@@ -4187,3 +4187,6 @@
 [1535613486] sched.pyc:getCard(): {'data': u'', 'did': 1405453928115L, 'due': 1503, 'factor': 1300, 'flags': 0, 'id': 1379856348776L, 'ivl': 174, 'lapses': 4, 'left': 1001, 'mod': 1520241103, 'nid': 1379856348381L, 'odid': 0, 'odue': 0, 'ord': 0, 'queue': 2, 'reps': 70, 'type': 2, 'usn': -1}
 [1535613495] sched.pyc:answerCard(): 
 [1535613495] cards.pyc:flushSched(): {'data': u'', 'did': 1405453928115L, 'due': 1734, 'factor': 1300, 'flags': 0, 'id': 1379856348776L, 'ivl': 227, 'lapses': 4, 'lastIvl': 174, 'left': 1001, 'mod': 1535613495, 'nid': 1379856348381L, 'odid': 0, 'odue': 0, 'ord': 0, 'queue': 2, 'reps': 71, 'type': 2, 'usn': -1, 'wasNew': False}
+[1536034734] collection.pyc:__init__(): /Users/nguyenvantu/Documents/Anki/Người dùng 1/collection.anki2, 2.0.36
+[1536034734] sched.pyc:_updateCutoff(): 1512, 1536080400
+[1536034734] sched.pyc:unburyCards(): []
