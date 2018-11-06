@@ -1,0 +1,553 @@
+{
+	"info": {
+		"name": "Vidoo",
+		"_postman_id": "5ab27c98-cbb3-587e-098b-449d5b1353a8",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "levent@ezlo.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://vidoo-api.appspot.com/api/auth",
+					"protocol": "https",
+					"host": [
+						"vidoo-api",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"api",
+						"auth"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "serial",
+							"value": "",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://vidoo-api.appspot.com/api/devices/register",
+					"protocol": "https",
+					"host": [
+						"vidoo-api",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"api",
+						"devices",
+						"register"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "SetOwner",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "serial",
+							"value": "",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://vidoo-api.appspot.com/api/devices/setowner",
+					"protocol": "https",
+					"host": [
+						"vidoo-api",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"api",
+						"devices",
+						"setowner"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Devices",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1MzgxMjM4NjgsInVzZXIiOnsiaWQiOjJ9LCJpYXQiOjE1MzgxMjM1Njh9.l1rax2V-Q7dLT-KIwCXYZw3_bW0vaamd3o2BokZQhAY"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://vidoo-api.appspot.com/api/devices",
+					"protocol": "https",
+					"host": [
+						"vidoo-api",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"api",
+						"devices"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "SelectDevice",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1MzgxMjQ0NDEsInVzZXIiOnsiaWQiOjJ9LCJpYXQiOjE1MzgxMjQxNDF9.epPwT5QUfdOcZXGPlpX3Qi7iWLfB9JHPmwBK5ypyIQY"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://vidoo-api.appspot.com/api/devices/2/select",
+					"protocol": "https",
+					"host": [
+						"vidoo-api",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"api",
+						"devices",
+						"2",
+						"select"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "RefreshToken",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1MzgxMjQzMjUsImRhdGEiOiJkZWRkYjY3MmQ4YTJjNDRjYWMzMDhjNzA5MGQxMjQ2ODliMDU1MTFlODFmNWNlOTc4NWFiOGRmMzczNGVkZDU2OWY0NjBlNjkxMTc2ZDI0MWZjYjIyZDRjZWI1MDYyYTY4YmQyOGZkMjI4NzJhZmZhZjMzZjhkMGU3OTM2OGMzZTIzMjRkYmIyYmM2MGQ0OWJmNjQ5YWY3ZjZjMWMyOGZlYjQ4MTFiZDY2NTJjMzIxNGQ0N2QyNDE1YzU2MzBhNWJkZjg1MTcxNGQzZmUzZGEyMWU3Yjc3ZjQxMmFlYmY5NjkxYTMyMWQ1OTE2NmM3MGQyN2M0NjIyODdmOGEwNTFiNzIxZGE3OTFiYTJhYzBhY2VhNzAxNTQ5NDVhNzk5Y2FmMzU5NTZiMTEyZDA3NmYzZmM5ZmIxYTMxYjM3YmVmOCIsImlhdCI6MTUzODEyMzk2NX0.5WIkahxagNNdBFp7bQhPGTp5Pr4P8Xksos-OM8YSo7Y"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "refresh_token",
+							"value": "a65e70de3b3f62600beb4728b35e89da68225bf388cefd6cd5d40a5b9653416b6c2da5e7e28053dd",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://vidoo-api.appspot.com/api/token/refresh",
+					"protocol": "https",
+					"host": [
+						"vidoo-api",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"api",
+						"token",
+						"refresh"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Cameras",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1MzgxMjQ1MTEsImRhdGEiOiJkZWRkYjY3MmQ4YTJjNDRjYWMzMDhjNzA5MGQxMjQ2ODliMDU1MTFlODFmNWNlOTc4NWFiOGRmMzczNGVkZDU2OWY0NjBlNjkxMTc2ZDI0MWZjYjIyZDRjZWI1MDYyYTY4YmQyOGZkMjI4NzJhZmZhZjMzZjhkMGU3OTM2OGMzZTIzMjRkYmIyYmM2MGQ0OWJmNjQ5YWY3ZjZjMWMyOGZlYjQ4MTFiZDY2NTJjMzIxNGQ0N2QyNDE1YzU2MzBhNWJkZjg1MTcxNGQzZmUzZGEyMWU3Yjc3ZjQxMmFlYmY5NjkxYTMyMWQ1OTE2NmM3MGQyN2M0NjIyODdmOGEwNTFiNzIxZGE3OTFiYTJhYzBhY2VhNzAxNTQ5NDVhNzk5Y2FmMzU5NTZiMTEyZDA3NmYzZmM5ZmIxYTMxYjM3YmVmOCIsImlhdCI6MTUzODEyNDE1MX0.RlW0u0kSRSwMKU2QEW5rbGOc73mW-LxlbSNQQZsll6Y"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://vidoo-api.appspot.com/api/cameras",
+					"protocol": "https",
+					"host": [
+						"vidoo-api",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"api",
+						"cameras"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Deleted Camera",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1MzgxMjQ1MTEsImRhdGEiOiJkZWRkYjY3MmQ4YTJjNDRjYWMzMDhjNzA5MGQxMjQ2ODliMDU1MTFlODFmNWNlOTc4NWFiOGRmMzczNGVkZDU2OWY0NjBlNjkxMTc2ZDI0MWZjYjIyZDRjZWI1MDYyYTY4YmQyOGZkMjI4NzJhZmZhZjMzZjhkMGU3OTM2OGMzZTIzMjRkYmIyYmM2MGQ0OWJmNjQ5YWY3ZjZjMWMyOGZlYjQ4MTFiZDY2NTJjMzIxNGQ0N2QyNDE1YzU2MzBhNWJkZjg1MTcxNGQzZmUzZGEyMWU3Yjc3ZjQxMmFlYmY5NjkxYTMyMWQ1OTE2NmM3MGQyN2M0NjIyODdmOGEwNTFiNzIxZGE3OTFiYTJhYzBhY2VhNzAxNTQ5NDVhNzk5Y2FmMzU5NTZiMTEyZDA3NmYzZmM5ZmIxYTMxYjM3YmVmOCIsImlhdCI6MTUzODEyNDE1MX0.RlW0u0kSRSwMKU2QEW5rbGOc73mW-LxlbSNQQZsll6Y"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://vidoo-api.appspot.com/api/cameras?deleted=true",
+					"protocol": "https",
+					"host": [
+						"vidoo-api",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"api",
+						"cameras"
+					],
+					"query": [
+						{
+							"key": "deleted",
+							"value": "true",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "List Detailed Camera",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1MzgxMjQ1MTEsImRhdGEiOiJkZWRkYjY3MmQ4YTJjNDRjYWMzMDhjNzA5MGQxMjQ2ODliMDU1MTFlODFmNWNlOTc4NWFiOGRmMzczNGVkZDU2OWY0NjBlNjkxMTc2ZDI0MWZjYjIyZDRjZWI1MDYyYTY4YmQyOGZkMjI4NzJhZmZhZjMzZjhkMGU3OTM2OGMzZTIzMjRkYmIyYmM2MGQ0OWJmNjQ5YWY3ZjZjMWMyOGZlYjQ4MTFiZDY2NTJjMzIxNGQ0N2QyNDE1YzU2MzBhNWJkZjg1MTcxNGQzZmUzZGEyMWU3Yjc3ZjQxMmFlYmY5NjkxYTMyMWQ1OTE2NmM3MGQyN2M0NjIyODdmOGEwNTFiNzIxZGE3OTFiYTJhYzBhY2VhNzAxNTQ5NDVhNzk5Y2FmMzU5NTZiMTEyZDA3NmYzZmM5ZmIxYTMxYjM3YmVmOCIsImlhdCI6MTUzODEyNDE1MX0.RlW0u0kSRSwMKU2QEW5rbGOc73mW-LxlbSNQQZsll6Y"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://vidoo-api.appspot.com/api/cameras?detailed=true",
+					"protocol": "https",
+					"host": [
+						"vidoo-api",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"api",
+						"cameras"
+					],
+					"query": [
+						{
+							"key": "detailed",
+							"value": "true",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Detail Camera",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1MzgxMjQ1MTEsImRhdGEiOiJkZWRkYjY3MmQ4YTJjNDRjYWMzMDhjNzA5MGQxMjQ2ODliMDU1MTFlODFmNWNlOTc4NWFiOGRmMzczNGVkZDU2OWY0NjBlNjkxMTc2ZDI0MWZjYjIyZDRjZWI1MDYyYTY4YmQyOGZkMjI4NzJhZmZhZjMzZjhkMGU3OTM2OGMzZTIzMjRkYmIyYmM2MGQ0OWJmNjQ5YWY3ZjZjMWMyOGZlYjQ4MTFiZDY2NTJjMzIxNGQ0N2QyNDE1YzU2MzBhNWJkZjg1MTcxNGQzZmUzZGEyMWU3Yjc3ZjQxMmFlYmY5NjkxYTMyMWQ1OTE2NmM3MGQyN2M0NjIyODdmOGEwNTFiNzIxZGE3OTFiYTJhYzBhY2VhNzAxNTQ5NDVhNzk5Y2FmMzU5NTZiMTEyZDA3NmYzZmM5ZmIxYTMxYjM3YmVmOCIsImlhdCI6MTUzODEyNDE1MX0.RlW0u0kSRSwMKU2QEW5rbGOc73mW-LxlbSNQQZsll6Y"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://vidoo-api.appspot.com/api/cameras/1",
+					"protocol": "https",
+					"host": [
+						"vidoo-api",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"api",
+						"cameras",
+						"1"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Deleted Camera By id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1MzgxMjQ1MTEsImRhdGEiOiJkZWRkYjY3MmQ4YTJjNDRjYWMzMDhjNzA5MGQxMjQ2ODliMDU1MTFlODFmNWNlOTc4NWFiOGRmMzczNGVkZDU2OWY0NjBlNjkxMTc2ZDI0MWZjYjIyZDRjZWI1MDYyYTY4YmQyOGZkMjI4NzJhZmZhZjMzZjhkMGU3OTM2OGMzZTIzMjRkYmIyYmM2MGQ0OWJmNjQ5YWY3ZjZjMWMyOGZlYjQ4MTFiZDY2NTJjMzIxNGQ0N2QyNDE1YzU2MzBhNWJkZjg1MTcxNGQzZmUzZGEyMWU3Yjc3ZjQxMmFlYmY5NjkxYTMyMWQ1OTE2NmM3MGQyN2M0NjIyODdmOGEwNTFiNzIxZGE3OTFiYTJhYzBhY2VhNzAxNTQ5NDVhNzk5Y2FmMzU5NTZiMTEyZDA3NmYzZmM5ZmIxYTMxYjM3YmVmOCIsImlhdCI6MTUzODEyNDE1MX0.RlW0u0kSRSwMKU2QEW5rbGOc73mW-LxlbSNQQZsll6Y"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://vidoo-api.appspot.com/api/cameras/:id?deleted=true",
+					"protocol": "https",
+					"host": [
+						"vidoo-api",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"api",
+						"cameras",
+						":id"
+					],
+					"query": [
+						{
+							"key": "deleted",
+							"value": "true",
+							"equals": true
+						}
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": ""
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Activities",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1Mzg5NjkyMTYsImRhdGEiOiJkZWRkYjY3MmQ4YTJjNDRjYWMzMDhjNzA5MGQxMjQ2ODliMDU1MTFlODFmNWNlOTc4NWFiOGRmMzczNGVkZDU2OWY0NjBlNjkxMTc2ZDI0MWZjYjIyZDRjZWI1MDYyYTY4YmQyOGZkMjI4NzJhZmZhZjMzZjhkMGU3OTM2OGMzZTIzMjRkYmIyYmM2MGQ0OWJmNjQ5YWY3ZjZjMWMyOGZlYjQ4MTFiZDY2NTJjMzIxNGQ0N2QyNDE1YzU2MzBhNWJkZjg1MTcxNGQzZmUzZGEyMWU3Yjc3ZjQxMmFlYmY5NjkxYTMyMWQ1OTE2NmM3MGQyN2M0NjIyODdmOGEwNTFiNzIxZGE3OTFiYTJhYzBhY2VhNzAxNTQ5NDVhNzk5Y2FmMzU5NTZiMTEyZDA3NmYzZmM5ZmIxYTMxYjM3YmVmOCIsImlhdCI6MTUzODk2ODg1Nn0.sSwFiPxw_f216hwJ5UZRxhHQfrK5Apau7sB1gljluAc"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://vidoo-api.appspot.com/api/activities",
+					"protocol": "https",
+					"host": [
+						"vidoo-api",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"api",
+						"activities"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getVideo ",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1NDAyMjM3NzksImRhdGEiOiJkZWRkYjY3MmQ4YTJjNDRjYWMzMDhjNzA5MGQxMjQ2ODliMDU1MTFlODFmNWNlOTc4NWFiOGRmMzczNGVkZDU2OWY0NjBlNjkxMTc2ZDI0MWZjYjIyZDRjZWI1MDYyYTY4YmQyOGZkMjI4NzJhZmZhZjMzZjhkMGU3OTM2OGMzZTIzMjRkYmIyYmM2MGQ0OWJmNjQ5YWY3ZjZjMWMyOGZlYjQ4MTFiZDY2NTJjMzIxNGQ0N2QyNDE1YzU2MzBhNWJkZjg1MTcxNGQzZmUzZGEyMWU3Yjc3ZjQxMmFlYmY5NjkxYTMyMWQ1OTE2NmM3MGQyN2M0NjIyODdmOGEwNTFiNzIxZGE3OTFiYTJhYzBhY2VhNzAxNTQ5NDVhNzk5Y2FmMzU5NTZiMTEyZDA3NmYzZmM5ZmIxYTMxYjM3YmVmOCIsImlkIjoxODUyLCJpYXQiOjE1NDAyMjM0MTl9.3dVlbKX3xhU7zsCPYYfkobyJk0B7gJCAFo3R59Amg6I"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://vidoo-api.appspot.com/api/media/snapshots/7510.mp4",
+					"protocol": "https",
+					"host": [
+						"vidoo-api",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"api",
+						"media",
+						"snapshots",
+						"7510.mp4"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Thumnail",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1NDAyMjM3NzksImRhdGEiOiJkZWRkYjY3MmQ4YTJjNDRjYWMzMDhjNzA5MGQxMjQ2ODliMDU1MTFlODFmNWNlOTc4NWFiOGRmMzczNGVkZDU2OWY0NjBlNjkxMTc2ZDI0MWZjYjIyZDRjZWI1MDYyYTY4YmQyOGZkMjI4NzJhZmZhZjMzZjhkMGU3OTM2OGMzZTIzMjRkYmIyYmM2MGQ0OWJmNjQ5YWY3ZjZjMWMyOGZlYjQ4MTFiZDY2NTJjMzIxNGQ0N2QyNDE1YzU2MzBhNWJkZjg1MTcxNGQzZmUzZGEyMWU3Yjc3ZjQxMmFlYmY5NjkxYTMyMWQ1OTE2NmM3MGQyN2M0NjIyODdmOGEwNTFiNzIxZGE3OTFiYTJhYzBhY2VhNzAxNTQ5NDVhNzk5Y2FmMzU5NTZiMTEyZDA3NmYzZmM5ZmIxYTMxYjM3YmVmOCIsImlkIjoxODUyLCJpYXQiOjE1NDAyMjM0MTl9.3dVlbKX3xhU7zsCPYYfkobyJk0B7gJCAFo3R59Amg6I"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://vidoo-api.appspot.com/api/live/1/frame.png",
+					"protocol": "https",
+					"host": [
+						"vidoo-api",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"api",
+						"live",
+						"1",
+						"frame.png"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "faceLogs",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1NDEwOTI0NjYsImRhdGEiOiI3OTFmNjcwODY5OTUyNDUwNjE2YmVmMDlmMTkxOTA3NDNjNjQyNDkyOGQ1NGEyYWRiMTNkZDc1OTU5YzNhODA4ZmIxMGRjNzc0ZjUzMWFmOTk0YjJmYzM5MjViYWQ1YTQ0OGY4NTA5MzgxMmEzMWI0YTlkNTdiNzJmYzM5ZDYyMjM4ZmYzZGJjMzg5YWQ2Y2Y4MWYwMmExOWUwZWFkMmRmNDRkYTY0YTEyMTU0NDEzY2Q4ZjJiMDFjYjczZTE4ZDJiM2ViZmY1ZTM5MWI5NjVlYTVlODU1NWRhMGY1OWJiZDM1ODQxMjI1ZTgyZWQ4NDFlYTFmNzFiNzUwMjI0YWYwMzM3MDYwNTFlNmJkMTg3NWI5NDlmMjUxNWEyOGVjNjZhMzEyMWMzOGM5ZGFiNDNmNmM2Mzk1ZWYyZjI1M2ZkMjE0YjZiYzZjZDY1ZjUzZGJkOWUyZGU0MzNmYzgzODRkIiwiaWQiOjMzNjUsImlhdCI6MTU0MTA5MjEwNn0.k1ChI-h3b-i-OiQ51h-Q8cZVy8nefEyAJL071hVGcYA"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://vidoo-api.appspot.com/api/face_logs/today",
+					"protocol": "https",
+					"host": [
+						"vidoo-api",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"api",
+						"face_logs",
+						"today"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getPeopleLogs",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1NDE1MTU5OTcsImRhdGEiOiI3OTFmNjcwODY5OTUyNDUwNjE2YmVmMDlmMTkxOTA3NGEyZmRjOTY1N2YwNGRiNjVjOTU2MmI1MjcyODA2OTI2NzFmOGU1MDNiMWViYjQ0Y2RiODQyMWNlNzQ2OWM1MjBkMGQwYmYzMjcyMjkyOGFjOTYyZDY1NzYyZjliNjRiZDU0MzExYmZiZDNhNzkxZjE0ZWFmZDA2OGFjYjQ0ZDcyMTYxNjQ4YWJhYzhiZmYzZjE0NWJiY2EzNzIyM2QxNjIwZjI1YjlhYjg2YWY0NGZhNjBiMDVlMjM1ODhjYjFmNjNhNWJiYzRiZmFkZTg0MDUxZWMyYmJmNDIyNGRjMmFjYmYyNzFlZTk3MWFlOTA1ODJhNjEyYjgxOTM0MzZlZDc1OTZmNTJmYTY4MTdmMjk3MmQ0MWMzNzY3MTdlYjNkMTA4MWE1ODEwMmVmOThkNGYwODUyMGNmMWZkMzMxZjcwIiwiaWQiOjM3MTEsImlhdCI6MTU0MTUxNTYzN30.Jp-JE8UbegCjPCd3HaXtUhQinvyvxT8ICoHFFOFfwuM"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://vidoo-api.appspot.com/api/people/4/logs",
+					"protocol": "https",
+					"host": [
+						"vidoo-api",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"api",
+						"people",
+						"4",
+						"logs"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
