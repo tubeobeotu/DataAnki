@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aQz-al-O7u">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Item-->
+        <scene sceneID="eWC-dD-7A6">
+            <objects>
+                <viewController id="aQz-al-O7u" customClass="ViewController" customModule="RouletteGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7jq-mP-fmM"/>
+                        <viewControllerLayoutGuide type="bottom" id="eFe-tb-cfp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fjC-b4-Dht">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2bp-y0-9Ce" customClass="ZoomImageView" customModule="RouletteGame" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8nt-P5-t0s" customClass="ZoomImageView" customModule="RouletteGame" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j1T-xX-EVf">
+                                <rect key="frame" x="0.0" y="803" width="375" height="197"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bva-EV-aRQ">
+                                <rect key="frame" x="161" y="380" width="52" height="260"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dick" translatesAutoresizingMaskIntoConstraints="NO" id="hpR-MI-kNt">
+                                        <rect key="frame" x="0.0" y="130.5" width="52" height="130.5"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="hpR-MI-kNt" secondAttribute="trailing" id="A2y-jr-fin"/>
+                                    <constraint firstItem="hpR-MI-kNt" firstAttribute="leading" secondItem="bva-EV-aRQ" secondAttribute="leading" id="KAB-BR-0dt"/>
+                                    <constraint firstItem="hpR-MI-kNt" firstAttribute="centerX" secondItem="bva-EV-aRQ" secondAttribute="centerX" id="T5C-lR-W19"/>
+                                    <constraint firstAttribute="width" secondItem="bva-EV-aRQ" secondAttribute="height" multiplier="0.2" id="Xha-jo-5SB"/>
+                                    <constraint firstItem="hpR-MI-kNt" firstAttribute="height" secondItem="bva-EV-aRQ" secondAttribute="height" multiplier="0.5" id="eQe-Gl-eCA"/>
+                                    <constraint firstItem="hpR-MI-kNt" firstAttribute="top" secondItem="bva-EV-aRQ" secondAttribute="centerY" id="fbL-dG-T3e"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aO6-kT-obC">
+                                <rect key="frame" x="0.0" y="20" width="375" height="980"/>
+                                <connections>
+                                    <action selector="action:" destination="aQz-al-O7u" eventType="touchUpInside" id="iTN-XZ-Pyq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8nt-P5-t0s" firstAttribute="top" secondItem="2bp-y0-9Ce" secondAttribute="top" id="1iT-dO-AnX"/>
+                            <constraint firstItem="2bp-y0-9Ce" firstAttribute="leading" secondItem="fjC-b4-Dht" secondAttribute="leading" id="2IG-Jx-hhs"/>
+                            <constraint firstItem="eFe-tb-cfp" firstAttribute="top" secondItem="aO6-kT-obC" secondAttribute="bottom" id="7Qu-yZ-Jl2"/>
+                            <constraint firstItem="j1T-xX-EVf" firstAttribute="height" secondItem="fjC-b4-Dht" secondAttribute="height" multiplier="0.19685" id="FcM-tx-7my"/>
+                            <constraint firstItem="eFe-tb-cfp" firstAttribute="top" secondItem="j1T-xX-EVf" secondAttribute="bottom" id="Fsh-1i-SM7"/>
+                            <constraint firstItem="bva-EV-aRQ" firstAttribute="centerX" secondItem="MhF-hr-bzm" secondAttribute="centerX" id="Koa-6T-Mj6"/>
+                            <constraint firstItem="aO6-kT-obC" firstAttribute="trailing" secondItem="MhF-hr-bzm" secondAttribute="trailing" id="L3w-Gf-qLs"/>
+                            <constraint firstItem="aO6-kT-obC" firstAttribute="leading" secondItem="MhF-hr-bzm" secondAttribute="leading" id="Ldg-FY-3qP"/>
+                            <constraint firstItem="2bp-y0-9Ce" firstAttribute="top" secondItem="fjC-b4-Dht" secondAttribute="top" id="LrC-ae-fws"/>
+                            <constraint firstAttribute="trailing" secondItem="j1T-xX-EVf" secondAttribute="trailing" id="MTF-Zm-8Gq"/>
+                            <constraint firstItem="bva-EV-aRQ" firstAttribute="height" secondItem="fjC-b4-Dht" secondAttribute="width" multiplier="0.8" constant="-40" id="Q2n-65-Hcc"/>
+                            <constraint firstItem="bva-EV-aRQ" firstAttribute="centerY" secondItem="MhF-hr-bzm" secondAttribute="centerY" id="QUY-0j-EIY"/>
+                            <constraint firstItem="eFe-tb-cfp" firstAttribute="top" secondItem="2bp-y0-9Ce" secondAttribute="bottom" id="SnT-Qg-KGg"/>
+                            <constraint firstItem="aO6-kT-obC" firstAttribute="top" secondItem="7jq-mP-fmM" secondAttribute="bottom" id="XYj-Sh-SvP"/>
+                            <constraint firstItem="8nt-P5-t0s" firstAttribute="leading" secondItem="2bp-y0-9Ce" secondAttribute="leading" id="ki6-TB-Zlj"/>
+                            <constraint firstItem="j1T-xX-EVf" firstAttribute="leading" secondItem="MhF-hr-bzm" secondAttribute="leading" id="nlR-jL-f9D"/>
+                            <constraint firstItem="8nt-P5-t0s" firstAttribute="bottom" secondItem="2bp-y0-9Ce" secondAttribute="bottom" id="s9H-IN-Aza"/>
+                            <constraint firstAttribute="trailing" secondItem="2bp-y0-9Ce" secondAttribute="trailing" id="v8l-o4-469"/>
+                            <constraint firstItem="8nt-P5-t0s" firstAttribute="trailing" secondItem="2bp-y0-9Ce" secondAttribute="trailing" id="zSP-hH-JyL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MhF-hr-bzm"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="CKI-Lv-gxe"/>
+                    <size key="freeformSize" width="375" height="1000"/>
+                    <connections>
+                        <outlet property="btn_Action" destination="aO6-kT-obC" id="FYK-dZ-Y1W"/>
+                        <outlet property="imageView" destination="2bp-y0-9Ce" id="3PN-Al-xvP"/>
+                        <outlet property="img_Dick" destination="hpR-MI-kNt" id="ijk-93-FlN"/>
+                        <outlet property="img_Result" destination="8nt-P5-t0s" id="USl-sT-gAS"/>
+                        <outlet property="v_Dick" destination="bva-EV-aRQ" id="l1Y-SY-taD"/>
+                        <outlet property="v_TmpDick" destination="j1T-xX-EVf" id="PDr-hD-xg8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v0C-iZ-UZs" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="444" y="90.854572713643179"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dick" width="458" height="1107"/>
+    </resources>
+</document>
