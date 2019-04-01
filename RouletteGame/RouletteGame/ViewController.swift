@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     var currentIndex:Int = 1
     var isSetup = false
     var defaultIndex = 0
-    let defaultImageGif = "defaultAnimation"
+    let defaultImageGif = "defaultAnimation0"
     let dickImage = "dick"
     let dickSmileImage = "dickSmile"
     let rotationAnimation = "animation"
@@ -33,7 +33,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         v_Dick.isHidden = true
-        self.img_Result.imageView.image = UIImage(named: self.resultImage)
+//        self.img_Result.image = UIImage(gifName: defaultImageGif)
+//        self.img_Result.imageView.startAnimatingGif()
         self.img_Result.isHidden = true
         self.showDefaultAnimation()
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
@@ -48,9 +49,9 @@ class ViewController: UIViewController {
         btn_Action.isEnabled = false
         self.imageView.image = UIImage(gifName: rotationAnimation)
         self.img_Result.isHidden = true
-        let width:CGFloat = 50 * scale
-        let height:CGFloat = 23 * scale
-        let marginX:CGFloat = 4 * scale
+        let width:CGFloat = 48 * scale
+        let height:CGFloat = 18 * scale
+        let marginX:CGFloat = 1 * scale
         let marginY:CGFloat = 2 * scale
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             
@@ -73,7 +74,7 @@ class ViewController: UIViewController {
         view.layer.addSublayer(shapeLayer)
         let animation = CAKeyframeAnimation(keyPath: #keyPath(CALayer.position))
         animation.duration = 1.045
-        animation.timeOffset = -0.28
+        animation.timeOffset = -0.29
         animation.calculationMode = kCAAnimationPaced
         animation.repeatCount = MAXFLOAT
         animation.path = ovalPath.cgPath
@@ -92,17 +93,17 @@ class ViewController: UIViewController {
                 self.currentIndex = self.currentIndex + 1
                 self.rotateView(targetView: targetView, duration: duration)
             }else{
-                self.img_Result.isHidden = false
-                self.img_Dick.image = UIImage.init(named: self.dickSmileImage)
-                self.imageView.imageView.stopAnimatingGif()
-                self.v_Dick.layer.removeAllAnimations()
+//                self.imageView.image = UIImage(gifName: self.resultImage)
+//                self.img_Dick.image = UIImage.init(named: self.dickSmileImage)
+//                self.imageView.imageView.stopAnimatingGif()
+//                self.v_Dick.layer.removeAllAnimations()
 
-                DispatchQueue.main.asyncAfter(deadline: .now() + self.timeToShowResult) {
-                    self.img_Result.isHidden = true
-                    self.btn_Action.isEnabled = true
-                    self.v_Dick.isHidden = true
-                    self.showDefaultAnimation()
-                }
+//                DispatchQueue.main.asyncAfter(deadline: .now() + self.timeToShowResult) {
+//                    self.img_Result.isHidden = true
+//                    self.btn_Action.isEnabled = true
+//                    self.v_Dick.isHidden = true
+//                    self.showDefaultAnimation()
+//                }
 
             }
         }
