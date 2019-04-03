@@ -12,6 +12,15 @@
 		91F0ACCA2254FF9B00CE6782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91F0ACC82254FF9B00CE6782 /* Main.storyboard */; };
 		91F0ACCC2254FF9B00CE6782 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91F0ACCB2254FF9B00CE6782 /* Assets.xcassets */; };
 		91F0ACCF2254FF9B00CE6782 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91F0ACCD2254FF9B00CE6782 /* LaunchScreen.storyboard */; };
+		91F0ACD7225501E200CE6782 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F0ACD6225501E200CE6782 /* BaseViewController.swift */; };
+		91F0ACD92255020000CE6782 /* FavouriteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F0ACD82255020000CE6782 /* FavouriteVC.swift */; };
+		91F0ACDB2255020E00CE6782 /* HistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F0ACDA2255020E00CE6782 /* HistoryVC.swift */; };
+		91F0ACDD2255021B00CE6782 /* ContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F0ACDC2255021B00CE6782 /* ContactVC.swift */; };
+		91F0ACDF2255023900CE6782 /* BirthdayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F0ACDE2255023900CE6782 /* BirthdayVC.swift */; };
+		91F0ACE12255025100CE6782 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F0ACE02255025100CE6782 /* SettingsVC.swift */; };
+		91F0ACE4225503F000CE6782 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F0ACE3225503F000CE6782 /* BaseTableViewCell.swift */; };
+		91F0ACE72255043900CE6782 /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F0ACE52255043900CE6782 /* ContactCell.swift */; };
+		91F0ACE82255043900CE6782 /* ContactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91F0ACE62255043900CE6782 /* ContactCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +31,15 @@
 		91F0ACCB2254FF9B00CE6782 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91F0ACCE2254FF9B00CE6782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91F0ACD02254FF9B00CE6782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91F0ACD6225501E200CE6782 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		91F0ACD82255020000CE6782 /* FavouriteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteVC.swift; sourceTree = "<group>"; };
+		91F0ACDA2255020E00CE6782 /* HistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryVC.swift; sourceTree = "<group>"; };
+		91F0ACDC2255021B00CE6782 /* ContactVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactVC.swift; sourceTree = "<group>"; };
+		91F0ACDE2255023900CE6782 /* BirthdayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayVC.swift; sourceTree = "<group>"; };
+		91F0ACE02255025100CE6782 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		91F0ACE3225503F000CE6782 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		91F0ACE52255043900CE6782 /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
+		91F0ACE62255043900CE6782 /* ContactCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +72,31 @@
 		91F0ACC32254FF9B00CE6782 /* CardhopTNV */ = {
 			isa = PBXGroup;
 			children = (
+				91F0ACE2225503D900CE6782 /* Cells */,
 				91F0ACC42254FF9B00CE6782 /* AppDelegate.swift */,
 				91F0ACC62254FF9B00CE6782 /* ViewController.swift */,
+				91F0ACD6225501E200CE6782 /* BaseViewController.swift */,
+				91F0ACD82255020000CE6782 /* FavouriteVC.swift */,
+				91F0ACDA2255020E00CE6782 /* HistoryVC.swift */,
+				91F0ACDC2255021B00CE6782 /* ContactVC.swift */,
+				91F0ACDE2255023900CE6782 /* BirthdayVC.swift */,
+				91F0ACE02255025100CE6782 /* SettingsVC.swift */,
 				91F0ACC82254FF9B00CE6782 /* Main.storyboard */,
 				91F0ACCB2254FF9B00CE6782 /* Assets.xcassets */,
 				91F0ACCD2254FF9B00CE6782 /* LaunchScreen.storyboard */,
 				91F0ACD02254FF9B00CE6782 /* Info.plist */,
 			);
 			path = CardhopTNV;
+			sourceTree = "<group>";
+		};
+		91F0ACE2225503D900CE6782 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				91F0ACE3225503F000CE6782 /* BaseTableViewCell.swift */,
+				91F0ACE52255043900CE6782 /* ContactCell.swift */,
+				91F0ACE62255043900CE6782 /* ContactCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +158,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91F0ACE82255043900CE6782 /* ContactCell.xib in Resources */,
 				91F0ACCF2254FF9B00CE6782 /* LaunchScreen.storyboard in Resources */,
 				91F0ACCC2254FF9B00CE6782 /* Assets.xcassets in Resources */,
 				91F0ACCA2254FF9B00CE6782 /* Main.storyboard in Resources */,
@@ -136,8 +172,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91F0ACE72255043900CE6782 /* ContactCell.swift in Sources */,
 				91F0ACC72254FF9B00CE6782 /* ViewController.swift in Sources */,
+				91F0ACDB2255020E00CE6782 /* HistoryVC.swift in Sources */,
 				91F0ACC52254FF9B00CE6782 /* AppDelegate.swift in Sources */,
+				91F0ACDF2255023900CE6782 /* BirthdayVC.swift in Sources */,
+				91F0ACE4225503F000CE6782 /* BaseTableViewCell.swift in Sources */,
+				91F0ACDD2255021B00CE6782 /* ContactVC.swift in Sources */,
+				91F0ACE12255025100CE6782 /* SettingsVC.swift in Sources */,
+				91F0ACD92255020000CE6782 /* FavouriteVC.swift in Sources */,
+				91F0ACD7225501E200CE6782 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
