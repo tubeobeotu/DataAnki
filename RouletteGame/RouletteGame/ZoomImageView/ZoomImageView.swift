@@ -44,6 +44,7 @@ open class ZoomImageView : UIScrollView, UIScrollViewDelegate {
         }
     }
     open var loopCount:Int = -1
+    open var keepSetting = false
     open var image: UIImage? {
         get {
             return imageView.image
@@ -200,6 +201,7 @@ open class ZoomImageView : UIScrollView, UIScrollViewDelegate {
         contentSize = size
         imageView.center = ZoomImageView.contentCenter(forBoundingSize: bounds.size, contentSize: contentSize)
         self.zoomView(scale: 1, with: self.center)
+        
     }
     
     @objc private func handleDoubleTap(_ gestureRecognizer: UITapGestureRecognizer) {

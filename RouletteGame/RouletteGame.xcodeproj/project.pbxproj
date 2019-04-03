@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		91357CA82250E482002FE429 /* animation.gif in Resources */ = {isa = PBXBuildFile; fileRef = 91357CA72250E482002FE429 /* animation.gif */; };
-		91357CAB2250E536002FE429 /* defaultAnimation1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 91357CA92250E535002FE429 /* defaultAnimation1.gif */; };
-		91357CAC2250E536002FE429 /* defaultAnimation0.gif in Resources */ = {isa = PBXBuildFile; fileRef = 91357CAA2250E536002FE429 /* defaultAnimation0.gif */; };
+		9146F7A9225224270034C30A /* defaultAnimation0.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9146F7A8225224270034C30A /* defaultAnimation0.gif */; };
+		9146F7AB2252243F0034C30A /* animation.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9146F7AA2252243F0034C30A /* animation.gif */; };
 		91A8C41B2251A14800354B8A /* result.gif in Resources */ = {isa = PBXBuildFile; fileRef = 91A8C41A2251A14800354B8A /* result.gif */; };
 		91C2629F2243B3750054DCEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C2629E2243B3750054DCEA /* AppDelegate.swift */; };
 		91C262A12243B3750054DCEA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C262A02243B3750054DCEA /* ViewController.swift */; };
@@ -24,9 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		91357CA72250E482002FE429 /* animation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = animation.gif; sourceTree = "<group>"; };
-		91357CA92250E535002FE429 /* defaultAnimation1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = defaultAnimation1.gif; sourceTree = "<group>"; };
-		91357CAA2250E536002FE429 /* defaultAnimation0.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = defaultAnimation0.gif; sourceTree = "<group>"; };
+		9146F7A8225224270034C30A /* defaultAnimation0.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = defaultAnimation0.gif; sourceTree = "<group>"; };
+		9146F7AA2252243F0034C30A /* animation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = animation.gif; sourceTree = "<group>"; };
 		91A8C41A2251A14800354B8A /* result.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = result.gif; sourceTree = "<group>"; };
 		91C2629B2243B3750054DCEA /* RouletteGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RouletteGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91C2629E2243B3750054DCEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -79,9 +77,8 @@
 				91C2629E2243B3750054DCEA /* AppDelegate.swift */,
 				91C262A02243B3750054DCEA /* ViewController.swift */,
 				91C262A22243B3750054DCEA /* Main.storyboard */,
-				91357CAA2250E536002FE429 /* defaultAnimation0.gif */,
-				91357CA92250E535002FE429 /* defaultAnimation1.gif */,
-				91357CA72250E482002FE429 /* animation.gif */,
+				9146F7A8225224270034C30A /* defaultAnimation0.gif */,
+				9146F7AA2252243F0034C30A /* animation.gif */,
 				91A8C41A2251A14800354B8A /* result.gif */,
 				91C262A52243B3750054DCEA /* Assets.xcassets */,
 				91C262A72243B3750054DCEA /* LaunchScreen.storyboard */,
@@ -171,12 +168,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				91C262B62243B3820054DCEA /* Info.plist in Resources */,
-				91357CAB2250E536002FE429 /* defaultAnimation1.gif in Resources */,
-				91357CA82250E482002FE429 /* animation.gif in Resources */,
+				9146F7AB2252243F0034C30A /* animation.gif in Resources */,
 				91C262A92243B3750054DCEA /* LaunchScreen.storyboard in Resources */,
 				91C262A62243B3750054DCEA /* Assets.xcassets in Resources */,
 				91A8C41B2251A14800354B8A /* result.gif in Resources */,
-				91357CAC2250E536002FE429 /* defaultAnimation0.gif in Resources */,
+				9146F7A9225224270034C30A /* defaultAnimation0.gif in Resources */,
 				91C262A42243B3750054DCEA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,7 +335,7 @@
 				PROVISIONING_PROFILE = "ca141271-516e-4c1a-92c2-3dea5d80229b";
 				PROVISIONING_PROFILE_SPECIFIER = RouletteGameSample;
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -356,7 +352,7 @@
 				PROVISIONING_PROFILE = "ca141271-516e-4c1a-92c2-3dea5d80229b";
 				PROVISIONING_PROFILE_SPECIFIER = RouletteGameSample;
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
