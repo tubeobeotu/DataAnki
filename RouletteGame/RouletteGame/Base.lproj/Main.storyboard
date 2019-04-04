@@ -27,18 +27,17 @@
                         <subviews>
                             <view clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2bp-y0-9Ce" customClass="ZoomImageView" customModule="RouletteGame" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <view clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8nt-P5-t0s" customClass="ZoomImageView" customModule="RouletteGame" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j1T-xX-EVf">
                                 <rect key="frame" x="0.0" y="803" width="375" height="197"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bva-EV-aRQ">
-                                <rect key="frame" x="161" y="380" width="52" height="260"/>
+                                <rect key="frame" x="165.5" y="380" width="52" height="260"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dick" translatesAutoresizingMaskIntoConstraints="NO" id="hpR-MI-kNt">
                                         <rect key="frame" x="0.0" y="130.5" width="52" height="130.5"/>
@@ -55,7 +54,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xsg-vf-GNP">
-                                <rect key="frame" x="161" y="380" width="52" height="260"/>
+                                <rect key="frame" x="165.5" y="380" width="52" height="260"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dickSmile" translatesAutoresizingMaskIntoConstraints="NO" id="whW-Rm-KaE">
                                         <rect key="frame" x="0.0" y="130.5" width="52" height="130.5"/>
@@ -78,14 +77,15 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="xsg-vf-GNP" firstAttribute="centerX" secondItem="bva-EV-aRQ" secondAttribute="centerX" id="01y-X9-UWo"/>
                             <constraint firstItem="8nt-P5-t0s" firstAttribute="top" secondItem="2bp-y0-9Ce" secondAttribute="top" id="1iT-dO-AnX"/>
                             <constraint firstItem="2bp-y0-9Ce" firstAttribute="leading" secondItem="fjC-b4-Dht" secondAttribute="leading" id="2IG-Jx-hhs"/>
                             <constraint firstItem="eFe-tb-cfp" firstAttribute="top" secondItem="aO6-kT-obC" secondAttribute="bottom" id="7Qu-yZ-Jl2"/>
                             <constraint firstItem="j1T-xX-EVf" firstAttribute="height" secondItem="fjC-b4-Dht" secondAttribute="height" multiplier="0.19685" id="FcM-tx-7my"/>
                             <constraint firstItem="eFe-tb-cfp" firstAttribute="top" secondItem="j1T-xX-EVf" secondAttribute="bottom" id="Fsh-1i-SM7"/>
-                            <constraint firstItem="bva-EV-aRQ" firstAttribute="centerX" secondItem="MhF-hr-bzm" secondAttribute="centerX" id="Koa-6T-Mj6"/>
+                            <constraint firstItem="bva-EV-aRQ" firstAttribute="centerX" secondItem="MhF-hr-bzm" secondAttribute="centerX" constant="4" id="Koa-6T-Mj6"/>
                             <constraint firstItem="aO6-kT-obC" firstAttribute="trailing" secondItem="MhF-hr-bzm" secondAttribute="trailing" id="L3w-Gf-qLs"/>
                             <constraint firstItem="aO6-kT-obC" firstAttribute="leading" secondItem="MhF-hr-bzm" secondAttribute="leading" id="Ldg-FY-3qP"/>
                             <constraint firstItem="2bp-y0-9Ce" firstAttribute="top" secondItem="fjC-b4-Dht" secondAttribute="top" id="LrC-ae-fws"/>
@@ -102,7 +102,6 @@
                             <constraint firstItem="8nt-P5-t0s" firstAttribute="bottom" secondItem="2bp-y0-9Ce" secondAttribute="bottom" id="s9H-IN-Aza"/>
                             <constraint firstItem="xsg-vf-GNP" firstAttribute="centerY" secondItem="aO6-kT-obC" secondAttribute="centerY" id="smp-0d-V2e"/>
                             <constraint firstAttribute="trailing" secondItem="2bp-y0-9Ce" secondAttribute="trailing" id="v8l-o4-469"/>
-                            <constraint firstItem="xsg-vf-GNP" firstAttribute="centerX" secondItem="aO6-kT-obC" secondAttribute="centerX" id="ypH-BG-zRA"/>
                             <constraint firstItem="8nt-P5-t0s" firstAttribute="trailing" secondItem="2bp-y0-9Ce" secondAttribute="trailing" id="zSP-hH-JyL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MhF-hr-bzm"/>
@@ -111,6 +110,7 @@
                     <size key="freeformSize" width="375" height="1000"/>
                     <connections>
                         <outlet property="btn_Action" destination="aO6-kT-obC" id="FYK-dZ-Y1W"/>
+                        <outlet property="cst_X" destination="Koa-6T-Mj6" id="y0d-7r-04i"/>
                         <outlet property="imageView" destination="2bp-y0-9Ce" id="3PN-Al-xvP"/>
                         <outlet property="img_Dick" destination="hpR-MI-kNt" id="ijk-93-FlN"/>
                         <outlet property="img_Result" destination="8nt-P5-t0s" id="USl-sT-gAS"/>

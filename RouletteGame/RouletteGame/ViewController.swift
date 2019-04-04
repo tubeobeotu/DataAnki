@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var img_Result: ZoomImageView!
     @IBOutlet weak var v_TmpDick: UIView!
     
+    @IBOutlet weak var cst_X: NSLayoutConstraint!
     
     @IBOutlet weak var v_DickResult: UIView!
     @IBOutlet weak var v_Dick: UIView!
@@ -44,6 +45,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         self.imageView.imageView.delegate = self
         self.hideResultViews()
+        self.img_Result.delegateZoomImageView = self
         self.img_Result.image = UIImage(gifName: resultImage)
 //        self.img_Result.isHidden = true
         self.showDefaultAnimation()
@@ -60,16 +62,14 @@ class ViewController: UIViewController {
         btn_Action.isEnabled = false
         self.imageView.image = UIImage(gifName: rotationAnimation)
         self.img_Result.isHidden = true
-        let width:CGFloat = 48 * scale
-        let height:CGFloat = 18 * scale
-        let marginX:CGFloat = 1 * scale
+        let width:CGFloat = 50 * scale
+        let height:CGFloat = 10 * scale
+        let marginX:CGFloat = 2 * scale
         let marginY:CGFloat = 2 * scale
+        self.cst_X.constant = marginX
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             self.imageView.zoomView(scale: self.scale, with: CGPoint.init(x: self.v_TmpDick.center.x, y: self.v_TmpDick.frame.origin.y))
-            if(self.isZoomIn == false){
-                self.isZoomIn = true
-                self.img_Result.zoomView(scale: self.scale, with: CGPoint.init(x: self.v_TmpDick.center.x, y: self.v_TmpDick.frame.origin.y))
-            }
+            self.img_Result.zoomView(scale: self.scale, with: CGPoint.init(x: self.v_TmpDick.center.x, y: self.v_TmpDick.frame.origin.y))
             
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
@@ -89,7 +89,7 @@ class ViewController: UIViewController {
         view.layer.addSublayer(shapeLayer)
         let animation = CAKeyframeAnimation(keyPath: #keyPath(CALayer.position))
         animation.duration = 1.045
-        animation.timeOffset = -0.29
+        animation.timeOffset = -0.27
         animation.calculationMode = kCAAnimationPaced
         animation.repeatCount = MAXFLOAT
         animation.path = ovalPath.cgPath
@@ -113,12 +113,7 @@ class ViewController: UIViewController {
                 self.showDickResult(isShow: true)
                 self.img_Dick.image = UIImage.init(named: self.dickSmileImage)
                 DispatchQueue.main.asyncAfter(deadline: .now() + self.timeToShowResult) {
-                    self.isShowDefault = true
-                    self.showResultAnimation(isShow: false)
-                    self.img_Result.isHidden = true
-                    self.btn_Action.isEnabled = true
-                    self.hideResultViews()
-                    self.showDefaultAnimation()
+                    self.img_Result.zoomView(scale: 1, with: CGPoint.init(x: self.v_TmpDick.center.x, y: self.v_TmpDick.frame.origin.y))
                 }
 
             }
@@ -137,6 +132,11 @@ class ViewController: UIViewController {
     func showDickResult(isShow: Bool){
         self.v_Dick.isHidden = isShow
         self.v_DickResult.isHidden = !isShow
+        if(isShow == true){
+            v_DickResult.transform = v_DickResult.transform.rotated(by: v_Dick.transform.b)
+        }
+        
+        
     }
     func hideResultViews(){
         self.v_Dick.isHidden = true
@@ -160,5 +160,18 @@ extension ViewController: SwiftyGifDelegate{
         if(self.isShowDefault == true){
             self.showDefaultAnimation()
         }
+    }
+}
+extension ViewController: ZoomImageViewDelegate{
+    func didZoomOut() {
+        DispatchQueue.main.async {
+            self.isShowDefault = true
+            self.showResultAnimation(isShow: false)
+            self.img_Result.isHidden = true
+            self.btn_Action.isEnabled = true
+            self.hideResultViews()
+            self.showDefaultAnimation()
+        }
+        
     }
 }

@@ -21,7 +21,9 @@
 // THE SOFTWARE.
 
 import UIKit
-
+@objc public protocol ZoomImageViewDelegate {
+    @objc optional func didZoomOut()
+}
 open class ZoomImageView : UIScrollView, UIScrollViewDelegate {
     
     public enum ZoomMode {
@@ -36,7 +38,7 @@ open class ZoomImageView : UIScrollView, UIScrollViewDelegate {
         imageView.layer.allowsEdgeAntialiasing = true
         return imageView
     }()
-    
+    open var delegateZoomImageView:ZoomImageViewDelegate!
     public var zoomMode: ZoomMode = .fit {
         didSet {
             updateImageView()
@@ -231,10 +233,15 @@ open class ZoomImageView : UIScrollView, UIScrollViewDelegate {
         
         return zoomRect
     }
+
     
     // MARK: - UIScrollViewDelegate
     @objc dynamic public func scrollViewDidZoom(_ scrollView: UIScrollView) {
         imageView.center = ZoomImageView.contentCenter(forBoundingSize: bounds.size, contentSize: contentSize)
+        if scrollView.zoomScale == scrollView.minimumZoomScale
+        {
+            self.delegateZoomImageView?.didZoomOut?()
+        }
     }
     
     @objc dynamic public func scrollViewWillBeginZooming(_ scrollView: UIScrollView, with view: UIView?) {
