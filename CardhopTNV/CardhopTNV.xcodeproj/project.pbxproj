@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		914378E62256DE5200C41F6E /* BaseCustomNibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914378E52256DE5200C41F6E /* BaseCustomNibView.swift */; };
+		914378E82256DE8800C41F6E /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914378E72256DE8800C41F6E /* AvatarView.swift */; };
+		914378EA2256DE9200C41F6E /* AvatarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 914378E92256DE9200C41F6E /* AvatarView.xib */; };
 		91F0ACC52254FF9B00CE6782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F0ACC42254FF9B00CE6782 /* AppDelegate.swift */; };
 		91F0ACC72254FF9B00CE6782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F0ACC62254FF9B00CE6782 /* ViewController.swift */; };
 		91F0ACCA2254FF9B00CE6782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91F0ACC82254FF9B00CE6782 /* Main.storyboard */; };
@@ -24,6 +27,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		914378E52256DE5200C41F6E /* BaseCustomNibView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCustomNibView.swift; sourceTree = "<group>"; };
+		914378E72256DE8800C41F6E /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		914378E92256DE9200C41F6E /* AvatarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AvatarView.xib; sourceTree = "<group>"; };
 		91F0ACC12254FF9B00CE6782 /* CardhopTNV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardhopTNV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91F0ACC42254FF9B00CE6782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91F0ACC62254FF9B00CE6782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +59,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		914378E42256DE0B00C41F6E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				914378E52256DE5200C41F6E /* BaseCustomNibView.swift */,
+				914378E72256DE8800C41F6E /* AvatarView.swift */,
+				914378E92256DE9200C41F6E /* AvatarView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		91F0ACB82254FF9B00CE6782 = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +88,7 @@
 		91F0ACC32254FF9B00CE6782 /* CardhopTNV */ = {
 			isa = PBXGroup;
 			children = (
+				914378E42256DE0B00C41F6E /* Views */,
 				91F0ACE2225503D900CE6782 /* Cells */,
 				91F0ACC42254FF9B00CE6782 /* AppDelegate.swift */,
 				91F0ACC62254FF9B00CE6782 /* ViewController.swift */,
@@ -161,6 +178,7 @@
 				91F0ACE82255043900CE6782 /* ContactCell.xib in Resources */,
 				91F0ACCF2254FF9B00CE6782 /* LaunchScreen.storyboard in Resources */,
 				91F0ACCC2254FF9B00CE6782 /* Assets.xcassets in Resources */,
+				914378EA2256DE9200C41F6E /* AvatarView.xib in Resources */,
 				91F0ACCA2254FF9B00CE6782 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -173,11 +191,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				91F0ACE72255043900CE6782 /* ContactCell.swift in Sources */,
+				914378E82256DE8800C41F6E /* AvatarView.swift in Sources */,
 				91F0ACC72254FF9B00CE6782 /* ViewController.swift in Sources */,
 				91F0ACDB2255020E00CE6782 /* HistoryVC.swift in Sources */,
 				91F0ACC52254FF9B00CE6782 /* AppDelegate.swift in Sources */,
 				91F0ACDF2255023900CE6782 /* BirthdayVC.swift in Sources */,
 				91F0ACE4225503F000CE6782 /* BaseTableViewCell.swift in Sources */,
+				914378E62256DE5200C41F6E /* BaseCustomNibView.swift in Sources */,
 				91F0ACDD2255021B00CE6782 /* ContactVC.swift in Sources */,
 				91F0ACE12255025100CE6782 /* SettingsVC.swift in Sources */,
 				91F0ACD92255020000CE6782 /* FavouriteVC.swift in Sources */,
