@@ -21,7 +21,15 @@ class SettingsVC: BaseViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func changeBgMode(_ sender: Any) {
+        if(AppPreference.sharedInstance.appBgMode == .Dark){
+            AppPreference.sharedInstance.appBgMode = .White
+        }else{
+            AppPreference.sharedInstance.appBgMode = .Dark
+        }
+        
+    }
+    
     /*
     // MARK: - Navigation
 

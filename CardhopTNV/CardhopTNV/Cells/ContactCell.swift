@@ -10,8 +10,15 @@ import UIKit
 
 class ContactCell: BaseTableViewCell {
 
+    @IBOutlet weak var v_Avatar: AvatarView!
+    @IBOutlet weak var lbl_Name: UILabel!
+    @IBOutlet weak var lbl_SubName: UILabel!
+    @IBOutlet weak var v_Content: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.v_Content.layer.cornerRadius = 8
+        self.v_Content.backgroundColor = AppPreference.sharedInstance.getBgColorCell()
         // Initialization code
     }
 
@@ -19,6 +26,18 @@ class ContactCell: BaseTableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func setModelForCell(contact: ContactModel, isHideSubLabel: Bool = false){
+        self.lbl_Name.textColor = AppPreference.sharedInstance.getAppTitleColor()
+        self.lbl_SubName.textColor = AppPreference.sharedInstance.getSubTitleColor()
+        self.lbl_Name.text = contact.nickname
+        if(isHideSubLabel == false){
+            self.lbl_SubName.text = contact.organizationName
+        }else{
+            self.lbl_SubName.text = ""
+        }
+        self.v_Avatar.lbl_Name.text = contact.getFirstLetterName()
     }
     
 }

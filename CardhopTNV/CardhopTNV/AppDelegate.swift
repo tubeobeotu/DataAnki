@@ -15,7 +15,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        let view = SearchingView.init()
+        view.viewType = .UnAction
+        view.frame = CGRect(x: 8, y: UIScreen.main.bounds.height-AppPreference.sharedInstance.searchViewHeight-AppPreference.sharedInstance.tabbarHeight, width: UIScreen.main.bounds.width - 8*2, height: AppPreference.sharedInstance.searchViewHeight)
+        //window?.willRemoveSubview(view)
+        window?.makeKeyAndVisible()
+        window?.insertSubview(view, at: 0)
+        window?.bringSubview(toFront: view)
+        
+        let tabBar = UITabBar.appearance()
+        tabBar.barTintColor = UIColor.clear
+        tabBar.backgroundImage = UIImage()
+        tabBar.shadowImage = UIImage()
         return true
     }
 
