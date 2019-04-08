@@ -31,6 +31,9 @@
 		91F0ACE4225503F000CE6782 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F0ACE3225503F000CE6782 /* BaseTableViewCell.swift */; };
 		91F0ACE72255043900CE6782 /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F0ACE52255043900CE6782 /* ContactCell.swift */; };
 		91F0ACE82255043900CE6782 /* ContactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91F0ACE62255043900CE6782 /* ContactCell.xib */; };
+		B14A7BAF225B43D50027E540 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14A7BAE225B43D50027E540 /* StringExtension.swift */; };
+		B14A7BB1225B5A9F0027E540 /* ContactLabelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14A7BB0225B5A9F0027E540 /* ContactLabelModel.swift */; };
+		B14A7BB3225B5C370027E540 /* ContactAddressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14A7BB2225B5C370027E540 /* ContactAddressModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +63,9 @@
 		91F0ACE3225503F000CE6782 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		91F0ACE52255043900CE6782 /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
 		91F0ACE62255043900CE6782 /* ContactCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactCell.xib; sourceTree = "<group>"; };
+		B14A7BAE225B43D50027E540 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		B14A7BB0225B5A9F0027E540 /* ContactLabelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactLabelModel.swift; sourceTree = "<group>"; };
+		B14A7BB2225B5C370027E540 /* ContactAddressModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactAddressModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +84,8 @@
 			children = (
 				9124FDBC2258891600151834 /* BaseModel.swift */,
 				9124FDBE2258892E00151834 /* ContactModel.swift */,
+				B14A7BB0225B5A9F0027E540 /* ContactLabelModel.swift */,
+				B14A7BB2225B5C370027E540 /* ContactAddressModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -88,6 +96,7 @@
 				9124FDC12258900A00151834 /* AppPreference.swift */,
 				9124FDCC2258A32500151834 /* ColorExtension.swift */,
 				9124FDCE2258B30D00151834 /* SimpleFunction.swift */,
+				B14A7BAE225B43D50027E540 /* StringExtension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -241,11 +250,14 @@
 				91F0ACDF2255023900CE6782 /* BirthdayVC.swift in Sources */,
 				91F0ACE4225503F000CE6782 /* BaseTableViewCell.swift in Sources */,
 				914378E62256DE5200C41F6E /* BaseCustomNibView.swift in Sources */,
+				B14A7BB3225B5C370027E540 /* ContactAddressModel.swift in Sources */,
 				91F0ACDD2255021B00CE6782 /* ContactVC.swift in Sources */,
 				91F0ACE12255025100CE6782 /* SettingsVC.swift in Sources */,
 				9124FDC42258913300151834 /* SearchingView.swift in Sources */,
+				B14A7BAF225B43D50027E540 /* StringExtension.swift in Sources */,
 				91F0ACD92255020000CE6782 /* FavouriteVC.swift in Sources */,
 				91F0ACD7225501E200CE6782 /* BaseViewController.swift in Sources */,
+				B14A7BB1225B5A9F0027E540 /* ContactLabelModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

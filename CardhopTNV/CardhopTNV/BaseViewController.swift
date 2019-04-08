@@ -30,7 +30,9 @@ class BaseViewController: UIViewController {
                                        selector: #selector(changeBgView),
                                        name: .appBgMode,
                                        object: nil)
-        SimpleFunction.getContacts()
+        let aa = SimpleFunction.getContacts()
+        
+        print("")
     }
     
     override func didReceiveMemoryWarning() {
