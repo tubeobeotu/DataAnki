@@ -30,9 +30,6 @@ class BaseViewController: UIViewController {
                                        selector: #selector(changeBgView),
                                        name: .appBgMode,
                                        object: nil)
-        AppPreference.sharedInstance.contacts = SimpleFunction.getContacts()
-        let cc = AppPreference.sharedInstance
-        print("")
     }
     
     override func didReceiveMemoryWarning() {

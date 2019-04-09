@@ -9,8 +9,121 @@
 import Foundation
 import UIKit
 enum AppBgMode:Int {
-    case Dark = 0
-    case White = 1
+    case Default = 0
+    case Dark = 1
+    case White = 2
+    
+    var text: String{
+        get{
+            switch(self){
+            case .Default: return "Default"
+            case .Dark: return "Dark"
+            case .White: return "White"
+            }
+        }
+    }
+    var contentGuild: String{
+        get{
+            switch(self){
+            case .Default: return "Dark list and light contact cards."
+            case .Dark: return "Dark lit and dark contact cards"
+            case .White: return "Light list and light contact cards."
+            }
+        }
+    }
+    var contentGuildColor: UIColor{
+        get{
+            switch(self){
+            case .Default: return UIColor.lightGray
+            case .Dark: return UIColor.lightGray
+            case .White: return UIColor.init(rgb: 0x38393B)
+            }
+        }
+    }
+    var sectionBgColor: UIColor{
+        get{
+            switch(self){
+            case .Default: return UIColor.black
+            case .Dark: return UIColor.black
+            case .White: return UIColor.init(rgb: 0xEDEDED)
+            }
+        }
+    }
+    
+    var bgColor: UIColor{
+        get{
+            switch(self){
+            case .Default: return UIColor.black
+            case .Dark: return UIColor.black
+            case .White: return UIColor.init(rgb: 0xF5F8F8)
+            }
+        }
+    }
+    
+    var sectionTextColor: UIColor{
+        get{
+            switch(self){
+            case .Default: return UIColor.white
+            case .Dark: return UIColor.white
+            case .White: return UIColor.lightGray
+            }
+        }
+    }
+    var cellTitleTextColor: UIColor{
+        get{
+            switch(self){
+            case .Default: return UIColor.white
+            case .Dark: return UIColor.white
+            case .White: return UIColor.black
+            }
+        }
+    }
+    var cellContentTextColor: UIColor{
+        get{
+            switch(self){
+            case .Default: return UIColor.lightGray
+            case .Dark: return UIColor.lightGray
+            case .White: return UIColor.lightGray
+            }
+        }
+    }
+    
+    
+    var appTitleColor: UIColor{
+        if(AppPreference.sharedInstance.appBgMode == .White){
+            return UIColor.black
+        }else{
+            return UIColor.white
+        }
+    }
+    var bgColorCell: UIColor{
+        get{
+            switch(self){
+            case .Default: return UIColor.init(rgb: 0xEBEBF1)
+            case .Dark: return UIColor.init(rgb: 0xEBEBF1)
+            case .White: return UIColor.init(rgb: 0xEBEBF1)
+            }
+        }
+    }
+    
+    var selectedThemeBg: UIColor{
+        get{
+            switch(self){
+            case .Default: return UIColor.blue
+            case .Dark: return UIColor.blue
+            case .White: return UIColor.blue
+            }
+        }
+    }
+    var unSelectedThemeBg: UIColor{
+        get{
+            switch(self){
+            case .Default: return UIColor.lightGray
+            case .Dark: return UIColor.lightGray
+            case .White: return UIColor.lightGray
+            }
+        }
+    }
 }
 final class AppPreference {
     
@@ -23,7 +136,7 @@ final class AppPreference {
     }()
     
     //MARK: Local Variable
-    var appBgMode:AppBgMode = .White {
+    var appBgMode:AppBgMode = .Default {
         didSet{
             NotificationCenter.default.post(name: .appBgMode, object: nil, userInfo: nil)
         }
@@ -42,27 +155,18 @@ final class AppPreference {
     init( array : [String]) {
         emptyStringArray = array
     }
+    func getAppBgColor(isDetailVC: Bool = false) -> UIColor{
+        if(isDetailVC == false){
+            return AppPreference.sharedInstance.appBgMode.bgColor
+        }else{
+            if(AppPreference.sharedInstance.appBgMode == .Default){
+                return AppBgMode.White.bgColor
+            }else{
+                return AppBgMode.Dark.bgColor
+            }
+        }
+    }
     
-    func getAppTitleColor() -> UIColor{
-        if(AppPreference.sharedInstance.appBgMode == .White){
-            return UIColor.black
-        }else{
-            return UIColor.white
-        }
-    }
-    func getAppBgColor() -> UIColor{
-        if(AppPreference.sharedInstance.appBgMode == .White){
-            return UIColor.init(rgb: 0xF5F8F8)
-        }else{
-            return UIColor.black
-        }
-    }
-    func getSubTitleColor() -> UIColor{
-        return UIColor.lightGray
-    }
-    func getBgColorCell() -> UIColor{
-        return UIColor.init(rgb: 0xEBEBF1)
-    }
     func getNormalCellHeight() -> CGFloat{
         return 50
     }
@@ -72,7 +176,6 @@ final class AppPreference {
         }else{
             nav?.navigationBar.barStyle = UIBarStyle.black
         }
-        
     }
 }
 

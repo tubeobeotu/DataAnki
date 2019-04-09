@@ -10,6 +10,7 @@ import UIKit
 
 class SettingsVC: BaseViewController {
 
+    @IBOutlet weak var v_Theme: ThemeView!
     override func viewDidLoad() {
         super.viewDidLoad()
 

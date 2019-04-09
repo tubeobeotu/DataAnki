@@ -36,6 +36,14 @@
 		B14A7BAF225B43D50027E540 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14A7BAE225B43D50027E540 /* StringExtension.swift */; };
 		B14A7BB1225B5A9F0027E540 /* ContactLabelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14A7BB0225B5A9F0027E540 /* ContactLabelModel.swift */; };
 		B14A7BB3225B5C370027E540 /* ContactAddressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14A7BB2225B5C370027E540 /* ContactAddressModel.swift */; };
+		B1C4AB12225C49E4006386EA /* SectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C4AB11225C49E4006386EA /* SectionView.swift */; };
+		B1C4AB14225C49EC006386EA /* SectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1C4AB13225C49EC006386EA /* SectionView.xib */; };
+		B1C4AB16225C4A27006386EA /* SettingGeneralOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C4AB15225C4A27006386EA /* SettingGeneralOptionView.swift */; };
+		B1C4AB18225C4A2F006386EA /* SettingGeneralOptionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1C4AB17225C4A2F006386EA /* SettingGeneralOptionView.xib */; };
+		B1C4AB1A225C4A51006386EA /* ThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C4AB19225C4A51006386EA /* ThemeView.swift */; };
+		B1C4AB1E225C4A69006386EA /* ThemeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1C4AB1D225C4A69006386EA /* ThemeView.xib */; };
+		B1C4AB20225C4C78006386EA /* ThemeOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C4AB1F225C4C78006386EA /* ThemeOptionView.swift */; };
+		B1C4AB22225C4C81006386EA /* ThemeOptionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1C4AB21225C4C81006386EA /* ThemeOptionView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +78,14 @@
 		B14A7BAE225B43D50027E540 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		B14A7BB0225B5A9F0027E540 /* ContactLabelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactLabelModel.swift; sourceTree = "<group>"; };
 		B14A7BB2225B5C370027E540 /* ContactAddressModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactAddressModel.swift; sourceTree = "<group>"; };
+		B1C4AB11225C49E4006386EA /* SectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionView.swift; sourceTree = "<group>"; };
+		B1C4AB13225C49EC006386EA /* SectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionView.xib; sourceTree = "<group>"; };
+		B1C4AB15225C4A27006386EA /* SettingGeneralOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingGeneralOptionView.swift; sourceTree = "<group>"; };
+		B1C4AB17225C4A2F006386EA /* SettingGeneralOptionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingGeneralOptionView.xib; sourceTree = "<group>"; };
+		B1C4AB19225C4A51006386EA /* ThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeView.swift; sourceTree = "<group>"; };
+		B1C4AB1D225C4A69006386EA /* ThemeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThemeView.xib; sourceTree = "<group>"; };
+		B1C4AB1F225C4C78006386EA /* ThemeOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeOptionView.swift; sourceTree = "<group>"; };
+		B1C4AB21225C4C81006386EA /* ThemeOptionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThemeOptionView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +131,14 @@
 				914378E92256DE9200C41F6E /* AvatarView.xib */,
 				9124FDC32258913300151834 /* SearchingView.swift */,
 				9124FDC52258913900151834 /* SearchingView.xib */,
+				B1C4AB11225C49E4006386EA /* SectionView.swift */,
+				B1C4AB13225C49EC006386EA /* SectionView.xib */,
+				B1C4AB15225C4A27006386EA /* SettingGeneralOptionView.swift */,
+				B1C4AB17225C4A2F006386EA /* SettingGeneralOptionView.xib */,
+				B1C4AB19225C4A51006386EA /* ThemeView.swift */,
+				B1C4AB1D225C4A69006386EA /* ThemeView.xib */,
+				B1C4AB1F225C4C78006386EA /* ThemeOptionView.swift */,
+				B1C4AB21225C4C81006386EA /* ThemeOptionView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -230,8 +254,12 @@
 				91F0ACE82255043900CE6782 /* ContactCell.xib in Resources */,
 				91F0ACCF2254FF9B00CE6782 /* LaunchScreen.storyboard in Resources */,
 				91F0ACCC2254FF9B00CE6782 /* Assets.xcassets in Resources */,
+				B1C4AB1E225C4A69006386EA /* ThemeView.xib in Resources */,
 				9124FDC62258913900151834 /* SearchingView.xib in Resources */,
 				914378EA2256DE9200C41F6E /* AvatarView.xib in Resources */,
+				B1C4AB18225C4A2F006386EA /* SettingGeneralOptionView.xib in Resources */,
+				B1C4AB22225C4C81006386EA /* ThemeOptionView.xib in Resources */,
+				B1C4AB14225C49EC006386EA /* SectionView.xib in Resources */,
 				91F0ACCA2254FF9B00CE6782 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -246,6 +274,7 @@
 				91F0ACE72255043900CE6782 /* ContactCell.swift in Sources */,
 				9124FDCF2258B30D00151834 /* SimpleFunction.swift in Sources */,
 				914378E82256DE8800C41F6E /* AvatarView.swift in Sources */,
+				B1C4AB16225C4A27006386EA /* SettingGeneralOptionView.swift in Sources */,
 				9124FDC22258900A00151834 /* AppPreference.swift in Sources */,
 				91F0ACC72254FF9B00CE6782 /* ViewController.swift in Sources */,
 				9124FDBD2258891600151834 /* BaseModel.swift in Sources */,
@@ -258,11 +287,14 @@
 				914378E62256DE5200C41F6E /* BaseCustomNibView.swift in Sources */,
 				B14A7BB3225B5C370027E540 /* ContactAddressModel.swift in Sources */,
 				919B0C37225C2A71004576F6 /* DateExtension.swift in Sources */,
+				B1C4AB1A225C4A51006386EA /* ThemeView.swift in Sources */,
 				919B0C35225C23A5004576F6 /* ContactFileManager.swift in Sources */,
 				91F0ACDD2255021B00CE6782 /* ContactVC.swift in Sources */,
 				91F0ACE12255025100CE6782 /* SettingsVC.swift in Sources */,
 				9124FDC42258913300151834 /* SearchingView.swift in Sources */,
 				B14A7BAF225B43D50027E540 /* StringExtension.swift in Sources */,
+				B1C4AB20225C4C78006386EA /* ThemeOptionView.swift in Sources */,
+				B1C4AB12225C49E4006386EA /* SectionView.swift in Sources */,
 				91F0ACD92255020000CE6782 /* FavouriteVC.swift in Sources */,
 				91F0ACD7225501E200CE6782 /* BaseViewController.swift in Sources */,
 				B14A7BB1225B5A9F0027E540 /* ContactLabelModel.swift in Sources */,

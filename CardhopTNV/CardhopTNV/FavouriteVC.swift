@@ -9,20 +9,13 @@
 import UIKit
 
 class FavouriteVC: BaseViewController {
-    
     var favouritedContacts = [ContactModel]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        let model = ContactModel.init()
-        
-        favouritedContacts.append(model)
-        favouritedContacts.append(model)
-        favouritedContacts.append(model)
-        
+        favouritedContacts = AppPreference.sharedInstance.favouritContacts
         self.tbl_Content?.register(UINib.init(nibName: "ContactCell", bundle: nil), forCellReuseIdentifier: "ContactCell")
         self.tbl_Content?.delegate = self
         self.tbl_Content?.dataSource = self
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {

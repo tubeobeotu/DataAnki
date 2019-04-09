@@ -9,7 +9,7 @@
 import Foundation
 import Contacts
 class SimpleFunction{
-    class func getContacts() -> [ContactModel]{
+    class func getContacts(){
         let contactStore = CNContactStore()
         var contacts = [ContactModel]()
         let keys = [
@@ -33,7 +33,7 @@ class SimpleFunction{
             print("unable to fetch contacts")
         }
         self.calculateContactsFromLocal(contacts: contacts)
-        return contacts
+        AppPreference.sharedInstance.contacts = contacts
     }
     
     class func filterContacts(input: Array<ContactModel>, keyword: String) -> Array<ContactModel>?{

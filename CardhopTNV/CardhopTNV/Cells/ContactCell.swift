@@ -18,7 +18,7 @@ class ContactCell: BaseTableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.v_Content.layer.cornerRadius = 8
-        self.v_Content.backgroundColor = AppPreference.sharedInstance.getBgColorCell()
+        self.v_Content.backgroundColor = AppPreference.sharedInstance.appBgMode.bgColorCell
         // Initialization code
     }
 
@@ -29,8 +29,8 @@ class ContactCell: BaseTableViewCell {
     }
     
     func setModelForCell(contact: ContactModel, isHideSubLabel: Bool = false){
-        self.lbl_Name.textColor = AppPreference.sharedInstance.getAppTitleColor()
-        self.lbl_SubName.textColor = AppPreference.sharedInstance.getSubTitleColor()
+        self.lbl_Name.textColor = AppPreference.sharedInstance.appBgMode.cellTitleTextColor
+        self.lbl_SubName.textColor = AppPreference.sharedInstance.appBgMode.cellContentTextColor
         self.lbl_Name.text = contact.displayName
         if(isHideSubLabel == false){
             self.lbl_SubName.text = contact.organizationName
