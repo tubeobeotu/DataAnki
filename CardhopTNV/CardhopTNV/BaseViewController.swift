@@ -30,8 +30,8 @@ class BaseViewController: UIViewController {
                                        selector: #selector(changeBgView),
                                        name: .appBgMode,
                                        object: nil)
-        let aa = SimpleFunction.getContacts()
-        
+        AppPreference.sharedInstance.contacts = SimpleFunction.getContacts()
+        let cc = AppPreference.sharedInstance
         print("")
     }
     

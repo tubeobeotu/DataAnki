@@ -28,6 +28,12 @@ final class AppPreference {
             NotificationCenter.default.post(name: .appBgMode, object: nil, userInfo: nil)
         }
     }
+    
+    var contacts = [ContactModel]()
+    var recentContacts = [ContactModel]()
+    var favouritContacts = [ContactModel]()
+    var birthdayContacts = [ContactModel]()
+    
     var emptyStringArray : [String]
     var tabbarHeight:CGFloat = 0
     let searchViewHeight:CGFloat = 40

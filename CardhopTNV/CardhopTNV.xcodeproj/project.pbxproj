@@ -17,6 +17,8 @@
 		914378E62256DE5200C41F6E /* BaseCustomNibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914378E52256DE5200C41F6E /* BaseCustomNibView.swift */; };
 		914378E82256DE8800C41F6E /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914378E72256DE8800C41F6E /* AvatarView.swift */; };
 		914378EA2256DE9200C41F6E /* AvatarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 914378E92256DE9200C41F6E /* AvatarView.xib */; };
+		919B0C35225C23A5004576F6 /* ContactFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919B0C34225C23A5004576F6 /* ContactFileManager.swift */; };
+		919B0C37225C2A71004576F6 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919B0C36225C2A71004576F6 /* DateExtension.swift */; };
 		91F0ACC52254FF9B00CE6782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F0ACC42254FF9B00CE6782 /* AppDelegate.swift */; };
 		91F0ACC72254FF9B00CE6782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F0ACC62254FF9B00CE6782 /* ViewController.swift */; };
 		91F0ACCA2254FF9B00CE6782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91F0ACC82254FF9B00CE6782 /* Main.storyboard */; };
@@ -47,6 +49,8 @@
 		914378E52256DE5200C41F6E /* BaseCustomNibView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCustomNibView.swift; sourceTree = "<group>"; };
 		914378E72256DE8800C41F6E /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		914378E92256DE9200C41F6E /* AvatarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AvatarView.xib; sourceTree = "<group>"; };
+		919B0C34225C23A5004576F6 /* ContactFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFileManager.swift; sourceTree = "<group>"; };
+		919B0C36225C2A71004576F6 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		91F0ACC12254FF9B00CE6782 /* CardhopTNV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardhopTNV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91F0ACC42254FF9B00CE6782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91F0ACC62254FF9B00CE6782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +101,8 @@
 				9124FDCC2258A32500151834 /* ColorExtension.swift */,
 				9124FDCE2258B30D00151834 /* SimpleFunction.swift */,
 				B14A7BAE225B43D50027E540 /* StringExtension.swift */,
+				919B0C34225C23A5004576F6 /* ContactFileManager.swift */,
+				919B0C36225C2A71004576F6 /* DateExtension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -251,6 +257,8 @@
 				91F0ACE4225503F000CE6782 /* BaseTableViewCell.swift in Sources */,
 				914378E62256DE5200C41F6E /* BaseCustomNibView.swift in Sources */,
 				B14A7BB3225B5C370027E540 /* ContactAddressModel.swift in Sources */,
+				919B0C37225C2A71004576F6 /* DateExtension.swift in Sources */,
+				919B0C35225C23A5004576F6 /* ContactFileManager.swift in Sources */,
 				91F0ACDD2255021B00CE6782 /* ContactVC.swift in Sources */,
 				91F0ACE12255025100CE6782 /* SettingsVC.swift in Sources */,
 				9124FDC42258913300151834 /* SearchingView.swift in Sources */,

@@ -37,6 +37,7 @@ class ContactModel: BaseModel{
         if let thumb = contact.thumbnailImageData{
             self.thumbnailImageData = thumb
         }
+        self.identifier = contact.identifier
         self.firstName = contact.givenName
         self.lastName = contact.familyName
         self.contactType = contact.contactType
@@ -51,6 +52,7 @@ class ContactModel: BaseModel{
         var contactEmail = [ContactLabelModel]()
         for email in emails{
             let tmpEmail = ContactLabelModel()
+            tmpEmail.identifier = email.identifier
             tmpEmail.isEmail = true
             tmpEmail.identifier = email.identifier
             tmpEmail.label = (email.label ?? "") as String
@@ -65,6 +67,7 @@ class ContactModel: BaseModel{
         for phone in phones{
             let tmpPhone = ContactLabelModel()
             tmpPhone.identifier = phone.identifier
+            tmpPhone.identifier = phone.identifier
             tmpPhone.label = (phone.label ?? "") as String
             tmpPhone.value = (phone.value.stringValue) as String
             contactPhone.append(tmpPhone)
@@ -76,6 +79,7 @@ class ContactModel: BaseModel{
         var contactAddresses = [ContactAddressModel]()
         for address in addresses{
             let tmpAddress = ContactAddressModel()
+            tmpAddress.identifier = address.identifier
             let cnPostAddress = address.value
             tmpAddress.label = (address.label ?? "") as String
             tmpAddress.street = cnPostAddress.street

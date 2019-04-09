@@ -32,7 +32,7 @@ class SimpleFunction{
         } catch {
             print("unable to fetch contacts")
         }
-        
+        self.calculateContactsFromLocal(contacts: contacts)
         return contacts
     }
     
@@ -54,5 +54,45 @@ class SimpleFunction{
     }
     class func getStringFromEmailLabel(label: String) -> String{
         return CNLabeledValue<NSString>.localizedString(forLabel: label)
+    }
+    
+    class func calculateContactsFromLocal(contacts: [ContactModel]){
+        let fafouritIdentifiers = ContactFileManager.getPlist(withName: ContactFileManager.FAVOURITCONTACTSFILENAME)
+        let recentIdentifiers = ContactFileManager.getPlist(withName: ContactFileManager.RECENTCONTACTSFILENAME)
+        if let fafouritIdentifiers = fafouritIdentifiers{
+            self.calculateFavouritContacts(contacts: contacts, favouritIds: fafouritIdentifiers)
+        }
+        if let recentIdentifiers = recentIdentifiers{
+            self.calculateRecentContacts(contacts: contacts, recentIds: recentIdentifiers)
+        }
+        self.calculateBirthdayContacts(contacts: contacts)
+        
+    }
+    
+    class func calculateRecentContacts(contacts: [ContactModel], recentIds: [String]){
+        AppPreference.sharedInstance.recentContacts = self.getContacts(contacts: contacts, ids: recentIds)
+    }
+    class func calculateFavouritContacts(contacts: [ContactModel], favouritIds: [String]){
+         AppPreference.sharedInstance.favouritContacts = self.getContacts(contacts: contacts, ids: favouritIds)
+    }
+    class func calculateBirthdayContacts(contacts: [ContactModel]){
+        var validedContacts = [ContactModel]()
+        let date = Date()
+        let currentDateComs = Calendar.current.dateComponents([.year, .month, .day], from: date)
+        for contact in contacts{
+            if(contact.birthday?.month == currentDateComs.month && contact.birthday?.day == currentDateComs.day){
+                validedContacts.append(contact)
+            }
+        }
+        AppPreference.sharedInstance.birthdayContacts = validedContacts
+    }
+    class func getContacts(contacts: [ContactModel], ids: [String]) -> [ContactModel]{
+        var validedContacts = [ContactModel]()
+        for contact in contacts{
+            if(ids.contains(contact.identifier)){
+                validedContacts.append(contact)
+            }
+        }
+        return validedContacts
     }
 }
