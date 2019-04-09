@@ -18,7 +18,6 @@ class ContactCell: BaseTableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.v_Content.layer.cornerRadius = 8
-        self.v_Content.backgroundColor = AppPreference.sharedInstance.getBgColorCell()
         // Initialization code
     }
 
@@ -28,14 +27,24 @@ class ContactCell: BaseTableViewCell {
         // Configure the view for the selected state
     }
     
-    func setModelForCell(contact: ContactModel, isHideSubLabel: Bool = false){
-        self.lbl_Name.textColor = AppPreference.sharedInstance.getAppTitleColor()
-        self.lbl_SubName.textColor = AppPreference.sharedInstance.getSubTitleColor()
+    func setModelForCell(contact: ContactModel, isHideSubLabel: Bool = false, canSelect: Bool = true){
+        self.v_Content.backgroundColor = AppPreference.sharedInstance.appBgMode.bgColorCell
+        self.v_Avatar.setStateColor(color: contact.stateColor)
+        self.lbl_Name.textColor = AppPreference.sharedInstance.appBgMode.cellTitleTextColor
+        self.lbl_SubName.textColor = AppPreference.sharedInstance.appBgMode.cellContentTextColor
         self.lbl_Name.text = contact.displayName
         if(isHideSubLabel == false){
             self.lbl_SubName.text = contact.organizationName
         }else{
             self.lbl_SubName.text = ""
+        }
+        
+        if(canSelect == true){
+            self.lbl_Name.alpha = 1.0
+            self.lbl_SubName.alpha = 1.0
+        }else{
+            self.lbl_Name.alpha = 0.5
+            self.lbl_SubName.alpha = 0.5
         }
         self.v_Avatar.lbl_Name.text = contact.shortName
     }

@@ -9,6 +9,7 @@
 import UIKit
 
 class BaseViewController: UIViewController {
+    
     @IBOutlet weak var tbl_Content: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,11 +31,13 @@ class BaseViewController: UIViewController {
                                        selector: #selector(changeBgView),
                                        name: .appBgMode,
                                        object: nil)
-        AppPreference.sharedInstance.contacts = SimpleFunction.getContacts()
-        let cc = AppPreference.sharedInstance
-        print("")
+        self.view.constraint(withIdentifier: "BottomConstraint")?.constant = AppPreference.sharedInstance.searchViewHeight + AppPreference.sharedInstance.marginSearchView
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.reloadModels()
+        self.reloadData()
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -47,7 +50,17 @@ class BaseViewController: UIViewController {
     }
     
     func reloadData(){
-        self.tbl_Content.reloadData()
+        self.tbl_Content?.reloadData()
+    }
+    func reloadModels(){
+        
     }
     
+}
+
+
+extension UIView {
+    func constraint(withIdentifier: String) -> NSLayoutConstraint? {
+        return self.constraints.filter { $0.identifier == withIdentifier }.first
+    }
 }

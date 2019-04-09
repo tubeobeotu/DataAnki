@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingGeneralView" customModule="CardhopTNV" customModuleProvider="target">
+            <connections>
+                <outlet property="v_AddressFormat" destination="VwF-t0-BCZ" id="RXo-2K-UsG"/>
+                <outlet property="v_DefaultCountryCode" destination="asJ-3i-Ekn" id="tsf-1h-RcK"/>
+                <outlet property="v_DisplayName" destination="XbL-xz-hPc" id="kQK-Cq-ljy"/>
+                <outlet property="v_Section" destination="WHe-2Q-H3M" id="G15-Pk-m2A"/>
+                <outlet property="v_SortBy" destination="QtF-8U-1m1" id="2o4-ql-kzk"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WHe-2Q-H3M" customClass="SectionView" customModule="CardhopTNV" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Tin-Zt-3EA">
+                    <rect key="frame" x="0.0" y="60" width="375" height="120"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QtF-8U-1m1" customClass="SettingGeneralOptionView" customModule="CardhopTNV" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XbL-xz-hPc" customClass="SettingGeneralOptionView" customModule="CardhopTNV" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="30" width="375" height="30"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VwF-t0-BCZ" customClass="SettingGeneralOptionView" customModule="CardhopTNV" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="60" width="375" height="30"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="asJ-3i-Ekn" customClass="SettingGeneralOptionView" customModule="CardhopTNV" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="90" width="375" height="30"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="120" id="ciz-39-3Dk"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="WHe-2Q-H3M" secondAttribute="trailing" id="8Vs-r9-V4I"/>
+                <constraint firstAttribute="bottom" secondItem="Tin-Zt-3EA" secondAttribute="bottom" id="BdK-v5-K9a"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Tin-Zt-3EA" secondAttribute="trailing" id="LnU-xN-bEx"/>
+                <constraint firstItem="Tin-Zt-3EA" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="RE1-t2-DKH"/>
+                <constraint firstItem="Tin-Zt-3EA" firstAttribute="top" secondItem="WHe-2Q-H3M" secondAttribute="bottom" id="exd-dT-0da"/>
+                <constraint firstItem="WHe-2Q-H3M" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="wMR-rH-17y"/>
+                <constraint firstItem="WHe-2Q-H3M" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="yBf-06-fzS"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="133.59999999999999" y="154.72263868065968"/>
+        </view>
+    </objects>
+</document>

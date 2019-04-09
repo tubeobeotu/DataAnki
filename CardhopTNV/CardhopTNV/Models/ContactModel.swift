@@ -8,6 +8,7 @@
 
 import Foundation
 import Contacts
+import UIKit
 class ContactModel: BaseModel{
     
     
@@ -19,6 +20,9 @@ class ContactModel: BaseModel{
     open var organizationName: String = ""
     open var contactType: CNContactType!
     open var thumbnailImageData: Data?
+    let colors = [UIColor.green, UIColor.red, UIColor.yellow, UIColor.blue, UIColor.brown, UIColor.cyan, UIColor.orange]
+    var stateColor:UIColor!
+    
     open var phoneNumbers: [ContactLabelModel]!
     open var emailAddresses: [ContactLabelModel]!
     open var postalAddresses: [ContactAddressModel]!
@@ -37,6 +41,8 @@ class ContactModel: BaseModel{
         if let thumb = contact.thumbnailImageData{
             self.thumbnailImageData = thumb
         }
+        let randomInt = Int(arc4random_uniform(UInt32(colors.count)))
+        self.stateColor = colors[randomInt]
         self.identifier = contact.identifier
         self.firstName = contact.givenName
         self.lastName = contact.familyName

@@ -9,7 +9,7 @@
 import Foundation
 import Contacts
 class SimpleFunction{
-    class func getContacts() -> [ContactModel]{
+    class func getContacts(){
         let contactStore = CNContactStore()
         var contacts = [ContactModel]()
         let keys = [
@@ -33,14 +33,35 @@ class SimpleFunction{
             print("unable to fetch contacts")
         }
         self.calculateContactsFromLocal(contacts: contacts)
-        return contacts
+        AppPreference.sharedInstance.contacts = contacts
     }
     
     class func filterContacts(input: Array<ContactModel>, keyword: String) -> Array<ContactModel>?{
         //1 OBJECT
-        let resultPredicate = NSPredicate(format: "displayName contains[cd] %@ OR organizationName", keyword)
-        let searchResults = (input as NSArray).filtered(using: resultPredicate)
-        return searchResults as? Array<ContactModel>
+//        let resultPredicate = NSPredicate(format: "firstName = 'Robert'")
+//        let searchResults = (input as NSArray).filtered(using: resultPredicate)
+        return input.filter { $0.displayName.lowercased().contains(keyword.lowercased())}
+//         || $0.organizationName.lowercased().contains(keyword.lowercased())
+    }
+    class func filterContacts(input: Array<ContactModel>, beginWith keyword: String) -> Array<ContactModel>?{
+        return input.filter { $0.displayName.lowercased().hasPrefix(keyword.lowercased()) }
+    }
+    class func checkContainContacts(input: Array<ContactModel>, beginWith keyword: String) -> Bool{
+        for contact in input{
+            if(contact.displayName.lowercased().hasPrefix(keyword.lowercased())){
+                return true
+            }
+        }
+        return false
+    }
+    
+    class func checkContactInList(contact: ContactModel, contacts:[ContactModel]) -> Bool{
+        for tmpContact in contacts{
+            if(tmpContact.identifier == contact.identifier){
+                return true
+            }
+        }
+        return false
     }
     
     class func getListNumberLabels() -> [String]{
@@ -55,6 +76,27 @@ class SimpleFunction{
     class func getStringFromEmailLabel(label: String) -> String{
         return CNLabeledValue<NSString>.localizedString(forLabel: label)
     }
+    
+    class func insertContactToFavourit(contact: ContactModel){
+        AppPreference.sharedInstance.favouritContacts.insert(contact, at: 0)
+    }
+    class func insertContactToRecent(contact: ContactModel){
+        if(!self.checkContactInList(contact: contact, contacts: AppPreference.sharedInstance.recentContacts)){
+            AppPreference.sharedInstance.recentContacts.insert(contact, at: 0)
+        }
+    }
+    class func insertContactToBirthDay(contact: ContactModel){
+        if(!self.checkContactInList(contact: contact, contacts: AppPreference.sharedInstance.birthdayContacts)){
+            AppPreference.sharedInstance.birthdayContacts.insert(contact, at: 0)
+        }
+    }
+    class func insertContactToContacts(contact: ContactModel){
+        if(!self.checkContactInList(contact: contact, contacts: AppPreference.sharedInstance.contacts)){
+            AppPreference.sharedInstance.contacts.insert(contact, at: 0)
+        }
+        self.insertContactToRecent(contact: contact)
+    }
+    
     
     class func calculateContactsFromLocal(contacts: [ContactModel]){
         let fafouritIdentifiers = ContactFileManager.getPlist(withName: ContactFileManager.FAVOURITCONTACTSFILENAME)
