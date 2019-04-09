@@ -53,7 +53,7 @@ open class ZoomImageView : UIScrollView, UIScrollViewDelegate {
         }
         set {
             let oldImage = imageView.image
-//            imageView.image = newValue
+            //            imageView.image = newValue
             if let value = newValue{
                 imageView.setGifImage(value, manager: gifManager, loopCount: loopCount)
             }
@@ -95,8 +95,8 @@ open class ZoomImageView : UIScrollView, UIScrollViewDelegate {
     open func scrollToCenter() {
         
         let centerOffset = CGPoint(
-            x: contentSize.width > bounds.width ? (contentSize.width / 2) - (bounds.width / 2) : 0,
-            y: contentSize.height > bounds.height ? (contentSize.height / 2) - (bounds.height / 2) : 0
+            x: contentSize.width > UIScreen.main.bounds.width ? (contentSize.width / 2) - (UIScreen.main.bounds.width / 2) : 0,
+            y: contentSize.height > UIScreen.main.bounds.height ? (contentSize.height / 2) - (UIScreen.main.bounds.height / 2) : 0
         )
         
         contentOffset = centerOffset
@@ -112,7 +112,7 @@ open class ZoomImageView : UIScrollView, UIScrollViewDelegate {
         
         backgroundColor = UIColor.clear
         delegate = self
-        imageView.contentMode = .scaleAspectFill
+        imageView.contentMode = .scaleToFill
         showsVerticalScrollIndicator = false
         showsHorizontalScrollIndicator = false
         addSubview(imageView)
@@ -130,18 +130,18 @@ open class ZoomImageView : UIScrollView, UIScrollViewDelegate {
         
         super.layoutSubviews()
         
-        if imageView.image != nil && oldSize != bounds.size {
+        if imageView.image != nil && oldSize != UIScreen.main.bounds.size {
             
             updateImageView()
-            oldSize = bounds.size
+            oldSize = UIScreen.main.bounds.size
         }
         
-        if imageView.frame.width <= bounds.width {
-            imageView.center.x = bounds.width * 0.5
+        if imageView.frame.width <= UIScreen.main.bounds.width {
+            imageView.center.x = UIScreen.main.bounds.width * 0.5
         }
         
-        if imageView.frame.height <= bounds.height {
-            imageView.center.y = bounds.height * 0.5
+        if imageView.frame.height <= UIScreen.main.bounds.height {
+            imageView.center.y = UIScreen.main.bounds.height * 0.5
         }
     }
     
@@ -189,9 +189,9 @@ open class ZoomImageView : UIScrollView, UIScrollViewDelegate {
         
         switch zoomMode {
         case .fit:
-            size = fitSize(aspectRatio: image.size, boundingSize: bounds.size)
+            size = fitSize(aspectRatio: image.size, boundingSize: UIScreen.main.bounds.size)
         case .fill:
-            size = fillSize(aspectRatio: image.size, minimumSize: bounds.size)
+            size = fillSize(aspectRatio: image.size, minimumSize: UIScreen.main.bounds.size)
         }
         
         size.height = round(size.height)
@@ -199,9 +199,9 @@ open class ZoomImageView : UIScrollView, UIScrollViewDelegate {
         
         zoomScale = 1
         maximumZoomScale = 5
-        imageView.bounds.size = size
+        imageView.bounds.size = UIScreen.main.bounds.size
         contentSize = size
-        imageView.center = ZoomImageView.contentCenter(forBoundingSize: bounds.size, contentSize: contentSize)
+        imageView.center = ZoomImageView.contentCenter(forBoundingSize: UIScreen.main.bounds.size, contentSize: contentSize)
         self.zoomView(scale: 1, with: self.center)
         
     }
@@ -233,7 +233,7 @@ open class ZoomImageView : UIScrollView, UIScrollViewDelegate {
         
         return zoomRect
     }
-
+    
     
     // MARK: - UIScrollViewDelegate
     @objc dynamic public func scrollViewDidZoom(_ scrollView: UIScrollView) {
@@ -271,3 +271,4 @@ open class ZoomImageView : UIScrollView, UIScrollViewDelegate {
         return CGPoint(x: contentSize.width * 0.5 + horizontalOffest,  y: contentSize.height * 0.5 + verticalOffset)
     }
 }
+
