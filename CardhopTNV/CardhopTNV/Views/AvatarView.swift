@@ -14,15 +14,14 @@ class AvatarView: BaseCustomNibView {
     @IBOutlet weak var lbl_Name: UILabel!
     @IBOutlet weak var v_ContainerLblName: UIView!
     
-    let colors = [UIColor.green, UIColor.red, UIColor.yellow, UIColor.blue, UIColor.brown, UIColor.cyan, UIColor.orange]
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         self.clipsToBounds = true
         self.lbl_Name.backgroundColor = UIColor.init(rgb: 0xA3A7B3)
         self.setTextColor(color: UIColor.white)
         
-        let randomInt = Int(arc4random_uniform(UInt32(colors.count)))
-        self.setStateColor(color: colors[randomInt])
+        
     }
     override func layoutSubviews() {
         super.layoutSubviews()

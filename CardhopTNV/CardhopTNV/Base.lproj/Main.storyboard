@@ -27,7 +27,7 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="T7E-vH-QPm" secondAttribute="trailing" id="3FZ-d0-cnH"/>
                             <constraint firstItem="T7E-vH-QPm" firstAttribute="leading" secondItem="Gj4-95-v2h" secondAttribute="leading" id="KIA-mC-lT1"/>
-                            <constraint firstItem="Gj4-95-v2h" firstAttribute="bottom" secondItem="T7E-vH-QPm" secondAttribute="bottom" id="k16-Dy-OdA"/>
+                            <constraint firstItem="Gj4-95-v2h" firstAttribute="bottom" secondItem="T7E-vH-QPm" secondAttribute="bottom" identifier="BottomConstraint" id="k16-Dy-OdA"/>
                             <constraint firstItem="T7E-vH-QPm" firstAttribute="top" secondItem="8rW-7R-48n" secondAttribute="top" id="tgv-E6-ez6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Gj4-95-v2h"/>
@@ -58,16 +58,24 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="XpS-06-POT" firstAttribute="bottom" secondItem="2gc-WA-oyU" secondAttribute="bottom" id="Gqi-6r-Hbr"/>
-                            <constraint firstItem="2gc-WA-oyU" firstAttribute="leading" secondItem="XpS-06-POT" secondAttribute="leading" id="UWQ-RS-Obp"/>
-                            <constraint firstItem="2gc-WA-oyU" firstAttribute="top" secondItem="XpS-06-POT" secondAttribute="top" id="WgO-5G-7Jb"/>
-                            <constraint firstItem="XpS-06-POT" firstAttribute="trailing" secondItem="2gc-WA-oyU" secondAttribute="trailing" id="Xv2-Mq-fGt"/>
+                            <constraint firstItem="2gc-WA-oyU" firstAttribute="top" secondItem="XpS-06-POT" secondAttribute="top" id="0wS-AB-bHa"/>
+                            <constraint firstItem="2gc-WA-oyU" firstAttribute="bottom" secondItem="XpS-06-POT" secondAttribute="bottom" identifier="BottomConstraint" id="1B1-3v-ZcX"/>
+                            <constraint firstItem="2gc-WA-oyU" firstAttribute="trailing" secondItem="XpS-06-POT" secondAttribute="trailing" id="4vf-hK-x0s"/>
+                            <constraint firstItem="2gc-WA-oyU" firstAttribute="leading" secondItem="XpS-06-POT" secondAttribute="leading" id="fRj-eW-jqn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XpS-06-POT"/>
                     </view>
                     <navigationItem key="navigationItem" title="Farorites" id="F7Q-Tq-Tfy">
-                        <barButtonItem key="leftBarButtonItem" title="+" id="JiX-Rx-tWQ"/>
-                        <barButtonItem key="rightBarButtonItem" title="Edit" id="R27-kQ-vta"/>
+                        <barButtonItem key="leftBarButtonItem" title="+" id="JiX-Rx-tWQ">
+                            <connections>
+                                <action selector="showSearchingVC:" destination="YRJ-mt-QmS" id="Srr-X9-wlR"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="R27-kQ-vta">
+                            <connections>
+                                <action selector="editMode:" destination="YRJ-mt-QmS" id="IY7-OF-nV2"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tbl_Content" destination="2gc-WA-oyU" id="ThG-QN-v6N"/>
@@ -107,29 +115,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rp5-MC-qfb">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="116" width="375" height="502"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="rp5-MC-qfb" firstAttribute="top" secondItem="Xy7-0N-2aT" secondAttribute="top" id="I1c-k0-NR5"/>
-                            <constraint firstItem="rp5-MC-qfb" firstAttribute="leading" secondItem="Xy7-0N-2aT" secondAttribute="leading" id="kPx-Jc-1Wh"/>
-                            <constraint firstAttribute="trailing" secondItem="rp5-MC-qfb" secondAttribute="trailing" id="rvJ-Td-3Ed"/>
-                            <constraint firstAttribute="bottom" secondItem="rp5-MC-qfb" secondAttribute="bottom" id="yz6-2p-LI3"/>
+                            <constraint firstItem="rp5-MC-qfb" firstAttribute="top" secondItem="Xy7-0N-2aT" secondAttribute="top" id="3c7-XD-xA8"/>
+                            <constraint firstItem="rp5-MC-qfb" firstAttribute="trailing" secondItem="Xy7-0N-2aT" secondAttribute="trailing" id="bZq-np-Y0r"/>
+                            <constraint firstItem="rp5-MC-qfb" firstAttribute="leading" secondItem="Xy7-0N-2aT" secondAttribute="leading" id="drb-LH-yih"/>
+                            <constraint firstItem="Xy7-0N-2aT" firstAttribute="bottom" secondItem="rp5-MC-qfb" secondAttribute="bottom" identifier="BottomConstraint" id="qmP-sF-0Kz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Xy7-0N-2aT"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Contacts" id="EpR-nx-VNd">
-                        <barButtonItem key="leftBarButtonItem" title="All Contacts" id="g3w-g4-6lA"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Contacts" id="EpR-nx-VNd"/>
                     <connections>
                         <outlet property="tbl_Content" destination="rp5-MC-qfb" id="FJS-GR-f0G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wNE-cw-BCj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1063" y="669"/>
+            <point key="canvasLocation" x="-1063.2" y="668.81559220389806"/>
         </scene>
         <!--Birthdays-->
         <scene sceneID="rua-CU-h0f">
@@ -140,16 +146,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bfJ-W1-e6n">
-                                <rect key="frame" x="0.0" y="116" width="375" height="551"/>
+                                <rect key="frame" x="0.0" y="116" width="375" height="502"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="bfJ-W1-e6n" secondAttribute="bottom" id="06d-qt-5Mx"/>
-                            <constraint firstItem="bfJ-W1-e6n" firstAttribute="top" secondItem="ywI-cU-i20" secondAttribute="top" id="13H-A8-Os9"/>
-                            <constraint firstAttribute="trailing" secondItem="bfJ-W1-e6n" secondAttribute="trailing" id="NGI-Mz-fRB"/>
-                            <constraint firstItem="bfJ-W1-e6n" firstAttribute="leading" secondItem="ywI-cU-i20" secondAttribute="leading" id="yWO-Na-wYM"/>
+                            <constraint firstItem="bfJ-W1-e6n" firstAttribute="top" secondItem="ywI-cU-i20" secondAttribute="top" id="27g-kt-Pzy"/>
+                            <constraint firstItem="ywI-cU-i20" firstAttribute="bottom" secondItem="bfJ-W1-e6n" secondAttribute="bottom" identifier="BottomConstraint" id="Pif-l9-c7O"/>
+                            <constraint firstItem="bfJ-W1-e6n" firstAttribute="leading" secondItem="ywI-cU-i20" secondAttribute="leading" id="gfd-tA-Edu"/>
+                            <constraint firstItem="bfJ-W1-e6n" firstAttribute="trailing" secondItem="ywI-cU-i20" secondAttribute="trailing" id="qy0-ZT-NB6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ywI-cU-i20"/>
                     </view>
@@ -171,16 +177,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hn1-7u-mtk" customClass="ThemeView" customModule="CardhopTNV" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="116" width="375" height="502"/>
+                                <rect key="frame" x="0.0" y="116" width="375" height="215"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="215" id="V9c-yM-1ur"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JCn-lC-c04" customClass="SettingGeneralView" customModule="CardhopTNV" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="331" width="375" height="180"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="8pu-zo-Oxv"/>
+                                </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="JCn-lC-c04" firstAttribute="top" secondItem="Hn1-7u-mtk" secondAttribute="bottom" id="2Ve-Ui-S6X"/>
                             <constraint firstItem="Hn1-7u-mtk" firstAttribute="leading" secondItem="Hp5-hR-rTR" secondAttribute="leading" id="LUu-zW-JeY"/>
-                            <constraint firstItem="Hp5-hR-rTR" firstAttribute="bottom" secondItem="Hn1-7u-mtk" secondAttribute="bottom" id="SSI-AC-Emr"/>
                             <constraint firstItem="Hn1-7u-mtk" firstAttribute="top" secondItem="Hp5-hR-rTR" secondAttribute="top" id="j4a-vY-GXx"/>
+                            <constraint firstItem="Hp5-hR-rTR" firstAttribute="trailing" secondItem="JCn-lC-c04" secondAttribute="trailing" id="qMU-Ka-nro"/>
                             <constraint firstItem="Hp5-hR-rTR" firstAttribute="trailing" secondItem="Hn1-7u-mtk" secondAttribute="trailing" id="se6-Ih-jLg"/>
+                            <constraint firstItem="JCn-lC-c04" firstAttribute="leading" secondItem="Hp5-hR-rTR" secondAttribute="leading" id="vDV-jT-WpK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Hp5-hR-rTR"/>
                     </view>
@@ -246,7 +264,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rId-hH-SHi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2889.5999999999999" y="161.91904047976013"/>
+            <point key="canvasLocation" x="-3492" y="161"/>
         </scene>
         <!--S-->
         <scene sceneID="9DE-7C-bjp">
@@ -273,8 +291,8 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0GY-9g-D7w" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="C" id="zxZ-5n-qt3"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KdP-GF-WEy">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="KdP-GF-WEy">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -285,6 +303,72 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mhd-0d-ReD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1820.8" y="712.44377811094455"/>
+        </scene>
+        <!--Contacts-->
+        <scene sceneID="BVS-5q-5L4">
+            <objects>
+                <viewController storyboardIdentifier="SearchingContactVC" id="6cR-tq-AP7" customClass="SearchingContactsVC" customModule="CardhopTNV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0az-t6-qHb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="M3D-uv-oBY">
+                                <rect key="frame" x="0.0" y="128" width="375" height="539"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="Ju3-2k-lKJ">
+                                <rect key="frame" x="8" y="64" width="359" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="T7e-XC-ZJL"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Nqf-Up-wlJ" firstAttribute="bottom" secondItem="M3D-uv-oBY" secondAttribute="bottom" id="0M4-Y1-4oD"/>
+                            <constraint firstItem="M3D-uv-oBY" firstAttribute="leading" secondItem="Nqf-Up-wlJ" secondAttribute="leading" id="EWQ-YY-nDU"/>
+                            <constraint firstItem="Ju3-2k-lKJ" firstAttribute="top" secondItem="Nqf-Up-wlJ" secondAttribute="top" id="Ian-4j-eLO"/>
+                            <constraint firstItem="M3D-uv-oBY" firstAttribute="trailing" secondItem="Nqf-Up-wlJ" secondAttribute="trailing" id="fLj-eb-tac"/>
+                            <constraint firstItem="Ju3-2k-lKJ" firstAttribute="trailing" secondItem="Nqf-Up-wlJ" secondAttribute="trailing" constant="-8" id="q2i-8M-JRc"/>
+                            <constraint firstItem="M3D-uv-oBY" firstAttribute="top" secondItem="Ju3-2k-lKJ" secondAttribute="bottom" constant="8" id="rwF-Mh-X7o"/>
+                            <constraint firstItem="Ju3-2k-lKJ" firstAttribute="leading" secondItem="Nqf-Up-wlJ" secondAttribute="leading" constant="8" id="y2x-fU-S07"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Nqf-Up-wlJ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Contacts" id="Wlh-cm-6nW">
+                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="NNV-kb-UHS">
+                            <connections>
+                                <action selector="close:" destination="6cR-tq-AP7" id="H4l-8d-6rX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="sb_Contacts" destination="Ju3-2k-lKJ" id="rr0-VT-Kz5"/>
+                        <outlet property="tbl_Content" destination="M3D-uv-oBY" id="ny4-W9-38B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8fh-si-ohM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2680.8000000000002" y="308.9955022488756"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="IlU-lq-03d">
+            <objects>
+                <navigationController storyboardIdentifier="NavSearchingContactVC" automaticallyAdjustsScrollViewInsets="NO" id="Grm-y9-zwp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="v5m-rn-vtw">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6cR-tq-AP7" kind="relationship" relationship="rootViewController" id="yCO-id-yBG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="34x-zc-kb1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1741.5999999999999" y="308.9955022488756"/>
         </scene>
     </scenes>
 </document>

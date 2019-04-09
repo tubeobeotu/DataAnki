@@ -16,13 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         SimpleFunction.getContacts()
-        let view = SearchingView.init()
-        view.viewType = .UnAction
-        view.frame = CGRect(x: 8, y: UIScreen.main.bounds.height-AppPreference.sharedInstance.searchViewHeight-AppPreference.sharedInstance.tabbarHeight, width: UIScreen.main.bounds.width - 8*2, height: AppPreference.sharedInstance.searchViewHeight)
+        AppPreference.sharedInstance.siriView = SearchingView.init()
+        AppPreference.sharedInstance.siriView.viewType = .UnAction
+        AppPreference.sharedInstance.siriView.frame = CGRect(x: 8, y: UIScreen.main.bounds.height - AppPreference.sharedInstance.searchViewHeight-AppPreference.sharedInstance.tabbarHeight - AppPreference.sharedInstance.marginSearchView, width: UIScreen.main.bounds.width - 8*2, height: AppPreference.sharedInstance.searchViewHeight)
         //window?.willRemoveSubview(view)
         window?.makeKeyAndVisible()
-        window?.insertSubview(view, at: 0)
-        window?.bringSubview(toFront: view)
+        window?.insertSubview(AppPreference.sharedInstance.siriView, at: 0)
+        window?.bringSubview(toFront: AppPreference.sharedInstance.siriView)
         
         let tabBar = UITabBar.appearance()
         tabBar.barTintColor = UIColor.clear
@@ -47,6 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
+        SimpleFunction.getContacts()
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     }
 

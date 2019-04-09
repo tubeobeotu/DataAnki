@@ -32,24 +32,24 @@
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Light list and light contact cards" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dOB-rQ-Yu5">
-                    <rect key="frame" x="8" y="193.5" width="359" height="13.5"/>
+                    <rect key="frame" x="8" y="194" width="359" height="13"/>
                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                     <color key="textColor" red="0.2196078431372549" green="0.22352941176470589" blue="0.23137254901960785" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="hxi-ET-YIO">
-                    <rect key="frame" x="16" y="65" width="343" height="118.5"/>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="hxi-ET-YIO">
+                    <rect key="frame" x="16" y="65" width="343" height="121"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NCQ-Vu-MDR" customClass="ThemeOptionView" customModule="CardhopTNV" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="114.5" height="108"/>
+                            <rect key="frame" x="0.0" y="0.0" width="103.5" height="121"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6u4-Oz-SB9" customClass="ThemeOptionView" customModule="CardhopTNV" customModuleProvider="target">
-                            <rect key="frame" x="114.5" y="0.0" width="114" height="108"/>
+                            <rect key="frame" x="119.5" y="0.0" width="104" height="121"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2hu-LO-kPe" customClass="ThemeOptionView" customModule="CardhopTNV" customModuleProvider="target">
-                            <rect key="frame" x="228.5" y="0.0" width="114.5" height="108"/>
+                            <rect key="frame" x="239.5" y="0.0" width="103.5" height="121"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
                     </subviews>
@@ -60,9 +60,9 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Fds-7D-37G" secondAttribute="trailing" id="09R-aS-hdc"/>
                 <constraint firstItem="Fds-7D-37G" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="3Xf-BM-PHN"/>
                 <constraint firstItem="hxi-ET-YIO" firstAttribute="top" secondItem="Fds-7D-37G" secondAttribute="bottom" constant="5" id="DU2-ve-D9c"/>
+                <constraint firstItem="dOB-rQ-Yu5" firstAttribute="top" secondItem="hxi-ET-YIO" secondAttribute="bottom" constant="8" id="Qsv-4X-wuE"/>
                 <constraint firstItem="hxi-ET-YIO" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="Txd-HO-hX4"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="dOB-rQ-Yu5" secondAttribute="bottom" constant="8" id="Un6-aw-NYw"/>
-                <constraint firstItem="dOB-rQ-Yu5" firstAttribute="top" secondItem="hxi-ET-YIO" secondAttribute="bottom" constant="10" id="V25-iE-xOk"/>
                 <constraint firstItem="Fds-7D-37G" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="YL2-9q-omw"/>
                 <constraint firstItem="dOB-rQ-Yu5" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="aib-A7-gB1"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="dOB-rQ-Yu5" secondAttribute="trailing" constant="8" id="bUJ-V4-niu"/>

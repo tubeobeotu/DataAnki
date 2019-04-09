@@ -12,10 +12,13 @@ class FavouriteVC: BaseViewController {
     var favouritedContacts = [ContactModel]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        favouritedContacts = AppPreference.sharedInstance.favouritContacts
+        self.reloadModels()
         self.tbl_Content?.register(UINib.init(nibName: "ContactCell", bundle: nil), forCellReuseIdentifier: "ContactCell")
         self.tbl_Content?.delegate = self
         self.tbl_Content?.dataSource = self
+    }
+    override func reloadModels() {
+        favouritedContacts = AppPreference.sharedInstance.favouritContacts
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,6 +26,21 @@ class FavouriteVC: BaseViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func showSearchingVC(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let nav = storyboard.instantiateViewController(withIdentifier: "NavSearchingContactVC") as? UINavigationController{
+            if let controller = nav.viewControllers.first as? SearchingContactsVC{
+                controller.delegate = self
+                self.present(nav, animated: true, completion: nil)
+            }
+            
+            
+        }
+        
+    }
+    @IBAction func editMode(_ sender: Any) {
+    }
+    
 }
 extension FavouriteVC: UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -41,5 +59,10 @@ extension FavouriteVC: UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "ContactCell", for: indexPath) as! ContactCell
         cell.setModelForCell(contact: self.favouritedContacts[indexPath.row], isHideSubLabel: true)
         return cell
+    }
+}
+extension FavouriteVC: SearchingContactsVCDelegate{
+    func didSelectContact(contact: ContactModel) {
+        SimpleFunction.insertContactToFavourit(contact: contact)
     }
 }

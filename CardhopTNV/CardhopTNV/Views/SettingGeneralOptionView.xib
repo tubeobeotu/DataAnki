@@ -40,21 +40,32 @@
                         <constraint firstAttribute="width" constant="12" id="LeG-DP-DNU"/>
                     </constraints>
                 </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OS6-LJ-6aq">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                    <connections>
+                        <action selector="didTap:" destination="-1" eventType="touchUpInside" id="DDi-SL-lAm"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="Maz-Q7-QjR" firstAttribute="leading" secondItem="yK0-6W-pRu" secondAttribute="trailing" constant="8" id="CUd-Bu-n8G"/>
                 <constraint firstAttribute="trailing" secondItem="Maz-Q7-QjR" secondAttribute="trailing" constant="8" id="FV8-ol-Agz"/>
                 <constraint firstItem="yK0-6W-pRu" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Hm0-eP-E9B"/>
+                <constraint firstItem="OS6-LJ-6aq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Vwl-v4-TeC"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="K03-FB-uFy" secondAttribute="bottom" id="esX-Zg-QuI"/>
                 <constraint firstItem="yK0-6W-pRu" firstAttribute="leading" secondItem="K03-FB-uFy" secondAttribute="trailing" constant="8" id="fH0-Mt-qvn"/>
                 <constraint firstItem="Maz-Q7-QjR" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="faN-aB-fdj"/>
                 <constraint firstItem="K03-FB-uFy" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="k8z-6z-2yd"/>
+                <constraint firstItem="OS6-LJ-6aq" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="lWv-cX-YGo"/>
                 <constraint firstItem="K03-FB-uFy" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="nrN-C5-Zo9"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="OS6-LJ-6aq" secondAttribute="trailing" id="og4-Et-GFm"/>
+                <constraint firstItem="OS6-LJ-6aq" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="osa-q2-KzP"/>
                 <constraint firstItem="yK0-6W-pRu" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="u0u-ZZ-Y3a"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="40.799999999999997" y="46.776611694152926"/>
         </view>
     </objects>
 </document>

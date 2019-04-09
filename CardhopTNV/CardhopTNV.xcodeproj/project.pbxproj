@@ -44,6 +44,9 @@
 		B1C4AB1E225C4A69006386EA /* ThemeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1C4AB1D225C4A69006386EA /* ThemeView.xib */; };
 		B1C4AB20225C4C78006386EA /* ThemeOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C4AB1F225C4C78006386EA /* ThemeOptionView.swift */; };
 		B1C4AB22225C4C81006386EA /* ThemeOptionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1C4AB21225C4C81006386EA /* ThemeOptionView.xib */; };
+		B1C4AB24225C7D84006386EA /* SettingGeneralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C4AB23225C7D84006386EA /* SettingGeneralView.swift */; };
+		B1C4AB26225C7D8E006386EA /* SettingGeneralView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1C4AB25225C7D8E006386EA /* SettingGeneralView.xib */; };
+		B1C4AB28225C850D006386EA /* SearchingContactsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C4AB27225C850D006386EA /* SearchingContactsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +89,9 @@
 		B1C4AB1D225C4A69006386EA /* ThemeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThemeView.xib; sourceTree = "<group>"; };
 		B1C4AB1F225C4C78006386EA /* ThemeOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeOptionView.swift; sourceTree = "<group>"; };
 		B1C4AB21225C4C81006386EA /* ThemeOptionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThemeOptionView.xib; sourceTree = "<group>"; };
+		B1C4AB23225C7D84006386EA /* SettingGeneralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingGeneralView.swift; sourceTree = "<group>"; };
+		B1C4AB25225C7D8E006386EA /* SettingGeneralView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingGeneralView.xib; sourceTree = "<group>"; };
+		B1C4AB27225C850D006386EA /* SearchingContactsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchingContactsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +145,8 @@
 				B1C4AB1D225C4A69006386EA /* ThemeView.xib */,
 				B1C4AB1F225C4C78006386EA /* ThemeOptionView.swift */,
 				B1C4AB21225C4C81006386EA /* ThemeOptionView.xib */,
+				B1C4AB23225C7D84006386EA /* SettingGeneralView.swift */,
+				B1C4AB25225C7D8E006386EA /* SettingGeneralView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -172,6 +180,7 @@
 				91F0ACD82255020000CE6782 /* FavouriteVC.swift */,
 				91F0ACDA2255020E00CE6782 /* HistoryVC.swift */,
 				91F0ACDC2255021B00CE6782 /* ContactVC.swift */,
+				B1C4AB27225C850D006386EA /* SearchingContactsVC.swift */,
 				91F0ACDE2255023900CE6782 /* BirthdayVC.swift */,
 				91F0ACE02255025100CE6782 /* SettingsVC.swift */,
 				91F0ACC82254FF9B00CE6782 /* Main.storyboard */,
@@ -255,6 +264,7 @@
 				91F0ACCF2254FF9B00CE6782 /* LaunchScreen.storyboard in Resources */,
 				91F0ACCC2254FF9B00CE6782 /* Assets.xcassets in Resources */,
 				B1C4AB1E225C4A69006386EA /* ThemeView.xib in Resources */,
+				B1C4AB26225C7D8E006386EA /* SettingGeneralView.xib in Resources */,
 				9124FDC62258913900151834 /* SearchingView.xib in Resources */,
 				914378EA2256DE9200C41F6E /* AvatarView.xib in Resources */,
 				B1C4AB18225C4A2F006386EA /* SettingGeneralOptionView.xib in Resources */,
@@ -277,6 +287,7 @@
 				B1C4AB16225C4A27006386EA /* SettingGeneralOptionView.swift in Sources */,
 				9124FDC22258900A00151834 /* AppPreference.swift in Sources */,
 				91F0ACC72254FF9B00CE6782 /* ViewController.swift in Sources */,
+				B1C4AB24225C7D84006386EA /* SettingGeneralView.swift in Sources */,
 				9124FDBD2258891600151834 /* BaseModel.swift in Sources */,
 				9124FDBF2258892E00151834 /* ContactModel.swift in Sources */,
 				9124FDCD2258A32500151834 /* ColorExtension.swift in Sources */,
@@ -287,6 +298,7 @@
 				914378E62256DE5200C41F6E /* BaseCustomNibView.swift in Sources */,
 				B14A7BB3225B5C370027E540 /* ContactAddressModel.swift in Sources */,
 				919B0C37225C2A71004576F6 /* DateExtension.swift in Sources */,
+				B1C4AB28225C850D006386EA /* SearchingContactsVC.swift in Sources */,
 				B1C4AB1A225C4A51006386EA /* ThemeView.swift in Sources */,
 				919B0C35225C23A5004576F6 /* ContactFileManager.swift in Sources */,
 				91F0ACDD2255021B00CE6782 /* ContactVC.swift in Sources */,

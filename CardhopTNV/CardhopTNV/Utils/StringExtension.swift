@@ -42,4 +42,8 @@ extension String{
         }
         return (firstInitial ?? "") + lastInitial
     }
+    func isValidedString() -> Bool
+    {
+        return self.trimmingCharacters(in: .whitespacesAndNewlines).count > 0
+    }
 }

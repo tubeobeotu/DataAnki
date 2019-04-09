@@ -26,7 +26,7 @@ enum AppBgMode:Int {
         get{
             switch(self){
             case .Default: return "Dark list and light contact cards."
-            case .Dark: return "Dark lit and dark contact cards"
+            case .Dark: return "Dark list and dark contact cards"
             case .White: return "Light list and light contact cards."
             }
         }
@@ -34,8 +34,8 @@ enum AppBgMode:Int {
     var contentGuildColor: UIColor{
         get{
             switch(self){
-            case .Default: return UIColor.lightGray
-            case .Dark: return UIColor.lightGray
+            case .Default: return UIColor.init(rgb: 0x676767)
+            case .Dark: return UIColor.init(rgb: 0x676767)
             case .White: return UIColor.init(rgb: 0x38393B)
             }
         }
@@ -65,7 +65,7 @@ enum AppBgMode:Int {
             switch(self){
             case .Default: return UIColor.white
             case .Dark: return UIColor.white
-            case .White: return UIColor.lightGray
+            case .White: return UIColor.init(rgb: 0x979695)
             }
         }
     }
@@ -81,9 +81,9 @@ enum AppBgMode:Int {
     var cellContentTextColor: UIColor{
         get{
             switch(self){
-            case .Default: return UIColor.lightGray
-            case .Dark: return UIColor.lightGray
-            case .White: return UIColor.lightGray
+            case .Default: return UIColor.init(rgb: 0x979695)
+            case .Dark: return UIColor.init(rgb: 0x979695)
+            case .White: return UIColor.init(rgb: 0x979695)
             }
         }
     }
@@ -99,9 +99,9 @@ enum AppBgMode:Int {
     var bgColorCell: UIColor{
         get{
             switch(self){
-            case .Default: return UIColor.init(rgb: 0xEBEBF1)
-            case .Dark: return UIColor.init(rgb: 0xEBEBF1)
-            case .White: return UIColor.init(rgb: 0xEBEBF1)
+            case .Default: return UIColor.init(rgb: 0x1C1C1C)
+            case .Dark: return UIColor.init(rgb: 0x1C1C1C)
+            case .White: return UIColor.init(rgb: 0xEFEEEC)
             }
         }
     }
@@ -109,18 +109,18 @@ enum AppBgMode:Int {
     var selectedThemeBg: UIColor{
         get{
             switch(self){
-            case .Default: return UIColor.blue
-            case .Dark: return UIColor.blue
-            case .White: return UIColor.blue
+            case .Default: return UIColor.init(rgb: 0x0091FB)
+            case .Dark: return UIColor.init(rgb: 0x0091FB)
+            case .White: return UIColor.init(rgb: 0x0091FB)
             }
         }
     }
     var unSelectedThemeBg: UIColor{
         get{
             switch(self){
-            case .Default: return UIColor.lightGray
-            case .Dark: return UIColor.lightGray
-            case .White: return UIColor.lightGray
+            case .Default: return UIColor.init(rgb: 0x292929)
+            case .Dark: return UIColor.init(rgb: 0x292929)
+            case .White: return UIColor.init(rgb: 0xEAEAE9)
             }
         }
     }
@@ -141,7 +141,7 @@ final class AppPreference {
             NotificationCenter.default.post(name: .appBgMode, object: nil, userInfo: nil)
         }
     }
-    
+    var siriView:SearchingView!
     var contacts = [ContactModel]()
     var recentContacts = [ContactModel]()
     var favouritContacts = [ContactModel]()
@@ -149,6 +149,7 @@ final class AppPreference {
     
     var emptyStringArray : [String]
     var tabbarHeight:CGFloat = 0
+    var marginSearchView:CGFloat = 16
     let searchViewHeight:CGFloat = 40
     //MARK: Init
     

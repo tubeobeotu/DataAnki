@@ -7,17 +7,24 @@
 //
 
 import UIKit
-
+protocol SettingGeneralOptionViewDelegate{
+    func didSelectOption(type: OptionIndexType)
+}
 class SettingGeneralOptionView: BaseCustomNibView {
     @IBOutlet weak var lbl_Title: UILabel!
     @IBOutlet weak var lbl_Content: UILabel!
-    
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    var delegate:SettingGeneralOptionViewDelegate?
+    var type:OptionIndexType = .SortBy{
+        didSet{
+            self.lbl_Title.text = type.title
+        }
     }
-    */
+    func refreshUI(){
+        self.lbl_Title.textColor = AppPreference.sharedInstance.appBgMode.cellTitleTextColor
+        self.lbl_Content.textColor = AppPreference.sharedInstance.appBgMode.cellContentTextColor
+    }
 
+    @IBAction func didTap(_ sender: Any) {
+        self.delegate?.didSelectOption(type: self.type)
+    }
 }

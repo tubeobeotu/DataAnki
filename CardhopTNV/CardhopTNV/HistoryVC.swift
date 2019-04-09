@@ -12,12 +12,14 @@ class HistoryVC: BaseViewController {
     var recentsContacts = [ContactModel]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        recentsContacts = AppPreference.sharedInstance.recentContacts
+        self.reloadModels()
         self.tbl_Content?.register(UINib.init(nibName: "ContactCell", bundle: nil), forCellReuseIdentifier: "ContactCell")
         self.tbl_Content?.delegate = self
         self.tbl_Content?.dataSource = self
     }
-    
+    override func reloadModels() {
+        recentsContacts = AppPreference.sharedInstance.recentContacts
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -39,7 +41,7 @@ extension HistoryVC: UITableViewDataSource{
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ContactCell", for: indexPath) as! ContactCell
-        cell.setModelForCell(contact: self.recentsContacts[indexPath.row], isHideSubLabel: true)
+        cell.setModelForCell(contact: self.recentsContacts[indexPath.row], isHideSubLabel: false)
         return cell
     }
 }

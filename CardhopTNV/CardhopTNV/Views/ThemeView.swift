@@ -26,9 +26,13 @@ class ThemeView: BaseCustomNibView {
     }
     @objc func refreshView(){
         self.v_Section.backgroundColor = AppPreference.sharedInstance.appBgMode.sectionBgColor
+        self.v_Section.lbl_Title.textColor = AppPreference.sharedInstance.appBgMode.sectionTextColor
         self.v_Default.isSelected = AppPreference.sharedInstance.appBgMode == .Default
+        self.v_Default.mode = .Default
         self.v_Dark.isSelected = AppPreference.sharedInstance.appBgMode == .Dark
+        self.v_Dark.mode = .Dark
         self.v_Light.isSelected = AppPreference.sharedInstance.appBgMode == .White
+        self.v_Light.mode = .White
         self.lbl_Title.text = AppPreference.sharedInstance.appBgMode.contentGuild
         self.lbl_Title.textColor = AppPreference.sharedInstance.appBgMode.contentGuildColor
     }

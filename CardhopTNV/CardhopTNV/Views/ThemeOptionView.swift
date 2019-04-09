@@ -12,7 +12,11 @@ class ThemeOptionView: BaseCustomNibView {
     @IBOutlet weak var lbl_Title: UILabel!
     @IBOutlet weak var v_Bg: UIView!
     @IBOutlet weak var img_Contant: UIImageView!
-    var mode:AppBgMode = .Default
+    var mode:AppBgMode = .Default{
+        didSet{
+            self.lbl_Title.text = self.mode.text
+        }
+    }
     var isSelected = false{
         didSet{
             if(isSelected == true){
@@ -29,7 +33,6 @@ class ThemeOptionView: BaseCustomNibView {
     
     override func setupViews() {
         super.setupViews()
-        self.lbl_Title.text = self.mode.text
         self.v_Bg.layer.cornerRadius = 8
     }
     @IBAction func action(_ sender: Any) {
