@@ -9,33 +9,50 @@
 import Foundation
 import Contacts
 class SimpleFunction{
-    class func getContacts(){
+    class func getContacts() -> [ContactModel]{
         let contactStore = CNContactStore()
-        var contacts = [CNContact]()
+        var contacts = [ContactModel]()
         let keys = [
             CNContactFormatter.descriptorForRequiredKeys(for: .fullName),
             CNContactPhoneNumbersKey,
             CNContactEmailAddressesKey,
             CNContactBirthdayKey,
-            CNContactUrlAddressesKey,
-            CNContactThumbnailImageDataKey
+            CNContactPostalAddressesKey,
+            CNContactThumbnailImageDataKey,
+            CNContactOrganizationNameKey,
+            CNContactTypeKey
             ] as [Any]
         let request = CNContactFetchRequest(keysToFetch: keys as! [CNKeyDescriptor])
         do {
             try contactStore.enumerateContacts(with: request){
                 (contact, stop) in
                 // Array containing all unified contacts from everywhere
-                contacts.append(contact)
-                for phoneNumber in contact.phoneNumbers {
-                    if let number = phoneNumber.value as? CNPhoneNumber, let label = phoneNumber.label {
-                        let localizedLabel = CNLabeledValue<CNPhoneNumber>.localizedString(forLabel: label)
-                        print("\(contact.givenName) \(contact.familyName) tel:\(localizedLabel) -- \(number.stringValue), email: \(contact.emailAddresses)")
-                    }
-                }
+                contacts.append(ContactModel.init(contact: contact))
             }
-            print(contacts)
         } catch {
             print("unable to fetch contacts")
         }
+        
+        return contacts
+    }
+    
+    class func filterContacts(input: Array<ContactModel>, keyword: String) -> Array<ContactModel>?{
+        //1 OBJECT
+        let resultPredicate = NSPredicate(format: "displayName contains[cd] %@ OR organizationName", keyword)
+        let searchResults = (input as NSArray).filtered(using: resultPredicate)
+        return searchResults as? Array<ContactModel>
+    }
+    
+    class func getListNumberLabels() -> [String]{
+        return [CNLabelHome, CNLabelWork, CNLabelPhoneNumberiPhone, CNLabelPhoneNumberMobile, CNLabelPhoneNumberMain, CNLabelPhoneNumberHomeFax, CNLabelPhoneNumberWorkFax, CNLabelPhoneNumberOtherFax, CNLabelPhoneNumberPager, CNLabelOther]
+    }
+    class func getStringFromNumberLabel(label: String) -> String{
+        return CNLabeledValue<CNPhoneNumber>.localizedString(forLabel: label)
+    }
+    class func getListEmailLabels() -> [String]{
+        return [CNLabelHome, CNLabelWork, CNLabelEmailiCloud, CNLabelOther]
+    }
+    class func getStringFromEmailLabel(label: String) -> String{
+        return CNLabeledValue<NSString>.localizedString(forLabel: label)
     }
 }

@@ -9,6 +9,7 @@
 import Foundation
 
 class BaseModel: NSObject {
+    open var identifier: String = ""
     override init() {
         
     }

@@ -31,13 +31,13 @@ class ContactCell: BaseTableViewCell {
     func setModelForCell(contact: ContactModel, isHideSubLabel: Bool = false){
         self.lbl_Name.textColor = AppPreference.sharedInstance.getAppTitleColor()
         self.lbl_SubName.textColor = AppPreference.sharedInstance.getSubTitleColor()
-        self.lbl_Name.text = contact.nickname
+        self.lbl_Name.text = contact.displayName
         if(isHideSubLabel == false){
             self.lbl_SubName.text = contact.organizationName
         }else{
             self.lbl_SubName.text = ""
         }
-        self.v_Avatar.lbl_Name.text = contact.getFirstLetterName()
+        self.v_Avatar.lbl_Name.text = contact.shortName
     }
     
 }
