@@ -293,6 +293,112 @@
             </objects>
             <point key="canvasLocation" x="-3492" y="161"/>
         </scene>
+        <!--Contact DetailVC-->
+        <scene sceneID="y3N-qN-vaP">
+            <objects>
+                <viewController storyboardIdentifier="ContactDetailVC" id="xTZ-Pm-9Lp" customClass="ContactDetailVC" customModule="CardhopTNV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hEA-YS-KJO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ey0-Da-Y8W">
+                                <rect key="frame" x="0.0" y="20" width="375" height="200"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f50-dv-OlD">
+                                        <rect key="frame" x="172.5" y="-15" width="30" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="553-OP-qEb"/>
+                                            <constraint firstAttribute="height" constant="30" id="ODp-mg-wLh"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xxt-kL-mZX">
+                                        <rect key="frame" x="8" y="23" width="359" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="Eep-aN-fUl"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q4s-H1-vUu">
+                                        <rect key="frame" x="8" y="52" width="359" height="80"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="OoK-bL-bN8">
+                                                <rect key="frame" x="0.0" y="0.0" width="359" height="80"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WV1-lx-Hbo" customClass="ContactActionDetailView" customModule="CardhopTNV" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="80"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="60" id="LlP-g3-WrJ"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="30q-w6-ja2" customClass="ContactActionDetailView" customModule="CardhopTNV" customModuleProvider="target">
+                                                        <rect key="frame" x="99.5" y="0.0" width="60" height="80"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EbA-rG-lOs" customClass="ContactActionDetailView" customModule="CardhopTNV" customModuleProvider="target">
+                                                        <rect key="frame" x="199.5" y="0.0" width="60" height="80"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sXi-NO-age" customClass="ContactActionDetailView" customModule="CardhopTNV" customModuleProvider="target">
+                                                        <rect key="frame" x="299" y="0.0" width="60" height="80"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="EbA-rG-lOs" firstAttribute="width" secondItem="WV1-lx-Hbo" secondAttribute="width" id="I97-Vr-JTW"/>
+                                                    <constraint firstItem="30q-w6-ja2" firstAttribute="width" secondItem="WV1-lx-Hbo" secondAttribute="width" id="N2m-PK-Obp"/>
+                                                    <constraint firstItem="sXi-NO-age" firstAttribute="width" secondItem="WV1-lx-Hbo" secondAttribute="width" id="nje-4K-Dan"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="OoK-bL-bN8" firstAttribute="leading" secondItem="Q4s-H1-vUu" secondAttribute="leading" id="6ZY-PT-sJA"/>
+                                            <constraint firstItem="OoK-bL-bN8" firstAttribute="top" secondItem="Q4s-H1-vUu" secondAttribute="top" id="DXc-Gh-T7W"/>
+                                            <constraint firstAttribute="trailing" secondItem="OoK-bL-bN8" secondAttribute="trailing" id="FaM-4h-3Zj"/>
+                                            <constraint firstAttribute="bottom" secondItem="OoK-bL-bN8" secondAttribute="bottom" id="I0g-9v-aXv"/>
+                                            <constraint firstAttribute="height" constant="80" id="osq-Yn-Dbf"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="xxt-kL-mZX" firstAttribute="top" secondItem="f50-dv-OlD" secondAttribute="bottom" constant="8" id="7hl-mJ-N8L"/>
+                                    <constraint firstItem="xxt-kL-mZX" firstAttribute="leading" secondItem="Ey0-Da-Y8W" secondAttribute="leading" constant="8" id="HFP-0H-YkN"/>
+                                    <constraint firstAttribute="height" constant="200" id="RBa-bL-Ol2"/>
+                                    <constraint firstAttribute="trailing" secondItem="Q4s-H1-vUu" secondAttribute="trailing" constant="8" id="SrW-00-zPc"/>
+                                    <constraint firstItem="Q4s-H1-vUu" firstAttribute="top" secondItem="xxt-kL-mZX" secondAttribute="bottom" constant="8" id="YQN-Q5-MbA"/>
+                                    <constraint firstAttribute="trailing" secondItem="xxt-kL-mZX" secondAttribute="trailing" constant="8" id="ZsD-ce-dsM"/>
+                                    <constraint firstItem="f50-dv-OlD" firstAttribute="top" secondItem="Ey0-Da-Y8W" secondAttribute="top" constant="-15" id="d8R-nN-3CA"/>
+                                    <constraint firstItem="Q4s-H1-vUu" firstAttribute="leading" secondItem="Ey0-Da-Y8W" secondAttribute="leading" constant="8" id="lVN-LB-2Gn"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9WG-a8-fIc">
+                                <rect key="frame" x="0.0" y="236" width="375" height="431"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aTC-Ds-tJG" firstAttribute="trailing" secondItem="Ey0-Da-Y8W" secondAttribute="trailing" id="Cgc-fg-bSz"/>
+                            <constraint firstItem="Ey0-Da-Y8W" firstAttribute="leading" secondItem="aTC-Ds-tJG" secondAttribute="leading" id="LAW-ts-8mw"/>
+                            <constraint firstItem="f50-dv-OlD" firstAttribute="centerX" secondItem="aTC-Ds-tJG" secondAttribute="centerX" id="Yzq-JV-M5Y"/>
+                            <constraint firstItem="9WG-a8-fIc" firstAttribute="top" secondItem="Ey0-Da-Y8W" secondAttribute="bottom" constant="16" id="Zab-2u-Joo"/>
+                            <constraint firstItem="aTC-Ds-tJG" firstAttribute="trailing" secondItem="9WG-a8-fIc" secondAttribute="trailing" id="bzD-EE-LAD"/>
+                            <constraint firstItem="9WG-a8-fIc" firstAttribute="leading" secondItem="aTC-Ds-tJG" secondAttribute="leading" id="dcT-Nm-yKK"/>
+                            <constraint firstItem="aTC-Ds-tJG" firstAttribute="bottom" secondItem="9WG-a8-fIc" secondAttribute="bottom" id="fQn-m1-taQ"/>
+                            <constraint firstItem="Ey0-Da-Y8W" firstAttribute="top" secondItem="aTC-Ds-tJG" secondAttribute="top" id="isg-cx-bYf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aTC-Ds-tJG"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6nJ-rH-rIt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4888.8000000000002" y="-1053.8230884557722"/>
+        </scene>
         <!--S-->
         <scene sceneID="9DE-7C-bjp">
             <objects>
@@ -465,6 +571,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="34x-zc-kb1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1741.5999999999999" y="308.9955022488756"/>
+        </scene>
+        <!--Edit ContactVC-->
+        <scene sceneID="BAH-Ng-CBp">
+            <objects>
+                <viewController storyboardIdentifier="EditContactVC" id="GTB-lH-x4Z" customClass="EditContactVC" customModule="CardhopTNV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GwJ-Xf-82H">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="1GP-Ik-Yba"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i9h-VC-rlR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-6247" y="-801"/>
         </scene>
     </scenes>
 </document>

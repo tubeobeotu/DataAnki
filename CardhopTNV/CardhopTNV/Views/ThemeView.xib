@@ -37,12 +37,15 @@
                     <color key="textColor" red="0.2196078431372549" green="0.22352941176470589" blue="0.23137254901960785" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="hxi-ET-YIO">
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="hxi-ET-YIO">
                     <rect key="frame" x="16" y="55" width="343" height="130.5"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NCQ-Vu-MDR" customClass="ThemeOptionView" customModule="CardhopTNV" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="103.5" height="130.5"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="103.5" id="c7C-cd-Bfi"/>
+                            </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6u4-Oz-SB9" customClass="ThemeOptionView" customModule="CardhopTNV" customModuleProvider="target">
                             <rect key="frame" x="119.5" y="0.0" width="104" height="130.5"/>
@@ -53,6 +56,10 @@
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
                     </subviews>
+                    <constraints>
+                        <constraint firstItem="6u4-Oz-SB9" firstAttribute="width" secondItem="NCQ-Vu-MDR" secondAttribute="width" id="bI5-Jr-pxn"/>
+                        <constraint firstItem="2hu-LO-kPe" firstAttribute="width" secondItem="NCQ-Vu-MDR" secondAttribute="width" id="phh-J3-bNW"/>
+                    </constraints>
                 </stackView>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -36,6 +36,12 @@
 		91F24E1D225E5519001ABE9D /* SettingNormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F24E1B225E5519001ABE9D /* SettingNormalCell.swift */; };
 		91F24E1E225E5519001ABE9D /* SettingNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91F24E1C225E5519001ABE9D /* SettingNormalCell.xib */; };
 		91F24E20225E567D001ABE9D /* SettingDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F24E1F225E567D001ABE9D /* SettingDetailVC.swift */; };
+		91F24E22225E664C001ABE9D /* ContactDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F24E21225E664C001ABE9D /* ContactDetailVC.swift */; };
+		91F24E24225E6661001ABE9D /* EditContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F24E23225E6661001ABE9D /* EditContactVC.swift */; };
+		91F24E26225E67CF001ABE9D /* ContactActionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F24E25225E67CF001ABE9D /* ContactActionDetailView.swift */; };
+		91F24E28225E67D7001ABE9D /* ContactActionDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91F24E27225E67D7001ABE9D /* ContactActionDetailView.xib */; };
+		91F24E2B225E6B7E001ABE9D /* ContactDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F24E29225E6B7E001ABE9D /* ContactDetailCell.swift */; };
+		91F24E2C225E6B7E001ABE9D /* ContactDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91F24E2A225E6B7E001ABE9D /* ContactDetailCell.xib */; };
 		B14A7BAF225B43D50027E540 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14A7BAE225B43D50027E540 /* StringExtension.swift */; };
 		B14A7BB1225B5A9F0027E540 /* ContactLabelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14A7BB0225B5A9F0027E540 /* ContactLabelModel.swift */; };
 		B14A7BB3225B5C370027E540 /* ContactAddressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14A7BB2225B5C370027E540 /* ContactAddressModel.swift */; };
@@ -96,6 +102,12 @@
 		91F24E1B225E5519001ABE9D /* SettingNormalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingNormalCell.swift; sourceTree = "<group>"; };
 		91F24E1C225E5519001ABE9D /* SettingNormalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingNormalCell.xib; sourceTree = "<group>"; };
 		91F24E1F225E567D001ABE9D /* SettingDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingDetailVC.swift; sourceTree = "<group>"; };
+		91F24E21225E664C001ABE9D /* ContactDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailVC.swift; sourceTree = "<group>"; };
+		91F24E23225E6661001ABE9D /* EditContactVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditContactVC.swift; sourceTree = "<group>"; };
+		91F24E25225E67CF001ABE9D /* ContactActionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactActionDetailView.swift; sourceTree = "<group>"; };
+		91F24E27225E67D7001ABE9D /* ContactActionDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactActionDetailView.xib; sourceTree = "<group>"; };
+		91F24E29225E6B7E001ABE9D /* ContactDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailCell.swift; sourceTree = "<group>"; };
+		91F24E2A225E6B7E001ABE9D /* ContactDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactDetailCell.xib; sourceTree = "<group>"; };
 		B14A7BAE225B43D50027E540 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		B14A7BB0225B5A9F0027E540 /* ContactLabelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactLabelModel.swift; sourceTree = "<group>"; };
 		B14A7BB2225B5C370027E540 /* ContactAddressModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactAddressModel.swift; sourceTree = "<group>"; };
@@ -185,6 +197,8 @@
 				B1C4AB2D225D94F2006386EA /* SearchingGuideView.xib */,
 				B1C4AB2F225D9766006386EA /* SearchingGuideOptionView.swift */,
 				B1C4AB31225D9770006386EA /* SearchingGuideOptionView.xib */,
+				91F24E25225E67CF001ABE9D /* ContactActionDetailView.swift */,
+				91F24E27225E67D7001ABE9D /* ContactActionDetailView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -223,6 +237,8 @@
 				91F0ACE02255025100CE6782 /* SettingsVC.swift */,
 				91F24E1F225E567D001ABE9D /* SettingDetailVC.swift */,
 				B1C4AB5D225DD98C006386EA /* ContactCountryVC.swift */,
+				91F24E21225E664C001ABE9D /* ContactDetailVC.swift */,
+				91F24E23225E6661001ABE9D /* EditContactVC.swift */,
 				91F0ACC82254FF9B00CE6782 /* Main.storyboard */,
 				91F0ACCB2254FF9B00CE6782 /* Assets.xcassets */,
 				91F0ACCD2254FF9B00CE6782 /* LaunchScreen.storyboard */,
@@ -241,6 +257,8 @@
 				B1C4AB92225E016D006386EA /* CountryCell.xib */,
 				91F24E1B225E5519001ABE9D /* SettingNormalCell.swift */,
 				91F24E1C225E5519001ABE9D /* SettingNormalCell.xib */,
+				91F24E29225E6B7E001ABE9D /* ContactDetailCell.swift */,
+				91F24E2A225E6B7E001ABE9D /* ContactDetailCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -321,6 +339,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91F24E28225E67D7001ABE9D /* ContactActionDetailView.xib in Resources */,
 				B1C4AB94225E016E006386EA /* CountryCell.xib in Resources */,
 				B1C4AB32225D9770006386EA /* SearchingGuideOptionView.xib in Resources */,
 				91F0ACE82255043900CE6782 /* ContactCell.xib in Resources */,
@@ -335,6 +354,7 @@
 				B1C4AB18225C4A2F006386EA /* SettingGeneralOptionView.xib in Resources */,
 				B1C4AB22225C4C81006386EA /* ThemeOptionView.xib in Resources */,
 				91F24E1E225E5519001ABE9D /* SettingNormalCell.xib in Resources */,
+				91F24E2C225E6B7E001ABE9D /* ContactDetailCell.xib in Resources */,
 				B1C4AB14225C49EC006386EA /* SectionView.xib in Resources */,
 				91F0ACCA2254FF9B00CE6782 /* Main.storyboard in Resources */,
 			);
@@ -348,6 +368,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				91F0ACE72255043900CE6782 /* ContactCell.swift in Sources */,
+				91F24E24225E6661001ABE9D /* EditContactVC.swift in Sources */,
+				91F24E2B225E6B7E001ABE9D /* ContactDetailCell.swift in Sources */,
 				B1C4AB30225D9766006386EA /* SearchingGuideOptionView.swift in Sources */,
 				9124FDCF2258B30D00151834 /* SimpleFunction.swift in Sources */,
 				914378E82256DE8800C41F6E /* AvatarView.swift in Sources */,
@@ -355,12 +377,14 @@
 				9124FDC22258900A00151834 /* AppPreference.swift in Sources */,
 				91F0ACC72254FF9B00CE6782 /* ViewController.swift in Sources */,
 				B1C4AB24225C7D84006386EA /* SettingGeneralView.swift in Sources */,
+				91F24E22225E664C001ABE9D /* ContactDetailVC.swift in Sources */,
 				B1C4AB93225E016D006386EA /* CountryCell.swift in Sources */,
 				9124FDBD2258891600151834 /* BaseModel.swift in Sources */,
 				B1C4AB2C225D94E9006386EA /* SearchingGuideView.swift in Sources */,
 				9124FDBF2258892E00151834 /* ContactModel.swift in Sources */,
 				9124FDCD2258A32500151834 /* ColorExtension.swift in Sources */,
 				91F0ACDB2255020E00CE6782 /* HistoryVC.swift in Sources */,
+				91F24E26225E67CF001ABE9D /* ContactActionDetailView.swift in Sources */,
 				91F0ACC52254FF9B00CE6782 /* AppDelegate.swift in Sources */,
 				91F0ACDF2255023900CE6782 /* BirthdayVC.swift in Sources */,
 				91F0ACE4225503F000CE6782 /* BaseTableViewCell.swift in Sources */,
