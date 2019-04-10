@@ -44,9 +44,9 @@ extension UIView {
 import UIKit
 
 public extension UIDevice {
-//    static let defaultBuffer:CGFloat = 15
-    static let defaultBuffer:CGFloat = -10 
-    static let originalBuffer:CGFloat = 15
+//    static let defaultBuffer:CGFloat = 12
+    static let defaultBuffer:CGFloat = -10
+    static let originalBuffer:CGFloat = 12
     static let modelBufferHeight: CGFloat = {
         var systemInfo = utsname()
         uname(&systemInfo)
