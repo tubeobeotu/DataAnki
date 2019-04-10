@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		14D9917F98EB8CDDBA9BCD65 /* Pods_CardhopTNV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF0F10695C802A7625AF126C /* Pods_CardhopTNV.framework */; };
 		9124FDBD2258891600151834 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9124FDBC2258891600151834 /* BaseModel.swift */; };
 		9124FDBF2258892E00151834 /* ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9124FDBE2258892E00151834 /* ContactModel.swift */; };
 		9124FDC22258900A00151834 /* AppPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9124FDC12258900A00151834 /* AppPreference.swift */; };
@@ -55,6 +54,11 @@
 		B1C4AB34225DA912006386EA /* SearchBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C4AB33225DA912006386EA /* SearchBarExtension.swift */; };
 		B1C4AB36225DAA94006386EA /* GeneralSettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C4AB35225DAA94006386EA /* GeneralSettingModel.swift */; };
 		B1C4AB5E225DD98C006386EA /* ContactCountryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C4AB5D225DD98C006386EA /* ContactCountryVC.swift */; };
+		B1C4AB88225DF3E6006386EA /* CountryPickerView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B1C4AB81225DF3E6006386EA /* CountryPickerView.bundle */; };
+		B1C4AB90225DF650006386EA /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C4AB8F225DF650006386EA /* CountryModel.swift */; };
+		B1C4AB93225E016D006386EA /* CountryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C4AB91225E016D006386EA /* CountryCell.swift */; };
+		B1C4AB94225E016E006386EA /* CountryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1C4AB92225E016D006386EA /* CountryCell.xib */; };
+		B1C4AB96225E07A3006386EA /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C4AB95225E07A3006386EA /* UIViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -107,9 +111,11 @@
 		B1C4AB33225DA912006386EA /* SearchBarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarExtension.swift; sourceTree = "<group>"; };
 		B1C4AB35225DAA94006386EA /* GeneralSettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSettingModel.swift; sourceTree = "<group>"; };
 		B1C4AB5D225DD98C006386EA /* ContactCountryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCountryVC.swift; sourceTree = "<group>"; };
-		B8A8D79DD4B01641C204EB1B /* Pods-CardhopTNV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardhopTNV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CardhopTNV/Pods-CardhopTNV.debug.xcconfig"; sourceTree = "<group>"; };
-		D9D60A5C454590902BA6EEDC /* Pods-CardhopTNV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardhopTNV.release.xcconfig"; path = "Pods/Target Support Files/Pods-CardhopTNV/Pods-CardhopTNV.release.xcconfig"; sourceTree = "<group>"; };
-		FF0F10695C802A7625AF126C /* Pods_CardhopTNV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CardhopTNV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1C4AB81225DF3E6006386EA /* CountryPickerView.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CountryPickerView.bundle; sourceTree = "<group>"; };
+		B1C4AB8F225DF650006386EA /* CountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
+		B1C4AB91225E016D006386EA /* CountryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCell.swift; sourceTree = "<group>"; };
+		B1C4AB92225E016D006386EA /* CountryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryCell.xib; sourceTree = "<group>"; };
+		B1C4AB95225E07A3006386EA /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,30 +123,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14D9917F98EB8CDDBA9BCD65 /* Pods_CardhopTNV.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6305445518A09BB31886F2B5 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				FF0F10695C802A7625AF126C /* Pods_CardhopTNV.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		7353E662B81D26F41988466C /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				B8A8D79DD4B01641C204EB1B /* Pods-CardhopTNV.debug.xcconfig */,
-				D9D60A5C454590902BA6EEDC /* Pods-CardhopTNV.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		9124FDBB2258890F00151834 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +137,7 @@
 				B14A7BB0225B5A9F0027E540 /* ContactLabelModel.swift */,
 				B14A7BB2225B5C370027E540 /* ContactAddressModel.swift */,
 				B1C4AB35225DAA94006386EA /* GeneralSettingModel.swift */,
+				B1C4AB8F225DF650006386EA /* CountryModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -156,6 +145,7 @@
 		9124FDC022588FF600151834 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				B1C4AB7F225DF3E6006386EA /* CountryPickerView */,
 				9124FDC12258900A00151834 /* AppPreference.swift */,
 				9124FDCC2258A32500151834 /* ColorExtension.swift */,
 				9124FDCE2258B30D00151834 /* SimpleFunction.swift */,
@@ -198,8 +188,6 @@
 			children = (
 				91F0ACC32254FF9B00CE6782 /* CardhopTNV */,
 				91F0ACC22254FF9B00CE6782 /* Products */,
-				7353E662B81D26F41988466C /* Pods */,
-				6305445518A09BB31886F2B5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -242,8 +230,27 @@
 				91F0ACE3225503F000CE6782 /* BaseTableViewCell.swift */,
 				91F0ACE52255043900CE6782 /* ContactCell.swift */,
 				91F0ACE62255043900CE6782 /* ContactCell.xib */,
+				B1C4AB91225E016D006386EA /* CountryCell.swift */,
+				B1C4AB92225E016D006386EA /* CountryCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		B1C4AB7F225DF3E6006386EA /* CountryPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				B1C4AB80225DF3E6006386EA /* Assets */,
+				B1C4AB95225E07A3006386EA /* UIViewExtension.swift */,
+			);
+			path = CountryPickerView;
+			sourceTree = "<group>";
+		};
+		B1C4AB80225DF3E6006386EA /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				B1C4AB81225DF3E6006386EA /* CountryPickerView.bundle */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,11 +260,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 91F0ACD32254FF9B00CE6782 /* Build configuration list for PBXNativeTarget "CardhopTNV" */;
 			buildPhases = (
-				D7CB1B5B4EA4DEC0FF3391CB /* [CP] Check Pods Manifest.lock */,
 				91F0ACBD2254FF9B00CE6782 /* Sources */,
 				91F0ACBE2254FF9B00CE6782 /* Frameworks */,
 				91F0ACBF2254FF9B00CE6782 /* Resources */,
-				B282376DE53A67635EB91A08 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -307,6 +312,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1C4AB94225E016E006386EA /* CountryCell.xib in Resources */,
 				B1C4AB32225D9770006386EA /* SearchingGuideOptionView.xib in Resources */,
 				91F0ACE82255043900CE6782 /* ContactCell.xib in Resources */,
 				91F0ACCF2254FF9B00CE6782 /* LaunchScreen.storyboard in Resources */,
@@ -314,6 +320,7 @@
 				B1C4AB1E225C4A69006386EA /* ThemeView.xib in Resources */,
 				B1C4AB2E225D94F2006386EA /* SearchingGuideView.xib in Resources */,
 				B1C4AB26225C7D8E006386EA /* SettingGeneralView.xib in Resources */,
+				B1C4AB88225DF3E6006386EA /* CountryPickerView.bundle in Resources */,
 				9124FDC62258913900151834 /* SearchingView.xib in Resources */,
 				914378EA2256DE9200C41F6E /* AvatarView.xib in Resources */,
 				B1C4AB18225C4A2F006386EA /* SettingGeneralOptionView.xib in Resources */,
@@ -324,53 +331,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		B282376DE53A67635EB91A08 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-CardhopTNV/Pods-CardhopTNV-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/CountryPickerView/CountryPickerView.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CountryPickerView.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CardhopTNV/Pods-CardhopTNV-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D7CB1B5B4EA4DEC0FF3391CB /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CardhopTNV-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		91F0ACBD2254FF9B00CE6782 /* Sources */ = {
@@ -385,6 +345,7 @@
 				9124FDC22258900A00151834 /* AppPreference.swift in Sources */,
 				91F0ACC72254FF9B00CE6782 /* ViewController.swift in Sources */,
 				B1C4AB24225C7D84006386EA /* SettingGeneralView.swift in Sources */,
+				B1C4AB93225E016D006386EA /* CountryCell.swift in Sources */,
 				9124FDBD2258891600151834 /* BaseModel.swift in Sources */,
 				B1C4AB2C225D94E9006386EA /* SearchingGuideView.swift in Sources */,
 				9124FDBF2258892E00151834 /* ContactModel.swift in Sources */,
@@ -408,9 +369,11 @@
 				B1C4AB5E225DD98C006386EA /* ContactCountryVC.swift in Sources */,
 				B1C4AB34225DA912006386EA /* SearchBarExtension.swift in Sources */,
 				B1C4AB12225C49E4006386EA /* SectionView.swift in Sources */,
+				B1C4AB90225DF650006386EA /* CountryModel.swift in Sources */,
 				91F0ACD92255020000CE6782 /* FavouriteVC.swift in Sources */,
 				91F0ACD7225501E200CE6782 /* BaseViewController.swift in Sources */,
 				B14A7BB1225B5A9F0027E540 /* ContactLabelModel.swift in Sources */,
+				B1C4AB96225E07A3006386EA /* UIViewExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -545,7 +508,6 @@
 		};
 		91F0ACD42254FF9B00CE6782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B8A8D79DD4B01641C204EB1B /* Pods-CardhopTNV.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -561,7 +523,6 @@
 		};
 		91F0ACD52254FF9B00CE6782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D9D60A5C454590902BA6EEDC /* Pods-CardhopTNV.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

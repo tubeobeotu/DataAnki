@@ -171,40 +171,67 @@
         <!--Settings-->
         <scene sceneID="iKu-NK-AUH">
             <objects>
-                <viewController id="VVZ-ch-wDp" customClass="SettingsVC" customModule="CardhopTNV" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="VVZ-ch-wDp" customClass="SettingsVC" customModule="CardhopTNV" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4PL-Id-vaz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hn1-7u-mtk" customClass="ThemeView" customModule="CardhopTNV" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="116" width="375" height="215"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qDk-SF-tj6">
+                                <rect key="frame" x="0.0" y="116" width="375" height="502"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nQ3-mV-aik">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hn1-7u-mtk" customClass="ThemeView" customModule="CardhopTNV" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="215"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="215" id="V9c-yM-1ur"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JCn-lC-c04" customClass="SettingGeneralView" customModule="CardhopTNV" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="223" width="375" height="180"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="180" id="8pu-zo-Oxv"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="JCn-lC-c04" secondAttribute="trailing" id="1pu-gt-b3u"/>
+                                            <constraint firstItem="Hn1-7u-mtk" firstAttribute="top" secondItem="nQ3-mV-aik" secondAttribute="top" id="KC5-CK-Uql"/>
+                                            <constraint firstItem="JCn-lC-c04" firstAttribute="leading" secondItem="nQ3-mV-aik" secondAttribute="leading" id="X5y-cd-AaI"/>
+                                            <constraint firstAttribute="trailing" secondItem="Hn1-7u-mtk" secondAttribute="trailing" id="kse-00-ZeU"/>
+                                            <constraint firstItem="Hn1-7u-mtk" firstAttribute="leading" secondItem="nQ3-mV-aik" secondAttribute="leading" id="uQ0-0d-Zmz"/>
+                                            <constraint firstItem="JCn-lC-c04" firstAttribute="top" secondItem="Hn1-7u-mtk" secondAttribute="bottom" constant="8" id="w9g-g4-X22"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="215" id="V9c-yM-1ur"/>
+                                    <constraint firstItem="nQ3-mV-aik" firstAttribute="leading" secondItem="qDk-SF-tj6" secondAttribute="leading" id="6iK-ay-ofb"/>
+                                    <constraint firstAttribute="trailing" secondItem="nQ3-mV-aik" secondAttribute="trailing" id="IJv-Nf-Ap5"/>
+                                    <constraint firstItem="nQ3-mV-aik" firstAttribute="top" secondItem="qDk-SF-tj6" secondAttribute="top" id="L59-3z-QVm"/>
+                                    <constraint firstAttribute="bottom" secondItem="nQ3-mV-aik" secondAttribute="bottom" id="tae-zB-jV3"/>
                                 </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JCn-lC-c04" customClass="SettingGeneralView" customModule="CardhopTNV" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="331" width="375" height="180"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="180" id="8pu-zo-Oxv"/>
-                                </constraints>
-                            </view>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="JCn-lC-c04" firstAttribute="top" secondItem="Hn1-7u-mtk" secondAttribute="bottom" id="2Ve-Ui-S6X"/>
-                            <constraint firstItem="Hn1-7u-mtk" firstAttribute="leading" secondItem="Hp5-hR-rTR" secondAttribute="leading" id="LUu-zW-JeY"/>
-                            <constraint firstItem="Hn1-7u-mtk" firstAttribute="top" secondItem="Hp5-hR-rTR" secondAttribute="top" id="j4a-vY-GXx"/>
-                            <constraint firstItem="Hp5-hR-rTR" firstAttribute="trailing" secondItem="JCn-lC-c04" secondAttribute="trailing" id="qMU-Ka-nro"/>
-                            <constraint firstItem="Hp5-hR-rTR" firstAttribute="trailing" secondItem="Hn1-7u-mtk" secondAttribute="trailing" id="se6-Ih-jLg"/>
-                            <constraint firstItem="JCn-lC-c04" firstAttribute="leading" secondItem="Hp5-hR-rTR" secondAttribute="leading" id="vDV-jT-WpK"/>
+                            <constraint firstItem="qDk-SF-tj6" firstAttribute="leading" secondItem="4PL-Id-vaz" secondAttribute="leading" id="7iU-Fp-8ue"/>
+                            <constraint firstItem="nQ3-mV-aik" firstAttribute="height" secondItem="4PL-Id-vaz" secondAttribute="height" id="Uwm-WO-yeg"/>
+                            <constraint firstItem="nQ3-mV-aik" firstAttribute="width" secondItem="4PL-Id-vaz" secondAttribute="width" id="Ybf-4L-3Js"/>
+                            <constraint firstItem="Hp5-hR-rTR" firstAttribute="bottom" secondItem="qDk-SF-tj6" secondAttribute="bottom" id="mfZ-Z2-hST"/>
+                            <constraint firstItem="qDk-SF-tj6" firstAttribute="top" secondItem="Hp5-hR-rTR" secondAttribute="top" id="rUS-5p-cRG"/>
+                            <constraint firstAttribute="trailing" secondItem="qDk-SF-tj6" secondAttribute="trailing" id="tNe-iV-l8C"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Hp5-hR-rTR"/>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="tjA-vD-SUF"/>
                     <connections>
                         <outlet property="v_Theme" destination="Hn1-7u-mtk" id="kMR-IH-Kqk"/>
+                        <outlet property="v_settingGeneral" destination="JCn-lC-c04" id="hO6-rW-v9o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hpe-2L-bJl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -283,7 +310,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xqT-Ly-1ge" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2497.5999999999999" y="-800.59970014992507"/>
+            <point key="canvasLocation" x="-3020" y="-770"/>
         </scene>
         <!--C-->
         <scene sceneID="O7I-s4-Spd">
@@ -360,6 +387,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8fh-si-ohM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2680.8000000000002" y="308.9955022488756"/>
+        </scene>
+        <!--Contact CountryVC-->
+        <scene sceneID="b76-tC-vMq">
+            <objects>
+                <viewController storyboardIdentifier="ContactCountryVC" id="zXV-Gt-jje" customClass="ContactCountryVC" customModule="CardhopTNV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sQ8-yj-SKU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="B7p-td-MuC">
+                                <rect key="frame" x="0.0" y="28" width="375" height="639"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="B7p-td-MuC" firstAttribute="top" secondItem="uzO-nW-0b5" secondAttribute="top" constant="8" id="Rs5-nA-nBD"/>
+                            <constraint firstItem="uzO-nW-0b5" firstAttribute="bottom" secondItem="B7p-td-MuC" secondAttribute="bottom" id="W4W-x4-4Rz"/>
+                            <constraint firstAttribute="trailing" secondItem="B7p-td-MuC" secondAttribute="trailing" id="Z71-wX-a7t"/>
+                            <constraint firstItem="B7p-td-MuC" firstAttribute="leading" secondItem="uzO-nW-0b5" secondAttribute="leading" id="ase-Ke-wu5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uzO-nW-0b5"/>
+                    </view>
+                    <connections>
+                        <outlet property="tbl_Content" destination="B7p-td-MuC" id="G93-Cy-qdc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Egx-JV-Q15" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3524" y="248.72563718140933"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IlU-lq-03d">

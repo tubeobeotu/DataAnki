@@ -7,26 +7,29 @@
 //
 
 import UIKit
-import CountryPickerView
-class SettingsVC: BaseViewController {
 
+class SettingsVC: BaseViewController {
+    var isSelectType:OptionIndexType = .SortBy
     @IBOutlet weak var v_Theme: ThemeView!
-    let cpvInternal = CountryPickerView()
+
+    @IBOutlet weak var v_settingGeneral: SettingGeneralView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setupPickerCountry()
+       
+        self.v_settingGeneral.delegate = self
         // Do any additional setup after loading the view.
     }
-    func setupPickerCountry(){
-        cpvInternal.dataSource = self
-        cpvInternal.delegate = self
-        cpvInternal.textColor = AppPreference.sharedInstance.settings.appBgMode.cellTitleTextColor
+    func showPickCountryVC(){
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let vc = storyboard.instantiateViewController(withIdentifier: "ContactCountryVC") as? ContactCountryVC{
+            vc.isSelectType = self.isSelectType
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+       
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidLoad()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            self.cpvInternal.showCountriesList(from: self.navigationController!)
-        }
+       
         
     }
     override func didReceiveMemoryWarning() {
@@ -36,33 +39,15 @@ class SettingsVC: BaseViewController {
     
 
 }
-
-
-extension SettingsVC: CountryPickerViewDelegate {
-    func countryPickerView(_ countryPickerView: CountryPickerView, didSelectCountry country: Country) {
-        // Only countryPickerInternal has it's delegate set
-        let title = "Selected Country"
-        let message = "Name: \(country.name) \nCode: \(country.code) \nPhone: \(country.phoneCode)"
-        print(message)
+extension SettingsVC: SettingGeneralViewDelegate{
+    func didSelectOption(type: OptionIndexType) {
+        isSelectType = type
+        if(type == .AddressFormat){
+            self.showPickCountryVC()
+        }else if(type == .DefaultCountryCode){
+            self.showPickCountryVC()
+        }
     }
-    func countryPickerView(_ countryPickerView: CountryPickerView, willShow viewController: UITableViewController) {
-        viewController.view.backgroundColor = AppPreference.sharedInstance.getAppBgColor()
-        viewController.tableView.backgroundColor = AppPreference.sharedInstance.getAppBgColor()
-    }
-
 }
 
-extension SettingsVC: CountryPickerViewDataSource {
-    func navigationTitle(in countryPickerView: CountryPickerView) -> String? {
-        return "Select a Country"
-    }
-    
-    func searchBarPosition(in countryPickerView: CountryPickerView) -> SearchBarPosition {
-        return .hidden
-    }
-    
-    func showPhoneCodeInList(in countryPickerView: CountryPickerView) -> Bool {
-        return cpvInternal.showPhoneCodeInView 
-    }
 
-}

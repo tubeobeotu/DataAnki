@@ -66,6 +66,14 @@ extension ContactVC: UITableViewDelegate{
 }
 
 extension ContactVC: UITableViewDataSource{
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = UIView()
+        header.setupHeaderView(text: validedArrIndexSection[section])
+        return header
+    }
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 40
+    }
     func numberOfSections(in tableView: UITableView) -> Int {
         return sections.count
     }
@@ -77,34 +85,6 @@ extension ContactVC: UITableViewDataSource{
         return index
     }
     
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let header = UIView()
-        let tmpView = UIView()
-        header.addSubview(tmpView)
-        tmpView.translatesAutoresizingMaskIntoConstraints = false
-        let topTmpView = NSLayoutConstraint(item: tmpView, attribute: .top, relatedBy: .equal, toItem: header, attribute: .top, multiplier: 1, constant: 0)
-        let leftTmpView = NSLayoutConstraint(item: tmpView, attribute: .left, relatedBy: .equal, toItem: header, attribute: .left, multiplier: 1, constant: 0)
-        let bottomTmpView = NSLayoutConstraint(item: tmpView, attribute: .bottom, relatedBy: .equal, toItem: header, attribute: .bottom, multiplier: 1, constant: 0)
-        let rightTmpView = NSLayoutConstraint(item: tmpView, attribute: .right, relatedBy: .equal, toItem: header, attribute: .right, multiplier: 1, constant: 0)
-        header.addConstraints([topTmpView, leftTmpView, bottomTmpView, rightTmpView])
-        tmpView.backgroundColor = AppPreference.sharedInstance.settings.appBgMode.sectionBgColor
-        tmpView.alpha = 0.3
-        
-        let label = UILabel()
-        label.text = validedArrIndexSection[section]
-        label.textColor = AppPreference.sharedInstance.settings.appBgMode.sectionTextColor
-        label.translatesAutoresizingMaskIntoConstraints = false
-        header.addSubview(label)
-        let top = NSLayoutConstraint(item: label, attribute: .top, relatedBy: .equal, toItem: header, attribute: .top, multiplier: 1, constant: 0)
-        let left = NSLayoutConstraint(item: label, attribute: .left, relatedBy: .equal, toItem: header, attribute: .left, multiplier: 1, constant: 16)
-        let bottom = NSLayoutConstraint(item: label, attribute: .bottom, relatedBy: .equal, toItem: header, attribute: .bottom, multiplier: 1, constant: 0)
-        let right = NSLayoutConstraint(item: label, attribute: .right, relatedBy: .equal, toItem: header, attribute: .right, multiplier: 1, constant: -16)
-        header.addConstraints([top, left, bottom, right])
-        return header
-    }
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 40
-    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return sections[section].values.first?.count ?? 0

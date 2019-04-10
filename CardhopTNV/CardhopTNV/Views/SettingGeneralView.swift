@@ -28,8 +28,10 @@ enum OptionIndexType:Int{
     }
     
 }
+protocol SettingGeneralViewDelegate: SettingGeneralOptionViewDelegate{
+}
 class SettingGeneralView: BaseCustomNibView {
-    
+    var delegate:SettingGeneralViewDelegate?
     @IBOutlet weak var v_Section: SectionView!
     @IBOutlet weak var v_SortBy: SettingGeneralOptionView!
     
@@ -67,6 +69,6 @@ class SettingGeneralView: BaseCustomNibView {
 }
 extension SettingGeneralView: SettingGeneralOptionViewDelegate{
     func didSelectOption(type: OptionIndexType) {
-        print(type)
+        self.delegate?.didSelectOption(type: type)
     }
 }
