@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14D9917F98EB8CDDBA9BCD65 /* Pods_CardhopTNV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF0F10695C802A7625AF126C /* Pods_CardhopTNV.framework */; };
 		9124FDBD2258891600151834 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9124FDBC2258891600151834 /* BaseModel.swift */; };
 		9124FDBF2258892E00151834 /* ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9124FDBE2258892E00151834 /* ContactModel.swift */; };
 		9124FDC22258900A00151834 /* AppPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9124FDC12258900A00151834 /* AppPreference.swift */; };
@@ -52,6 +53,8 @@
 		B1C4AB30225D9766006386EA /* SearchingGuideOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C4AB2F225D9766006386EA /* SearchingGuideOptionView.swift */; };
 		B1C4AB32225D9770006386EA /* SearchingGuideOptionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1C4AB31225D9770006386EA /* SearchingGuideOptionView.xib */; };
 		B1C4AB34225DA912006386EA /* SearchBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C4AB33225DA912006386EA /* SearchBarExtension.swift */; };
+		B1C4AB36225DAA94006386EA /* GeneralSettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C4AB35225DAA94006386EA /* GeneralSettingModel.swift */; };
+		B1C4AB5E225DD98C006386EA /* ContactCountryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C4AB5D225DD98C006386EA /* ContactCountryVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +105,11 @@
 		B1C4AB2F225D9766006386EA /* SearchingGuideOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchingGuideOptionView.swift; sourceTree = "<group>"; };
 		B1C4AB31225D9770006386EA /* SearchingGuideOptionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchingGuideOptionView.xib; sourceTree = "<group>"; };
 		B1C4AB33225DA912006386EA /* SearchBarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarExtension.swift; sourceTree = "<group>"; };
+		B1C4AB35225DAA94006386EA /* GeneralSettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSettingModel.swift; sourceTree = "<group>"; };
+		B1C4AB5D225DD98C006386EA /* ContactCountryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCountryVC.swift; sourceTree = "<group>"; };
+		B8A8D79DD4B01641C204EB1B /* Pods-CardhopTNV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardhopTNV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CardhopTNV/Pods-CardhopTNV.debug.xcconfig"; sourceTree = "<group>"; };
+		D9D60A5C454590902BA6EEDC /* Pods-CardhopTNV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardhopTNV.release.xcconfig"; path = "Pods/Target Support Files/Pods-CardhopTNV/Pods-CardhopTNV.release.xcconfig"; sourceTree = "<group>"; };
+		FF0F10695C802A7625AF126C /* Pods_CardhopTNV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CardhopTNV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,12 +117,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14D9917F98EB8CDDBA9BCD65 /* Pods_CardhopTNV.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6305445518A09BB31886F2B5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FF0F10695C802A7625AF126C /* Pods_CardhopTNV.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7353E662B81D26F41988466C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B8A8D79DD4B01641C204EB1B /* Pods-CardhopTNV.debug.xcconfig */,
+				D9D60A5C454590902BA6EEDC /* Pods-CardhopTNV.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		9124FDBB2258890F00151834 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +148,7 @@
 				9124FDBE2258892E00151834 /* ContactModel.swift */,
 				B14A7BB0225B5A9F0027E540 /* ContactLabelModel.swift */,
 				B14A7BB2225B5C370027E540 /* ContactAddressModel.swift */,
+				B1C4AB35225DAA94006386EA /* GeneralSettingModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -171,6 +198,8 @@
 			children = (
 				91F0ACC32254FF9B00CE6782 /* CardhopTNV */,
 				91F0ACC22254FF9B00CE6782 /* Products */,
+				7353E662B81D26F41988466C /* Pods */,
+				6305445518A09BB31886F2B5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -198,6 +227,7 @@
 				B1C4AB27225C850D006386EA /* SearchingContactsVC.swift */,
 				91F0ACDE2255023900CE6782 /* BirthdayVC.swift */,
 				91F0ACE02255025100CE6782 /* SettingsVC.swift */,
+				B1C4AB5D225DD98C006386EA /* ContactCountryVC.swift */,
 				91F0ACC82254FF9B00CE6782 /* Main.storyboard */,
 				91F0ACCB2254FF9B00CE6782 /* Assets.xcassets */,
 				91F0ACCD2254FF9B00CE6782 /* LaunchScreen.storyboard */,
@@ -223,9 +253,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 91F0ACD32254FF9B00CE6782 /* Build configuration list for PBXNativeTarget "CardhopTNV" */;
 			buildPhases = (
+				D7CB1B5B4EA4DEC0FF3391CB /* [CP] Check Pods Manifest.lock */,
 				91F0ACBD2254FF9B00CE6782 /* Sources */,
 				91F0ACBE2254FF9B00CE6782 /* Frameworks */,
 				91F0ACBF2254FF9B00CE6782 /* Resources */,
+				B282376DE53A67635EB91A08 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -293,6 +325,53 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B282376DE53A67635EB91A08 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CardhopTNV/Pods-CardhopTNV-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CountryPickerView/CountryPickerView.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CountryPickerView.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CardhopTNV/Pods-CardhopTNV-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D7CB1B5B4EA4DEC0FF3391CB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CardhopTNV-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		91F0ACBD2254FF9B00CE6782 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -314,6 +393,7 @@
 				91F0ACC52254FF9B00CE6782 /* AppDelegate.swift in Sources */,
 				91F0ACDF2255023900CE6782 /* BirthdayVC.swift in Sources */,
 				91F0ACE4225503F000CE6782 /* BaseTableViewCell.swift in Sources */,
+				B1C4AB36225DAA94006386EA /* GeneralSettingModel.swift in Sources */,
 				914378E62256DE5200C41F6E /* BaseCustomNibView.swift in Sources */,
 				B14A7BB3225B5C370027E540 /* ContactAddressModel.swift in Sources */,
 				919B0C37225C2A71004576F6 /* DateExtension.swift in Sources */,
@@ -325,6 +405,7 @@
 				9124FDC42258913300151834 /* SearchingView.swift in Sources */,
 				B14A7BAF225B43D50027E540 /* StringExtension.swift in Sources */,
 				B1C4AB20225C4C78006386EA /* ThemeOptionView.swift in Sources */,
+				B1C4AB5E225DD98C006386EA /* ContactCountryVC.swift in Sources */,
 				B1C4AB34225DA912006386EA /* SearchBarExtension.swift in Sources */,
 				B1C4AB12225C49E4006386EA /* SectionView.swift in Sources */,
 				91F0ACD92255020000CE6782 /* FavouriteVC.swift in Sources */,
@@ -464,6 +545,7 @@
 		};
 		91F0ACD42254FF9B00CE6782 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8A8D79DD4B01641C204EB1B /* Pods-CardhopTNV.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -479,6 +561,7 @@
 		};
 		91F0ACD52254FF9B00CE6782 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9D60A5C454590902BA6EEDC /* Pods-CardhopTNV.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

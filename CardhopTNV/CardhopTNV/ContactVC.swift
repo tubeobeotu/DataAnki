@@ -87,12 +87,12 @@ extension ContactVC: UITableViewDataSource{
         let bottomTmpView = NSLayoutConstraint(item: tmpView, attribute: .bottom, relatedBy: .equal, toItem: header, attribute: .bottom, multiplier: 1, constant: 0)
         let rightTmpView = NSLayoutConstraint(item: tmpView, attribute: .right, relatedBy: .equal, toItem: header, attribute: .right, multiplier: 1, constant: 0)
         header.addConstraints([topTmpView, leftTmpView, bottomTmpView, rightTmpView])
-        tmpView.backgroundColor = AppPreference.sharedInstance.appBgMode.sectionBgColor
+        tmpView.backgroundColor = AppPreference.sharedInstance.settings.appBgMode.sectionBgColor
         tmpView.alpha = 0.3
         
         let label = UILabel()
         label.text = validedArrIndexSection[section]
-        label.textColor = AppPreference.sharedInstance.appBgMode.sectionTextColor
+        label.textColor = AppPreference.sharedInstance.settings.appBgMode.sectionTextColor
         label.translatesAutoresizingMaskIntoConstraints = false
         header.addSubview(label)
         let top = NSLayoutConstraint(item: label, attribute: .top, relatedBy: .equal, toItem: header, attribute: .top, multiplier: 1, constant: 0)

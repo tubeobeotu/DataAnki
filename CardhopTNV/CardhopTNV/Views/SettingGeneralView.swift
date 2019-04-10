@@ -57,8 +57,8 @@ class SettingGeneralView: BaseCustomNibView {
         refreshView()
     }
     @objc func refreshView(){
-        self.v_Section.backgroundColor = AppPreference.sharedInstance.appBgMode.sectionBgColor
-        self.v_Section.lbl_Title.textColor = AppPreference.sharedInstance.appBgMode.sectionTextColor
+        self.v_Section.backgroundColor = AppPreference.sharedInstance.settings.appBgMode.sectionBgColor
+        self.v_Section.lbl_Title.textColor = AppPreference.sharedInstance.settings.appBgMode.sectionTextColor
         self.v_SortBy.refreshUI()
         self.v_DisplayName.refreshUI()
         self.v_AddressFormat.refreshUI()

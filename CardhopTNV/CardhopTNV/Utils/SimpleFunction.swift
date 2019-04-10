@@ -190,6 +190,11 @@ class SimpleFunction{
         self.calculateBirthdayContacts(contacts: contacts)
         
     }
+    class func getSettingsFromLocal(){
+        if let settingsDict = ContactFileManager.getSettingPlist(withName: ContactFileManager.SETTINGSFILENAME){
+            AppPreference.sharedInstance.settings = GeneralSettingModel.init(dictionary: settingsDict)
+        }
+    }
     
     class func calculateRecentContacts(contacts: [ContactModel], recentIds: [String]){
         AppPreference.sharedInstance.recentContacts = self.getContacts(contacts: contacts, ids: recentIds)

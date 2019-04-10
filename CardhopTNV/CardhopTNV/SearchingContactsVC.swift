@@ -17,7 +17,7 @@ class SearchingContactsVC: ContactVC {
     @IBOutlet weak var v_Guide: SearchingGuideView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.sb_Contacts.textField?.textColor = AppPreference.sharedInstance.appBgMode.cellTitleTextColor
+        self.sb_Contacts.textField?.textColor = AppPreference.sharedInstance.settings.appBgMode.cellTitleTextColor
         self.v_Guide.isHidden = !self.isShowGuide
         self.sb_Contacts.delegate = self
         self.reloadModels()

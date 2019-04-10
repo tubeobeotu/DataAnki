@@ -49,7 +49,7 @@ class SearchingGuideView: BaseCustomNibView {
     @IBOutlet weak var v_Address: SearchingGuideOptionView!
     
     override func setupViews() {
-        self.lbl_Title.textColor = AppPreference.sharedInstance.appBgMode.sectionTextColor
+        self.lbl_Title.textColor = AppPreference.sharedInstance.settings.appBgMode.sectionTextColor
         self.v_Name.type = .Name
         self.v_Email.type = .Email
         self.v_Phone.type = .Phone

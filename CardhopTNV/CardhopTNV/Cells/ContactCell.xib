@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,7 +16,7 @@
             <rect key="frame" x="0.0" y="0.0" width="340" height="66"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="340" height="66"/>
+                <rect key="frame" x="0.0" y="0.0" width="340" height="65.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZnF-ck-3Qr">
@@ -32,10 +31,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CoK-t7-m6T">
-                                <rect key="frame" x="48" y="8.5" width="268" height="41"/>
+                                <rect key="frame" x="48" y="8.5" width="248" height="41"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4m8-lT-lNa">
-                                        <rect key="frame" x="0.0" y="0.0" width="268" height="24"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="248" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="C4V-IU-0IJ"/>
                                         </constraints>
@@ -44,7 +43,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RxK-lA-uji">
-                                        <rect key="frame" x="0.0" y="24" width="268" height="17"/>
+                                        <rect key="frame" x="0.0" y="24" width="248" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -61,14 +60,23 @@
                                     <constraint firstItem="4m8-lT-lNa" firstAttribute="top" secondItem="CoK-t7-m6T" secondAttribute="top" id="sL5-FH-4G2"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sry-QP-PCd">
+                                <rect key="frame" x="304" y="23" width="12" height="12"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="12" id="4l2-SO-MVh"/>
+                                    <constraint firstAttribute="width" constant="12" id="x5B-A0-tSN"/>
+                                </constraints>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="sry-QP-PCd" secondAttribute="trailing" constant="8" id="3i1-lX-SbL"/>
                             <constraint firstItem="9tc-Ub-YZr" firstAttribute="centerY" secondItem="ZnF-ck-3Qr" secondAttribute="centerY" id="AxB-Xu-PqJ"/>
                             <constraint firstItem="CoK-t7-m6T" firstAttribute="centerY" secondItem="ZnF-ck-3Qr" secondAttribute="centerY" id="Bt8-hI-hxE"/>
                             <constraint firstItem="CoK-t7-m6T" firstAttribute="leading" secondItem="9tc-Ub-YZr" secondAttribute="trailing" constant="10" id="Sbr-ac-HY8"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="CoK-t7-m6T" secondAttribute="trailing" id="Suq-76-23E"/>
+                            <constraint firstItem="sry-QP-PCd" firstAttribute="leading" secondItem="CoK-t7-m6T" secondAttribute="trailing" constant="8" id="bmX-d9-Uqz"/>
                             <constraint firstItem="9tc-Ub-YZr" firstAttribute="leading" secondItem="ZnF-ck-3Qr" secondAttribute="leading" constant="8" id="v0X-An-pSd"/>
+                            <constraint firstItem="sry-QP-PCd" firstAttribute="centerY" secondItem="ZnF-ck-3Qr" secondAttribute="centerY" id="wPZ-0d-25e"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -81,6 +89,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="btn_Image" destination="sry-QP-PCd" id="eXg-gg-oCX"/>
                 <outlet property="lbl_Name" destination="4m8-lT-lNa" id="dU9-80-i9g"/>
                 <outlet property="lbl_SubName" destination="RxK-lA-uji" id="StX-Xw-I4p"/>
                 <outlet property="v_Avatar" destination="9tc-Ub-YZr" id="jtd-iU-Dma"/>

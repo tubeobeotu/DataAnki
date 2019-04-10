@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Contacts
 class ContactAddressModel: BaseModel {
     private var _label: String = ""
     open var label: String {
@@ -34,5 +34,21 @@ class ContactAddressModel: BaseModel {
             return true
         }
         return false
+    }
+    
+    func getAddressString(iso: String = "") -> String{
+        let postalAddress = CNMutablePostalAddress()
+        postalAddress.street = street
+        postalAddress.postalCode = postalCode
+        postalAddress.city = city
+        postalAddress.state = state
+        postalAddress.country = country
+        if(iso == ""){
+            postalAddress.isoCountryCode = countryCode
+        }else{
+            postalAddress.isoCountryCode = iso
+        }
+        let formattedAddress = CNPostalAddressFormatter.string(from: postalAddress, style: .mailingAddress)
+        return formattedAddress
     }
 }

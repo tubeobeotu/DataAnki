@@ -20,13 +20,13 @@ class ThemeOptionView: BaseCustomNibView {
     var isSelected = false{
         didSet{
             if(isSelected == true){
-                self.lbl_Title.textColor = AppPreference.sharedInstance.appBgMode.cellTitleTextColor
+                self.lbl_Title.textColor = AppPreference.sharedInstance.settings.appBgMode.cellTitleTextColor
                 self.lbl_Title.font = UIFont.systemFont(ofSize: 14)
-                self.v_Bg.backgroundColor = AppPreference.sharedInstance.appBgMode.selectedThemeBg
+                self.v_Bg.backgroundColor = AppPreference.sharedInstance.settings.appBgMode.selectedThemeBg
             }else{
-                self.lbl_Title.textColor = AppPreference.sharedInstance.appBgMode.cellContentTextColor
+                self.lbl_Title.textColor = AppPreference.sharedInstance.settings.appBgMode.cellContentTextColor
                 self.lbl_Title.font = UIFont.boldSystemFont(ofSize: 14)
-                self.v_Bg.backgroundColor = AppPreference.sharedInstance.appBgMode.unSelectedThemeBg
+                self.v_Bg.backgroundColor = AppPreference.sharedInstance.settings.appBgMode.unSelectedThemeBg
             }
         }
     }
@@ -38,7 +38,7 @@ class ThemeOptionView: BaseCustomNibView {
     @IBAction func action(_ sender: Any) {
         self.isSelected = !isSelected
         if(isSelected){
-            AppPreference.sharedInstance.appBgMode = self.mode
+            AppPreference.sharedInstance.settings.appBgMode = self.mode
         }
         
     }

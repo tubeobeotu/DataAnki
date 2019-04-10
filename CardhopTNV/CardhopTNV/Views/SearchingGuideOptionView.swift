@@ -9,6 +9,8 @@
 import UIKit
 
 class SearchingGuideOptionView: BaseCustomNibView {
+    
+    
     var type:SearchingGuideViewType = .Name{
         didSet{
             self.lbl_Title.text = type.text
@@ -20,8 +22,8 @@ class SearchingGuideOptionView: BaseCustomNibView {
     @IBOutlet weak var lbl_Title: UILabel!
     @IBOutlet weak var img_Content: UIImageView!
     override func setupViews() {
-        self.lbl_Title.textColor = AppPreference.sharedInstance.appBgMode.cellTitleTextColor
-        self.v_Content.backgroundColor = AppPreference.sharedInstance.appBgMode.bgColorCell
+        self.lbl_Title.textColor = AppPreference.sharedInstance.settings.appBgMode.cellTitleTextColor
+        self.v_Content.backgroundColor = AppPreference.sharedInstance.settings.appBgMode.bgColorCell
         self.v_Content.layer.cornerRadius = 8
         
     }

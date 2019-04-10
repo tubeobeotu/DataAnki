@@ -10,6 +10,7 @@ import UIKit
 
 class ContactCell: BaseTableViewCell {
 
+    @IBOutlet weak var btn_Image: UIButton!
     @IBOutlet weak var v_Avatar: AvatarView!
     @IBOutlet weak var lbl_Name: UILabel!
     @IBOutlet weak var lbl_SubName: UILabel!
@@ -28,10 +29,11 @@ class ContactCell: BaseTableViewCell {
     }
     
     func setModelForCell(contact: ContactModel, isHideSubLabel: Bool = false, canSelect: Bool = true){
-        self.v_Content.backgroundColor = AppPreference.sharedInstance.appBgMode.bgColorCell
+        self.btn_Image.tintColor = AppPreference.sharedInstance.settings.appBgMode.cellTitleTextColor
+        self.v_Content.backgroundColor =  AppPreference.sharedInstance.settings.appBgMode.bgColorCell
         self.v_Avatar.setStateColor(color: contact.stateColor)
-        self.lbl_Name.textColor = AppPreference.sharedInstance.appBgMode.cellTitleTextColor
-        self.lbl_SubName.textColor = AppPreference.sharedInstance.appBgMode.cellContentTextColor
+        self.lbl_Name.textColor = AppPreference.sharedInstance.settings.appBgMode.cellTitleTextColor
+        self.lbl_SubName.textColor = AppPreference.sharedInstance.settings.appBgMode.cellContentTextColor
         self.lbl_Name.text = contact.displayName
         if(isHideSubLabel == false){
             self.lbl_SubName.text = contact.organizationName

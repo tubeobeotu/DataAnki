@@ -11,6 +11,7 @@ protocol SettingGeneralOptionViewDelegate{
     func didSelectOption(type: OptionIndexType)
 }
 class SettingGeneralOptionView: BaseCustomNibView {
+    @IBOutlet weak var btn_Image: UIButton!
     @IBOutlet weak var lbl_Title: UILabel!
     @IBOutlet weak var lbl_Content: UILabel!
     var delegate:SettingGeneralOptionViewDelegate?
@@ -20,8 +21,9 @@ class SettingGeneralOptionView: BaseCustomNibView {
         }
     }
     func refreshUI(){
-        self.lbl_Title.textColor = AppPreference.sharedInstance.appBgMode.cellTitleTextColor
-        self.lbl_Content.textColor = AppPreference.sharedInstance.appBgMode.cellContentTextColor
+        self.btn_Image.tintColor = AppPreference.sharedInstance.settings.appBgMode.cellTitleTextColor
+        self.lbl_Title.textColor =  AppPreference.sharedInstance.settings.appBgMode.cellTitleTextColor
+        self.lbl_Content.textColor = AppPreference.sharedInstance.settings.appBgMode.cellContentTextColor
     }
 
     @IBAction func didTap(_ sender: Any) {

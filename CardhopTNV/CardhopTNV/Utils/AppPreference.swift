@@ -9,10 +9,10 @@
 import Foundation
 import UIKit
 import Contacts
-enum AppBgMode:Int {
-    case Default = 0
-    case Dark = 1
-    case White = 2
+enum AppBgMode:String {
+    case Default = "0"
+    case Dark = "1"
+    case White = "2"
     
     var text: String{
         get{
@@ -92,7 +92,7 @@ enum AppBgMode:Int {
     
     
     var appTitleColor: UIColor{
-        if(AppPreference.sharedInstance.appBgMode == .White){
+        if(AppPreference.sharedInstance.settings.appBgMode == .White){
             return UIColor.black
         }else{
             return UIColor.white
@@ -127,22 +127,19 @@ enum AppBgMode:Int {
         }
     }
 }
-final class AppPreference {
+open class AppPreference {
     let contactStore = CNContactStore()
     //MARK: Shared Instance
     static let sharedInstance : AppPreference = {
         let instance = AppPreference(array: [])
         let tabBarController = UITabBarController.init()
+        instance.settings = GeneralSettingModel()
         instance.tabbarHeight = tabBarController.tabBar.frame.size.height
         return instance
     }()
     
     //MARK: Local Variable
-    var appBgMode:AppBgMode = .Default {
-        didSet{
-            NotificationCenter.default.post(name: .appBgMode, object: nil, userInfo: nil)
-        }
-    }
+    var settings:GeneralSettingModel!
     var siriView:SearchingView!
     var contacts = [ContactModel]()
     var recentContacts = [ContactModel]()
@@ -160,9 +157,9 @@ final class AppPreference {
     }
     func getAppBgColor(isDetailVC: Bool = false) -> UIColor{
         if(isDetailVC == false){
-            return AppPreference.sharedInstance.appBgMode.bgColor
+            return AppPreference.sharedInstance.settings.appBgMode.bgColor
         }else{
-            if(AppPreference.sharedInstance.appBgMode == .Default){
+            if(AppPreference.sharedInstance.settings.appBgMode == .Default){
                 return AppBgMode.White.bgColor
             }else{
                 return AppBgMode.Dark.bgColor
@@ -174,7 +171,7 @@ final class AppPreference {
         return 50
     }
     func changeNavMode(nav: UINavigationController?){
-        if(AppPreference.sharedInstance.appBgMode == .White){
+        if(AppPreference.sharedInstance.settings.appBgMode == .White){
             nav?.navigationBar.barStyle = UIBarStyle.default
         }else{
             nav?.navigationBar.barStyle = UIBarStyle.black
