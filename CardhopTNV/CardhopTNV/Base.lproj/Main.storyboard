@@ -183,17 +183,17 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hn1-7u-mtk" customClass="ThemeView" customModule="CardhopTNV" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="215"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="205"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="215" id="V9c-yM-1ur"/>
+                                                    <constraint firstAttribute="height" constant="205" id="V9c-yM-1ur"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JCn-lC-c04" customClass="SettingGeneralView" customModule="CardhopTNV" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="223" width="375" height="180"/>
+                                                <rect key="frame" x="0.0" y="213" width="375" height="170"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="180" id="8pu-zo-Oxv"/>
+                                                    <constraint firstAttribute="height" constant="170" id="8pu-zo-Oxv"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
