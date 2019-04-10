@@ -41,4 +41,18 @@ class GeneralSettingModel: BaseModel {
         dict["appBgMode"] = self.appBgMode.rawValue
         return dict
     }
+    
+    func addressFormatTitle() -> String{
+        let country = AppPreference.sharedInstance.countries.filter { (country) -> Bool in
+            country.code == self.addressFormat
+        }.first
+        return country?.name ?? ""
+    }
+    func defaultCountryTitle() -> String{
+        let country = AppPreference.sharedInstance.countries.filter { (country) -> Bool in
+            country.code == self.defaultCountryCode
+        }.first
+        
+        return "\(country?.phoneCode ?? "") (\(country?.name ?? ""))"
+    }
 }

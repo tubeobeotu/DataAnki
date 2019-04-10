@@ -27,10 +27,9 @@ class SettingsVC: BaseViewController {
         }
        
     }
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidLoad()
-       
-        
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        v_settingGeneral.refreshView()
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

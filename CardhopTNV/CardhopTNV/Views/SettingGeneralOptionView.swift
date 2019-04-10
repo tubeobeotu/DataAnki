@@ -18,6 +18,23 @@ class SettingGeneralOptionView: BaseCustomNibView {
     var type:OptionIndexType = .SortBy{
         didSet{
             self.lbl_Title.text = type.title
+            switch type {
+            case .SortBy:
+                self.lbl_Content.text = AppPreference.sharedInstance.settings.sortType
+                break
+            case .DisplayName:
+                self.lbl_Content.text = AppPreference.sharedInstance.settings.displayName
+                break
+            case .DefaultCountryCode:
+                self.lbl_Content.text = AppPreference.sharedInstance.settings.defaultCountryTitle()
+                break
+            case .AddressFormat:
+                self.lbl_Content.text = AppPreference.sharedInstance.settings.addressFormatTitle()
+                break
+            default:
+                break
+                
+            }
         }
     }
     func refreshUI(){

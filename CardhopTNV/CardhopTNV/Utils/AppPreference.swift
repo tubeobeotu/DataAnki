@@ -65,8 +65,8 @@ enum AppBgMode:String {
     var sectionTextColor: UIColor{
         get{
             switch(self){
-            case .Default: return UIColor.white
-            case .Dark: return UIColor.white
+            case .Default: return UIColor.init(rgb: 0x979695)
+            case .Dark: return UIColor.init(rgb: 0x979695)
             case .White: return UIColor.init(rgb: 0x979695)
             }
         }
@@ -166,6 +166,38 @@ open class AppPreference {
             }
         }
     }
+    
+    var countries: [CountryModel] = {
+        var countries = [CountryModel]()
+        let bundle = Bundle(for: ContactCountryVC.self)
+        guard let jsonPath = bundle.path(forResource: "CountryPickerView.bundle/Data/CountryCodes", ofType: "json"),
+            let jsonData = try? Data(contentsOf: URL(fileURLWithPath: jsonPath)) else {
+                return countries
+        }
+        
+        if let jsonObjects = (try? JSONSerialization.jsonObject(with: jsonData, options: JSONSerialization
+            .ReadingOptions.allowFragments)) as? Array<Any> {
+            
+            for jsonObject in jsonObjects {
+                
+                guard let countryObj = jsonObject as? Dictionary<String, Any> else {
+                    continue
+                }
+                
+                guard let name = countryObj["name"] as? String,
+                    let code = countryObj["code"] as? String,
+                    let phoneCode = countryObj["dial_code"] as? String else {
+                        continue
+                }
+                
+                let country = CountryModel(name: name, code: code, phoneCode: phoneCode)
+                countries.append(country)
+            }
+            
+        }
+        
+        return countries
+    }()
     
     func getNormalCellHeight() -> CGFloat{
         return 50

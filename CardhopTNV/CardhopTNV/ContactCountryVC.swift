@@ -21,37 +21,7 @@ class ContactCountryVC: BaseViewController {
            
         }
     }
-    public var countries: [CountryModel] = {
-        var countries = [CountryModel]()
-        let bundle = Bundle(for: ContactCountryVC.self)
-        guard let jsonPath = bundle.path(forResource: "CountryPickerView.bundle/Data/CountryCodes", ofType: "json"),
-            let jsonData = try? Data(contentsOf: URL(fileURLWithPath: jsonPath)) else {
-                return countries
-        }
-        
-        if let jsonObjects = (try? JSONSerialization.jsonObject(with: jsonData, options: JSONSerialization
-            .ReadingOptions.allowFragments)) as? Array<Any> {
-            
-            for jsonObject in jsonObjects {
-                
-                guard let countryObj = jsonObject as? Dictionary<String, Any> else {
-                    continue
-                }
-                
-                guard let name = countryObj["name"] as? String,
-                    let code = countryObj["code"] as? String,
-                    let phoneCode = countryObj["dial_code"] as? String else {
-                        continue
-                }
-                
-                let country = CountryModel(name: name, code: code, phoneCode: phoneCode)
-                countries.append(country)
-            }
-            
-        }
-        
-        return countries
-    }()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,7 +36,7 @@ class ContactCountryVC: BaseViewController {
         self.sections.removeAll()
         self.validedArrIndexSection.removeAll()
         for letter in arrIndexSection{
-            let tmpContacts = countries.filter { (country) -> Bool in
+            let tmpContacts = AppPreference.sharedInstance.countries.filter { (country) -> Bool in
                 return country.name.contains(letter)
             }
             if(tmpContacts.count > 0){
@@ -78,7 +48,19 @@ class ContactCountryVC: BaseViewController {
 }
 
 extension ContactCountryVC: UITableViewDelegate{
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let country = self.sections[indexPath.section].values.first{
+            if(self.isSelectType == .AddressFormat){
+                AppPreference.sharedInstance.settings.addressFormat = country[indexPath.row].code
+                
+            }else{
+                AppPreference.sharedInstance.settings.defaultCountryCode = country[indexPath.row].code
+            }
+        }
+        self.reloadData()
+        
 
+    }
     func numberOfSections(in tableView: UITableView) -> Int {
         return sections.count
     }
@@ -101,6 +83,9 @@ extension ContactCountryVC: UITableViewDelegate{
         }
         return 0
     }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 30
+    }
 }
 extension ContactCountryVC: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -112,6 +97,18 @@ extension ContactCountryVC: UITableViewDataSource{
         {
             cell.type = self.isSelectType
             cell.setupCountry(country: country[indexPath.row])
+            cell.accessoryType = .none
+            if(self.isSelectType == .AddressFormat){
+                if(country[indexPath.row].code == AppPreference.sharedInstance.settings.addressFormat){
+                    cell.accessoryType = .checkmark
+                }
+                
+            }else{
+                if(country[indexPath.row].code == AppPreference.sharedInstance.settings.defaultCountryCode){
+                    cell.accessoryType = .checkmark
+                }
+            }
+            
         }
         return cell
     }

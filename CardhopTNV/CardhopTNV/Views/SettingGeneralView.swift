@@ -44,13 +44,13 @@ class SettingGeneralView: BaseCustomNibView {
         super.setupViews()
         self.v_Section.lbl_Title.text = "GENERAL"
         self.v_SortBy.delegate = self
-        self.v_SortBy.type = .SortBy
+        
         self.v_DisplayName.delegate = self
-        self.v_DisplayName.type = .DisplayName
+        
         self.v_AddressFormat.delegate = self
-        self.v_AddressFormat.type = .AddressFormat
+        
         self.v_DefaultCountryCode.delegate = self
-        self.v_DefaultCountryCode.type = .DefaultCountryCode
+        
         let notificationCenter = NotificationCenter.default
         notificationCenter.addObserver(self,
                                        selector: #selector(refreshView),
@@ -59,6 +59,10 @@ class SettingGeneralView: BaseCustomNibView {
         refreshView()
     }
     @objc func refreshView(){
+        self.v_SortBy.type = .SortBy
+        self.v_DisplayName.type = .DisplayName
+        self.v_AddressFormat.type = .AddressFormat
+        self.v_DefaultCountryCode.type = .DefaultCountryCode
         self.v_Section.backgroundColor = AppPreference.sharedInstance.settings.appBgMode.sectionBgColor
         self.v_Section.lbl_Title.textColor = AppPreference.sharedInstance.settings.appBgMode.sectionTextColor
         self.v_SortBy.refreshUI()
