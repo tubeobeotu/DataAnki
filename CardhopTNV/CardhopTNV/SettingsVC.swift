@@ -25,7 +25,13 @@ class SettingsVC: BaseViewController {
             vc.isSelectType = self.isSelectType
             self.navigationController?.pushViewController(vc, animated: true)
         }
-       
+    }
+    func showSettingsDetail(){
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let vc = storyboard.instantiateViewController(withIdentifier: "SettingDetailVC") as? SettingDetailVC{
+            vc.type = self.isSelectType
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -41,10 +47,10 @@ class SettingsVC: BaseViewController {
 extension SettingsVC: SettingGeneralViewDelegate{
     func didSelectOption(type: OptionIndexType) {
         isSelectType = type
-        if(type == .AddressFormat){
+        if(type == .AddressFormat || type == .DefaultCountryCode){
             self.showPickCountryVC()
-        }else if(type == .DefaultCountryCode){
-            self.showPickCountryVC()
+        }else{
+            self.showSettingsDetail()
         }
     }
 }

@@ -32,6 +32,15 @@ class ContactCountryVC: BaseViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        AppPreference.sharedInstance.siriView.isHidden = true
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        AppPreference.sharedInstance.siriView.isHidden = false
+    }
+    
     func checkValidSections(){
         self.sections.removeAll()
         self.validedArrIndexSection.removeAll()

@@ -35,7 +35,7 @@ class SimpleFunction{
                     print("unable to fetch contacts")
                 }
                 self.calculateContactsFromLocal(contacts: contacts)
-                AppPreference.sharedInstance.contacts = contacts
+                
             }
         }
         
@@ -179,15 +179,24 @@ class SimpleFunction{
     
     
     class func calculateContactsFromLocal(contacts: [ContactModel]){
+        var sortedContacts:[ContactModel]!
+//        if(isFirst){
+            sortedContacts = contacts.sorted(by: { $0.displayShortField > $1.displayShortField})
+//        }else{
+//            sortedContacts = sortedContacts.reversed()
+//        }
+        
         let fafouritIdentifiers = ContactFileManager.getPlist(withName: ContactFileManager.FAVOURITCONTACTSFILENAME)
         let recentIdentifiers = ContactFileManager.getPlist(withName: ContactFileManager.RECENTCONTACTSFILENAME)
         if let fafouritIdentifiers = fafouritIdentifiers{
-            self.calculateFavouritContacts(contacts: contacts, favouritIds: fafouritIdentifiers)
+            self.calculateFavouritContacts(contacts: sortedContacts, favouritIds: fafouritIdentifiers)
         }
         if let recentIdentifiers = recentIdentifiers{
-            self.calculateRecentContacts(contacts: contacts, recentIds: recentIdentifiers)
+            self.calculateRecentContacts(contacts: sortedContacts, recentIds: recentIdentifiers)
         }
-        self.calculateBirthdayContacts(contacts: contacts)
+        self.calculateBirthdayContacts(contacts: sortedContacts)
+        
+        AppPreference.sharedInstance.contacts = sortedContacts
         
     }
     class func getSettingsFromLocal(){

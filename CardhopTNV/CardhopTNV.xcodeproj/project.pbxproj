@@ -33,6 +33,9 @@
 		91F0ACE4225503F000CE6782 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F0ACE3225503F000CE6782 /* BaseTableViewCell.swift */; };
 		91F0ACE72255043900CE6782 /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F0ACE52255043900CE6782 /* ContactCell.swift */; };
 		91F0ACE82255043900CE6782 /* ContactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91F0ACE62255043900CE6782 /* ContactCell.xib */; };
+		91F24E1D225E5519001ABE9D /* SettingNormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F24E1B225E5519001ABE9D /* SettingNormalCell.swift */; };
+		91F24E1E225E5519001ABE9D /* SettingNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91F24E1C225E5519001ABE9D /* SettingNormalCell.xib */; };
+		91F24E20225E567D001ABE9D /* SettingDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F24E1F225E567D001ABE9D /* SettingDetailVC.swift */; };
 		B14A7BAF225B43D50027E540 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14A7BAE225B43D50027E540 /* StringExtension.swift */; };
 		B14A7BB1225B5A9F0027E540 /* ContactLabelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14A7BB0225B5A9F0027E540 /* ContactLabelModel.swift */; };
 		B14A7BB3225B5C370027E540 /* ContactAddressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14A7BB2225B5C370027E540 /* ContactAddressModel.swift */; };
@@ -90,6 +93,9 @@
 		91F0ACE3225503F000CE6782 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		91F0ACE52255043900CE6782 /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
 		91F0ACE62255043900CE6782 /* ContactCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactCell.xib; sourceTree = "<group>"; };
+		91F24E1B225E5519001ABE9D /* SettingNormalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingNormalCell.swift; sourceTree = "<group>"; };
+		91F24E1C225E5519001ABE9D /* SettingNormalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingNormalCell.xib; sourceTree = "<group>"; };
+		91F24E1F225E567D001ABE9D /* SettingDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingDetailVC.swift; sourceTree = "<group>"; };
 		B14A7BAE225B43D50027E540 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		B14A7BB0225B5A9F0027E540 /* ContactLabelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactLabelModel.swift; sourceTree = "<group>"; };
 		B14A7BB2225B5C370027E540 /* ContactAddressModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactAddressModel.swift; sourceTree = "<group>"; };
@@ -215,6 +221,7 @@
 				B1C4AB27225C850D006386EA /* SearchingContactsVC.swift */,
 				91F0ACDE2255023900CE6782 /* BirthdayVC.swift */,
 				91F0ACE02255025100CE6782 /* SettingsVC.swift */,
+				91F24E1F225E567D001ABE9D /* SettingDetailVC.swift */,
 				B1C4AB5D225DD98C006386EA /* ContactCountryVC.swift */,
 				91F0ACC82254FF9B00CE6782 /* Main.storyboard */,
 				91F0ACCB2254FF9B00CE6782 /* Assets.xcassets */,
@@ -232,6 +239,8 @@
 				91F0ACE62255043900CE6782 /* ContactCell.xib */,
 				B1C4AB91225E016D006386EA /* CountryCell.swift */,
 				B1C4AB92225E016D006386EA /* CountryCell.xib */,
+				91F24E1B225E5519001ABE9D /* SettingNormalCell.swift */,
+				91F24E1C225E5519001ABE9D /* SettingNormalCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -325,6 +334,7 @@
 				914378EA2256DE9200C41F6E /* AvatarView.xib in Resources */,
 				B1C4AB18225C4A2F006386EA /* SettingGeneralOptionView.xib in Resources */,
 				B1C4AB22225C4C81006386EA /* ThemeOptionView.xib in Resources */,
+				91F24E1E225E5519001ABE9D /* SettingNormalCell.xib in Resources */,
 				B1C4AB14225C49EC006386EA /* SectionView.xib in Resources */,
 				91F0ACCA2254FF9B00CE6782 /* Main.storyboard in Resources */,
 			);
@@ -358,6 +368,7 @@
 				914378E62256DE5200C41F6E /* BaseCustomNibView.swift in Sources */,
 				B14A7BB3225B5C370027E540 /* ContactAddressModel.swift in Sources */,
 				919B0C37225C2A71004576F6 /* DateExtension.swift in Sources */,
+				91F24E1D225E5519001ABE9D /* SettingNormalCell.swift in Sources */,
 				B1C4AB28225C850D006386EA /* SearchingContactsVC.swift in Sources */,
 				B1C4AB1A225C4A51006386EA /* ThemeView.swift in Sources */,
 				919B0C35225C23A5004576F6 /* ContactFileManager.swift in Sources */,
@@ -372,6 +383,7 @@
 				B1C4AB90225DF650006386EA /* CountryModel.swift in Sources */,
 				91F0ACD92255020000CE6782 /* FavouriteVC.swift in Sources */,
 				91F0ACD7225501E200CE6782 /* BaseViewController.swift in Sources */,
+				91F24E20225E567D001ABE9D /* SettingDetailVC.swift in Sources */,
 				B14A7BB1225B5A9F0027E540 /* ContactLabelModel.swift in Sources */,
 				B1C4AB96225E07A3006386EA /* UIViewExtension.swift in Sources */,
 			);

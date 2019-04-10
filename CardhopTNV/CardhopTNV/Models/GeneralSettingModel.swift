@@ -9,8 +9,12 @@
 import UIKit
 
 class GeneralSettingModel: BaseModel {
-    var sortType = "" //First Name, List name
-    var displayName = "" //First Last(John Doe), Last First(Doe John), Last, First(Doe, John)
+    var sortType:SortBy = .FirstNameLastName{
+        didSet{
+            SimpleFunction.calculateBirthdayContacts(contacts: AppPreference.sharedInstance.contacts)
+        }
+    }
+    var displayName:DisplayName = .FistLast //First Last(John Doe), Last First(Doe John), Last, First(Doe, John)
     var addressFormat = ""
     var defaultCountryCode = ""
     var defaultAccount = ""
@@ -20,21 +24,20 @@ class GeneralSettingModel: BaseModel {
         }
     }
     init(dictionary: Dictionary<String, String>){
-        self.sortType = dictionary["sortType"] ?? ""
-        self.displayName = dictionary["displayName"] ?? ""
+        self.sortType = SortBy(rawValue: dictionary["sortType"] ?? "") ?? .FirstNameLastName
+        self.displayName = DisplayName(rawValue: dictionary["displayName"] ?? "") ?? DisplayName.FistLast
         self.addressFormat = dictionary["addressFormat"] ?? ""
         self.defaultCountryCode = dictionary["defaultCountryCode"] ?? ""
         self.defaultAccount = dictionary["defaultAccount"] ?? ""
-        
-        self.appBgMode =  AppBgMode.init(rawValue: dictionary["appBgMode"] ?? AppBgMode.Default.rawValue) ?? .Default
+        self.appBgMode =  AppBgMode(rawValue: dictionary["appBgMode"] ?? AppBgMode.Default.rawValue) ?? .Default
     }
     override init() {
         
     }
     func toDict() -> Dictionary<String, String>{
         var dict = Dictionary<String, String>()
-        dict["sortType"] = self.sortType
-        dict["displayName"] = self.displayName
+        dict["sortType"] = self.sortType.rawValue
+        dict["displayName"] = self.displayName.rawValue
         dict["addressFormat"] = self.addressFormat
         dict["defaultCountryCode"] = self.defaultCountryCode
         dict["defaultAccount"] = self.defaultAccount

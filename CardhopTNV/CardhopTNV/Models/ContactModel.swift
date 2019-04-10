@@ -11,12 +11,41 @@ import Contacts
 import UIKit
 class ContactModel: BaseModel{
     
-    
-    /*! The identifier is unique among contacts on the device. It can be saved and used for fetching contacts next application launch. */
+    private var _displayShortField: String = ""
+    private var _displayName: String = ""
+    private var _shortName: String = ""
+    open var displayShortField: String {
+        set {
+            _displayShortField = newValue //Error
+        }
+        get {
+            switch AppPreference.sharedInstance.settings.sortType {
+            case .FirstNameLastName:
+                return "\(self.firstName)\(self.lastName)"
+            case .LastNameFirstName:
+                return "\(self.lastName)\(self.firstName)"
+            }
+        }
+    }
+
     open var firstName: String = ""
     open var lastName: String = ""
-    open var shortName: String = ""
-    open var displayName: String = ""
+    open var shortName: String{
+        set {
+            _shortName = newValue
+        }
+        get {
+            return displayName.agc_initials(separator: " ") ?? ""
+        }
+    }
+    open var displayName: String {
+        set{
+            _displayName = newValue
+        }
+        get{
+            return self.calculateDisplayName()
+        }
+    }
     open var organizationName: String = ""
     open var contactType: CNContactType!
     open var thumbnailImageData: Data?
@@ -34,10 +63,11 @@ class ContactModel: BaseModel{
         
         let formatter = CNContactFormatter()
         formatter.style = .fullName
-        if let displayName = formatter.string(from: contact) {
-            self.displayName = displayName
-            self.shortName = displayName.agc_initials(separator: " ") ?? ""
-        }
+        //        if let displayName = formatter.string(from: contact) {
+        //            self.displayName = displayName
+        //            self.shortName = displayName.agc_initials(separator: " ") ?? ""
+        //        }
+        
         if let thumb = contact.thumbnailImageData{
             self.thumbnailImageData = thumb
         }
@@ -52,8 +82,20 @@ class ContactModel: BaseModel{
         self.postalAddresses = self.parseAddress(addresses: contact.postalAddresses)
         self.organizationName = contact.organizationName
         self.birthday = contact.birthday
+        
+        self.displayName = calculateDisplayName()
+        self.shortName = displayName.agc_initials(separator: " ") ?? ""
     }
-    
+    func calculateDisplayName() -> String{
+        switch AppPreference.sharedInstance.settings.displayName {
+        case .FistLast:
+            return "\(firstName) \(lastName)"
+        case .LastFirst:
+            return "\(lastName) \(firstName)"
+        case .LastFirst2:
+            return "\(lastName), \(firstName)"
+        }
+    }
     func parseEmailLabel(emails: [CNLabeledValue<NSString>]) -> [ContactLabelModel]{
         var contactEmail = [ContactLabelModel]()
         for email in emails{
@@ -98,7 +140,7 @@ class ContactModel: BaseModel{
             tmpAddress.countryCode = cnPostAddress.isoCountryCode
             contactAddresses.append(tmpAddress)
         }
-
+        
         
         return contactAddresses
     }

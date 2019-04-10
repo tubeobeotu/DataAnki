@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2Xe-dT-msc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2Xe-dT-msc">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -387,6 +387,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8fh-si-ohM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2680.8000000000002" y="308.9955022488756"/>
+        </scene>
+        <!--Setting DetailVC-->
+        <scene sceneID="iAw-Ku-KMz">
+            <objects>
+                <viewController storyboardIdentifier="SettingDetailVC" id="HFq-hb-rzo" customClass="SettingDetailVC" customModule="CardhopTNV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ekF-ys-6ye">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bNm-43-LwG">
+                                <rect key="frame" x="0.0" y="28" width="375" height="639"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VIE-Lu-gG3" firstAttribute="trailing" secondItem="bNm-43-LwG" secondAttribute="trailing" id="7Xp-Sk-zdz"/>
+                            <constraint firstItem="VIE-Lu-gG3" firstAttribute="bottom" secondItem="bNm-43-LwG" secondAttribute="bottom" id="Qbf-jL-6XB"/>
+                            <constraint firstItem="bNm-43-LwG" firstAttribute="leading" secondItem="VIE-Lu-gG3" secondAttribute="leading" id="Wuq-zq-WVa"/>
+                            <constraint firstItem="bNm-43-LwG" firstAttribute="top" secondItem="VIE-Lu-gG3" secondAttribute="top" constant="8" id="YVe-zs-6zN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VIE-Lu-gG3"/>
+                    </view>
+                    <connections>
+                        <outlet property="tbl_Content" destination="bNm-43-LwG" id="BpM-Ly-B7o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Odr-Jg-9fA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3375" y="-575"/>
         </scene>
         <!--Contact CountryVC-->
         <scene sceneID="b76-tC-vMq">

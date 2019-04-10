@@ -20,10 +20,10 @@ class SettingGeneralOptionView: BaseCustomNibView {
             self.lbl_Title.text = type.title
             switch type {
             case .SortBy:
-                self.lbl_Content.text = AppPreference.sharedInstance.settings.sortType
+                self.lbl_Content.text = AppPreference.sharedInstance.settings.sortType.title
                 break
             case .DisplayName:
-                self.lbl_Content.text = AppPreference.sharedInstance.settings.displayName
+                self.lbl_Content.text = AppPreference.sharedInstance.settings.displayName.title
                 break
             case .DefaultCountryCode:
                 self.lbl_Content.text = AppPreference.sharedInstance.settings.defaultCountryTitle()
