@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchingGuideView" customModule="CardhopTNV" customModuleProvider="target">
+            <connections>
+                <outlet property="lbl_Title" destination="uca-vc-OI0" id="goO-LO-EUe"/>
+                <outlet property="v_Address" destination="FeU-dG-s74" id="sRn-Un-zyj"/>
+                <outlet property="v_Email" destination="xcg-vH-9dx" id="n4X-M3-vVF"/>
+                <outlet property="v_Name" destination="4Ud-eG-kxU" id="Vw0-mW-619"/>
+                <outlet property="v_Phone" destination="98y-Dc-Ral" id="6nP-4p-F6Y"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="348"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Some things you can do:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uca-vc-OI0">
+                    <rect key="frame" x="12" y="8" width="351" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="7xV-aw-eJ9"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Ud-eG-kxU" customClass="SearchingGuideOptionView" customModule="CardhopTNV" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="36" width="375" height="40"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="fpf-17-CL3"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="98y-Dc-Ral" customClass="SearchingGuideOptionView" customModule="CardhopTNV" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="84" width="375" height="40"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="8oY-CG-Hku"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xcg-vH-9dx" customClass="SearchingGuideOptionView" customModule="CardhopTNV" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="132" width="375" height="40"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="To1-ds-DRQ"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FeU-dG-s74" customClass="SearchingGuideOptionView" customModule="CardhopTNV" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="180" width="375" height="40"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="Ug4-LD-Ypc"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="uca-vc-OI0" secondAttribute="trailing" constant="12" id="8DZ-x3-hdO"/>
+                <constraint firstItem="xcg-vH-9dx" firstAttribute="top" secondItem="98y-Dc-Ral" secondAttribute="bottom" constant="8" id="Gdn-FG-qri"/>
+                <constraint firstItem="FeU-dG-s74" firstAttribute="top" secondItem="xcg-vH-9dx" secondAttribute="bottom" constant="8" id="Jeu-8k-7nt"/>
+                <constraint firstItem="uca-vc-OI0" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="NhL-Id-e5f"/>
+                <constraint firstItem="FeU-dG-s74" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="QVn-zG-d8d"/>
+                <constraint firstItem="xcg-vH-9dx" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Vj4-4L-24r"/>
+                <constraint firstItem="4Ud-eG-kxU" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="buL-cF-Db2"/>
+                <constraint firstItem="98y-Dc-Ral" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="bxP-oo-m7c"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="4Ud-eG-kxU" secondAttribute="trailing" id="faj-lP-4Y9"/>
+                <constraint firstItem="98y-Dc-Ral" firstAttribute="top" secondItem="4Ud-eG-kxU" secondAttribute="bottom" constant="8" id="hD3-sv-i6G"/>
+                <constraint firstItem="98y-Dc-Ral" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="n0n-e8-r1W"/>
+                <constraint firstItem="xcg-vH-9dx" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="o6d-Vu-d5g"/>
+                <constraint firstItem="FeU-dG-s74" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="tuf-eJ-TY1"/>
+                <constraint firstItem="uca-vc-OI0" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="12" id="zJO-he-r61"/>
+                <constraint firstItem="4Ud-eG-kxU" firstAttribute="top" secondItem="uca-vc-OI0" secondAttribute="bottom" constant="8" id="zRb-ro-nyG"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="132" y="10.794602698650676"/>
+        </view>
+    </objects>
+</document>

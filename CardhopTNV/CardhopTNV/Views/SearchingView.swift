@@ -40,9 +40,15 @@ class SearchingView: BaseCustomNibView {
 
     }
     @IBAction func search(_ sender: Any) {
+        if let topVC = SimpleFunction.getTopVC(){
+            topVC.showSearchingVC(isShowGuide: true)
+        }
         self.delegate?.showSiri()
     }
     @IBAction func showSearchingVC(_ sender: Any) {
+        if let topVC = SimpleFunction.getTopVC(){
+            topVC.showSearchingVC(isShowGuide: true)
+        }
         self.delegate?.showSearchingVC()
     }
     

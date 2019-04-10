@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Contacts
 enum AppBgMode:Int {
     case Default = 0
     case Dark = 1
@@ -40,6 +41,7 @@ enum AppBgMode:Int {
             }
         }
     }
+    
     var sectionBgColor: UIColor{
         get{
             switch(self){
@@ -126,7 +128,7 @@ enum AppBgMode:Int {
     }
 }
 final class AppPreference {
-    
+    let contactStore = CNContactStore()
     //MARK: Shared Instance
     static let sharedInstance : AppPreference = {
         let instance = AppPreference(array: [])

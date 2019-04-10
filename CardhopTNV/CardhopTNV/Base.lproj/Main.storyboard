@@ -316,6 +316,10 @@
                                 <rect key="frame" x="0.0" y="128" width="375" height="539"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CAz-iV-6fC" customClass="SearchingGuideView" customModule="CardhopTNV" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="128" width="375" height="539"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="Ju3-2k-lKJ">
                                 <rect key="frame" x="8" y="64" width="359" height="56"/>
                                 <constraints>
@@ -329,10 +333,14 @@
                             <constraint firstItem="Nqf-Up-wlJ" firstAttribute="bottom" secondItem="M3D-uv-oBY" secondAttribute="bottom" id="0M4-Y1-4oD"/>
                             <constraint firstItem="M3D-uv-oBY" firstAttribute="leading" secondItem="Nqf-Up-wlJ" secondAttribute="leading" id="EWQ-YY-nDU"/>
                             <constraint firstItem="Ju3-2k-lKJ" firstAttribute="top" secondItem="Nqf-Up-wlJ" secondAttribute="top" id="Ian-4j-eLO"/>
+                            <constraint firstItem="CAz-iV-6fC" firstAttribute="top" secondItem="M3D-uv-oBY" secondAttribute="top" id="Kjc-Hl-6Mv"/>
+                            <constraint firstItem="CAz-iV-6fC" firstAttribute="bottom" secondItem="M3D-uv-oBY" secondAttribute="bottom" id="X8t-t5-K4n"/>
+                            <constraint firstItem="CAz-iV-6fC" firstAttribute="trailing" secondItem="M3D-uv-oBY" secondAttribute="trailing" id="YJ6-LE-8df"/>
                             <constraint firstItem="M3D-uv-oBY" firstAttribute="trailing" secondItem="Nqf-Up-wlJ" secondAttribute="trailing" id="fLj-eb-tac"/>
                             <constraint firstItem="Ju3-2k-lKJ" firstAttribute="trailing" secondItem="Nqf-Up-wlJ" secondAttribute="trailing" constant="-8" id="q2i-8M-JRc"/>
                             <constraint firstItem="M3D-uv-oBY" firstAttribute="top" secondItem="Ju3-2k-lKJ" secondAttribute="bottom" constant="8" id="rwF-Mh-X7o"/>
                             <constraint firstItem="Ju3-2k-lKJ" firstAttribute="leading" secondItem="Nqf-Up-wlJ" secondAttribute="leading" constant="8" id="y2x-fU-S07"/>
+                            <constraint firstItem="CAz-iV-6fC" firstAttribute="leading" secondItem="M3D-uv-oBY" secondAttribute="leading" id="y87-EP-nKM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Nqf-Up-wlJ"/>
                     </view>
@@ -346,6 +354,7 @@
                     <connections>
                         <outlet property="sb_Contacts" destination="Ju3-2k-lKJ" id="rr0-VT-Kz5"/>
                         <outlet property="tbl_Content" destination="M3D-uv-oBY" id="ny4-W9-38B"/>
+                        <outlet property="v_Guide" destination="CAz-iV-6fC" id="JeG-vk-cGT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8fh-si-ohM" userLabel="First Responder" sceneMemberID="firstResponder"/>

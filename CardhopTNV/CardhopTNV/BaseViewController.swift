@@ -56,11 +56,46 @@ class BaseViewController: UIViewController {
         
     }
     
+    func didSelectContactAtVC(contact: ContactModel) {
+        
+    }
+    func showSearchingVC(isShowGuide: Bool = false){
+        if let nav = self.getSearchingNav(isShowGuide: isShowGuide){
+            let controller = self.getSearchingVCFrom(nav: nav, isShowGuide: isShowGuide)
+            controller?.delegate = self
+            self.present(nav, animated: true, completion: nil)
+        }
+        
+    }
+}
+
+extension BaseViewController: SearchingContactsVCDelegate{
+    func didSelectContact(contact: ContactModel) {
+        self.didSelectContactAtVC(contact: contact)
+    }
 }
 
 
 extension UIView {
     func constraint(withIdentifier: String) -> NSLayoutConstraint? {
         return self.constraints.filter { $0.identifier == withIdentifier }.first
+    }
+}
+
+extension UIViewController{
+    func getSearchingNav(isShowGuide: Bool = false) -> UINavigationController?{
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let nav = storyboard.instantiateViewController(withIdentifier: "NavSearchingContactVC") as? UINavigationController{
+            return nav
+        }
+        
+        return nil
+    }
+    func getSearchingVCFrom(nav: UINavigationController, isShowGuide: Bool = false) -> SearchingContactsVC?{
+        if let controller = nav.viewControllers.first as? SearchingContactsVC{
+            controller.isShowGuide = isShowGuide
+            return controller
+        }
+        return nil
     }
 }

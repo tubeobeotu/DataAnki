@@ -17,7 +17,11 @@ class ContactVC: BaseViewController {
             self.checkValidSections()
         }
     }
-    var sections : [Dictionary<String, [ContactModel]>] = []
+    var sections : [Dictionary<String, [ContactModel]>] = []{
+        didSet{
+            didFilter()
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         self.reloadModels()
@@ -27,6 +31,7 @@ class ContactVC: BaseViewController {
     }
     override func reloadModels() {
         contacts = AppPreference.sharedInstance.contacts
+        filteredContacts = NSMutableArray.init(array: contacts) as? [ContactModel] ?? [ContactModel]()
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -43,6 +48,10 @@ class ContactVC: BaseViewController {
                 self.validedArrIndexSection.append(letter)
             }
         }
+    }
+    
+    func didFilter(){
+        
     }
     
 }

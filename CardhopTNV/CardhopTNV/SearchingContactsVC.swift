@@ -12,15 +12,23 @@ protocol SearchingContactsVCDelegate{
 }
 class SearchingContactsVC: ContactVC {
     var delegate:SearchingContactsVCDelegate?
+    var isShowGuide = false
     @IBOutlet weak var sb_Contacts: UISearchBar!
-    
+    @IBOutlet weak var v_Guide: SearchingGuideView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.sb_Contacts.textField?.textColor = AppPreference.sharedInstance.appBgMode.cellTitleTextColor
+        self.v_Guide.isHidden = !self.isShowGuide
         self.sb_Contacts.delegate = self
         self.reloadModels()
         self.tbl_Content?.register(UINib.init(nibName: "ContactCell", bundle: nil), forCellReuseIdentifier: "ContactCell")
         self.tbl_Content?.delegate = self
         self.tbl_Content?.dataSource = self
+        self.checkShowGuide(isShow: isShowGuide)
+    }
+    func checkShowGuide(isShow: Bool){
+        self.v_Guide?.isHidden = !isShow
+        self.tbl_Content?.isHidden = isShow
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -33,7 +41,11 @@ class SearchingContactsVC: ContactVC {
     
     override func reloadModels() {
         contacts = AppPreference.sharedInstance.contacts
-        self.filteredContacts = NSMutableArray.init(array: contacts) as? [ContactModel] ?? [ContactModel]()
+        if(self.isShowGuide){
+            self.filteredContacts = [ContactModel]()
+        }else{
+            self.filteredContacts = NSMutableArray.init(array: contacts) as? [ContactModel] ?? [ContactModel]()
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -49,6 +61,15 @@ class SearchingContactsVC: ContactVC {
         self.dismiss(animated: true, completion: nil)
     }
     
+    override func didFilter(){
+        if(self.isShowGuide){
+            if(self.sections.count == 0){
+                self.checkShowGuide(isShow: true)
+            }else{
+                self.checkShowGuide(isShow: false)
+            }
+        }
+    }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if(!(SimpleFunction.checkContactInList(contact: self.filteredContacts[indexPath.row], contacts: AppPreference.sharedInstance.favouritContacts))){
@@ -74,7 +95,12 @@ extension SearchingContactsVC: UISearchBarDelegate{
     }
     
     func showAllContacts(){
-        self.filteredContacts = NSMutableArray.init(array: contacts) as? [ContactModel] ?? [ContactModel]()
+        if(self.isShowGuide){
+            self.filteredContacts = [ContactModel]()
+        }else{
+            self.filteredContacts = NSMutableArray.init(array: contacts) as? [ContactModel] ?? [ContactModel]()
+        }
+        
         self.reloadData()
     }
 }

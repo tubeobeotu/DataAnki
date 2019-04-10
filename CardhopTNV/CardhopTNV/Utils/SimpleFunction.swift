@@ -8,34 +8,88 @@
 
 import Foundation
 import Contacts
+import UIKit
 class SimpleFunction{
     class func getContacts(){
-        let contactStore = CNContactStore()
-        var contacts = [ContactModel]()
-        let keys = [
-            CNContactFormatter.descriptorForRequiredKeys(for: .fullName),
-            CNContactPhoneNumbersKey,
-            CNContactEmailAddressesKey,
-            CNContactBirthdayKey,
-            CNContactPostalAddressesKey,
-            CNContactThumbnailImageDataKey,
-            CNContactOrganizationNameKey,
-            CNContactTypeKey
-            ] as [Any]
-        let request = CNContactFetchRequest(keysToFetch: keys as! [CNKeyDescriptor])
-        do {
-            try contactStore.enumerateContacts(with: request){
-                (contact, stop) in
-                // Array containing all unified contacts from everywhere
-                contacts.append(ContactModel.init(contact: contact))
+        self.requestAccess { (accessGranted) in
+            if(accessGranted == true){
+                var contacts = [ContactModel]()
+                let keys = [
+                    CNContactFormatter.descriptorForRequiredKeys(for: .fullName),
+                    CNContactPhoneNumbersKey,
+                    CNContactEmailAddressesKey,
+                    CNContactBirthdayKey,
+                    CNContactPostalAddressesKey,
+                    CNContactThumbnailImageDataKey,
+                    CNContactOrganizationNameKey,
+                    CNContactTypeKey
+                    ] as [Any]
+                let request = CNContactFetchRequest(keysToFetch: keys as! [CNKeyDescriptor])
+                do {
+                    try AppPreference.sharedInstance.contactStore.enumerateContacts(with: request){
+                        (contact, stop) in
+                        // Array containing all unified contacts from everywhere
+                        contacts.append(ContactModel.init(contact: contact))
+                    }
+                } catch {
+                    print("unable to fetch contacts")
+                }
+                self.calculateContactsFromLocal(contacts: contacts)
+                AppPreference.sharedInstance.contacts = contacts
             }
-        } catch {
-            print("unable to fetch contacts")
         }
-        self.calculateContactsFromLocal(contacts: contacts)
-        AppPreference.sharedInstance.contacts = contacts
+        
     }
     
+    class func requestAccess(completionHandler: @escaping (_ accessGranted: Bool) -> Void) {
+        switch CNContactStore.authorizationStatus(for: .contacts) {
+        case .authorized:
+            completionHandler(true)
+        case .denied:
+            showSettingsAlert(completionHandler)
+        case .restricted, .notDetermined:
+            AppPreference.sharedInstance.contactStore.requestAccess(for: .contacts) { granted, error in
+                if granted {
+                    completionHandler(true)
+                } else {
+                    DispatchQueue.main.async {
+                        self.showSettingsAlert(completionHandler)
+                    }
+                }
+            }
+        }
+    }
+    
+    class private func showSettingsAlert(_ completionHandler: @escaping (_ accessGranted: Bool) -> Void) {
+        let alert = UIAlertController(title: nil, message: "This app requires access to Contacts to proceed. Would you like to open settings and grant permission to contacts?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Open Settings", style: .default) { action in
+            completionHandler(false)
+            UIApplication.shared.open(URL(string: UIApplicationOpenSettingsURLString)!)
+        })
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel) { action in
+            completionHandler(false)
+        })
+        if let topController = self.getTopVC(){
+            topController.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    class func getTopVC() -> BaseViewController?{
+        if var topController = UIApplication.shared.keyWindow?.rootViewController {
+            while let presentedViewController = topController.presentedViewController {
+                topController = presentedViewController
+            }
+            if let tabbar = topController as? UITabBarController{
+                if let nav = tabbar.selectedViewController as? UINavigationController{
+                    return nav.viewControllers.first as? BaseViewController
+                }
+                return tabbar.selectedViewController as? BaseViewController
+            }
+            return topController as? BaseViewController
+            // topController should now be your topmost view controller
+        }
+        return nil
+    }
     class func filterContacts(input: Array<ContactModel>, keyword: String) -> Array<ContactModel>?{
         //1 OBJECT
 //        let resultPredicate = NSPredicate(format: "firstName = 'Robert'")
@@ -43,9 +97,35 @@ class SimpleFunction{
         return input.filter { $0.displayName.lowercased().contains(keyword.lowercased())}
 //         || $0.organizationName.lowercased().contains(keyword.lowercased())
     }
+
+    class func filterContactsHighLevel(input: Array<ContactModel>, keyword: String) -> Array<ContactModel>?{
+        return input.filter { $0.displayName.lowercased().contains(keyword.lowercased()) || self.checkContact(data: $0.phoneNumbers, keyword: keyword) || self.checkContact(data: $0.emailAddresses, keyword: keyword) ||
+            self.checkContact(data: $0.postalAddresses, keyword: keyword)
+        }
+    }
+    class func checkContact(data: [ContactLabelModel], keyword: String) -> Bool{
+        for tmpData in data{
+            if(tmpData.value.lowercased().contains(keyword.lowercased())){
+                return true
+            }
+        }
+        return false
+    }
+    class func checkContact(data: [ContactAddressModel], keyword: String) -> Bool{
+        for tmpData in data{
+            if(tmpData.checkAddress(keyword: keyword.lowercased())){
+                return true
+            }
+        }
+        return false
+    }
+    
+    
     class func filterContacts(input: Array<ContactModel>, beginWith keyword: String) -> Array<ContactModel>?{
         return input.filter { $0.displayName.lowercased().hasPrefix(keyword.lowercased()) }
     }
+    
+    
     class func checkContainContacts(input: Array<ContactModel>, beginWith keyword: String) -> Bool{
         for contact in input{
             if(contact.displayName.lowercased().hasPrefix(keyword.lowercased())){

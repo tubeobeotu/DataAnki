@@ -47,6 +47,11 @@
 		B1C4AB24225C7D84006386EA /* SettingGeneralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C4AB23225C7D84006386EA /* SettingGeneralView.swift */; };
 		B1C4AB26225C7D8E006386EA /* SettingGeneralView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1C4AB25225C7D8E006386EA /* SettingGeneralView.xib */; };
 		B1C4AB28225C850D006386EA /* SearchingContactsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C4AB27225C850D006386EA /* SearchingContactsVC.swift */; };
+		B1C4AB2C225D94E9006386EA /* SearchingGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C4AB2B225D94E9006386EA /* SearchingGuideView.swift */; };
+		B1C4AB2E225D94F2006386EA /* SearchingGuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1C4AB2D225D94F2006386EA /* SearchingGuideView.xib */; };
+		B1C4AB30225D9766006386EA /* SearchingGuideOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C4AB2F225D9766006386EA /* SearchingGuideOptionView.swift */; };
+		B1C4AB32225D9770006386EA /* SearchingGuideOptionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1C4AB31225D9770006386EA /* SearchingGuideOptionView.xib */; };
+		B1C4AB34225DA912006386EA /* SearchBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C4AB33225DA912006386EA /* SearchBarExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +97,11 @@
 		B1C4AB23225C7D84006386EA /* SettingGeneralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingGeneralView.swift; sourceTree = "<group>"; };
 		B1C4AB25225C7D8E006386EA /* SettingGeneralView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingGeneralView.xib; sourceTree = "<group>"; };
 		B1C4AB27225C850D006386EA /* SearchingContactsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchingContactsVC.swift; sourceTree = "<group>"; };
+		B1C4AB2B225D94E9006386EA /* SearchingGuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchingGuideView.swift; sourceTree = "<group>"; };
+		B1C4AB2D225D94F2006386EA /* SearchingGuideView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchingGuideView.xib; sourceTree = "<group>"; };
+		B1C4AB2F225D9766006386EA /* SearchingGuideOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchingGuideOptionView.swift; sourceTree = "<group>"; };
+		B1C4AB31225D9770006386EA /* SearchingGuideOptionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchingGuideOptionView.xib; sourceTree = "<group>"; };
+		B1C4AB33225DA912006386EA /* SearchBarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +135,7 @@
 				B14A7BAE225B43D50027E540 /* StringExtension.swift */,
 				919B0C34225C23A5004576F6 /* ContactFileManager.swift */,
 				919B0C36225C2A71004576F6 /* DateExtension.swift */,
+				B1C4AB33225DA912006386EA /* SearchBarExtension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -147,6 +158,10 @@
 				B1C4AB21225C4C81006386EA /* ThemeOptionView.xib */,
 				B1C4AB23225C7D84006386EA /* SettingGeneralView.swift */,
 				B1C4AB25225C7D8E006386EA /* SettingGeneralView.xib */,
+				B1C4AB2B225D94E9006386EA /* SearchingGuideView.swift */,
+				B1C4AB2D225D94F2006386EA /* SearchingGuideView.xib */,
+				B1C4AB2F225D9766006386EA /* SearchingGuideOptionView.swift */,
+				B1C4AB31225D9770006386EA /* SearchingGuideOptionView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -260,10 +275,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1C4AB32225D9770006386EA /* SearchingGuideOptionView.xib in Resources */,
 				91F0ACE82255043900CE6782 /* ContactCell.xib in Resources */,
 				91F0ACCF2254FF9B00CE6782 /* LaunchScreen.storyboard in Resources */,
 				91F0ACCC2254FF9B00CE6782 /* Assets.xcassets in Resources */,
 				B1C4AB1E225C4A69006386EA /* ThemeView.xib in Resources */,
+				B1C4AB2E225D94F2006386EA /* SearchingGuideView.xib in Resources */,
 				B1C4AB26225C7D8E006386EA /* SettingGeneralView.xib in Resources */,
 				9124FDC62258913900151834 /* SearchingView.xib in Resources */,
 				914378EA2256DE9200C41F6E /* AvatarView.xib in Resources */,
@@ -282,6 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				91F0ACE72255043900CE6782 /* ContactCell.swift in Sources */,
+				B1C4AB30225D9766006386EA /* SearchingGuideOptionView.swift in Sources */,
 				9124FDCF2258B30D00151834 /* SimpleFunction.swift in Sources */,
 				914378E82256DE8800C41F6E /* AvatarView.swift in Sources */,
 				B1C4AB16225C4A27006386EA /* SettingGeneralOptionView.swift in Sources */,
@@ -289,6 +307,7 @@
 				91F0ACC72254FF9B00CE6782 /* ViewController.swift in Sources */,
 				B1C4AB24225C7D84006386EA /* SettingGeneralView.swift in Sources */,
 				9124FDBD2258891600151834 /* BaseModel.swift in Sources */,
+				B1C4AB2C225D94E9006386EA /* SearchingGuideView.swift in Sources */,
 				9124FDBF2258892E00151834 /* ContactModel.swift in Sources */,
 				9124FDCD2258A32500151834 /* ColorExtension.swift in Sources */,
 				91F0ACDB2255020E00CE6782 /* HistoryVC.swift in Sources */,
@@ -306,6 +325,7 @@
 				9124FDC42258913300151834 /* SearchingView.swift in Sources */,
 				B14A7BAF225B43D50027E540 /* StringExtension.swift in Sources */,
 				B1C4AB20225C4C78006386EA /* ThemeOptionView.swift in Sources */,
+				B1C4AB34225DA912006386EA /* SearchBarExtension.swift in Sources */,
 				B1C4AB12225C49E4006386EA /* SectionView.swift in Sources */,
 				91F0ACD92255020000CE6782 /* FavouriteVC.swift in Sources */,
 				91F0ACD7225501E200CE6782 /* BaseViewController.swift in Sources */,

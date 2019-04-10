@@ -26,4 +26,13 @@ class ContactAddressModel: BaseModel {
     open var postalCode: String = ""
     open var country: String = ""
     open var countryCode: String = ""
+    
+    
+    func checkAddress(keyword: String) -> Bool{
+        if(street.lowercased().contains(keyword) || street.lowercased().contains(keyword) || subLocality.lowercased().contains(keyword) || city.lowercased().contains(keyword) || subAdministrativeArea.lowercased().contains(keyword) || postalCode.lowercased().contains(keyword) || country.lowercased().contains(keyword) ||
+            country.lowercased().contains(keyword)){
+            return true
+        }
+        return false
+    }
 }

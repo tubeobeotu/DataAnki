@@ -27,18 +27,14 @@ class FavouriteVC: BaseViewController {
     }
 
     @IBAction func showSearchingVC(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let nav = storyboard.instantiateViewController(withIdentifier: "NavSearchingContactVC") as? UINavigationController{
-            if let controller = nav.viewControllers.first as? SearchingContactsVC{
-                controller.delegate = self
-                self.present(nav, animated: true, completion: nil)
-            }
-            
-            
-        }
+        self.showSearchingVC(isShowGuide: false)
         
     }
     @IBAction func editMode(_ sender: Any) {
+    }
+    
+    override func didSelectContactAtVC(contact: ContactModel) {
+        SimpleFunction.insertContactToFavourit(contact: contact)
     }
     
 }
@@ -59,10 +55,5 @@ extension FavouriteVC: UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "ContactCell", for: indexPath) as! ContactCell
         cell.setModelForCell(contact: self.favouritedContacts[indexPath.row], isHideSubLabel: true)
         return cell
-    }
-}
-extension FavouriteVC: SearchingContactsVCDelegate{
-    func didSelectContact(contact: ContactModel) {
-        SimpleFunction.insertContactToFavourit(contact: contact)
     }
 }
