@@ -14,6 +14,8 @@
 		9124FDC62258913900151834 /* SearchingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9124FDC52258913900151834 /* SearchingView.xib */; };
 		9124FDCD2258A32500151834 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9124FDCC2258A32500151834 /* ColorExtension.swift */; };
 		9124FDCF2258B30D00151834 /* SimpleFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9124FDCE2258B30D00151834 /* SimpleFunction.swift */; };
+		91420583225F753E00496AA0 /* ContactNoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91420581225F753E00496AA0 /* ContactNoteCell.swift */; };
+		91420584225F753E00496AA0 /* ContactNoteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91420582225F753E00496AA0 /* ContactNoteCell.xib */; };
 		914378E62256DE5200C41F6E /* BaseCustomNibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914378E52256DE5200C41F6E /* BaseCustomNibView.swift */; };
 		914378E82256DE8800C41F6E /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914378E72256DE8800C41F6E /* AvatarView.swift */; };
 		914378EA2256DE9200C41F6E /* AvatarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 914378E92256DE9200C41F6E /* AvatarView.xib */; };
@@ -86,6 +88,8 @@
 		9124FDC52258913900151834 /* SearchingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchingView.xib; sourceTree = "<group>"; };
 		9124FDCC2258A32500151834 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		9124FDCE2258B30D00151834 /* SimpleFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleFunction.swift; sourceTree = "<group>"; };
+		91420581225F753E00496AA0 /* ContactNoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactNoteCell.swift; sourceTree = "<group>"; };
+		91420582225F753E00496AA0 /* ContactNoteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactNoteCell.xib; sourceTree = "<group>"; };
 		914378E52256DE5200C41F6E /* BaseCustomNibView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCustomNibView.swift; sourceTree = "<group>"; };
 		914378E72256DE8800C41F6E /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		914378E92256DE9200C41F6E /* AvatarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AvatarView.xib; sourceTree = "<group>"; };
@@ -304,6 +308,8 @@
 				91B5D48F225ECD9E00AC0DF0 /* ContactNewCell.xib */,
 				B1C4AB97225F252B006386EA /* AddressCell.swift */,
 				B1C4AB98225F252B006386EA /* AddressCell.xib */,
+				91420581225F753E00496AA0 /* ContactNoteCell.swift */,
+				91420582225F753E00496AA0 /* ContactNoteCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -394,6 +400,7 @@
 				91B5D491225ECD9E00AC0DF0 /* ContactNewCell.xib in Resources */,
 				91F0ACCC2254FF9B00CE6782 /* Assets.xcassets in Resources */,
 				B1C4AB1E225C4A69006386EA /* ThemeView.xib in Resources */,
+				91420584225F753E00496AA0 /* ContactNoteCell.xib in Resources */,
 				B1C4AB2E225D94F2006386EA /* SearchingGuideView.xib in Resources */,
 				91B5D48D225ECD7E00AC0DF0 /* ContactEditCell.xib in Resources */,
 				B1C4AB9A225F252B006386EA /* AddressCell.xib in Resources */,
@@ -418,15 +425,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-CardhopTNV-checkManifestLockResult.txt",
 			);
@@ -440,15 +443,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-CardhopTNV/Pods-CardhopTNV-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/QBImagePickerController/QBImagePickerController.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QBImagePickerController.framework",
 			);
@@ -466,6 +465,7 @@
 			files = (
 				91F0ACE72255043900CE6782 /* ContactCell.swift in Sources */,
 				91F24E24225E6661001ABE9D /* EditContactVC.swift in Sources */,
+				91420583225F753E00496AA0 /* ContactNoteCell.swift in Sources */,
 				91F24E2B225E6B7E001ABE9D /* ContactDetailCell.swift in Sources */,
 				B1C4AB30225D9766006386EA /* SearchingGuideOptionView.swift in Sources */,
 				9124FDCF2258B30D00151834 /* SimpleFunction.swift in Sources */,

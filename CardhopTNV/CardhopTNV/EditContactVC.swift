@@ -110,7 +110,7 @@ extension EditContactVC: UITableViewDataSource{
             return self.contact.emailAddresses.count
         case .address:
             return self.contact.postalAddresses.count
-        case .birthday:
+        case .birthday, .note:
             return 1
         }
     }

@@ -14,7 +14,7 @@ enum ContactModelSectionsType:Int{
     case email = 1
     case address = 2
     case birthday = 3
-    
+    case note = 4
     var text: String {
         get{
             switch self {
@@ -26,20 +26,24 @@ enum ContactModelSectionsType:Int{
                 return "address"
             case .birthday:
                 return "birthday"
+            case .note:
+                return "note"
             }
         }
     }
-    var image: UIImage{
+    var image: UIImage?{
         get{
             switch self {
             case .mobile:
-                return UIImage.init(named: "mobile")!
+                return UIImage.init(named: "mobile")
             case .email:
-                return UIImage.init(named: "email")!
+                return UIImage.init(named: "email")
             case .address:
-                return UIImage.init(named: "address")!
+                return UIImage.init(named: "address")
             case .birthday:
-                return UIImage.init(named: "birthday")!
+                return UIImage.init(named: "birthday")
+            case .note:
+                return UIImage.init(named: "note")
             }
         }
     }
