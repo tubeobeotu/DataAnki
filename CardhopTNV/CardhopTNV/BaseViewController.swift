@@ -75,8 +75,12 @@ class BaseViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let vc = storyboard.instantiateViewController(withIdentifier: "ContactDetailVC") as? ContactDetailVC{
             vc.contact = contact
-            self.navigationController?.navigationBar.prefersLargeTitles = false
-           self.navigationController?.pushViewController(vc, animated:  true)
+            let nav = UINavigationController.init(rootViewController: vc)
+            AppPreference.sharedInstance.changeNavMode(nav: nav)
+            DispatchQueue.main.async {
+                self.present(nav, animated: true, completion: nil)
+            }
+           
         }
     }
 }

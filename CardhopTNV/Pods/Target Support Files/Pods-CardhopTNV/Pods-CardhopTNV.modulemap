@@ -1,0 +1,6 @@
+framework module Pods_CardhopTNV {
+  umbrella header "Pods-CardhopTNV-umbrella.h"
+
+  export *
+  module * { export * }
+}

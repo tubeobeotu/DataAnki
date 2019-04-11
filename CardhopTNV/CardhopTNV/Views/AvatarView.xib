@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -33,7 +33,7 @@
                             <rect key="frame" x="1" y="1" width="58" height="58"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9h8-go-41o">
-                                    <rect key="frame" x="0.0" y="0.0" width="58" height="57.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="58" height="58"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -47,11 +47,22 @@
                                 <constraint firstAttribute="trailing" secondItem="9h8-go-41o" secondAttribute="trailing" id="yli-kv-6fs"/>
                             </constraints>
                         </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oB1-de-dzZ">
+                            <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="didTapAvatar:" destination="-1" eventType="touchUpInside" id="A2L-eE-pZ0"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
+                        <constraint firstItem="oB1-de-dzZ" firstAttribute="top" secondItem="knr-7e-9Ui" secondAttribute="top" id="6G8-ZM-OKa"/>
                         <constraint firstAttribute="bottom" secondItem="p3b-DE-Jcy" secondAttribute="bottom" constant="1" id="HeR-uU-iBu"/>
                         <constraint firstAttribute="trailing" secondItem="p3b-DE-Jcy" secondAttribute="trailing" constant="1" id="MI4-QU-TaM"/>
+                        <constraint firstAttribute="trailing" secondItem="oB1-de-dzZ" secondAttribute="trailing" id="Qj3-DW-Hqx"/>
+                        <constraint firstItem="oB1-de-dzZ" firstAttribute="leading" secondItem="knr-7e-9Ui" secondAttribute="leading" id="VoK-iw-exq"/>
+                        <constraint firstAttribute="bottom" secondItem="oB1-de-dzZ" secondAttribute="bottom" id="gKR-9r-TYj"/>
                         <constraint firstItem="p3b-DE-Jcy" firstAttribute="top" secondItem="knr-7e-9Ui" secondAttribute="top" constant="1" id="mww-mi-dwc"/>
                         <constraint firstItem="p3b-DE-Jcy" firstAttribute="leading" secondItem="knr-7e-9Ui" secondAttribute="leading" constant="1" id="t62-YU-OTt"/>
                     </constraints>
@@ -70,6 +81,7 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="132.80000000000001" y="154.72263868065968"/>
         </view>
     </objects>
 </document>

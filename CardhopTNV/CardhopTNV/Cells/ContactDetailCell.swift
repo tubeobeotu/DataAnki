@@ -27,4 +27,10 @@ class ContactDetailCell: BaseTableViewCell {
         // Configure the view for the selected state
     }
     
+    func setup(title: String, content: String, isFirst: Bool = false){
+        self.lbl_Title.text = title
+        self.lbl_Content.text = content
+        self.btn_Icon.isHidden = !isFirst
+    }
+    
 }

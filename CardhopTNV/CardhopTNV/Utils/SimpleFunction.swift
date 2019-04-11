@@ -22,7 +22,9 @@ class SimpleFunction{
                     CNContactPostalAddressesKey,
                     CNContactThumbnailImageDataKey,
                     CNContactOrganizationNameKey,
-                    CNContactTypeKey
+                    CNContactTypeKey,
+                    CNContactNoteKey,
+                    CNContactImageDataKey
                     ] as [Any]
                 let request = CNContactFetchRequest(keysToFetch: keys as! [CNKeyDescriptor])
                 do {
@@ -230,5 +232,29 @@ class SimpleFunction{
             }
         }
         return validedContacts
+    }
+    
+    class func saveContact(contact: ContactModel){
+        let model = contact.getModelToRawContact()
+        // Saving the newly created contact
+        let store = AppPreference.sharedInstance.contactStore
+        let saveRequest = CNSaveRequest()
+        saveRequest.update(model)
+        do {
+            try store.execute(saveRequest)
+        } catch {
+            print("unable to update contacts")
+        }
+    }
+    class func saveContactNote(contact: ContactModel){
+        let model = contact.getNoteModelToRawContact()
+        let store = AppPreference.sharedInstance.contactStore
+        let saveRequest = CNSaveRequest()
+        saveRequest.update(model)
+        do {
+            try store.execute(saveRequest)
+        } catch {
+            print("unable to update contacts")
+        }
     }
 }

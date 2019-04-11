@@ -7,13 +7,15 @@
 //
 
 import UIKit
-
+protocol AvatarViewDelegate{
+    func didAppAvatar()
+}
 class AvatarView: BaseCustomNibView {
     @IBOutlet weak var img_Profile: UIImageView!
     @IBOutlet weak var v_Name: UIView!
     @IBOutlet weak var lbl_Name: UILabel!
     @IBOutlet weak var v_ContainerLblName: UIView!
-    
+    var delegate:AvatarViewDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -40,4 +42,9 @@ class AvatarView: BaseCustomNibView {
     func setImage(image: UIImage){
         self.img_Profile.image = image
     }
+    
+    @IBAction func didTapAvatar(_ sender: Any) {
+        self.delegate?.didAppAvatar()
+    }
+    
 }

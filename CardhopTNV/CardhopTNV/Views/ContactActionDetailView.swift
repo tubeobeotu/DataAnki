@@ -23,12 +23,12 @@ enum ActionType: Int{
             }
         }
     }
-    var image: UIImage{
+    var image: UIImage?{
         switch(self){
-        case .Message: return UIImage.init(named: "message")!
-        case .Email: return  UIImage.init(named: "email")!
-        case .Call: return  UIImage.init(named: "call")!
-        case .Video: return  UIImage.init(named: "video")!
+        case .Message: return UIImage.init(named: "message")
+        case .Email: return  UIImage.init(named: "email")
+        case .Call: return  UIImage.init(named: "call")
+        case .Video: return  UIImage.init(named: "video")
         }
     }
     var textColor:UIColor{

@@ -9,6 +9,41 @@
 import Foundation
 import Contacts
 import UIKit
+enum ContactModelSectionsType:Int{
+    case mobile = 0
+    case email = 1
+    case address = 2
+    case birthday = 3
+    
+    var text: String {
+        get{
+            switch self {
+            case .mobile:
+               return "mobile"
+            case .email:
+                return "email"
+            case .address:
+                return "address"
+            case .birthday:
+                return "birthday"
+            }
+        }
+    }
+    var image: UIImage{
+        get{
+            switch self {
+            case .mobile:
+                return UIImage.init(named: "mobile")!
+            case .email:
+                return UIImage.init(named: "email")!
+            case .address:
+                return UIImage.init(named: "address")!
+            case .birthday:
+                return UIImage.init(named: "birthday")!
+            }
+        }
+    }
+}
 class ContactModel: BaseModel{
     
     private var _displayShortField: String = ""
@@ -27,7 +62,7 @@ class ContactModel: BaseModel{
             }
         }
     }
-
+    
     open var firstName: String = ""
     open var lastName: String = ""
     open var shortName: String{
@@ -46,8 +81,9 @@ class ContactModel: BaseModel{
             return self.calculateDisplayName()
         }
     }
+    open var note:String = ""
     open var organizationName: String = ""
-    open var contactType: CNContactType!
+    open var contactType: Int! //0 person 1 organizarion
     open var thumbnailImageData: Data?
     let colors = [UIColor.green, UIColor.red, UIColor.yellow, UIColor.blue, UIColor.brown, UIColor.cyan, UIColor.orange]
     var stateColor:UIColor!
@@ -58,9 +94,9 @@ class ContactModel: BaseModel{
     /*! The Gregorian birthday. */
     open var birthday: DateComponents?
     
+    private var rawContact:CNContact!
     convenience init(contact: CNContact) {
         self.init()
-        
         let formatter = CNContactFormatter()
         formatter.style = .fullName
         //        if let displayName = formatter.string(from: contact) {
@@ -76,15 +112,16 @@ class ContactModel: BaseModel{
         self.identifier = contact.identifier
         self.firstName = contact.givenName
         self.lastName = contact.familyName
-        self.contactType = contact.contactType
+        self.contactType = contact.contactType.rawValue
         self.phoneNumbers = self.parsePhoneLabel(phones: contact.phoneNumbers)
         self.emailAddresses = self.parseEmailLabel(emails: contact.emailAddresses)
         self.postalAddresses = self.parseAddress(addresses: contact.postalAddresses)
         self.organizationName = contact.organizationName
         self.birthday = contact.birthday
-        
+        self.note = contact.note
         self.displayName = calculateDisplayName()
         self.shortName = displayName.agc_initials(separator: " ") ?? ""
+        self.rawContact = contact
     }
     func calculateDisplayName() -> String{
         switch AppPreference.sharedInstance.settings.displayName {
@@ -96,13 +133,24 @@ class ContactModel: BaseModel{
             return "\(lastName), \(firstName)"
         }
     }
+    func getBirthdayString() -> String{
+        if let components = birthday{
+            let calendar = Calendar(identifier: .gregorian)
+            let date = calendar.date(from: components)!
+            let formatter = DateFormatter()
+            formatter.dateFormat = "MMMM dd, yyyy"
+            let dateString = formatter.string(from: date)
+            return dateString
+        }
+        return ""
+        
+    }
     func parseEmailLabel(emails: [CNLabeledValue<NSString>]) -> [ContactLabelModel]{
         var contactEmail = [ContactLabelModel]()
         for email in emails{
             let tmpEmail = ContactLabelModel()
             tmpEmail.identifier = email.identifier
             tmpEmail.isEmail = true
-            tmpEmail.identifier = email.identifier
             tmpEmail.label = (email.label ?? "") as String
             tmpEmail.value = (email.value) as String
             contactEmail.append(tmpEmail)
@@ -110,17 +158,36 @@ class ContactModel: BaseModel{
         return contactEmail
     }
     
+    func getRawEmailLabel() -> [CNLabeledValue<NSString>]{
+        var emails = [CNLabeledValue<NSString>]()
+        for email in self.emailAddresses{
+            let tmpAddress = CNLabeledValue(label: email.label, value: email.value as NSString)
+            emails.append(tmpAddress)
+        }
+        return emails
+    }
+    
     func parsePhoneLabel(phones: [CNLabeledValue<CNPhoneNumber>]) -> [ContactLabelModel]{
         var contactPhone = [ContactLabelModel]()
         for phone in phones{
             let tmpPhone = ContactLabelModel()
-            tmpPhone.identifier = phone.identifier
             tmpPhone.identifier = phone.identifier
             tmpPhone.label = (phone.label ?? "") as String
             tmpPhone.value = (phone.value.stringValue) as String
             contactPhone.append(tmpPhone)
         }
         return contactPhone
+    }
+    
+    func getRawPhoneLabel() -> [CNLabeledValue<CNPhoneNumber>]{
+        var phones = [CNLabeledValue<CNPhoneNumber>]()
+        for phone in self.phoneNumbers{
+            let tmpPhone = CNLabeledValue(
+                label:phone.label,
+                value:CNPhoneNumber(stringValue:phone.value))
+            phones.append(tmpPhone)
+        }
+        return phones
     }
     
     func parseAddress(addresses: [CNLabeledValue<CNPostalAddress>]) -> [ContactAddressModel]{
@@ -140,9 +207,59 @@ class ContactModel: BaseModel{
             tmpAddress.countryCode = cnPostAddress.isoCountryCode
             contactAddresses.append(tmpAddress)
         }
-        
-        
         return contactAddresses
+    }
+    func getRawAddressLabel() -> [CNLabeledValue<CNPostalAddress>]{
+        var addresses = [CNLabeledValue<CNPostalAddress>]()
+        for address in self.postalAddresses{
+            let homeAddress = CNMutablePostalAddress()
+            homeAddress.street = address.street
+            homeAddress.subLocality = address.subLocality
+            homeAddress.city = address.city
+            homeAddress.subAdministrativeArea = address.subAdministrativeArea
+            homeAddress.state = address.state
+            homeAddress.postalCode = address.postalCode
+            homeAddress.country = address.country
+            homeAddress.isoCountryCode = address.countryCode
+            addresses.append(CNLabeledValue(label:address.label, value:homeAddress))
+        }
+        return addresses
+    }
+    
+    func sectionsAvaiable() -> [ContactModelSectionsType]{
+        var sections:[ContactModelSectionsType] = [ContactModelSectionsType]()
+        if(phoneNumbers.count > 0){
+            sections.append(.mobile)
+        }
+        if(emailAddresses.count > 0){
+            sections.append(.email)
+        }
+        if(postalAddresses.count > 0){
+            sections.append(.address)
+        }
+        if(birthday != nil){
+            sections.append(.birthday)
+        }
+        return sections
+    }
+    
+    func getModelToRawContact() -> CNMutableContact{
+        let contact = self.rawContact.mutableCopy() as! CNMutableContact
+        contact.imageData = self.thumbnailImageData
+        contact.givenName = self.firstName
+        contact.familyName = self.lastName
+        contact.emailAddresses = self.getRawEmailLabel()
+        contact.phoneNumbers = self.getRawPhoneLabel()
+        contact.postalAddresses = self.getRawAddressLabel()
+        contact.birthday = self.birthday
+        contact.note = self.note
+        return contact
+    }
+    
+    func getNoteModelToRawContact() -> CNMutableContact{
+        let contact = self.rawContact.mutableCopy() as! CNMutableContact
+        contact.note = self.note
+        return contact
     }
 }
 
