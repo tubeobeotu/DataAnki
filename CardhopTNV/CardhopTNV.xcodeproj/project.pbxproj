@@ -19,6 +19,10 @@
 		914378EA2256DE9200C41F6E /* AvatarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 914378E92256DE9200C41F6E /* AvatarView.xib */; };
 		919B0C35225C23A5004576F6 /* ContactFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919B0C34225C23A5004576F6 /* ContactFileManager.swift */; };
 		919B0C37225C2A71004576F6 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919B0C36225C2A71004576F6 /* DateExtension.swift */; };
+		91B5D48C225ECD7E00AC0DF0 /* ContactEditCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B5D48A225ECD7E00AC0DF0 /* ContactEditCell.swift */; };
+		91B5D48D225ECD7E00AC0DF0 /* ContactEditCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91B5D48B225ECD7E00AC0DF0 /* ContactEditCell.xib */; };
+		91B5D490225ECD9E00AC0DF0 /* ContactNewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B5D48E225ECD9E00AC0DF0 /* ContactNewCell.swift */; };
+		91B5D491225ECD9E00AC0DF0 /* ContactNewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91B5D48F225ECD9E00AC0DF0 /* ContactNewCell.xib */; };
 		91F0ACC52254FF9B00CE6782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F0ACC42254FF9B00CE6782 /* AppDelegate.swift */; };
 		91F0ACC72254FF9B00CE6782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F0ACC62254FF9B00CE6782 /* ViewController.swift */; };
 		91F0ACCA2254FF9B00CE6782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91F0ACC82254FF9B00CE6782 /* Main.storyboard */; };
@@ -83,6 +87,10 @@
 		914378E92256DE9200C41F6E /* AvatarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AvatarView.xib; sourceTree = "<group>"; };
 		919B0C34225C23A5004576F6 /* ContactFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFileManager.swift; sourceTree = "<group>"; };
 		919B0C36225C2A71004576F6 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		91B5D48A225ECD7E00AC0DF0 /* ContactEditCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactEditCell.swift; sourceTree = "<group>"; };
+		91B5D48B225ECD7E00AC0DF0 /* ContactEditCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactEditCell.xib; sourceTree = "<group>"; };
+		91B5D48E225ECD9E00AC0DF0 /* ContactNewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactNewCell.swift; sourceTree = "<group>"; };
+		91B5D48F225ECD9E00AC0DF0 /* ContactNewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactNewCell.xib; sourceTree = "<group>"; };
 		91F0ACC12254FF9B00CE6782 /* CardhopTNV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardhopTNV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91F0ACC42254FF9B00CE6782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91F0ACC62254FF9B00CE6782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -259,6 +267,10 @@
 				91F24E1C225E5519001ABE9D /* SettingNormalCell.xib */,
 				91F24E29225E6B7E001ABE9D /* ContactDetailCell.swift */,
 				91F24E2A225E6B7E001ABE9D /* ContactDetailCell.xib */,
+				91B5D48A225ECD7E00AC0DF0 /* ContactEditCell.swift */,
+				91B5D48B225ECD7E00AC0DF0 /* ContactEditCell.xib */,
+				91B5D48E225ECD9E00AC0DF0 /* ContactNewCell.swift */,
+				91B5D48F225ECD9E00AC0DF0 /* ContactNewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -344,9 +356,11 @@
 				B1C4AB32225D9770006386EA /* SearchingGuideOptionView.xib in Resources */,
 				91F0ACE82255043900CE6782 /* ContactCell.xib in Resources */,
 				91F0ACCF2254FF9B00CE6782 /* LaunchScreen.storyboard in Resources */,
+				91B5D491225ECD9E00AC0DF0 /* ContactNewCell.xib in Resources */,
 				91F0ACCC2254FF9B00CE6782 /* Assets.xcassets in Resources */,
 				B1C4AB1E225C4A69006386EA /* ThemeView.xib in Resources */,
 				B1C4AB2E225D94F2006386EA /* SearchingGuideView.xib in Resources */,
+				91B5D48D225ECD7E00AC0DF0 /* ContactEditCell.xib in Resources */,
 				B1C4AB26225C7D8E006386EA /* SettingGeneralView.xib in Resources */,
 				B1C4AB88225DF3E6006386EA /* CountryPickerView.bundle in Resources */,
 				9124FDC62258913900151834 /* SearchingView.xib in Resources */,
@@ -389,10 +403,12 @@
 				91F0ACDF2255023900CE6782 /* BirthdayVC.swift in Sources */,
 				91F0ACE4225503F000CE6782 /* BaseTableViewCell.swift in Sources */,
 				B1C4AB36225DAA94006386EA /* GeneralSettingModel.swift in Sources */,
+				91B5D490225ECD9E00AC0DF0 /* ContactNewCell.swift in Sources */,
 				914378E62256DE5200C41F6E /* BaseCustomNibView.swift in Sources */,
 				B14A7BB3225B5C370027E540 /* ContactAddressModel.swift in Sources */,
 				919B0C37225C2A71004576F6 /* DateExtension.swift in Sources */,
 				91F24E1D225E5519001ABE9D /* SettingNormalCell.swift in Sources */,
+				91B5D48C225ECD7E00AC0DF0 /* ContactEditCell.swift in Sources */,
 				B1C4AB28225C850D006386EA /* SearchingContactsVC.swift in Sources */,
 				B1C4AB1A225C4A51006386EA /* ThemeView.swift in Sources */,
 				919B0C35225C23A5004576F6 /* ContactFileManager.swift in Sources */,
