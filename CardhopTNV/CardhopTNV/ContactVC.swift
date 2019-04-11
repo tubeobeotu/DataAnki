@@ -60,7 +60,9 @@ extension ContactVC: UITableViewDelegate{
         return AppPreference.sharedInstance.getNormalCellHeight()
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        if let contacts = self.sections[indexPath.section].values.first{
+            self.showContactDetailVC(contact: contacts[indexPath.row])
+        }
         
     }
 }

@@ -45,21 +45,14 @@ class SettingDetailVC: BaseViewController {
     let display:[DisplayName] = [.FistLast, .LastFirst, .LastFirst2]
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.isShowLargeTitle = false
+        self.isShowSiriView = false
         self.tbl_Content.delegate = self
         self.tbl_Content.dataSource = self
         self.tbl_Content.register(UINib.init(nibName: "SettingNormalCell", bundle: nil), forCellReuseIdentifier: "SettingNormalCell")
         // Do any additional setup after loading the view.
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        AppPreference.sharedInstance.siriView.isHidden = true
-    }
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        AppPreference.sharedInstance.siriView.isHidden = false
-    }
 
 }
 extension SettingDetailVC: UITableViewDelegate{

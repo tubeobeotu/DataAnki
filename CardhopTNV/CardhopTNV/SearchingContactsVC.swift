@@ -30,15 +30,7 @@ class SearchingContactsVC: ContactVC {
         self.v_Guide?.isHidden = !isShow
         self.tbl_Content?.isHidden = isShow
     }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        AppPreference.sharedInstance.siriView.isHidden = true
-    }
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        AppPreference.sharedInstance.siriView.isHidden = false
-    }
-    
+
     override func reloadModels() {
         contacts = AppPreference.sharedInstance.contacts
         if(self.isShowGuide){

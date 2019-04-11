@@ -9,7 +9,12 @@
 import UIKit
 
 class ContactEditCell: BaseTableViewCell {
-
+    @IBOutlet weak var btn_Delete: UIButton!
+    
+    @IBOutlet weak var btn_Icon: UIButton!
+    @IBOutlet weak var btn_DropList: UIButton!
+    
+    @IBOutlet weak var tf_PhoneNumber: UITextField!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,6 +24,10 @@ class ContactEditCell: BaseTableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    @IBAction func deleteAction(_ sender: Any) {
+    }
+    @IBAction func showDropList(_ sender: Any) {
     }
     
 }

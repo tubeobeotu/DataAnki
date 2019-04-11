@@ -43,8 +43,9 @@ extension FavouriteVC: UITableViewDelegate{
         return AppPreference.sharedInstance.getNormalCellHeight()
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("")
+        self.showContactDetailVC(contact: favouritedContacts[indexPath.row])
     }
+    
 }
 
 extension FavouriteVC: UITableViewDataSource{

@@ -9,7 +9,8 @@
 import UIKit
 
 class BaseViewController: UIViewController {
-    
+    var isShowSiriView = true
+    var isShowLargeTitle = true
     @IBOutlet weak var tbl_Content: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +38,10 @@ class BaseViewController: UIViewController {
         super.viewWillAppear(animated)
         self.reloadModels()
         self.reloadData()
+        AppPreference.sharedInstance.siriView.isHidden = !self.isShowSiriView
+        self.navigationController?.navigationBar.prefersLargeTitles = self.isShowLargeTitle
     }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -66,6 +70,14 @@ class BaseViewController: UIViewController {
             self.present(nav, animated: true, completion: nil)
         }
         
+    }
+    func showContactDetailVC(contact: ContactModel){
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let vc = storyboard.instantiateViewController(withIdentifier: "ContactDetailVC") as? ContactDetailVC{
+            vc.contact = contact
+            self.navigationController?.navigationBar.prefersLargeTitles = false
+           self.navigationController?.pushViewController(vc, animated:  true)
+        }
     }
 }
 
@@ -98,4 +110,5 @@ extension UIViewController{
         }
         return nil
     }
+
 }

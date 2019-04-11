@@ -31,7 +31,7 @@ extension HistoryVC: UITableViewDelegate{
         return AppPreference.sharedInstance.getNormalCellHeight()
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("")
+        self.showContactDetailVC(contact: recentsContacts[indexPath.row])
     }
 }
 

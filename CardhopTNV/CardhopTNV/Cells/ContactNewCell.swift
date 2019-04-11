@@ -9,7 +9,9 @@
 import UIKit
 
 class ContactNewCell: BaseTableViewCell {
-
+    @IBOutlet weak var lbl_Title: UILabel!
+    
+    @IBOutlet weak var btn_Icon: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
