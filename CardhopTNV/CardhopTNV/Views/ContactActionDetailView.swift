@@ -25,10 +25,10 @@ enum ActionType: Int{
     }
     var image: UIImage?{
         switch(self){
-        case .Message: return UIImage.init(named: "message")
-        case .Email: return  UIImage.init(named: "email")
-        case .Call: return  UIImage.init(named: "call")
-        case .Video: return  UIImage.init(named: "video")
+        case .Message: return UIImage.init(named: "ic_message")
+        case .Email: return  UIImage.init(named: "ic_email")
+        case .Call: return  UIImage.init(named: "ic_call")
+        case .Video: return  UIImage.init(named: "ic_video")
         }
     }
     var textColor:UIColor{
@@ -46,15 +46,22 @@ class ContactActionDetailView: BaseCustomNibView {
         didSet{
             self.lbl_Content.text = type.text
             self.lbl_Content.textColor = type.textColor
-            self.img_View.image = type.image
+            self.btn_Icon.setImage(type.image, for: .normal)
+            self.btn_Icon.tintColor = UIColor.white
+            self.btn_Icon.backgroundColor = self.type.textColor
         }
     }
     var delegate:ContactActionDetailViewDelegate?
-    @IBOutlet weak var img_View: UIImageView!
+    
+    @IBOutlet weak var btn_Icon: UIButton!
     @IBOutlet weak var lbl_Content: UILabel!
     
     override func setupViews() {
-        
+    
+    }
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        self.btn_Icon.layer.cornerRadius = self.btn_Icon.frame.size.width/2
     }
     
     @IBAction func action(_ sender: Any) {

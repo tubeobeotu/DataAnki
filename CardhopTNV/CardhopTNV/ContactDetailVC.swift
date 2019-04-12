@@ -21,6 +21,7 @@ class ContactDetailVC: BaseViewController {
     @IBOutlet weak var v_Video: ContactActionDetailView!
     @IBOutlet weak var cst_Top: NSLayoutConstraint!
     
+    @IBOutlet weak var v_Birthday: UIView!
     @IBOutlet weak var cst_BirthdayHeight: NSLayoutConstraint!
     @IBOutlet weak var lbl_Birthday: UILabel!
     var contact:ContactModel!
@@ -106,13 +107,13 @@ class ContactDetailVC: BaseViewController {
     }
     func setupBirthdayView(){
         func hide(){
-            self.lbl_Birthday.isHidden = true
+            self.v_Birthday.isHidden = true
             self.cst_BirthdayHeight.constant = 0
         }
         if(self.contact.birthday != nil){
             if let date = NSCalendar.current.date(from: self.contact.birthday!){
                 if(Calendar.current.isDateInToday(date)){
-                    self.lbl_Birthday.isHidden = false
+                    self.v_Birthday.isHidden = false
                     self.lbl_Birthday.text = "\(self.contact.firstName)'s birthday is today!"
                     self.cst_BirthdayHeight.constant = 25
                     return

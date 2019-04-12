@@ -31,19 +31,20 @@ enum ContactModelSectionsType:Int{
             }
         }
     }
+
     var image: UIImage?{
         get{
             switch self {
             case .mobile:
-                return UIImage.init(named: "mobile")
+                return UIImage.init(named: "ic_call")
             case .email:
-                return UIImage.init(named: "email")
+                return UIImage.init(named: "ic_email")
             case .address:
-                return UIImage.init(named: "address")
+                return UIImage.init(named: "ic_address")
             case .birthday:
-                return UIImage.init(named: "birthday")
+                return UIImage.init(named: "ic_gift")
             case .note:
-                return UIImage.init(named: "note")
+                return UIImage.init(named: "ic_note")
             }
         }
     }

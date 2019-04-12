@@ -14,60 +14,56 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ContactEditCell" id="KGk-i7-Jjw" customClass="ContactEditCell" customModule="CardhopTNV" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="49.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BmA-mn-8Gf">
-                        <rect key="frame" x="0.0" y="0.0" width="120" height="43.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="110" height="49.5"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t9L-Nn-YcH">
-                                <rect key="frame" x="8" y="7" width="30" height="30"/>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t9L-Nn-YcH">
+                                <rect key="frame" x="8" y="10.5" width="30" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="9gw-cy-d9o"/>
                                     <constraint firstAttribute="width" constant="30" id="tmb-fa-nev"/>
                                 </constraints>
-                                <inset key="imageEdgeInsets" minX="4" minY="4" maxX="4" maxY="4"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="imageEdgeInsets" minX="7" minY="7" maxX="7" maxY="7"/>
+                                <state key="normal" title="    " image="ic_remove"/>
                                 <connections>
                                     <action selector="deleteAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="j6t-v5-REO"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Thi-DF-3WY">
-                                <rect key="frame" x="38" y="0.0" width="58" height="43.5"/>
+                                <rect key="frame" x="38" y="0.0" width="64" height="49.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="mobile"/>
                                 <connections>
                                     <action selector="showDropList:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="hof-if-BbQ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="757-qm-HZ5">
-                                <rect key="frame" x="100" y="16" width="12" height="12"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="12" id="42k-f5-Nmr"/>
-                                    <constraint firstAttribute="height" constant="12" id="rsc-Ej-jPf"/>
-                                </constraints>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="757-qm-HZ5" firstAttribute="leading" secondItem="Thi-DF-3WY" secondAttribute="trailing" constant="4" id="DLZ-4d-YqA"/>
+                            <constraint firstItem="t9L-Nn-YcH" firstAttribute="top" secondItem="BmA-mn-8Gf" secondAttribute="top" constant="10.5" id="0DS-Uv-Y7g"/>
+                            <constraint firstAttribute="bottom" secondItem="t9L-Nn-YcH" secondAttribute="bottom" constant="9" id="5iH-Pp-NIM"/>
                             <constraint firstItem="t9L-Nn-YcH" firstAttribute="leading" secondItem="BmA-mn-8Gf" secondAttribute="leadingMargin" id="DQ3-bf-N8R"/>
-                            <constraint firstAttribute="width" constant="120" id="Dub-qC-NCe"/>
+                            <constraint firstAttribute="width" constant="110" id="Dub-qC-NCe"/>
                             <constraint firstItem="Thi-DF-3WY" firstAttribute="leading" secondItem="t9L-Nn-YcH" secondAttribute="trailing" id="GH6-KA-V31"/>
-                            <constraint firstAttribute="trailing" secondItem="757-qm-HZ5" secondAttribute="trailing" constant="8" id="S6w-A4-0l3"/>
+                            <constraint firstAttribute="trailing" secondItem="Thi-DF-3WY" secondAttribute="trailing" constant="8" id="KL4-Fp-pyX"/>
                             <constraint firstItem="Thi-DF-3WY" firstAttribute="top" secondItem="BmA-mn-8Gf" secondAttribute="top" id="fgB-8A-0WU"/>
                             <constraint firstAttribute="bottom" secondItem="Thi-DF-3WY" secondAttribute="bottom" id="hex-Kh-NkX"/>
                             <constraint firstItem="t9L-Nn-YcH" firstAttribute="centerY" secondItem="BmA-mn-8Gf" secondAttribute="centerY" id="uKq-qm-F9M"/>
-                            <constraint firstItem="757-qm-HZ5" firstAttribute="centerY" secondItem="BmA-mn-8Gf" secondAttribute="centerY" id="v9X-dH-f2L"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Yn-uz-Db4">
-                        <rect key="frame" x="120" y="0.0" width="200" height="43.5"/>
+                        <rect key="frame" x="110" y="0.0" width="210" height="49.5"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fzt-pW-ze6">
-                                <rect key="frame" x="8" y="0.0" width="184" height="43.5"/>
+                                <rect key="frame" x="8" y="0.0" width="194" height="49.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -98,9 +94,11 @@
             <connections>
                 <outlet property="btn_Delete" destination="t9L-Nn-YcH" id="pup-HI-NUb"/>
                 <outlet property="btn_DropList" destination="Thi-DF-3WY" id="eAX-bH-ox3"/>
-                <outlet property="btn_Icon" destination="757-qm-HZ5" id="fPz-aV-ZKS"/>
                 <outlet property="tf_PhoneNumber" destination="fzt-pW-ze6" id="ZHH-HI-T6N"/>
             </connections>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="ic_remove" width="30" height="30"/>
+    </resources>
 </document>

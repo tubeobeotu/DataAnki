@@ -1,20 +1,15 @@
 PODS:
-  - DropDown (2.3.4)
+  - DropDown (2.0.2)
   - QBImagePickerController (3.4.0)
 
 DEPENDENCIES:
-  - DropDown (= 2.3.4)
+  - DropDown
   - QBImagePickerController
 
-SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - DropDown
-    - QBImagePickerController
-
 SPEC CHECKSUMS:
-  DropDown: f225ff0fd09dde064d17aa03db7e4d4e4ff40b6b
+  DropDown: 75562633a203f57a917021b4edb96c76f293b0ec
   QBImagePickerController: d54cf93db6decf26baf6ed3472f336ef35cae022
 
-PODFILE CHECKSUM: 41544c5c8c7de19b9ba6995966e41d5facecd634
+PODFILE CHECKSUM: 27ef260fb0272a2e4cb94e3dbfb180aa37dd3583
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.3.1

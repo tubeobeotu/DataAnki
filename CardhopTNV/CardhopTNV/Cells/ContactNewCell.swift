@@ -30,14 +30,19 @@ class ContactNewCell: BaseTableViewCell {
     }
     var delegate:ContactNewCellDelegate?
     @IBOutlet weak var lbl_Title: UILabel!
-    @IBOutlet weak var btn_Icon: UILabel!
+    @IBOutlet weak var btn_Icon: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         self.lbl_Title.textColor = AppPreference.sharedInstance.settings.appBgMode.cellTitleTextColor
+        self.btn_Icon.layer.cornerRadius = 15
+        self.btn_Icon.clipsToBounds = true
+        
     }
 
     @IBAction func tapAddNew(_ sender: Any) {
         self.delegate?.didTapAddNew(type: self.type)
     }
+
     
 }

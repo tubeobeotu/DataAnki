@@ -3,172 +3,172 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		07A0BB7515059A81E79D6282FF6C42AD /* QBCheckmarkView.h in Headers */ = {isa = PBXBuildFile; fileRef = 136E96193C7F189850CC203D547A021A /* QBCheckmarkView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1069C47FC723926D2BCD1AFDB95F02D6 /* QBAssetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8386B29DE97AA09E3EFCAFDA012B2450 /* QBAssetCell.m */; };
-		1E100179A53425720BD878D58A2CBAB9 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 657401A1018833BDAE66ED7A511086D7 /* Photos.framework */; };
-		22F454EC2CF998CDD6DDE85ECA1EADF4 /* QBImagePickerController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6000C3BAF0FB7991EDD76EBD551A522B /* QBImagePickerController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2340FB88F1E02021398B4CFABB620185 /* QBAlbumCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 66099000A5413AD2C52082B2AEEDB070 /* QBAlbumCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		240A0F0EFC70E12766B3BDF2370CB6E7 /* DPDUIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9761C9153BCBEA1F31BB8AD334191187 /* DPDUIView+Extension.swift */; };
-		2C094C780571998345753337431F31A7 /* QBSlomoIconView.h in Headers */ = {isa = PBXBuildFile; fileRef = A070DDCB58E2B3BC1632C631EC3705DC /* QBSlomoIconView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		31B168EC461F0F9AE3AA3F3EAADF69E8 /* QBImagePicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1308CCD193A9EF29001EE4F646531187 /* QBImagePicker.storyboard */; };
-		335C75DF07A422A827DA1DE7277FAF3B /* QBVideoIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 25FDDAC3A0B6B93612430EA3EFF82699 /* QBVideoIconView.m */; };
-		34B1820CD2A2E24621DDEDE963B9996D /* QBAlbumCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4A07075289DECD46C7115D99B7E1C1 /* QBAlbumCell.m */; };
-		38851C8DD387559A7F8D462E3B85D75E /* QBAssetCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C4AC86FBEC8196E15B424AE5CCB6E0B /* QBAssetCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		49D9535D4C5F930D4030341ED2F96A35 /* DPDKeyboardListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07CA1CEC129DEDA5F64E8D74BDA46ED /* DPDKeyboardListener.swift */; };
-		508E94959435C386BF9F2BCDF89B8ABF /* QBImagePickerController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D95741A853C95595C768D9ADCBA8DF0 /* QBImagePickerController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		573FA8A312D833DA2F1FF734419EE989 /* DropDown-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE8FA96AB552E8804CF01277F8978BF /* DropDown-dummy.m */; };
-		5ACA12F5D1E1F4C8B42B221761E27300 /* QBAssetsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F7CF3BB7261551778C24E1776F11ADF /* QBAssetsViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5C7C25F95681B9D5EBDB138D950EDDE1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0874248BC88164A8B0677CC18AEF01 /* Foundation.framework */; };
-		6393AB5973F2DA40002E61908CAF09EB /* QBAlbumsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 7062422F2AEF0303B38D5B208BABFB7B /* QBAlbumsViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		65ADD2BE4974C126AD2078A4D92C9B70 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0874248BC88164A8B0677CC18AEF01 /* Foundation.framework */; };
-		70CAF72416038F5947395B9FB4A415F0 /* QBAlbumsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B1188E87F3A3605B53E919EF0303F86 /* QBAlbumsViewController.m */; };
-		7225E2407BCBD8CDD31416E3AA18B464 /* QBVideoIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1574E2B7B8D55C1D3DE53B1AE8693CAF /* QBVideoIndicatorView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7960CF120A2415F48DCC981A8AD047E5 /* QBCheckmarkView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BC32B60C11A1E527E322E6597AC60A /* QBCheckmarkView.m */; };
-		7D394B3F6BA60DA268DE90D4F2759D67 /* QBVideoIconView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CC6928B248EC94992878EAA7D76D6F9 /* QBVideoIconView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		806FA2DE207BA6DD86E66C1AFE2163DA /* QBImagePicker.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1BFA3BC66B6C99DADDA96C46319F404F /* QBImagePicker.bundle */; };
-		867CD75D7E598260FF19B2BAA413A55C /* QBImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8852049521C3CCC4810626293711D7A3 /* QBImagePickerController.m */; };
-		87A59B7C6099EF118595543EEF3DECB5 /* QBAssetsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFF189DBA2FF169AADB5DE2AC327162 /* QBAssetsViewController.m */; };
-		89A682C4E3E4B1B55085832D4CFB4ADA /* DropDownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581861174F61E35934982D45422DD183 /* DropDownCell.swift */; };
-		8AC8050FE46C3D1C741D1B9D9B637FF3 /* Pods-CardhopTNV-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 164B358ADE5292C6BDD1F42443D92B7C /* Pods-CardhopTNV-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		94A7DFD684BC8AE0EEF13BA17610C7C6 /* DropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3354CF9DB92D0A6F2FB29503DC8129F1 /* DropDown.swift */; };
-		9878A6D978E104427C11E28E8F651D9B /* es.lproj in Resources */ = {isa = PBXBuildFile; fileRef = AE3CF0D34A9AD39E838C82E1F42D9CF8 /* es.lproj */; };
-		993A80DCF50F57437FDA2A2FC48F76FF /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 5BF7E31129D01AD28602A78900ECE4C0 /* en.lproj */; };
-		9BCD9217F5A20D934F27E17A564111F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0874248BC88164A8B0677CC18AEF01 /* Foundation.framework */; };
-		A50F744D1B554E6C751308E168095A22 /* QBVideoIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A3AF57034C89DA67AC64ACE54A8487 /* QBVideoIndicatorView.m */; };
-		B59E75CB029C100A622924064730EE7A /* DropDown-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B54A62CCC425E2811929F2C8A0826776 /* DropDown-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C341A71E9D1383FD0B73DD98B1C42D8E /* QBImagePickerController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A25E83E94984DE690928CECBC725780 /* QBImagePickerController-dummy.m */; };
-		C3851EB5463F8F3669AC09D6B1376A88 /* DropDown+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D7F416A949E3F61EB7F4CE13639DB8 /* DropDown+Appearance.swift */; };
-		CEE1CDC044B6A81DAD9669E7914BA1B9 /* zh-Hans.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 0FF6B4B71B59D160B6EF7B3678614BDD /* zh-Hans.lproj */; };
-		D59432D2C6465200645AF507C9BAAB3D /* de.lproj in Resources */ = {isa = PBXBuildFile; fileRef = AF9F41C82F619DA50C838EEC88182FD4 /* de.lproj */; };
-		D9DCC833AEACEAC21F569BEBB9170D86 /* DPDConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2BA0FD272F6517EC4DCD04C7BA2D39 /* DPDConstants.swift */; };
-		F18B3575D787209BD42BDC52BBEAF0F0 /* Pods-CardhopTNV-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B1DD0ACB21B77066C528D0FB765A11 /* Pods-CardhopTNV-dummy.m */; };
-		F750279D22DEF376E29E00C86DABABC4 /* ja.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 018E976E227E79AFDB77794F7F470BFB /* ja.lproj */; };
-		FF168F05DFAE21A2FFF0BD61B869E2BB /* DropDownCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35A72418B7CCCAE7A74A36B1F4990FC3 /* DropDownCell.xib */; };
-		FFDC6D5C4353768C65CEAB4AC66E0E82 /* QBSlomoIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79446FFABBBD3C852DF4A174331A1C48 /* QBSlomoIconView.m */; };
+		02CAE638EF1CEEBD6F5740498F9CA3F8 /* DropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3354CF9DB92D0A6F2FB29503DC8129F1 /* DropDown.swift */; };
+		08EE83852A6CCCE073A5692E4AD6EE5F /* QBAssetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8386B29DE97AA09E3EFCAFDA012B2450 /* QBAssetCell.m */; };
+		098F056D90AF9CD3FD60D8A81DF043B6 /* DropDownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581861174F61E35934982D45422DD183 /* DropDownCell.swift */; };
+		12E4604C2CEDECB12208B26929833467 /* QBAssetCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C4AC86FBEC8196E15B424AE5CCB6E0B /* QBAssetCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		202789476C44204DB49835032E6C240C /* QBCheckmarkView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BC32B60C11A1E527E322E6597AC60A /* QBCheckmarkView.m */; };
+		2A94E013E75E2E8EBE007AFD56586AE1 /* QBVideoIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A3AF57034C89DA67AC64ACE54A8487 /* QBVideoIndicatorView.m */; };
+		2B59CE760F78AE027D56D1ADC58643F4 /* es.lproj in Resources */ = {isa = PBXBuildFile; fileRef = AE3CF0D34A9AD39E838C82E1F42D9CF8 /* es.lproj */; };
+		2E7E74DF0C455B0BC43BFDD1D0163E64 /* DropDown-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FD435DD5594AC6FC6DE3632F54A6B47E /* DropDown-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2E9CD6F441E6B30601549781F5DB2D12 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F25127136F29324AC0675569034753E /* Foundation.framework */; };
+		3322A39AD5198605D99F0D4A048F5599 /* QBCheckmarkView.h in Headers */ = {isa = PBXBuildFile; fileRef = 136E96193C7F189850CC203D547A021A /* QBCheckmarkView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		35B20C42FC615DAE1DD41C13238DCF77 /* ja.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 018E976E227E79AFDB77794F7F470BFB /* ja.lproj */; };
+		37C293AEA575D6E5186739D1B07805F2 /* DropDownCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35A72418B7CCCAE7A74A36B1F4990FC3 /* DropDownCell.xib */; };
+		442ADADA3215E1E5CA1557E708D4228C /* DropDown+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D7F416A949E3F61EB7F4CE13639DB8 /* DropDown+Appearance.swift */; };
+		4CF0C95E891C95DFB984633079247A77 /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 5BF7E31129D01AD28602A78900ECE4C0 /* en.lproj */; };
+		515520D11950689CBA89BB7D9D22A282 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F25127136F29324AC0675569034753E /* Foundation.framework */; };
+		53D545F81545177FCF535E09F2D8005D /* QBVideoIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1574E2B7B8D55C1D3DE53B1AE8693CAF /* QBVideoIndicatorView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5DED4E0518FD1945D1C6F0AD0A00F3E7 /* Pods-CardhopTNV-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E9C112F55547DB0706F5A288A749A7D /* Pods-CardhopTNV-dummy.m */; };
+		5E43B7D2259F851CC41C211A1ABA708B /* QBAlbumCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 66099000A5413AD2C52082B2AEEDB070 /* QBAlbumCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6C94BA085D9F7493B9CA54984769BE2F /* QBSlomoIconView.h in Headers */ = {isa = PBXBuildFile; fileRef = A070DDCB58E2B3BC1632C631EC3705DC /* QBSlomoIconView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		76AFA2EDE653ACE393E8BF4F8A8B34FD /* QBAlbumsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 7062422F2AEF0303B38D5B208BABFB7B /* QBAlbumsViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7A5C63B5BD94015B0AC495555A5DD1FC /* QBImagePicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1308CCD193A9EF29001EE4F646531187 /* QBImagePicker.storyboard */; };
+		91C4FB0064A13055CF7933275418C1CE /* QBImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8852049521C3CCC4810626293711D7A3 /* QBImagePickerController.m */; };
+		9D0221E27E37CDA9DF26DD3CFA56D75B /* DPDKeyboardListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07CA1CEC129DEDA5F64E8D74BDA46ED /* DPDKeyboardListener.swift */; };
+		A401CF18D15DF246F40FAC4E8F06CBC7 /* DPDUIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9761C9153BCBEA1F31BB8AD334191187 /* DPDUIView+Extension.swift */; };
+		A812E7811821F66B3B7499F6F1B513BA /* DPDConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2BA0FD272F6517EC4DCD04C7BA2D39 /* DPDConstants.swift */; };
+		AC3D82AF1BF19772AD69DAF81D55B500 /* QBAlbumsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B1188E87F3A3605B53E919EF0303F86 /* QBAlbumsViewController.m */; };
+		AC6581D9387744158B44BE683403C3BC /* DropDown-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E73DC6939B3E36F11EDA35EDA96E5BD /* DropDown-dummy.m */; };
+		BC7D74F52F7E4B8993D24C26E57A0202 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 783319C0CD696BE7D17336FBA98C5336 /* Photos.framework */; };
+		BDDDB0C5625594AC0E2D4B9997CF86C3 /* Pods-CardhopTNV-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DDD495CFC22F4F0269C3DBF2425178EB /* Pods-CardhopTNV-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C3C793F79666AEFB79B8516E8C52B238 /* QBImagePicker.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 072876DF720D77CA1A7B0052ED9139FF /* QBImagePicker.bundle */; };
+		C7E6D33A90EE4FADF7602B3E3E96C47C /* QBSlomoIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79446FFABBBD3C852DF4A174331A1C48 /* QBSlomoIconView.m */; };
+		CA6F440627CFE2F36AA31CE40986326B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F25127136F29324AC0675569034753E /* Foundation.framework */; };
+		CE18A6FD1BD4D02DF43AD4BA5171D0AC /* QBVideoIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 25FDDAC3A0B6B93612430EA3EFF82699 /* QBVideoIconView.m */; };
+		CFAB80F282F0B79B14FCB7BC039E9B97 /* zh-Hans.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 0FF6B4B71B59D160B6EF7B3678614BDD /* zh-Hans.lproj */; };
+		D57D19FF86E1D674DE94ACB575CACE5F /* QBImagePickerController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6000C3BAF0FB7991EDD76EBD551A522B /* QBImagePickerController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D66BD10425B79ED31F2385422F544571 /* QBAlbumCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4A07075289DECD46C7115D99B7E1C1 /* QBAlbumCell.m */; };
+		E04A5DC89A0469A18246E0421C8AACC2 /* QBVideoIconView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CC6928B248EC94992878EAA7D76D6F9 /* QBVideoIconView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E3112065D3DDE7D0DF493A85BE59D390 /* QBAssetsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFF189DBA2FF169AADB5DE2AC327162 /* QBAssetsViewController.m */; };
+		E5902B290DB60D0EFF81872B244AD9AC /* QBImagePickerController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F4FFE3225831E4EBD2E69363E4ADD5 /* QBImagePickerController-dummy.m */; };
+		E73F67D8BDB46EBF3EACB7C20A69A86A /* QBAssetsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F7CF3BB7261551778C24E1776F11ADF /* QBAssetsViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FD7441E4C996E29F63AD1F316A5DAA92 /* de.lproj in Resources */ = {isa = PBXBuildFile; fileRef = AF9F41C82F619DA50C838EEC88182FD4 /* de.lproj */; };
+		FF785934C7A0062E2CBA5001B02B7E94 /* QBImagePickerController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D6E7B7D5D037B03E7E1B0A5C41A7A38 /* QBImagePickerController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4E371280CD32DF3DC54CC9DAF56BA81F /* PBXContainerItemProxy */ = {
+		39F7C7AD084FF3E413D94357960D4415 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 010BF88BD9BDF28DD9E8A6B8E0076AEC;
+			remoteGlobalIDString = 5168099F2EBFC99A707C03C9EADE01A5;
+			remoteInfo = DropDown;
+		};
+		7BE8A709D98D4EBD4A7C2192FF11CBB7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 520244A3248D5416A8FFDA3C0D3BD802;
 			remoteInfo = "QBImagePickerController-QBImagePicker";
 		};
-		6924529D64B5552DCF72428EE9170817 /* PBXContainerItemProxy */ = {
+		801555FA47E0F5F4FA9F89E8A7604479 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 580D5A438EA699E7F5D024D2213E9372;
+			remoteGlobalIDString = 9D273FE88249288D157730E6E5722C82;
 			remoteInfo = QBImagePickerController;
-		};
-		7A0A7D1AC1BF8879BE8CE8208DA94CCB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FD1ECC3979ED6D745803FF751221D70C;
-			remoteInfo = DropDown;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		018E976E227E79AFDB77794F7F470BFB /* ja.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = ja.lproj; path = QBImagePicker/ja.lproj; sourceTree = "<group>"; };
-		0FF6B4B71B59D160B6EF7B3678614BDD /* zh-Hans.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = "zh-Hans.lproj"; path = "QBImagePicker/zh-Hans.lproj"; sourceTree = "<group>"; };
-		1099D86C4B84F1C2506EECC1A163F236 /* Pods-CardhopTNV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CardhopTNV.debug.xcconfig"; sourceTree = "<group>"; };
+		003F028972D867C892FCDBB7BF3E799B /* QBImagePickerController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = QBImagePickerController.framework; path = QBImagePickerController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		018E976E227E79AFDB77794F7F470BFB /* ja.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ja.lproj; path = QBImagePicker/ja.lproj; sourceTree = "<group>"; };
+		024C81C3C9303D118DD6F9308DDF3281 /* DropDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DropDown.framework; path = DropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		072876DF720D77CA1A7B0052ED9139FF /* QBImagePicker.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = QBImagePicker.bundle; path = QBImagePicker.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		0859B3F3B14DE04EB7F36F64BD3AFF80 /* DropDown.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DropDown.xcconfig; sourceTree = "<group>"; };
+		0B12F8AA959CC7C209723FAA787F3967 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0FF6B4B71B59D160B6EF7B3678614BDD /* zh-Hans.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "zh-Hans.lproj"; path = "QBImagePicker/zh-Hans.lproj"; sourceTree = "<group>"; };
 		1308CCD193A9EF29001EE4F646531187 /* QBImagePicker.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; name = QBImagePicker.storyboard; path = QBImagePicker/QBImagePicker.storyboard; sourceTree = "<group>"; };
 		136E96193C7F189850CC203D547A021A /* QBCheckmarkView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QBCheckmarkView.h; path = QBImagePicker/QBCheckmarkView.h; sourceTree = "<group>"; };
 		1574E2B7B8D55C1D3DE53B1AE8693CAF /* QBVideoIndicatorView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QBVideoIndicatorView.h; path = QBImagePicker/QBVideoIndicatorView.h; sourceTree = "<group>"; };
-		164B358ADE5292C6BDD1F42443D92B7C /* Pods-CardhopTNV-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CardhopTNV-umbrella.h"; sourceTree = "<group>"; };
 		18BC32B60C11A1E527E322E6597AC60A /* QBCheckmarkView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QBCheckmarkView.m; path = QBImagePicker/QBCheckmarkView.m; sourceTree = "<group>"; };
 		1A2BA0FD272F6517EC4DCD04C7BA2D39 /* DPDConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DPDConstants.swift; path = DropDown/helpers/DPDConstants.swift; sourceTree = "<group>"; };
-		1BFA3BC66B6C99DADDA96C46319F404F /* QBImagePicker.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QBImagePicker.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D96914B4497F33BFCC4D5E8852FFB33 /* Pods-CardhopTNV-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CardhopTNV-acknowledgements.plist"; sourceTree = "<group>"; };
+		1E73DC6939B3E36F11EDA35EDA96E5BD /* DropDown-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DropDown-dummy.m"; sourceTree = "<group>"; };
+		249FFDF6F8A621261459BBD3EF0E86DA /* Pods-CardhopTNV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CardhopTNV.debug.xcconfig"; sourceTree = "<group>"; };
+		24E3697ADB877F29EC120808D470C44B /* Pods-CardhopTNV-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CardhopTNV-acknowledgements.markdown"; sourceTree = "<group>"; };
 		25FDDAC3A0B6B93612430EA3EFF82699 /* QBVideoIconView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QBVideoIconView.m; path = QBImagePicker/QBVideoIconView.m; sourceTree = "<group>"; };
-		2C05E5486E7940CA1A0697F90E205D9F /* QBImagePickerController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QBImagePickerController-prefix.pch"; sourceTree = "<group>"; };
 		2DFF189DBA2FF169AADB5DE2AC327162 /* QBAssetsViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QBAssetsViewController.m; path = QBImagePicker/QBAssetsViewController.m; sourceTree = "<group>"; };
+		32AC9B9E27469694B0C9111E7F13CE83 /* DropDown.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = DropDown.modulemap; sourceTree = "<group>"; };
 		3354CF9DB92D0A6F2FB29503DC8129F1 /* DropDown.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropDown.swift; path = DropDown/src/DropDown.swift; sourceTree = "<group>"; };
+		3452875D5B7170EED1E91D540D48DA3C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35A72418B7CCCAE7A74A36B1F4990FC3 /* DropDownCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = DropDownCell.xib; path = DropDown/resources/DropDownCell.xib; sourceTree = "<group>"; };
 		36A3AF57034C89DA67AC64ACE54A8487 /* QBVideoIndicatorView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QBVideoIndicatorView.m; path = QBImagePicker/QBVideoIndicatorView.m; sourceTree = "<group>"; };
-		3EED9BEDE76C1382457FE5A9124E7DA0 /* DropDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		428ED46ADE712CABAE5B81F0791D813C /* Pods-CardhopTNV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CardhopTNV.release.xcconfig"; sourceTree = "<group>"; };
-		46786EABD0D7134CF36F75C94357AC79 /* DropDown.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DropDown.xcconfig; sourceTree = "<group>"; };
-		4C57ED02015BD775ADC65CCCC330323D /* ResourceBundle-QBImagePicker-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-QBImagePicker-Info.plist"; sourceTree = "<group>"; };
-		4E0874248BC88164A8B0677CC18AEF01 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		37F4FFE3225831E4EBD2E69363E4ADD5 /* QBImagePickerController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "QBImagePickerController-dummy.m"; sourceTree = "<group>"; };
 		53D7F416A949E3F61EB7F4CE13639DB8 /* DropDown+Appearance.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DropDown+Appearance.swift"; path = "DropDown/src/DropDown+Appearance.swift"; sourceTree = "<group>"; };
 		581861174F61E35934982D45422DD183 /* DropDownCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropDownCell.swift; path = DropDown/src/DropDownCell.swift; sourceTree = "<group>"; };
-		5AE8FA96AB552E8804CF01277F8978BF /* DropDown-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DropDown-dummy.m"; sourceTree = "<group>"; };
-		5B237008337EFA7179D72ACB49C8BBAD /* Pods_CardhopTNV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CardhopTNV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5BF7E31129D01AD28602A78900ECE4C0 /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = en.lproj; path = QBImagePicker/en.lproj; sourceTree = "<group>"; };
+		5BF7E31129D01AD28602A78900ECE4C0 /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = en.lproj; path = QBImagePicker/en.lproj; sourceTree = "<group>"; };
+		5F93974496DB03C7C90CC8450A6EFF58 /* QBImagePickerController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = QBImagePickerController.xcconfig; sourceTree = "<group>"; };
 		6000C3BAF0FB7991EDD76EBD551A522B /* QBImagePickerController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QBImagePickerController.h; path = QBImagePicker/QBImagePickerController.h; sourceTree = "<group>"; };
-		62FEE3E85A15EFE2ACA5DA5BB705264C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		657401A1018833BDAE66ED7A511086D7 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Photos.framework; sourceTree = DEVELOPER_DIR; };
 		66099000A5413AD2C52082B2AEEDB070 /* QBAlbumCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QBAlbumCell.h; path = QBImagePicker/QBAlbumCell.h; sourceTree = "<group>"; };
-		6D95741A853C95595C768D9ADCBA8DF0 /* QBImagePickerController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QBImagePickerController-umbrella.h"; sourceTree = "<group>"; };
+		6F25127136F29324AC0675569034753E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		6F7CF3BB7261551778C24E1776F11ADF /* QBAssetsViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QBAssetsViewController.h; path = QBImagePicker/QBAssetsViewController.h; sourceTree = "<group>"; };
 		7062422F2AEF0303B38D5B208BABFB7B /* QBAlbumsViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QBAlbumsViewController.h; path = QBImagePicker/QBAlbumsViewController.h; sourceTree = "<group>"; };
-		706292D3499F4C4F20D5C338FFACC91E /* DropDown-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DropDown-prefix.pch"; sourceTree = "<group>"; };
+		71864913902EA8722FCC9AD97F9179FD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		783319C0CD696BE7D17336FBA98C5336 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Photos.framework; sourceTree = DEVELOPER_DIR; };
 		79446FFABBBD3C852DF4A174331A1C48 /* QBSlomoIconView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QBSlomoIconView.m; path = QBImagePicker/QBSlomoIconView.m; sourceTree = "<group>"; };
-		7A25E83E94984DE690928CECBC725780 /* QBImagePickerController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "QBImagePickerController-dummy.m"; sourceTree = "<group>"; };
-		7DCFE973EF0730A9C22DDA6A56D0E1CF /* Pods-CardhopTNV.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CardhopTNV.modulemap"; sourceTree = "<group>"; };
+		7E317F7947BFB731865BCC5085825772 /* DropDown-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DropDown-prefix.pch"; sourceTree = "<group>"; };
+		7E9C112F55547DB0706F5A288A749A7D /* Pods-CardhopTNV-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CardhopTNV-dummy.m"; sourceTree = "<group>"; };
 		8386B29DE97AA09E3EFCAFDA012B2450 /* QBAssetCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QBAssetCell.m; path = QBImagePicker/QBAssetCell.m; sourceTree = "<group>"; };
 		8852049521C3CCC4810626293711D7A3 /* QBImagePickerController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QBImagePickerController.m; path = QBImagePicker/QBImagePickerController.m; sourceTree = "<group>"; };
 		8C4AC86FBEC8196E15B424AE5CCB6E0B /* QBAssetCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QBAssetCell.h; path = QBImagePicker/QBAssetCell.h; sourceTree = "<group>"; };
 		8CC6928B248EC94992878EAA7D76D6F9 /* QBVideoIconView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QBVideoIconView.h; path = QBImagePicker/QBVideoIconView.h; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		93B1DD0ACB21B77066C528D0FB765A11 /* Pods-CardhopTNV-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CardhopTNV-dummy.m"; sourceTree = "<group>"; };
-		94CF2DBF85156C8610D5CEA0B9F6F8EB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D6E7B7D5D037B03E7E1B0A5C41A7A38 /* QBImagePickerController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QBImagePickerController-umbrella.h"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		94BD9708445E3F3B49EA72FC28F43B4A /* Pods-CardhopTNV.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-CardhopTNV.modulemap"; sourceTree = "<group>"; };
 		9761C9153BCBEA1F31BB8AD334191187 /* DPDUIView+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DPDUIView+Extension.swift"; path = "DropDown/helpers/DPDUIView+Extension.swift"; sourceTree = "<group>"; };
 		9B1188E87F3A3605B53E919EF0303F86 /* QBAlbumsViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QBAlbumsViewController.m; path = QBImagePicker/QBAlbumsViewController.m; sourceTree = "<group>"; };
-		9F594C94A54D0577952FB2453C53AA06 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A070DDCB58E2B3BC1632C631EC3705DC /* QBSlomoIconView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QBSlomoIconView.h; path = QBImagePicker/QBSlomoIconView.h; sourceTree = "<group>"; };
-		A4D836988BAEC8895606F2B18BD484C5 /* Pods-CardhopTNV-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CardhopTNV-acknowledgements.markdown"; sourceTree = "<group>"; };
-		AE3CF0D34A9AD39E838C82E1F42D9CF8 /* es.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = es.lproj; path = QBImagePicker/es.lproj; sourceTree = "<group>"; };
-		AF9F41C82F619DA50C838EEC88182FD4 /* de.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = de.lproj; path = QBImagePicker/de.lproj; sourceTree = "<group>"; };
-		B54A62CCC425E2811929F2C8A0826776 /* DropDown-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DropDown-umbrella.h"; sourceTree = "<group>"; };
-		BF069A51E0492FA5EAA5D17C5DEC334A /* Pods-CardhopTNV-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CardhopTNV-resources.sh"; sourceTree = "<group>"; };
-		C2CF17B3A34752867C1699A9A2F72BEB /* QBImagePickerController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = QBImagePickerController.xcconfig; sourceTree = "<group>"; };
-		C8885C29E9DE5A129BEA8749B44CBFD7 /* Pods-CardhopTNV-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CardhopTNV-acknowledgements.plist"; sourceTree = "<group>"; };
+		AE3CF0D34A9AD39E838C82E1F42D9CF8 /* es.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = es.lproj; path = QBImagePicker/es.lproj; sourceTree = "<group>"; };
+		AF9F41C82F619DA50C838EEC88182FD4 /* de.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = de.lproj; path = QBImagePicker/de.lproj; sourceTree = "<group>"; };
+		B416F151689728C54C15AB77F3511DCB /* QBImagePickerController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QBImagePickerController-prefix.pch"; sourceTree = "<group>"; };
 		CB4A07075289DECD46C7115D99B7E1C1 /* QBAlbumCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QBAlbumCell.m; path = QBImagePicker/QBAlbumCell.m; sourceTree = "<group>"; };
-		CB4F1D3D1FDC31E92BDC7C562745243A /* Pods-CardhopTNV-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CardhopTNV-frameworks.sh"; sourceTree = "<group>"; };
-		CB668F5BD7147A857A25447A1C6C8D70 /* DropDown.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = DropDown.modulemap; sourceTree = "<group>"; };
-		CFFB96C45CF02C327BD8B9A6E57168C7 /* QBImagePickerController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = QBImagePickerController.modulemap; sourceTree = "<group>"; };
-		D31F9D6C1635D31A261329B01B8C69E2 /* QBImagePickerController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QBImagePickerController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D986A1586FCDCE28760993B8F790BC83 /* QBImagePickerController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = QBImagePickerController.modulemap; sourceTree = "<group>"; };
+		DB28E62EF52550801A40496D3BD17A88 /* Pods-CardhopTNV-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CardhopTNV-resources.sh"; sourceTree = "<group>"; };
+		DDD495CFC22F4F0269C3DBF2425178EB /* Pods-CardhopTNV-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CardhopTNV-umbrella.h"; sourceTree = "<group>"; };
+		DDD663DAEA63F6A1265A6DBB25D7C0C2 /* Pods-CardhopTNV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CardhopTNV.release.xcconfig"; sourceTree = "<group>"; };
+		E1E3D33FED5656E1C8B10E2C15707BD1 /* Pods-CardhopTNV-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CardhopTNV-frameworks.sh"; sourceTree = "<group>"; };
 		F07CA1CEC129DEDA5F64E8D74BDA46ED /* DPDKeyboardListener.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DPDKeyboardListener.swift; path = DropDown/helpers/DPDKeyboardListener.swift; sourceTree = "<group>"; };
+		FD435DD5594AC6FC6DE3632F54A6B47E /* DropDown-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DropDown-umbrella.h"; sourceTree = "<group>"; };
+		FF25944D72CF5BA84B9745229914279B /* Pods_CardhopTNV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CardhopTNV.framework; path = "Pods-CardhopTNV.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF65D456348615A1B5E9B2E86002BD97 /* ResourceBundle-QBImagePicker-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-QBImagePicker-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4446B0A3B23383BE2A37E7A7C9BDAC6D /* Frameworks */ = {
+		3FE28484C632D94C9779E4E74AE0BD29 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C7C25F95681B9D5EBDB138D950EDDE1 /* Foundation.framework in Frameworks */,
+				2E9CD6F441E6B30601549781F5DB2D12 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		46B1108C3EBA58EE48E16A7F850DA4CE /* Frameworks */ = {
+		7B0448A6AEDCBDAC4E1FCFF84D68D0A7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65ADD2BE4974C126AD2078A4D92C9B70 /* Foundation.framework in Frameworks */,
+				CA6F440627CFE2F36AA31CE40986326B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		87018BD0FEB68A9BC29963094B5B234C /* Frameworks */ = {
+		EDB8BBEE9FBA7A9825517417CB234EF0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E6EAE42782AF0154CDCDA7CD7AE53860 /* Frameworks */ = {
+		F6C84E4DDFB46FBD592F50023307D4B9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BCD9217F5A20D934F27E17A564111F8 /* Foundation.framework in Frameworks */,
-				1E100179A53425720BD878D58A2CBAB9 /* Photos.framework in Frameworks */,
+				515520D11950689CBA89BB7D9D22A282 /* Foundation.framework in Frameworks */,
+				BC7D74F52F7E4B8993D24C26E57A0202 /* Photos.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,9 +197,39 @@
 				1574E2B7B8D55C1D3DE53B1AE8693CAF /* QBVideoIndicatorView.h */,
 				36A3AF57034C89DA67AC64ACE54A8487 /* QBVideoIndicatorView.m */,
 				7A70D00C3A677F9F413531A1F96AFFC1 /* Resources */,
-				9D88DA51C220AB0DCD3E884ED1B95C36 /* Support Files */,
+				0E4DF6A745A142F0943C7F89811650F7 /* Support Files */,
 			);
+			name = QBImagePickerController;
 			path = QBImagePickerController;
+			sourceTree = "<group>";
+		};
+		0E4DF6A745A142F0943C7F89811650F7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3452875D5B7170EED1E91D540D48DA3C /* Info.plist */,
+				D986A1586FCDCE28760993B8F790BC83 /* QBImagePickerController.modulemap */,
+				5F93974496DB03C7C90CC8450A6EFF58 /* QBImagePickerController.xcconfig */,
+				37F4FFE3225831E4EBD2E69363E4ADD5 /* QBImagePickerController-dummy.m */,
+				B416F151689728C54C15AB77F3511DCB /* QBImagePickerController-prefix.pch */,
+				8D6E7B7D5D037B03E7E1B0A5C41A7A38 /* QBImagePickerController-umbrella.h */,
+				FF65D456348615A1B5E9B2E86002BD97 /* ResourceBundle-QBImagePicker-Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/QBImagePickerController";
+			sourceTree = "<group>";
+		};
+		23EBA354C57AD5966A54E691BCDE5146 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				32AC9B9E27469694B0C9111E7F13CE83 /* DropDown.modulemap */,
+				0859B3F3B14DE04EB7F36F64BD3AFF80 /* DropDown.xcconfig */,
+				1E73DC6939B3E36F11EDA35EDA96E5BD /* DropDown-dummy.m */,
+				7E317F7947BFB731865BCC5085825772 /* DropDown-prefix.pch */,
+				FD435DD5594AC6FC6DE3632F54A6B47E /* DropDown-umbrella.h */,
+				71864913902EA8722FCC9AD97F9179FD /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/DropDown";
 			sourceTree = "<group>";
 		};
 		2ED2BF2F9A644B351D36BFCB0AD00A4A /* DropDown */ = {
@@ -212,8 +242,9 @@
 				53D7F416A949E3F61EB7F4CE13639DB8 /* DropDown+Appearance.swift */,
 				581861174F61E35934982D45422DD183 /* DropDownCell.swift */,
 				3F4EC06EDCA5F719EF3AEBEFE9D68202 /* Resources */,
-				F83091726EED00CD74C227F392CB865E /* Support Files */,
+				23EBA354C57AD5966A54E691BCDE5146 /* Support Files */,
 			);
+			name = DropDown;
 			path = DropDown;
 			sourceTree = "<group>";
 		};
@@ -228,7 +259,7 @@
 		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CF71B76FE08CECFF382B06747E7022DD /* iOS */,
+				A719DB28F89BB6B7B2DE6F91A23DC0BB /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -261,49 +292,27 @@
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
 				70BB6D820CCB9AF9B42807385CAC0811 /* Pods */,
-				E8EAFD7393CA8C3B7A12FA035E38D024 /* Products */,
+				97785A9B65903219E2D345F221C6CD93 /* Products */,
 				D92E2A317AFAE4665445B9BEBF749448 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		85A4CF18A86116FDA21ADF0EDBCF0032 /* Pods-CardhopTNV */ = {
+		97785A9B65903219E2D345F221C6CD93 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9F594C94A54D0577952FB2453C53AA06 /* Info.plist */,
-				7DCFE973EF0730A9C22DDA6A56D0E1CF /* Pods-CardhopTNV.modulemap */,
-				A4D836988BAEC8895606F2B18BD484C5 /* Pods-CardhopTNV-acknowledgements.markdown */,
-				C8885C29E9DE5A129BEA8749B44CBFD7 /* Pods-CardhopTNV-acknowledgements.plist */,
-				93B1DD0ACB21B77066C528D0FB765A11 /* Pods-CardhopTNV-dummy.m */,
-				CB4F1D3D1FDC31E92BDC7C562745243A /* Pods-CardhopTNV-frameworks.sh */,
-				BF069A51E0492FA5EAA5D17C5DEC334A /* Pods-CardhopTNV-resources.sh */,
-				164B358ADE5292C6BDD1F42443D92B7C /* Pods-CardhopTNV-umbrella.h */,
-				1099D86C4B84F1C2506EECC1A163F236 /* Pods-CardhopTNV.debug.xcconfig */,
-				428ED46ADE712CABAE5B81F0791D813C /* Pods-CardhopTNV.release.xcconfig */,
+				024C81C3C9303D118DD6F9308DDF3281 /* DropDown.framework */,
+				FF25944D72CF5BA84B9745229914279B /* Pods_CardhopTNV.framework */,
+				072876DF720D77CA1A7B0052ED9139FF /* QBImagePicker.bundle */,
+				003F028972D867C892FCDBB7BF3E799B /* QBImagePickerController.framework */,
 			);
-			name = "Pods-CardhopTNV";
-			path = "Target Support Files/Pods-CardhopTNV";
+			name = Products;
 			sourceTree = "<group>";
 		};
-		9D88DA51C220AB0DCD3E884ED1B95C36 /* Support Files */ = {
+		A719DB28F89BB6B7B2DE6F91A23DC0BB /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				62FEE3E85A15EFE2ACA5DA5BB705264C /* Info.plist */,
-				CFFB96C45CF02C327BD8B9A6E57168C7 /* QBImagePickerController.modulemap */,
-				C2CF17B3A34752867C1699A9A2F72BEB /* QBImagePickerController.xcconfig */,
-				7A25E83E94984DE690928CECBC725780 /* QBImagePickerController-dummy.m */,
-				2C05E5486E7940CA1A0697F90E205D9F /* QBImagePickerController-prefix.pch */,
-				6D95741A853C95595C768D9ADCBA8DF0 /* QBImagePickerController-umbrella.h */,
-				4C57ED02015BD775ADC65CCCC330323D /* ResourceBundle-QBImagePicker-Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/QBImagePickerController";
-			sourceTree = "<group>";
-		};
-		CF71B76FE08CECFF382B06747E7022DD /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				4E0874248BC88164A8B0677CC18AEF01 /* Foundation.framework */,
-				657401A1018833BDAE66ED7A511086D7 /* Photos.framework */,
+				6F25127136F29324AC0675569034753E /* Foundation.framework */,
+				783319C0CD696BE7D17336FBA98C5336 /* Photos.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
@@ -311,139 +320,76 @@
 		D92E2A317AFAE4665445B9BEBF749448 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				85A4CF18A86116FDA21ADF0EDBCF0032 /* Pods-CardhopTNV */,
+				E4319CCE873069E330EADFA86C646A86 /* Pods-CardhopTNV */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		E8EAFD7393CA8C3B7A12FA035E38D024 /* Products */ = {
+		E4319CCE873069E330EADFA86C646A86 /* Pods-CardhopTNV */ = {
 			isa = PBXGroup;
 			children = (
-				3EED9BEDE76C1382457FE5A9124E7DA0 /* DropDown.framework */,
-				5B237008337EFA7179D72ACB49C8BBAD /* Pods_CardhopTNV.framework */,
-				1BFA3BC66B6C99DADDA96C46319F404F /* QBImagePicker.bundle */,
-				D31F9D6C1635D31A261329B01B8C69E2 /* QBImagePickerController.framework */,
+				0B12F8AA959CC7C209723FAA787F3967 /* Info.plist */,
+				94BD9708445E3F3B49EA72FC28F43B4A /* Pods-CardhopTNV.modulemap */,
+				24E3697ADB877F29EC120808D470C44B /* Pods-CardhopTNV-acknowledgements.markdown */,
+				1D96914B4497F33BFCC4D5E8852FFB33 /* Pods-CardhopTNV-acknowledgements.plist */,
+				7E9C112F55547DB0706F5A288A749A7D /* Pods-CardhopTNV-dummy.m */,
+				E1E3D33FED5656E1C8B10E2C15707BD1 /* Pods-CardhopTNV-frameworks.sh */,
+				DB28E62EF52550801A40496D3BD17A88 /* Pods-CardhopTNV-resources.sh */,
+				DDD495CFC22F4F0269C3DBF2425178EB /* Pods-CardhopTNV-umbrella.h */,
+				249FFDF6F8A621261459BBD3EF0E86DA /* Pods-CardhopTNV.debug.xcconfig */,
+				DDD663DAEA63F6A1265A6DBB25D7C0C2 /* Pods-CardhopTNV.release.xcconfig */,
 			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		F83091726EED00CD74C227F392CB865E /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				CB668F5BD7147A857A25447A1C6C8D70 /* DropDown.modulemap */,
-				46786EABD0D7134CF36F75C94357AC79 /* DropDown.xcconfig */,
-				5AE8FA96AB552E8804CF01277F8978BF /* DropDown-dummy.m */,
-				706292D3499F4C4F20D5C338FFACC91E /* DropDown-prefix.pch */,
-				B54A62CCC425E2811929F2C8A0826776 /* DropDown-umbrella.h */,
-				94CF2DBF85156C8610D5CEA0B9F6F8EB /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/DropDown";
+			name = "Pods-CardhopTNV";
+			path = "Target Support Files/Pods-CardhopTNV";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		69B6EE6512FAB22BC77810C67F8539F3 /* Headers */ = {
+		1904CD5E5CEA9226AFC355E19C3EB159 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2340FB88F1E02021398B4CFABB620185 /* QBAlbumCell.h in Headers */,
-				6393AB5973F2DA40002E61908CAF09EB /* QBAlbumsViewController.h in Headers */,
-				38851C8DD387559A7F8D462E3B85D75E /* QBAssetCell.h in Headers */,
-				5ACA12F5D1E1F4C8B42B221761E27300 /* QBAssetsViewController.h in Headers */,
-				07A0BB7515059A81E79D6282FF6C42AD /* QBCheckmarkView.h in Headers */,
-				508E94959435C386BF9F2BCDF89B8ABF /* QBImagePickerController-umbrella.h in Headers */,
-				22F454EC2CF998CDD6DDE85ECA1EADF4 /* QBImagePickerController.h in Headers */,
-				2C094C780571998345753337431F31A7 /* QBSlomoIconView.h in Headers */,
-				7D394B3F6BA60DA268DE90D4F2759D67 /* QBVideoIconView.h in Headers */,
-				7225E2407BCBD8CDD31416E3AA18B464 /* QBVideoIndicatorView.h in Headers */,
+				2E7E74DF0C455B0BC43BFDD1D0163E64 /* DropDown-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		80B326CCA68B1A18DCFF82AD69D1582A /* Headers */ = {
+		822887B7B1D257A7AD9B812670DE98CF /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8AC8050FE46C3D1C741D1B9D9B637FF3 /* Pods-CardhopTNV-umbrella.h in Headers */,
+				BDDDB0C5625594AC0E2D4B9997CF86C3 /* Pods-CardhopTNV-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C30D98263CC89C39DE616F507092D788 /* Headers */ = {
+		D5BA36BB67A2D1450430B812B28446E2 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B59E75CB029C100A622924064730EE7A /* DropDown-umbrella.h in Headers */,
+				5E43B7D2259F851CC41C211A1ABA708B /* QBAlbumCell.h in Headers */,
+				76AFA2EDE653ACE393E8BF4F8A8B34FD /* QBAlbumsViewController.h in Headers */,
+				12E4604C2CEDECB12208B26929833467 /* QBAssetCell.h in Headers */,
+				E73F67D8BDB46EBF3EACB7C20A69A86A /* QBAssetsViewController.h in Headers */,
+				3322A39AD5198605D99F0D4A048F5599 /* QBCheckmarkView.h in Headers */,
+				FF785934C7A0062E2CBA5001B02B7E94 /* QBImagePickerController-umbrella.h in Headers */,
+				D57D19FF86E1D674DE94ACB575CACE5F /* QBImagePickerController.h in Headers */,
+				6C94BA085D9F7493B9CA54984769BE2F /* QBSlomoIconView.h in Headers */,
+				E04A5DC89A0469A18246E0421C8AACC2 /* QBVideoIconView.h in Headers */,
+				53D545F81545177FCF535E09F2D8005D /* QBVideoIndicatorView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		010BF88BD9BDF28DD9E8A6B8E0076AEC /* QBImagePickerController-QBImagePicker */ = {
+		5168099F2EBFC99A707C03C9EADE01A5 /* DropDown */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 863A17A395A2E4D1D7D7317A0DB8EA5B /* Build configuration list for PBXNativeTarget "QBImagePickerController-QBImagePicker" */;
+			buildConfigurationList = 45143614893062803984DA50AB90C1D5 /* Build configuration list for PBXNativeTarget "DropDown" */;
 			buildPhases = (
-				1C79DB161ED53C597EBB95372B7AB873 /* Sources */,
-				87018BD0FEB68A9BC29963094B5B234C /* Frameworks */,
-				4F025D3FE4CB2F37EB3A5EF502FB2433 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "QBImagePickerController-QBImagePicker";
-			productName = "QBImagePickerController-QBImagePicker";
-			productReference = 1BFA3BC66B6C99DADDA96C46319F404F /* QBImagePicker.bundle */;
-			productType = "com.apple.product-type.bundle";
-		};
-		580D5A438EA699E7F5D024D2213E9372 /* QBImagePickerController */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AD46C4BF6636420A5DECF80D55387C5C /* Build configuration list for PBXNativeTarget "QBImagePickerController" */;
-			buildPhases = (
-				69B6EE6512FAB22BC77810C67F8539F3 /* Headers */,
-				1F1C0E960652231F9F4E8450819A8A14 /* Sources */,
-				E6EAE42782AF0154CDCDA7CD7AE53860 /* Frameworks */,
-				5ABC2923A53324DA9C02F3F1948BB0BF /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				38A9CD9DE4BD54478AB4F737E3FDD2A1 /* PBXTargetDependency */,
-			);
-			name = QBImagePickerController;
-			productName = QBImagePickerController;
-			productReference = D31F9D6C1635D31A261329B01B8C69E2 /* QBImagePickerController.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		B79BE0BCEEE89BC304717246959D36AF /* Pods-CardhopTNV */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AB28BECD09C075DE79DBBE4B7E9A369C /* Build configuration list for PBXNativeTarget "Pods-CardhopTNV" */;
-			buildPhases = (
-				80B326CCA68B1A18DCFF82AD69D1582A /* Headers */,
-				9DAE1A5147BBE01951423A54CBDF3A9C /* Sources */,
-				46B1108C3EBA58EE48E16A7F850DA4CE /* Frameworks */,
-				0E738D32CF99405D3EB7C597FEE19D18 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2836D63DB6206653652D360457CEA409 /* PBXTargetDependency */,
-				AF3A01D6058B4FDD0595674338C7C515 /* PBXTargetDependency */,
-			);
-			name = "Pods-CardhopTNV";
-			productName = "Pods-CardhopTNV";
-			productReference = 5B237008337EFA7179D72ACB49C8BBAD /* Pods_CardhopTNV.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		FD1ECC3979ED6D745803FF751221D70C /* DropDown */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BA336CF301A80A832FE821A4157B24CB /* Build configuration list for PBXNativeTarget "DropDown" */;
-			buildPhases = (
-				C30D98263CC89C39DE616F507092D788 /* Headers */,
-				3ADCE2BE57BDA56AE1CB3CE9A38A4F5C /* Sources */,
-				4446B0A3B23383BE2A37E7A7C9BDAC6D /* Frameworks */,
-				A3FEE9F76E64532EA9614DAB44A57029 /* Resources */,
+				ED45CA897A4B81CB8204042001D7AEE8 /* Sources */,
+				3FE28484C632D94C9779E4E74AE0BD29 /* Frameworks */,
+				D7D924A57BC65B5D41E46B156A8DCF2B /* Resources */,
+				1904CD5E5CEA9226AFC355E19C3EB159 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -451,7 +397,62 @@
 			);
 			name = DropDown;
 			productName = DropDown;
-			productReference = 3EED9BEDE76C1382457FE5A9124E7DA0 /* DropDown.framework */;
+			productReference = 024C81C3C9303D118DD6F9308DDF3281 /* DropDown.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		520244A3248D5416A8FFDA3C0D3BD802 /* QBImagePickerController-QBImagePicker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7667FBCEF785D66B370F9783080672FB /* Build configuration list for PBXNativeTarget "QBImagePickerController-QBImagePicker" */;
+			buildPhases = (
+				2FEED92C5C077DC3C5BFC26C4818BD84 /* Sources */,
+				EDB8BBEE9FBA7A9825517417CB234EF0 /* Frameworks */,
+				3CD466BCE09087C1376C9114E0819105 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "QBImagePickerController-QBImagePicker";
+			productName = "QBImagePickerController-QBImagePicker";
+			productReference = 072876DF720D77CA1A7B0052ED9139FF /* QBImagePicker.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		9D273FE88249288D157730E6E5722C82 /* QBImagePickerController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7180AD286C4562D68EB85F6B7A9152B /* Build configuration list for PBXNativeTarget "QBImagePickerController" */;
+			buildPhases = (
+				FB16D3C0E3D521DBEF6264C1DE231690 /* Sources */,
+				F6C84E4DDFB46FBD592F50023307D4B9 /* Frameworks */,
+				9554DD8555C4DDA06FBBBF8AF76A7FB0 /* Resources */,
+				D5BA36BB67A2D1450430B812B28446E2 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B7A44308CA6789C9B9FD46A5B142E729 /* PBXTargetDependency */,
+			);
+			name = QBImagePickerController;
+			productName = QBImagePickerController;
+			productReference = 003F028972D867C892FCDBB7BF3E799B /* QBImagePickerController.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D83A0D2C049A3C89DCFF3CE7BBBF2441 /* Pods-CardhopTNV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 311408AB321C22FCC36CD431A4B3A233 /* Build configuration list for PBXNativeTarget "Pods-CardhopTNV" */;
+			buildPhases = (
+				09C5F4EF730BD94BF9C7CE1C7A4B3FA9 /* Sources */,
+				7B0448A6AEDCBDAC4E1FCFF84D68D0A7 /* Frameworks */,
+				822887B7B1D257A7AD9B812670DE98CF /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8CC4870D9BEE74E770EEBE5E8DDD9587 /* PBXTargetDependency */,
+				9DE5B56D92F92C5A4251B386D92B9803 /* PBXTargetDependency */,
+			);
+			name = "Pods-CardhopTNV";
+			productName = "Pods-CardhopTNV";
+			productReference = FF25944D72CF5BA84B9745229914279B /* Pods_CardhopTNV.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -460,8 +461,8 @@
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -471,300 +472,124 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = E8EAFD7393CA8C3B7A12FA035E38D024 /* Products */;
+			productRefGroup = 97785A9B65903219E2D345F221C6CD93 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FD1ECC3979ED6D745803FF751221D70C /* DropDown */,
-				B79BE0BCEEE89BC304717246959D36AF /* Pods-CardhopTNV */,
-				580D5A438EA699E7F5D024D2213E9372 /* QBImagePickerController */,
-				010BF88BD9BDF28DD9E8A6B8E0076AEC /* QBImagePickerController-QBImagePicker */,
+				5168099F2EBFC99A707C03C9EADE01A5 /* DropDown */,
+				D83A0D2C049A3C89DCFF3CE7BBBF2441 /* Pods-CardhopTNV */,
+				9D273FE88249288D157730E6E5722C82 /* QBImagePickerController */,
+				520244A3248D5416A8FFDA3C0D3BD802 /* QBImagePickerController-QBImagePicker */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		0E738D32CF99405D3EB7C597FEE19D18 /* Resources */ = {
+		3CD466BCE09087C1376C9114E0819105 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD7441E4C996E29F63AD1F316A5DAA92 /* de.lproj in Resources */,
+				4CF0C95E891C95DFB984633079247A77 /* en.lproj in Resources */,
+				2B59CE760F78AE027D56D1ADC58643F4 /* es.lproj in Resources */,
+				35B20C42FC615DAE1DD41C13238DCF77 /* ja.lproj in Resources */,
+				7A5C63B5BD94015B0AC495555A5DD1FC /* QBImagePicker.storyboard in Resources */,
+				CFAB80F282F0B79B14FCB7BC039E9B97 /* zh-Hans.lproj in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4F025D3FE4CB2F37EB3A5EF502FB2433 /* Resources */ = {
+		9554DD8555C4DDA06FBBBF8AF76A7FB0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D59432D2C6465200645AF507C9BAAB3D /* de.lproj in Resources */,
-				993A80DCF50F57437FDA2A2FC48F76FF /* en.lproj in Resources */,
-				9878A6D978E104427C11E28E8F651D9B /* es.lproj in Resources */,
-				F750279D22DEF376E29E00C86DABABC4 /* ja.lproj in Resources */,
-				31B168EC461F0F9AE3AA3F3EAADF69E8 /* QBImagePicker.storyboard in Resources */,
-				CEE1CDC044B6A81DAD9669E7914BA1B9 /* zh-Hans.lproj in Resources */,
+				C3C793F79666AEFB79B8516E8C52B238 /* QBImagePicker.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5ABC2923A53324DA9C02F3F1948BB0BF /* Resources */ = {
+		D7D924A57BC65B5D41E46B156A8DCF2B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				806FA2DE207BA6DD86E66C1AFE2163DA /* QBImagePicker.bundle in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A3FEE9F76E64532EA9614DAB44A57029 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FF168F05DFAE21A2FFF0BD61B869E2BB /* DropDownCell.xib in Resources */,
+				37C293AEA575D6E5186739D1B07805F2 /* DropDownCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1C79DB161ED53C597EBB95372B7AB873 /* Sources */ = {
+		09C5F4EF730BD94BF9C7CE1C7A4B3FA9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DED4E0518FD1945D1C6F0AD0A00F3E7 /* Pods-CardhopTNV-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2FEED92C5C077DC3C5BFC26C4818BD84 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1F1C0E960652231F9F4E8450819A8A14 /* Sources */ = {
+		ED45CA897A4B81CB8204042001D7AEE8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34B1820CD2A2E24621DDEDE963B9996D /* QBAlbumCell.m in Sources */,
-				70CAF72416038F5947395B9FB4A415F0 /* QBAlbumsViewController.m in Sources */,
-				1069C47FC723926D2BCD1AFDB95F02D6 /* QBAssetCell.m in Sources */,
-				87A59B7C6099EF118595543EEF3DECB5 /* QBAssetsViewController.m in Sources */,
-				7960CF120A2415F48DCC981A8AD047E5 /* QBCheckmarkView.m in Sources */,
-				C341A71E9D1383FD0B73DD98B1C42D8E /* QBImagePickerController-dummy.m in Sources */,
-				867CD75D7E598260FF19B2BAA413A55C /* QBImagePickerController.m in Sources */,
-				FFDC6D5C4353768C65CEAB4AC66E0E82 /* QBSlomoIconView.m in Sources */,
-				335C75DF07A422A827DA1DE7277FAF3B /* QBVideoIconView.m in Sources */,
-				A50F744D1B554E6C751308E168095A22 /* QBVideoIndicatorView.m in Sources */,
+				A812E7811821F66B3B7499F6F1B513BA /* DPDConstants.swift in Sources */,
+				9D0221E27E37CDA9DF26DD3CFA56D75B /* DPDKeyboardListener.swift in Sources */,
+				A401CF18D15DF246F40FAC4E8F06CBC7 /* DPDUIView+Extension.swift in Sources */,
+				442ADADA3215E1E5CA1557E708D4228C /* DropDown+Appearance.swift in Sources */,
+				AC6581D9387744158B44BE683403C3BC /* DropDown-dummy.m in Sources */,
+				02CAE638EF1CEEBD6F5740498F9CA3F8 /* DropDown.swift in Sources */,
+				098F056D90AF9CD3FD60D8A81DF043B6 /* DropDownCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3ADCE2BE57BDA56AE1CB3CE9A38A4F5C /* Sources */ = {
+		FB16D3C0E3D521DBEF6264C1DE231690 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9DCC833AEACEAC21F569BEBB9170D86 /* DPDConstants.swift in Sources */,
-				49D9535D4C5F930D4030341ED2F96A35 /* DPDKeyboardListener.swift in Sources */,
-				240A0F0EFC70E12766B3BDF2370CB6E7 /* DPDUIView+Extension.swift in Sources */,
-				C3851EB5463F8F3669AC09D6B1376A88 /* DropDown+Appearance.swift in Sources */,
-				573FA8A312D833DA2F1FF734419EE989 /* DropDown-dummy.m in Sources */,
-				94A7DFD684BC8AE0EEF13BA17610C7C6 /* DropDown.swift in Sources */,
-				89A682C4E3E4B1B55085832D4CFB4ADA /* DropDownCell.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9DAE1A5147BBE01951423A54CBDF3A9C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F18B3575D787209BD42BDC52BBEAF0F0 /* Pods-CardhopTNV-dummy.m in Sources */,
+				D66BD10425B79ED31F2385422F544571 /* QBAlbumCell.m in Sources */,
+				AC3D82AF1BF19772AD69DAF81D55B500 /* QBAlbumsViewController.m in Sources */,
+				08EE83852A6CCCE073A5692E4AD6EE5F /* QBAssetCell.m in Sources */,
+				E3112065D3DDE7D0DF493A85BE59D390 /* QBAssetsViewController.m in Sources */,
+				202789476C44204DB49835032E6C240C /* QBCheckmarkView.m in Sources */,
+				E5902B290DB60D0EFF81872B244AD9AC /* QBImagePickerController-dummy.m in Sources */,
+				91C4FB0064A13055CF7933275418C1CE /* QBImagePickerController.m in Sources */,
+				C7E6D33A90EE4FADF7602B3E3E96C47C /* QBSlomoIconView.m in Sources */,
+				CE18A6FD1BD4D02DF43AD4BA5171D0AC /* QBVideoIconView.m in Sources */,
+				2A94E013E75E2E8EBE007AFD56586AE1 /* QBVideoIndicatorView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2836D63DB6206653652D360457CEA409 /* PBXTargetDependency */ = {
+		8CC4870D9BEE74E770EEBE5E8DDD9587 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = DropDown;
-			target = FD1ECC3979ED6D745803FF751221D70C /* DropDown */;
-			targetProxy = 7A0A7D1AC1BF8879BE8CE8208DA94CCB /* PBXContainerItemProxy */;
+			target = 5168099F2EBFC99A707C03C9EADE01A5 /* DropDown */;
+			targetProxy = 39F7C7AD084FF3E413D94357960D4415 /* PBXContainerItemProxy */;
 		};
-		38A9CD9DE4BD54478AB4F737E3FDD2A1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "QBImagePickerController-QBImagePicker";
-			target = 010BF88BD9BDF28DD9E8A6B8E0076AEC /* QBImagePickerController-QBImagePicker */;
-			targetProxy = 4E371280CD32DF3DC54CC9DAF56BA81F /* PBXContainerItemProxy */;
-		};
-		AF3A01D6058B4FDD0595674338C7C515 /* PBXTargetDependency */ = {
+		9DE5B56D92F92C5A4251B386D92B9803 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = QBImagePickerController;
-			target = 580D5A438EA699E7F5D024D2213E9372 /* QBImagePickerController */;
-			targetProxy = 6924529D64B5552DCF72428EE9170817 /* PBXContainerItemProxy */;
+			target = 9D273FE88249288D157730E6E5722C82 /* QBImagePickerController */;
+			targetProxy = 801555FA47E0F5F4FA9F89E8A7604479 /* PBXContainerItemProxy */;
+		};
+		B7A44308CA6789C9B9FD46A5B142E729 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "QBImagePickerController-QBImagePicker";
+			target = 520244A3248D5416A8FFDA3C0D3BD802 /* QBImagePickerController-QBImagePicker */;
+			targetProxy = 7BE8A709D98D4EBD4A7C2192FF11CBB7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0A98D6F59960C1BA319B95BAF57D7DCA /* Release */ = {
+		09DFF3E89DB1519E7C6E72823CB76602 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 428ED46ADE712CABAE5B81F0791D813C /* Pods-CardhopTNV.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-CardhopTNV/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-CardhopTNV/Pods-CardhopTNV.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		0FF7E22BC5FCAF819ADE79F59C2230CD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 46786EABD0D7134CF36F75C94357AC79 /* DropDown.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/DropDown/DropDown-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/DropDown/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/DropDown/DropDown.modulemap";
-				PRODUCT_MODULE_NAME = DropDown;
-				PRODUCT_NAME = DropDown;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		2D8348BE91580E69C828DCD6DC5A14DD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1099D86C4B84F1C2506EECC1A163F236 /* Pods-CardhopTNV.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-CardhopTNV/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-CardhopTNV/Pods-CardhopTNV.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		3F438D12A780CFCEC91D6CE914685E3B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C2CF17B3A34752867C1699A9A2F72BEB /* QBImagePickerController.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/QBImagePickerController";
-				INFOPLIST_FILE = "Target Support Files/QBImagePickerController/ResourceBundle-QBImagePicker-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_NAME = QBImagePicker;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
-		4B7802785BF3E29A4399F1D1E3AF3019 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C2CF17B3A34752867C1699A9A2F72BEB /* QBImagePickerController.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/QBImagePickerController";
-				INFOPLIST_FILE = "Target Support Files/QBImagePickerController/ResourceBundle-QBImagePicker-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_NAME = QBImagePicker;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
-		76BBC145F9B9CF340AAA8AA490C09EDA /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 46786EABD0D7134CF36F75C94357AC79 /* DropDown.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/DropDown/DropDown-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/DropDown/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/DropDown/DropDown.modulemap";
-				PRODUCT_MODULE_NAME = DropDown;
-				PRODUCT_NAME = DropDown;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		7ADED7C65777676575CD222A9FC57594 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C2CF17B3A34752867C1699A9A2F72BEB /* QBImagePickerController.xcconfig */;
+			baseConfigurationReference = 5F93974496DB03C7C90CC8450A6EFF58 /* QBImagePickerController.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -781,7 +606,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/QBImagePickerController/QBImagePickerController.modulemap";
-				PRODUCT_MODULE_NAME = QBImagePickerController;
 				PRODUCT_NAME = QBImagePickerController;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -793,7 +617,39 @@
 			};
 			name = Debug;
 		};
-		90801340DB97DA2D6643DE3ECC36F95F /* Release */ = {
+		1C3F30409149F7A5765B16C93233CB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0859B3F3B14DE04EB7F36F64BD3AFF80 /* DropDown.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DropDown/DropDown-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DropDown/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DropDown/DropDown.modulemap";
+				PRODUCT_NAME = DropDown;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1D23278938ADF334174C5BF2A4B6B1B8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -803,12 +659,10 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -816,7 +670,6 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -825,7 +678,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_ALLOWED = NO;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -845,14 +697,46 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
 		};
-		A610193BC95AA1FBE8D125DF9AD72C9D /* Debug */ = {
+		3AEA89258A35FB0B18CF87C013163F9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F93974496DB03C7C90CC8450A6EFF58 /* QBImagePickerController.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/QBImagePickerController";
+				INFOPLIST_FILE = "Target Support Files/QBImagePickerController/ResourceBundle-QBImagePicker-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = QBImagePicker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		5843C67A168F966A0E472A7A7AA8DBD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F93974496DB03C7C90CC8450A6EFF58 /* QBImagePickerController.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/QBImagePickerController";
+				INFOPLIST_FILE = "Target Support Files/QBImagePickerController/ResourceBundle-QBImagePicker-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = QBImagePicker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		995C3A53DEAA96B47E756185345E180D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -862,12 +746,10 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -875,7 +757,6 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -884,7 +765,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_ALLOWED = NO;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -906,19 +786,50 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		F2AA8F403F4BF9163859F2BA24B6A396 /* Release */ = {
+		99F30834D5F0DE82F011B2005AC1533E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C2CF17B3A34752867C1699A9A2F72BEB /* QBImagePickerController.xcconfig */;
+			baseConfigurationReference = 0859B3F3B14DE04EB7F36F64BD3AFF80 /* DropDown.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DropDown/DropDown-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DropDown/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DropDown/DropDown.modulemap";
+				PRODUCT_NAME = DropDown;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B7C9B448A02165820F7F8718CD88C3D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F93974496DB03C7C90CC8450A6EFF58 /* QBImagePickerController.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -935,7 +846,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/QBImagePickerController/QBImagePickerController.modulemap";
-				PRODUCT_MODULE_NAME = QBImagePickerController;
 				PRODUCT_NAME = QBImagePickerController;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -948,50 +858,118 @@
 			};
 			name = Release;
 		};
+		E2F824E1B3500EAD8A3965B9FF1A408E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDD663DAEA63F6A1265A6DBB25D7C0C2 /* Pods-CardhopTNV.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CardhopTNV/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CardhopTNV/Pods-CardhopTNV.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_CardhopTNV;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		EAB4B248B07EB5562DC0A7257B18D9D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 249FFDF6F8A621261459BBD3EF0E86DA /* Pods-CardhopTNV.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CardhopTNV/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CardhopTNV/Pods-CardhopTNV.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_CardhopTNV;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A610193BC95AA1FBE8D125DF9AD72C9D /* Debug */,
-				90801340DB97DA2D6643DE3ECC36F95F /* Release */,
+				995C3A53DEAA96B47E756185345E180D /* Debug */,
+				1D23278938ADF334174C5BF2A4B6B1B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		863A17A395A2E4D1D7D7317A0DB8EA5B /* Build configuration list for PBXNativeTarget "QBImagePickerController-QBImagePicker" */ = {
+		311408AB321C22FCC36CD431A4B3A233 /* Build configuration list for PBXNativeTarget "Pods-CardhopTNV" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3F438D12A780CFCEC91D6CE914685E3B /* Debug */,
-				4B7802785BF3E29A4399F1D1E3AF3019 /* Release */,
+				EAB4B248B07EB5562DC0A7257B18D9D2 /* Debug */,
+				E2F824E1B3500EAD8A3965B9FF1A408E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AB28BECD09C075DE79DBBE4B7E9A369C /* Build configuration list for PBXNativeTarget "Pods-CardhopTNV" */ = {
+		45143614893062803984DA50AB90C1D5 /* Build configuration list for PBXNativeTarget "DropDown" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2D8348BE91580E69C828DCD6DC5A14DD /* Debug */,
-				0A98D6F59960C1BA319B95BAF57D7DCA /* Release */,
+				99F30834D5F0DE82F011B2005AC1533E /* Debug */,
+				1C3F30409149F7A5765B16C93233CB54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AD46C4BF6636420A5DECF80D55387C5C /* Build configuration list for PBXNativeTarget "QBImagePickerController" */ = {
+		7667FBCEF785D66B370F9783080672FB /* Build configuration list for PBXNativeTarget "QBImagePickerController-QBImagePicker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7ADED7C65777676575CD222A9FC57594 /* Debug */,
-				F2AA8F403F4BF9163859F2BA24B6A396 /* Release */,
+				3AEA89258A35FB0B18CF87C013163F9A /* Debug */,
+				5843C67A168F966A0E472A7A7AA8DBD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BA336CF301A80A832FE821A4157B24CB /* Build configuration list for PBXNativeTarget "DropDown" */ = {
+		C7180AD286C4562D68EB85F6B7A9152B /* Build configuration list for PBXNativeTarget "QBImagePickerController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0FF7E22BC5FCAF819ADE79F59C2230CD /* Debug */,
-				76BBC145F9B9CF340AAA8AA490C09EDA /* Release */,
+				09DFF3E89DB1519E7C6E72823CB76602 /* Debug */,
+				B7C9B448A02165820F7F8718CD88C3D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

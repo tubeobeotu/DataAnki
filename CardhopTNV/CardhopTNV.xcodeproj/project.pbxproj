@@ -51,7 +51,6 @@
 		A363A4D37D76A19C36F2E727 /* Pods_CardhopTNV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAD99D97F49F467D635ABBE8 /* Pods_CardhopTNV.framework */; };
 		B147B477226038CC000C2F99 /* ToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B147B476226038CC000C2F99 /* ToolBar.swift */; };
 		B147B47922603E12000C2F99 /* ImageProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B147B47822603E12000C2F99 /* ImageProfileVC.swift */; };
-		B147B47F226045E7000C2F99 /* EFImageViewZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B147B47E226045E7000C2F99 /* EFImageViewZoom.swift */; };
 		B147B482226051BB000C2F99 /* AddressEditCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B147B480226051BB000C2F99 /* AddressEditCell.swift */; };
 		B147B483226051BB000C2F99 /* AddressEditCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B147B481226051BB000C2F99 /* AddressEditCell.xib */; };
 		B147B4852260644C000C2F99 /* LabelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B147B4842260644C000C2F99 /* LabelVC.swift */; };
@@ -135,7 +134,6 @@
 		A4C2EE56E1248F39E0E3B266 /* Pods-CardhopTNV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardhopTNV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CardhopTNV/Pods-CardhopTNV.debug.xcconfig"; sourceTree = "<group>"; };
 		B147B476226038CC000C2F99 /* ToolBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBar.swift; sourceTree = "<group>"; };
 		B147B47822603E12000C2F99 /* ImageProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProfileVC.swift; sourceTree = "<group>"; };
-		B147B47E226045E7000C2F99 /* EFImageViewZoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EFImageViewZoom.swift; sourceTree = "<group>"; };
 		B147B480226051BB000C2F99 /* AddressEditCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressEditCell.swift; sourceTree = "<group>"; };
 		B147B481226051BB000C2F99 /* AddressEditCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddressEditCell.xib; sourceTree = "<group>"; };
 		B147B4842260644C000C2F99 /* LabelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelVC.swift; sourceTree = "<group>"; };
@@ -217,7 +215,6 @@
 		9124FDC022588FF600151834 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				B147B47E226045E7000C2F99 /* EFImageViewZoom.swift */,
 				B1C4AB7F225DF3E6006386EA /* CountryPickerView */,
 				9124FDC12258900A00151834 /* AppPreference.swift */,
 				9124FDCC2258A32500151834 /* ColorExtension.swift */,
@@ -364,6 +361,7 @@
 				91F0ACBE2254FF9B00CE6782 /* Frameworks */,
 				91F0ACBF2254FF9B00CE6782 /* Resources */,
 				DE23260854930CD4333EBC28 /* [CP] Embed Pods Frameworks */,
+				24F2CB978118961DC7360A90 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -442,6 +440,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		24F2CB978118961DC7360A90 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CardhopTNV/Pods-CardhopTNV-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		743D1EC5A7E211D78464E045 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -530,7 +543,6 @@
 				B1C4AB20225C4C78006386EA /* ThemeOptionView.swift in Sources */,
 				B1C4AB5E225DD98C006386EA /* ContactCountryVC.swift in Sources */,
 				B1C4AB34225DA912006386EA /* SearchBarExtension.swift in Sources */,
-				B147B47F226045E7000C2F99 /* EFImageViewZoom.swift in Sources */,
 				B1C4AB99225F252B006386EA /* AddressCell.swift in Sources */,
 				B1C4AB12225C49E4006386EA /* SectionView.swift in Sources */,
 				B1C4AB90225DF650006386EA /* CountryModel.swift in Sources */,

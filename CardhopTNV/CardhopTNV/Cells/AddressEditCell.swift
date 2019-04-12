@@ -20,6 +20,7 @@ class AddressEditCell: BaseTableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.btn_Icon.setImage(ContactModelSectionsType.address.image, for: .normal)
         self.btn_Icon.tintColor = AppPreference.sharedInstance.settings.appBgMode.cellTitleTextColor
         self.tf_Province.textColor = AppPreference.sharedInstance.settings.appBgMode.cellTitleTextColor
         self.tf_City.textColor = self.tf_Province.textColor

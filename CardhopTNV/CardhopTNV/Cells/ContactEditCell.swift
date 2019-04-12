@@ -15,16 +15,18 @@ protocol ContactEditCellDelegate {
 class ContactEditCell: BaseTableViewCell {
     var delegate:ContactEditCellDelegate?
     @IBOutlet weak var btn_Delete: UIButton!
-    @IBOutlet weak var btn_Icon: UIButton!
+//    @IBOutlet weak var btn_Icon: UIButton!
     @IBOutlet weak var btn_DropList: UIButton!
     
     @IBOutlet weak var tf_PhoneNumber: UITextField!
     var type:ContactModelSectionsType = .birthday
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.btn_Icon.tintColor = AppPreference.sharedInstance.settings.appBgMode.cellTitleTextColor
+//        self.btn_Delete.tintColor = AppPreference.sharedInstance.settings.appBgMode.cellTitleTextColor
         self.tf_PhoneNumber.textColor = AppPreference.sharedInstance.settings.appBgMode.cellTitleTextColor
         self.tf_PhoneNumber.delegate = self
+        self.btn_Delete.layer.cornerRadius = 15
+        self.btn_Delete.clipsToBounds = true
     }
     func becomeFirstResponderCell(){
 //        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
@@ -40,7 +42,8 @@ class ContactEditCell: BaseTableViewCell {
     func setup(title: String, content: String, isFirst: Bool = false){
         self.btn_DropList.setTitle(title, for: .normal)
         self.tf_PhoneNumber.text = content
-        self.btn_Icon.isHidden = !isFirst
+//        self.btn_Icon.isHidden = !isFirst
+//        self.btn_Icon.setImage(self.type.image, for: .normal)
     }
     
     @IBAction func deleteAction(_ sender: Any) {

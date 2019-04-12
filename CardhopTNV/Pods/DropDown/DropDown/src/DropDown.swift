@@ -151,23 +151,23 @@ public final class DropDown: UIView {
 	public var width: CGFloat? {
 		didSet { setNeedsUpdateConstraints() }
 	}
-
-	/**
-	arrowIndication.x
-
-	arrowIndication will be add to tableViewContainer when configured
-	*/
-	public var arrowIndicationX: CGFloat? {
-		didSet {
-			if let arrowIndicationX = arrowIndicationX {
-				tableViewContainer.addSubview(arrowIndication)
-				arrowIndication.tintColor = tableViewBackgroundColor
-				arrowIndication.frame.origin.x = arrowIndicationX
-			} else {
-				arrowIndication.removeFromSuperview()
-			}
-		}
-	}
+    
+    /**
+     arrowIndication.x
+     
+     arrowIndication will be add to tableViewContainer when configured
+     */
+    public var arrowIndicationX: CGFloat? {
+        didSet{
+            if arrowIndicationX != nil {
+                tableViewContainer.addSubview(arrowIndication)
+                arrowIndication.tintColor = tableViewBackgroundColor
+                arrowIndication.frame = CGRect(origin: CGPoint(x: arrowIndicationX!, y: arrowIndication.frame.origin.y), size: arrowIndication.frame.size)
+            } else {
+                arrowIndication.removeFromSuperview()
+            }
+        }
+    }
 
 	//MARK: Constraints
 	fileprivate var heightConstraint: NSLayoutConstraint!
@@ -191,13 +191,6 @@ public final class DropDown: UIView {
 	public override var backgroundColor: UIColor? {
 		get { return tableViewBackgroundColor }
 		set { tableViewBackgroundColor = newValue! }
-	}
-
-	/**
-	The color of the dimmed background (behind the drop down, covering the entire screen).
-	*/
-	public var dimmedBackgroundColor = UIColor.clear {
-		willSet { super.backgroundColor = newValue }
 	}
 
 	/**
@@ -288,12 +281,12 @@ public final class DropDown: UIView {
 	/**
 	The option of the show animation. Only change the caller. To change all drop down's use the static var.
 	*/
-	public var animationEntranceOptions: UIView.AnimationOptions = DropDown.animationEntranceOptions
+	public var animationEntranceOptions: UIViewAnimationOptions = DropDown.animationEntranceOptions
 	
 	/**
 	The option of the hide animation. Only change the caller. To change all drop down's use the static var.
 	*/
-	public var animationExitOptions: UIView.AnimationOptions = DropDown.animationExitOptions
+	public var animationExitOptions: UIViewAnimationOptions = DropDown.animationExitOptions
 
 	/**
 	The downScale transformation of the tableview when the DropDown is appearing
@@ -497,7 +490,7 @@ private extension DropDown {
 	}
 
 	func setupUI() {
-		super.backgroundColor = dimmedBackgroundColor
+		super.backgroundColor = .clear
 
 		tableViewContainer.layer.masksToBounds = false
 		tableViewContainer.layer.cornerRadius = cornerRadius
@@ -616,7 +609,7 @@ extension DropDown {
 		// We update the constraint to update the position
 		setNeedsUpdateConstraints()
 
-		let shadowPath = UIBezierPath(roundedRect: tableViewContainer.bounds, cornerRadius: cornerRadius)
+		let shadowPath = UIBezierPath(roundedRect: tableViewContainer.bounds, cornerRadius: DPDConstant.UI.CornerRadius)
 		tableViewContainer.layer.shadowPath = shadowPath.cgPath
 	}
 
@@ -730,7 +723,7 @@ extension DropDown {
 		for index in 0..<dataSource.count {
 			configureCell(templateCell, at: index)
 			templateCell.bounds.size.height = cellHeight
-			let width = templateCell.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize).width
+			let width = templateCell.systemLayoutSizeFitting(UILayoutFittingCompressedSize).width
 			
 			if width > maxWidth {
 				maxWidth = width
@@ -812,7 +805,7 @@ extension DropDown {
 
 		let visibleWindow = UIWindow.visibleWindow()
 		visibleWindow?.addSubview(self)
-		visibleWindow?.bringSubviewToFront(self)
+		visibleWindow?.bringSubview(toFront: self)
 
 		self.translatesAutoresizingMaskIntoConstraints = false
 		visibleWindow?.addUniversalConstraints(format: "|[dropDown]|", views: ["dropDown": self])
@@ -1107,7 +1100,7 @@ extension DropDown {
 	Starts listening to keyboard events.
 	Allows the drop down to display correctly when keyboard is showed.
 	*/
-	@objc public static func startListeningToKeyboard() {
+	public static func startListeningToKeyboard() {
 		KeyboardListener.sharedInstance.startListeningToKeyboard()
 	}
 
@@ -1117,12 +1110,12 @@ extension DropDown {
 		NotificationCenter.default.addObserver(
 			self,
 			selector: #selector(keyboardUpdate),
-			name: UIResponder.keyboardWillShowNotification,
+			name: NSNotification.Name.UIKeyboardWillShow,
 			object: nil)
 		NotificationCenter.default.addObserver(
 			self,
 			selector: #selector(keyboardUpdate),
-			name: UIResponder.keyboardWillHideNotification,
+			name: NSNotification.Name.UIKeyboardWillHide,
 			object: nil)
 	}
 

@@ -29,6 +29,7 @@ class EditContactVC: BaseViewController {
     @IBOutlet weak var switch_CompanyMode: UISwitch!
     @IBOutlet weak var v_DatePicker: UIView!
     
+    @IBOutlet weak var btn_buildingIcon: UIButton!
     let dropDownPhone = DropDown()
     let dropDownEmail = DropDown()
     
@@ -47,6 +48,7 @@ class EditContactVC: BaseViewController {
         self.enableCompanyModeHeight = self.cst_StackHeigh.constant
         self.isShowLargeTitle = false
         self.isShowSiriView = false
+        self.btn_buildingIcon.tintColor = AppPreference.sharedInstance.settings.appBgMode.cellTitleTextColor
         barButtonSave = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(saveAction))
         barButtonSave.isEnabled = false
         self.navigationItem.rightBarButtonItem = barButtonSave
@@ -63,6 +65,9 @@ class EditContactVC: BaseViewController {
         
         self.v_Avatar.setStateColor(color: contact.stateColor)
         self.v_Avatar.lbl_Name.text = contact.shortName
+        if let picture = self.contact.thumbnailImageData{
+            self.v_Avatar.setImage(image: UIImage(data: picture, scale: 1.0) )
+        }
         
         self.tf_FirstName.text = contact.firstName
         self.tf_LastName.text = contact.lastName
