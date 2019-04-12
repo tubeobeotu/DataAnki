@@ -32,6 +32,11 @@ class ContactCell: BaseTableViewCell {
         self.btn_Image.tintColor = AppPreference.sharedInstance.settings.appBgMode.cellTitleTextColor
         self.v_Content.backgroundColor =  AppPreference.sharedInstance.settings.appBgMode.bgColorCell
         self.v_Avatar.setStateColor(color: contact.stateColor)
+        if let picture = contact.thumbnailImageData{
+            self.v_Avatar.setImage(image: UIImage.init(data: picture, scale: 1.0))
+        }else{
+            self.v_Avatar.setImage(image: UIImage())
+        }
         self.lbl_Name.textColor = AppPreference.sharedInstance.settings.appBgMode.cellTitleTextColor
         self.lbl_SubName.textColor = AppPreference.sharedInstance.settings.appBgMode.cellContentTextColor
         self.lbl_Name.text = contact.displayName

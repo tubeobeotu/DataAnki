@@ -26,6 +26,7 @@ class BaseViewController: UIViewController {
         self.navigationController?.navigationBar.isTranslucent = true
     
         self.changeBgView()
+        self.hideKeyboardWhenTappedAround()
         
         let notificationCenter = NotificationCenter.default
         notificationCenter.addObserver(self,
@@ -42,9 +43,19 @@ class BaseViewController: UIViewController {
         self.navigationController?.navigationBar.prefersLargeTitles = self.isShowLargeTitle
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func hideKeyboardWhenTappedAround() {
+        let tapGesture = UITapGestureRecognizer(target: self,
+                                                action: #selector(hideKeyboard))
+        tapGesture.cancelsTouchesInView = false
+        view.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func hideKeyboard() {
+        self.didTapToView()
+        view.endEditing(true)
+    }
+    func didTapToView(){
+        
     }
     
     @objc func changeBgView(){

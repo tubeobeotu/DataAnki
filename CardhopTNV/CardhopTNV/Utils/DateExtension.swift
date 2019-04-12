@@ -19,4 +19,10 @@ extension Date {
         dateFormatter.dateFormat = "dd"
         return dateFormatter.string(from: self)
     }
+    
+    var dateComponents: DateComponents{
+        let units: Set<Calendar.Component> = [.day, .month, .year]
+        let comps = Calendar.current.dateComponents(units, from: self)
+        return comps
+    }
 }

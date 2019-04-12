@@ -9,6 +9,7 @@
 import UIKit
 
 class ContactLabelModel: BaseModel {
+    open var isNew = false
     open var isEmail = false
     private var _label: String = ""
     open var label: String {

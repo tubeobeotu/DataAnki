@@ -257,6 +257,7 @@ class ContactModel: BaseModel{
         contact.postalAddresses = self.getRawAddressLabel()
         contact.birthday = self.birthday
         contact.note = self.note
+        contact.contactType = CNContactType(rawValue: self.contactType) ?? CNContactType.person
         return contact
     }
     

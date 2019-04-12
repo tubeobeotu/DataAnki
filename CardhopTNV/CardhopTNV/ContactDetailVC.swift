@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import DropDown
 class ContactDetailVC: BaseViewController {
     @IBOutlet weak var v_Avatar: AvatarView!
     
@@ -19,7 +19,6 @@ class ContactDetailVC: BaseViewController {
     @IBOutlet weak var v_Call: ContactActionDetailView!
     
     @IBOutlet weak var v_Video: ContactActionDetailView!
-    
     @IBOutlet weak var cst_Top: NSLayoutConstraint!
     
     @IBOutlet weak var cst_BirthdayHeight: NSLayoutConstraint!
@@ -27,10 +26,16 @@ class ContactDetailVC: BaseViewController {
     var contact:ContactModel!
     var photoManager = PhotoManager()
     var btnPhoto:UIButton!
+    var phoneNumber = ""
+    var emailAddress = ""
+    let dropDownPhone = DropDown()
+    let dropDownEmail = DropDown()
+    
+    var currentType:ActionType = .Message
     override func viewDidLoad() {
         super.viewDidLoad()
         self.photoManager.delegate = self
-        self.v_Avatar.delegate = self
+        
         let topBarHeight =
             (self.navigationController?.navigationBar.frame.height ?? 0.0)
         self.cst_Top.constant = -topBarHeight
@@ -39,9 +44,17 @@ class ContactDetailVC: BaseViewController {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Edit", style: .done, target: self, action: #selector(showEditVC))
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .done, target: self, action: #selector(cancelAction))
         
+        self.v_Avatar.delegate = self
         self.v_Avatar.setStateColor(color: contact.stateColor)
         self.v_Avatar.lbl_Name.text = contact.shortName
+        if let picture = self.contact.thumbnailImageData{
+            self.v_Avatar.setImage(image: UIImage(data: picture, scale: 1.0) )
+        }
+        
         self.lbl_Name.text = contact.displayName
+        self.lbl_Name.textColor = AppPreference.sharedInstance.settings.appBgMode.cellTitleTextColor
+        self.lbl_Birthday.textColor = AppPreference.sharedInstance.settings.appBgMode.cellTitleTextColor
+        
         
         self.tbl_Content.register(UINib.init(nibName: "ContactDetailCell", bundle: nil), forCellReuseIdentifier: "ContactDetailCell")
         self.tbl_Content.register(UINib.init(nibName: "AddressCell", bundle: nil), forCellReuseIdentifier: "AddressCell")
@@ -51,13 +64,68 @@ class ContactDetailVC: BaseViewController {
         self.tbl_Content.dataSource = self
         
         self.v_Message.type = .Message
+        self.v_Message.delegate = self
         self.v_Email.type = .Email
+        self.v_Email.delegate = self
         self.v_Call.type = .Call
+        self.v_Call.delegate = self
         self.v_Video.type = .Video
+        self.v_Video.delegate = self
         
         self.addActionButton()
+        self.setupDropDowns()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.setupBirthdayView()
+    }
+    func setupDropDowns(){
+        self.dropDownPhone.dataSource = self.contact.phoneNumbers.map({ (label) -> String in
+            return label.value
+        })
+        self.dropDownEmail.dataSource = self.contact.emailAddresses.map({ (label) -> String in
+            return label.value
+        })
+        self.dropDownEmail.direction = .bottom
+        self.dropDownPhone.direction = .bottom
+        
+        self.dropDownEmail.selectionAction = { [unowned self] (index: Int, item: String) in
+            self.emailAddress = item
+            SimpleFunction.sendEmail(email: item, content: "", vc: self)
+        }
+        self.dropDownPhone.selectionAction = { [unowned self] (index: Int, item: String) in
+            self.phoneNumber = item
+            if(self.currentType == .Call){
+                SimpleFunction.callNumber(phoneNumber: self.contact.phoneNumbers.first?.value ?? "", vc: self)
+            }else if(self.currentType == .Message){
+                SimpleFunction.sendMessage(phoneNumber: self.contact.phoneNumbers.first?.value ?? "", content: "", vc: self)
+            }else{
+                SimpleFunction.facetime(phoneNumber: self.contact.phoneNumbers.first?.value ?? "", vc: self)
+            }
+        }
+    }
+    func setupBirthdayView(){
+        func hide(){
+            self.lbl_Birthday.isHidden = true
+            self.cst_BirthdayHeight.constant = 0
+        }
+        if(self.contact.birthday != nil){
+            if let date = NSCalendar.current.date(from: self.contact.birthday!){
+                if(Calendar.current.isDateInToday(date)){
+                    self.lbl_Birthday.isHidden = false
+                    self.lbl_Birthday.text = "\(self.contact.firstName)'s birthday is today!"
+                    self.cst_BirthdayHeight.constant = 25
+                    return
+                }
+            }
+        }
+        
+        
+        hide()
+        
     }
     @objc func cancelAction(){
+        SimpleFunction.calculateContactsFromLocal(contacts: AppPreference.sharedInstance.contacts)
         self.btnPhoto.removeFromSuperview()
         self.dismiss(animated: true, completion: nil)
     }
@@ -109,6 +177,7 @@ extension ContactDetailVC: UITableViewDataSource{
         let type = ContactModelSectionsType(rawValue: indexPath.section)!
         if(type == .note){
             let cell = tableView.dequeueReusableCell(withIdentifier: "ContactNoteCell", for: indexPath) as! ContactNoteCell
+            cell.delegate = self
             cell.tv_Content.text = self.contact.note
             return cell
         }else{
@@ -137,7 +206,17 @@ extension ContactDetailVC: UITableViewDataSource{
 
 extension ContactDetailVC: AvatarViewDelegate{
     func didAppAvatar() {
-        self.photoManager.showOptions()
+        if let photo = self.contact.thumbnailImageData{
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            if let vc = storyboard.instantiateViewController(withIdentifier: "ImageProfileVC") as? ImageProfileVC{
+                vc.title = self.contact.firstName
+                vc.picture = UIImage(data:photo,scale:1.0) 
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+        }else{
+            self.photoManager.showOptions()
+        }
+        
     }
     
     
@@ -156,5 +235,39 @@ extension ContactDetailVC : PhotoManagerDelegate
 
     func presentVC() -> UIViewController {
         return self
+    }
+}
+extension ContactDetailVC: ContactNoteCellDelegate{
+    func didChangeNote(content: String) {
+        self.contact.note = content
+        SimpleFunction.saveContactNote(contact: self.contact)
+    }
+    func changeNote(content: String, cell: UITableViewCell) {
+        
+    }
+}
+extension ContactDetailVC: ContactActionDetailViewDelegate{
+    func didSelectAction(type: ActionType) {
+        currentType = type
+        switch type {
+        case .Call:
+            self.showDropDown(dropDown: dropDownPhone, anchor: v_Call)
+        break
+        case .Email:
+            self.showDropDown(dropDown: dropDownEmail, anchor: v_Email)
+        break
+        case .Message:
+            self.showDropDown(dropDown: dropDownPhone, anchor: v_Message)
+        break
+        case .Video:
+            self.showDropDown(dropDown: dropDownPhone, anchor: v_Video)
+        break
+        }
+    }
+    
+    func showDropDown(dropDown: DropDown, anchor: UIView){
+        dropDown.anchorView = anchor
+        dropDown.bottomOffset = CGPoint(x: 0, y:(dropDown.anchorView?.plainView.bounds.height)! + 8)
+        dropDown.show()
     }
 }

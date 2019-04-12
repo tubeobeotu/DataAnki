@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -33,14 +32,24 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xgy-0L-tbk">
+                        <rect key="frame" x="0.0" y="0.0" width="350" height="71.5"/>
+                        <connections>
+                            <action selector="tapAddNew:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="1xB-pb-vYb"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="bottom" secondItem="Xgy-0L-tbk" secondAttribute="bottom" id="DQs-3s-HUh"/>
                     <constraint firstItem="q6Q-Jh-54m" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="SqF-KP-bGz"/>
                     <constraint firstAttribute="trailingMargin" secondItem="pXv-kr-cx2" secondAttribute="trailing" id="WzE-bc-jbS"/>
                     <constraint firstItem="pXv-kr-cx2" firstAttribute="leading" secondItem="q6Q-Jh-54m" secondAttribute="trailing" constant="8" id="aKZ-dr-hOI"/>
                     <constraint firstItem="pXv-kr-cx2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="dMC-tJ-FNc"/>
+                    <constraint firstItem="Xgy-0L-tbk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="fxo-zf-6hq"/>
                     <constraint firstItem="q6Q-Jh-54m" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="kiW-F0-ym4"/>
                     <constraint firstAttribute="bottomMargin" secondItem="pXv-kr-cx2" secondAttribute="bottom" id="nhV-Ss-flA"/>
+                    <constraint firstItem="Xgy-0L-tbk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="tn5-5k-hmV"/>
+                    <constraint firstAttribute="trailing" secondItem="Xgy-0L-tbk" secondAttribute="trailing" id="z1r-1A-Cmo"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

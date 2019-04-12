@@ -39,7 +39,7 @@ class AvatarView: BaseCustomNibView {
     func setTextColor(color: UIColor){
         self.lbl_Name.textColor = color
     }
-    func setImage(image: UIImage){
+    func setImage(image: UIImage?){
         self.img_Profile.image = image
     }
     

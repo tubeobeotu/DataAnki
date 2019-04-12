@@ -49,6 +49,13 @@
 		91F24E2B225E6B7E001ABE9D /* ContactDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F24E29225E6B7E001ABE9D /* ContactDetailCell.swift */; };
 		91F24E2C225E6B7E001ABE9D /* ContactDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91F24E2A225E6B7E001ABE9D /* ContactDetailCell.xib */; };
 		A363A4D37D76A19C36F2E727 /* Pods_CardhopTNV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAD99D97F49F467D635ABBE8 /* Pods_CardhopTNV.framework */; };
+		B147B477226038CC000C2F99 /* ToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B147B476226038CC000C2F99 /* ToolBar.swift */; };
+		B147B47922603E12000C2F99 /* ImageProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B147B47822603E12000C2F99 /* ImageProfileVC.swift */; };
+		B147B47F226045E7000C2F99 /* EFImageViewZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B147B47E226045E7000C2F99 /* EFImageViewZoom.swift */; };
+		B147B482226051BB000C2F99 /* AddressEditCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B147B480226051BB000C2F99 /* AddressEditCell.swift */; };
+		B147B483226051BB000C2F99 /* AddressEditCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B147B481226051BB000C2F99 /* AddressEditCell.xib */; };
+		B147B4852260644C000C2F99 /* LabelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B147B4842260644C000C2F99 /* LabelVC.swift */; };
+		B147B489226089EA000C2F99 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B147B488226089EA000C2F99 /* ViewControllerExtension.swift */; };
 		B14A7BAF225B43D50027E540 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14A7BAE225B43D50027E540 /* StringExtension.swift */; };
 		B14A7BB1225B5A9F0027E540 /* ContactLabelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14A7BB0225B5A9F0027E540 /* ContactLabelModel.swift */; };
 		B14A7BB3225B5C370027E540 /* ContactAddressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14A7BB2225B5C370027E540 /* ContactAddressModel.swift */; };
@@ -126,6 +133,13 @@
 		91F24E2A225E6B7E001ABE9D /* ContactDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactDetailCell.xib; sourceTree = "<group>"; };
 		951DC87EA8C07658E2A21D9F /* Pods-CardhopTNV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardhopTNV.release.xcconfig"; path = "Pods/Target Support Files/Pods-CardhopTNV/Pods-CardhopTNV.release.xcconfig"; sourceTree = "<group>"; };
 		A4C2EE56E1248F39E0E3B266 /* Pods-CardhopTNV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardhopTNV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CardhopTNV/Pods-CardhopTNV.debug.xcconfig"; sourceTree = "<group>"; };
+		B147B476226038CC000C2F99 /* ToolBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBar.swift; sourceTree = "<group>"; };
+		B147B47822603E12000C2F99 /* ImageProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProfileVC.swift; sourceTree = "<group>"; };
+		B147B47E226045E7000C2F99 /* EFImageViewZoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EFImageViewZoom.swift; sourceTree = "<group>"; };
+		B147B480226051BB000C2F99 /* AddressEditCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressEditCell.swift; sourceTree = "<group>"; };
+		B147B481226051BB000C2F99 /* AddressEditCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddressEditCell.xib; sourceTree = "<group>"; };
+		B147B4842260644C000C2F99 /* LabelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelVC.swift; sourceTree = "<group>"; };
+		B147B488226089EA000C2F99 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
 		B14A7BAE225B43D50027E540 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		B14A7BB0225B5A9F0027E540 /* ContactLabelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactLabelModel.swift; sourceTree = "<group>"; };
 		B14A7BB2225B5C370027E540 /* ContactAddressModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactAddressModel.swift; sourceTree = "<group>"; };
@@ -203,6 +217,7 @@
 		9124FDC022588FF600151834 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				B147B47E226045E7000C2F99 /* EFImageViewZoom.swift */,
 				B1C4AB7F225DF3E6006386EA /* CountryPickerView */,
 				9124FDC12258900A00151834 /* AppPreference.swift */,
 				9124FDCC2258A32500151834 /* ColorExtension.swift */,
@@ -212,6 +227,8 @@
 				919B0C36225C2A71004576F6 /* DateExtension.swift */,
 				B1C4AB33225DA912006386EA /* SearchBarExtension.swift */,
 				B19FD8ED225F50B800226727 /* PhotoManager.swift */,
+				B147B476226038CC000C2F99 /* ToolBar.swift */,
+				B147B488226089EA000C2F99 /* ViewControllerExtension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -282,6 +299,8 @@
 				B1C4AB5D225DD98C006386EA /* ContactCountryVC.swift */,
 				91F24E21225E664C001ABE9D /* ContactDetailVC.swift */,
 				91F24E23225E6661001ABE9D /* EditContactVC.swift */,
+				B147B47822603E12000C2F99 /* ImageProfileVC.swift */,
+				B147B4842260644C000C2F99 /* LabelVC.swift */,
 				91F0ACC82254FF9B00CE6782 /* Main.storyboard */,
 				91F0ACCB2254FF9B00CE6782 /* Assets.xcassets */,
 				91F0ACCD2254FF9B00CE6782 /* LaunchScreen.storyboard */,
@@ -310,6 +329,8 @@
 				B1C4AB98225F252B006386EA /* AddressCell.xib */,
 				91420581225F753E00496AA0 /* ContactNoteCell.swift */,
 				91420582225F753E00496AA0 /* ContactNoteCell.xib */,
+				B147B480226051BB000C2F99 /* AddressEditCell.swift */,
+				B147B481226051BB000C2F99 /* AddressEditCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -408,6 +429,7 @@
 				B1C4AB88225DF3E6006386EA /* CountryPickerView.bundle in Resources */,
 				9124FDC62258913900151834 /* SearchingView.xib in Resources */,
 				914378EA2256DE9200C41F6E /* AvatarView.xib in Resources */,
+				B147B483226051BB000C2F99 /* AddressEditCell.xib in Resources */,
 				B1C4AB18225C4A2F006386EA /* SettingGeneralOptionView.xib in Resources */,
 				B1C4AB22225C4C81006386EA /* ThemeOptionView.xib in Resources */,
 				91F24E1E225E5519001ABE9D /* SettingNormalCell.xib in Resources */,
@@ -445,10 +467,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-CardhopTNV/Pods-CardhopTNV-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
 				"${BUILT_PRODUCTS_DIR}/QBImagePickerController/QBImagePickerController.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QBImagePickerController.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -483,6 +507,7 @@
 				91F0ACDB2255020E00CE6782 /* HistoryVC.swift in Sources */,
 				91F24E26225E67CF001ABE9D /* ContactActionDetailView.swift in Sources */,
 				91F0ACC52254FF9B00CE6782 /* AppDelegate.swift in Sources */,
+				B147B482226051BB000C2F99 /* AddressEditCell.swift in Sources */,
 				91F0ACDF2255023900CE6782 /* BirthdayVC.swift in Sources */,
 				91F0ACE4225503F000CE6782 /* BaseTableViewCell.swift in Sources */,
 				B1C4AB36225DAA94006386EA /* GeneralSettingModel.swift in Sources */,
@@ -494,21 +519,26 @@
 				91B5D48C225ECD7E00AC0DF0 /* ContactEditCell.swift in Sources */,
 				B1C4AB28225C850D006386EA /* SearchingContactsVC.swift in Sources */,
 				B1C4AB1A225C4A51006386EA /* ThemeView.swift in Sources */,
+				B147B4852260644C000C2F99 /* LabelVC.swift in Sources */,
 				919B0C35225C23A5004576F6 /* ContactFileManager.swift in Sources */,
 				91F0ACDD2255021B00CE6782 /* ContactVC.swift in Sources */,
 				91F0ACE12255025100CE6782 /* SettingsVC.swift in Sources */,
 				9124FDC42258913300151834 /* SearchingView.swift in Sources */,
 				B14A7BAF225B43D50027E540 /* StringExtension.swift in Sources */,
+				B147B47922603E12000C2F99 /* ImageProfileVC.swift in Sources */,
 				B19FD8EE225F50B800226727 /* PhotoManager.swift in Sources */,
 				B1C4AB20225C4C78006386EA /* ThemeOptionView.swift in Sources */,
 				B1C4AB5E225DD98C006386EA /* ContactCountryVC.swift in Sources */,
 				B1C4AB34225DA912006386EA /* SearchBarExtension.swift in Sources */,
+				B147B47F226045E7000C2F99 /* EFImageViewZoom.swift in Sources */,
 				B1C4AB99225F252B006386EA /* AddressCell.swift in Sources */,
 				B1C4AB12225C49E4006386EA /* SectionView.swift in Sources */,
 				B1C4AB90225DF650006386EA /* CountryModel.swift in Sources */,
 				91F0ACD92255020000CE6782 /* FavouriteVC.swift in Sources */,
+				B147B489226089EA000C2F99 /* ViewControllerExtension.swift in Sources */,
 				91F0ACD7225501E200CE6782 /* BaseViewController.swift in Sources */,
 				91F24E20225E567D001ABE9D /* SettingDetailVC.swift in Sources */,
+				B147B477226038CC000C2F99 /* ToolBar.swift in Sources */,
 				B14A7BB1225B5A9F0027E540 /* ContactLabelModel.swift in Sources */,
 				B1C4AB96225E07A3006386EA /* UIViewExtension.swift in Sources */,
 			);

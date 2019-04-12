@@ -32,6 +32,5 @@ class AddressCell: BaseTableViewCell {
     func setupModel(address: ContactAddressModel){
         self.lbl_Title.text = address.label
         self.lbl_Content.text = address.getAddressString(iso: AppPreference.sharedInstance.settings.addressFormat)
-        
     }
 }

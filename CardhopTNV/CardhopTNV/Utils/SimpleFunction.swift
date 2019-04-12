@@ -9,6 +9,7 @@
 import Foundation
 import Contacts
 import UIKit
+import MessageUI
 class SimpleFunction{
     class func getContacts(){
         self.requestAccess { (accessGranted) in
@@ -183,7 +184,7 @@ class SimpleFunction{
     class func calculateContactsFromLocal(contacts: [ContactModel]){
         var sortedContacts:[ContactModel]!
 //        if(isFirst){
-            sortedContacts = contacts.sorted(by: { $0.displayShortField > $1.displayShortField})
+            sortedContacts = contacts.sorted(by: { $0.displayShortField < $1.displayShortField})
 //        }else{
 //            sortedContacts = sortedContacts.reversed()
 //        }
@@ -235,6 +236,7 @@ class SimpleFunction{
     }
     
     class func saveContact(contact: ContactModel){
+        self.insertContactToRecent(contact: contact)
         let model = contact.getModelToRawContact()
         // Saving the newly created contact
         let store = AppPreference.sharedInstance.contactStore
@@ -247,6 +249,7 @@ class SimpleFunction{
         }
     }
     class func saveContactNote(contact: ContactModel){
+        self.insertContactToRecent(contact: contact)
         let model = contact.getNoteModelToRawContact()
         let store = AppPreference.sharedInstance.contactStore
         let saveRequest = CNSaveRequest()
@@ -257,4 +260,60 @@ class SimpleFunction{
             print("unable to update contacts")
         }
     }
+    
+    
+    //Call
+    class func callNumber(phoneNumber:String, vc: UIViewController) {
+        if let phoneCallURL = URL(string: "tel://\(phoneNumber)") {
+            let application:UIApplication = UIApplication.shared
+            if (application.canOpenURL(phoneCallURL)) {
+                application.open(phoneCallURL, options: [:], completionHandler: nil)
+            }else{
+                vc.showAlert(content: "Can not call to the phone number")
+            }
+        }
+    }
+    class func sendMessage(phoneNumber:String, content: String, vc: UIViewController) {
+        let composeVC = MFMessageComposeViewController()
+//        composeVC.messageComposeDelegate = vc as! MFMessageComposeViewControllerDelegate
+        // Configure the fields of the interface.
+        composeVC.recipients = [phoneNumber]
+        composeVC.body = content
+        
+        // Present the view controller modally.
+        if MFMessageComposeViewController.canSendText() {
+            vc.present(composeVC, animated: true, completion: nil)
+        } else {
+            print("Can't send messages.")
+        }
+    }
+    
+    class func sendEmail(email:String, content: String, vc: UIViewController) {
+        if(MFMailComposeViewController.canSendMail()){
+            let composeVC = MFMailComposeViewController()
+            //        composeVC.mailComposeDelegate = self
+            
+            // Configure the fields of the interface.
+            composeVC.setToRecipients([email])
+            composeVC.setSubject("")
+            composeVC.setMessageBody(content, isHTML: false)
+            
+            // Present the view controller modally.
+            vc.present(composeVC, animated: true, completion: nil)
+        }else{
+            vc.showAlert(content: "Please set up your email!")
+        }
+    }
+    class func facetime(phoneNumber:String, vc: UIViewController) {
+        if let phoneCallURL = URL(string: "facetime://\(phoneNumber)") {
+            let application:UIApplication = UIApplication.shared
+            if (application.canOpenURL(phoneCallURL)) {
+                application.open(phoneCallURL, options: [:], completionHandler: nil)
+            }
+            else{
+                vc.showAlert(content: "Can not video call to the phone number")
+            }
+        }
+    }
+
 }
