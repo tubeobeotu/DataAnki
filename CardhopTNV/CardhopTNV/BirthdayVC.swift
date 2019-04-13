@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SwipeCellKit
 class BirthdayVC: BaseViewController {
     var birthDayContacts = [ContactModel]()
     override func viewDidLoad() {
@@ -42,6 +42,23 @@ extension BirthdayVC: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ContactCell", for: indexPath) as! ContactCell
         cell.setModelForCell(contact: self.birthDayContacts[indexPath.row], isHideSubLabel: false)
+        cell.delegate = self
         return cell
+    }
+}
+extension BirthdayVC: SwipeTableViewCellDelegate{
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> [SwipeAction]? {
+        guard orientation == .right else { return nil }
+        
+        let deleteAction = SwipeAction(style: .destructive, title: "Delete") { action, indexPath in
+            SimpleFunction.deleteContactToBirthDay(contact: self.recentsContacts[indexPath.row])
+            self.birthDayContacts.remove(at: indexPath.row)
+            self.reloadModels()
+        }
+        
+        // customize the action appearance
+        deleteAction.image = UIImage(named: "ic_trash")
+        
+        return [deleteAction]
     }
 }

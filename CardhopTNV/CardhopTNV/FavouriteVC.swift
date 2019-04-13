@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SwipeCellKit
 class FavouriteVC: BaseViewController {
     var favouritedContacts = [ContactModel]()
     override func viewDidLoad() {
@@ -52,9 +52,28 @@ extension FavouriteVC: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.favouritedContacts.count
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ContactCell", for: indexPath) as! ContactCell
         cell.setModelForCell(contact: self.favouritedContacts[indexPath.row], isHideSubLabel: true)
+        cell.delegate = self
         return cell
+    }
+}
+extension FavouriteVC: SwipeTableViewCellDelegate{
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> [SwipeAction]? {
+        guard orientation == .right else { return nil }
+        
+        let deleteAction = SwipeAction(style: .destructive, title: "Delete") { action, indexPath in
+           
+            SimpleFunction.deleteContactToFavourit(contact: self.favouritedContacts[indexPath.row])
+            self.favouritedContacts.remove(at: indexPath.row)
+            self.reloadModels()
+        }
+        
+        // customize the action appearance
+        deleteAction.image = UIImage(named: "ic_trash")
+        
+        return [deleteAction]
     }
 }

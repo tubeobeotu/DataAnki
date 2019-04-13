@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SwipeCellKit
 class ContactVC: BaseViewController {
     var arrIndexSection = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
     var validedArrIndexSection = [String]()
@@ -97,6 +97,24 @@ extension ContactVC: UITableViewDataSource{
         {
             cell.setModelForCell(contact: tmpContacts[indexPath.row], isHideSubLabel: true, canSelect: !SimpleFunction.checkContactInList(contact: tmpContacts[indexPath.row], contacts: AppPreference.sharedInstance.favouritContacts))
         }
+        cell.delegate = self
         return cell
+    }
+}
+
+extension ContactVC: SwipeTableViewCellDelegate{
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> [SwipeAction]? {
+        guard orientation == .right else { return nil }
+        
+        let deleteAction = SwipeAction(style: .destructive, title: "Delete") { action, indexPath in
+            SimpleFunction.deleteContactToContacts(contact: self.contacts[indexPath.row])
+            self.contacts.remove(at: indexPath.row)
+            self.reloadModels()
+        }
+        
+        // customize the action appearance
+        deleteAction.image = UIImage(named: "ic_trash")
+        
+        return [deleteAction]
     }
 }

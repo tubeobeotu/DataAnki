@@ -7,8 +7,8 @@
 //
 
 import UIKit
-
-class ContactCell: BaseTableViewCell {
+import SwipeCellKit
+class ContactCell: SwipeTableViewCell {
 
     @IBOutlet weak var btn_Image: UIButton!
     @IBOutlet weak var v_Avatar: AvatarView!

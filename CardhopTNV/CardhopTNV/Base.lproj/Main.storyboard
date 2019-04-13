@@ -33,9 +33,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Gj4-95-v2h"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Recents" id="A08-iL-qdD">
-                        <barButtonItem key="rightBarButtonItem" title="Edit" id="7xR-Io-VjY"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Recents" id="A08-iL-qdD"/>
                     <connections>
                         <outlet property="tbl_Content" destination="T7E-vH-QPm" id="ceL-Yb-fCY"/>
                     </connections>
@@ -70,11 +68,6 @@
                         <barButtonItem key="leftBarButtonItem" image="ic_add" id="JiX-Rx-tWQ">
                             <connections>
                                 <action selector="showSearchingVC:" destination="YRJ-mt-QmS" id="Srr-X9-wlR"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Edit" id="R27-kQ-vta">
-                            <connections>
-                                <action selector="editMode:" destination="YRJ-mt-QmS" id="IY7-OF-nV2"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

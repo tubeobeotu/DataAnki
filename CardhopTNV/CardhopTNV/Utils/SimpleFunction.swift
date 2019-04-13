@@ -179,6 +179,27 @@ class SimpleFunction{
         }
         self.insertContactToRecent(contact: contact)
     }
+    class func deleteOptionContact(contact: ContactModel, from contacts: [ContactModel]) -> [ContactModel]{
+        var tmpContacts = contacts
+        let index = getContact(contacts: tmpContacts, id: contact.identifier)
+        if(index != -1){
+            tmpContacts.remove(at: index)
+        }
+        return tmpContacts
+    }
+    class func deleteContactToFavourit(contact: ContactModel){
+       AppPreference.sharedInstance.favouritContacts = self.deleteOptionContact(contact: contact, from: AppPreference.sharedInstance.favouritContacts)
+    }
+    class func deleteContactToRecent(contact: ContactModel){
+        AppPreference.sharedInstance.recentContacts = self.deleteOptionContact(contact: contact, from: AppPreference.sharedInstance.recentContacts)
+    }
+    class func deleteContactToBirthDay(contact: ContactModel){
+        AppPreference.sharedInstance.birthdayContacts = self.deleteOptionContact(contact: contact, from: AppPreference.sharedInstance.birthdayContacts)
+    }
+    class func deleteContactToContacts(contact: ContactModel){
+        AppPreference.sharedInstance.contacts = self.deleteOptionContact(contact: contact, from: AppPreference.sharedInstance.contacts)
+        self.calculateContactsFromLocal(contacts: AppPreference.sharedInstance.contacts)
+    }
     
     
     class func calculateContactsFromLocal(contacts: [ContactModel]){
@@ -234,7 +255,14 @@ class SimpleFunction{
         }
         return validedContacts
     }
-    
+    class func getContact(contacts: [ContactModel], id: String) -> Int{
+        for (index, contact) in contacts.enumerated(){
+            if(id == contact.identifier){
+                return index
+            }
+        }
+        return -1
+    }
     class func saveContact(contact: ContactModel){
         self.insertContactToRecent(contact: contact)
         let model = contact.getModelToRawContact()

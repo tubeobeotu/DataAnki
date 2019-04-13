@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D83A0D2C049A3C89DCFF3CE7BBBF2441"
+               BlueprintIdentifier = "382895CA67E4724DA6139DB0B12EFBA1"
                BuildableName = "Pods_CardhopTNV.framework"
                BlueprintName = "Pods-CardhopTNV"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D83A0D2C049A3C89DCFF3CE7BBBF2441"
+            BlueprintIdentifier = "382895CA67E4724DA6139DB0B12EFBA1"
             BuildableName = "Pods_CardhopTNV.framework"
             BlueprintName = "Pods-CardhopTNV"
             ReferencedContainer = "container:Pods.xcodeproj">

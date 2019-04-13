@@ -6,6 +6,7 @@ target 'CardhopTNV' do
   use_frameworks!
 	pod "QBImagePickerController"
     pod 'DropDown'
+    pod 'SwipeCellKit'
   # Pods for CardhopTNV
 
 end
