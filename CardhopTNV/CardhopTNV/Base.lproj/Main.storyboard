@@ -374,10 +374,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q4s-H1-vUu">
-                                        <rect key="frame" x="16" y="110" width="343" height="80"/>
+                                        <rect key="frame" x="24" y="110" width="335" height="80"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="OoK-bL-bN8">
-                                                <rect key="frame" x="0.0" y="0.0" width="343" height="80"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="80"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WV1-lx-Hbo" customClass="ContactActionDetailView" customModule="CardhopTNV" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="60" height="80"/>
@@ -387,15 +387,15 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="30q-w6-ja2" customClass="ContactActionDetailView" customModule="CardhopTNV" customModuleProvider="target">
-                                                        <rect key="frame" x="94.5" y="0.0" width="60" height="80"/>
+                                                        <rect key="frame" x="91.5" y="0.0" width="60" height="80"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EbA-rG-lOs" customClass="ContactActionDetailView" customModule="CardhopTNV" customModuleProvider="target">
-                                                        <rect key="frame" x="188.5" y="0.0" width="60" height="80"/>
+                                                        <rect key="frame" x="183.5" y="0.0" width="60" height="80"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sXi-NO-age" customClass="ContactActionDetailView" customModule="CardhopTNV" customModuleProvider="target">
-                                                        <rect key="frame" x="283" y="0.0" width="60" height="80"/>
+                                                        <rect key="frame" x="275" y="0.0" width="60" height="80"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </view>
                                                 </subviews>
@@ -429,7 +429,7 @@
                                     <constraint firstItem="iB6-Jw-NvD" firstAttribute="top" secondItem="xxt-kL-mZX" secondAttribute="bottom" constant="8" id="cwc-vR-VMd"/>
                                     <constraint firstItem="f50-dv-OlD" firstAttribute="top" secondItem="Ey0-Da-Y8W" secondAttribute="top" id="d8R-nN-3CA"/>
                                     <constraint firstItem="1O2-ud-BvF" firstAttribute="centerX" secondItem="xxt-kL-mZX" secondAttribute="centerX" id="gxS-Q2-hKv"/>
-                                    <constraint firstItem="Q4s-H1-vUu" firstAttribute="leading" secondItem="Ey0-Da-Y8W" secondAttribute="leading" constant="16" id="lVN-LB-2Gn"/>
+                                    <constraint firstItem="Q4s-H1-vUu" firstAttribute="leading" secondItem="Ey0-Da-Y8W" secondAttribute="leading" constant="24" id="lVN-LB-2Gn"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="iB6-Jw-NvD" secondAttribute="trailing" constant="8" id="yyt-Lq-GUx"/>
                                 </constraints>
                             </view>
