@@ -14,6 +14,7 @@ class ThemeOptionView: BaseCustomNibView {
     @IBOutlet weak var img_Contant: UIImageView!
     var mode:AppBgMode = .Default{
         didSet{
+            self.img_Contant.image = self.mode.themeImage
             self.lbl_Title.text = self.mode.text
         }
     }

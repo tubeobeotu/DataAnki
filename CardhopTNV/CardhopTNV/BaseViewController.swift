@@ -37,6 +37,7 @@ class BaseViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        AppPreference.sharedInstance.isDetailVC = false
         self.reloadModels()
         self.reloadData()
         AppPreference.sharedInstance.siriView.isHidden = !self.isShowSiriView

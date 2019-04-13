@@ -33,7 +33,11 @@ class AddressEditCell: BaseTableViewCell {
     }
     
     func setupModel(address: ContactAddressModel){
-        
+        self.tf_Street.text = address.street
+        self.tf_Province.text = address.state
+        self.tf_City.text = address.city
+        self.tf_Country.text = address.country
+        self.tf_PostCode.text = address.postalCode
     }
     
 }

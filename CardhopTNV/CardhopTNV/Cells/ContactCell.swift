@@ -18,6 +18,7 @@ class ContactCell: SwipeTableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.backgroundColor = UIColor.clear
         self.v_Content.layer.cornerRadius = 8
         // Initialization code
     }

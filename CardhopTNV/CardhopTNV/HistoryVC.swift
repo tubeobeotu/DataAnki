@@ -52,8 +52,8 @@ extension HistoryVC: SwipeTableViewCellDelegate{
         
         let deleteAction = SwipeAction(style: .destructive, title: "Delete") { action, indexPath in
             SimpleFunction.deleteContactToFavourit(contact: self.recentsContacts[indexPath.row])
-            self.recentsContacts.remove(at: indexPath.row)
             self.reloadModels()
+            self.reloadData()
         }
         
         // customize the action appearance

@@ -21,6 +21,17 @@ enum AppBgMode:String {
             case .Dark: return "Dark"
             case .White: return "White"
             }
+            
+        }
+    }
+    var themeImage: UIImage?{
+        get{
+            switch(self){
+            case .Default: return UIImage(named: "ic_default")
+            case .Dark: return UIImage(named: "ic_dark")
+            case .White: return UIImage(named: "ic_white")
+            }
+            
         }
     }
     var contentGuild: String{
@@ -34,96 +45,173 @@ enum AppBgMode:String {
     }
     var contentGuildColor: UIColor{
         get{
-            switch(self){
-            case .Default: return UIColor.init(rgb: 0x676767)
-            case .Dark: return UIColor.init(rgb: 0x676767)
-            case .White: return UIColor.init(rgb: 0x38393B)
+            if(AppPreference.sharedInstance.isDetailVC){
+                switch(self){
+                case .Dark: return UIColor.init(rgb: 0x676767)
+                case .Default, .White: return UIColor.init(rgb: 0x38393B)
+                }
+            }else{
+                switch(self){
+                case .Default: return UIColor.init(rgb: 0x676767)
+                case .Dark: return UIColor.init(rgb: 0x676767)
+                case .White: return UIColor.init(rgb: 0x38393B)
+                }
             }
+            
         }
     }
     
     var sectionBgColor: UIColor{
         get{
+            if(AppPreference.sharedInstance.isDetailVC){
+                
+            }else{
+                
+            }
             switch(self){
-            case .Default: return UIColor.black
             case .Dark: return UIColor.black
-            case .White: return UIColor.init(rgb: 0xEDEDED)
+            case .Default, .White: return UIColor.init(rgb: 0xEDEDED)
             }
         }
     }
     
     var bgColor: UIColor{
         get{
-            switch(self){
-            case .Default: return UIColor.black
-            case .Dark: return UIColor.black
-            case .White: return UIColor.init(rgb: 0xF5F8F8)
+            if(AppPreference.sharedInstance.isDetailVC){
+                switch(self){
+                case .Dark: return UIColor.black
+                case .Default, .White: return UIColor.init(rgb: 0xF5F8F8)
+                }
+            }else{
+                switch(self){
+                case .Default: return UIColor.black
+                case .Dark: return UIColor.black
+                case .White: return UIColor.init(rgb: 0xF5F8F8)
+                }
             }
+            
         }
     }
     
     var sectionTextColor: UIColor{
         get{
-            switch(self){
-            case .Default: return UIColor.init(rgb: 0x979695)
-            case .Dark: return UIColor.init(rgb: 0x979695)
-            case .White: return UIColor.init(rgb: 0x979695)
+            if(AppPreference.sharedInstance.isDetailVC){
+                switch(self){
+                case .Dark: return UIColor.init(rgb: 0x979695)
+                case .Default, .White: return UIColor.init(rgb: 0x979695)
+                }
+            }else{
+                switch(self){
+                case .Default: return UIColor.init(rgb: 0x979695)
+                case .Dark: return UIColor.init(rgb: 0x979695)
+                case .White: return UIColor.init(rgb: 0x979695)
+                }
             }
+            
         }
     }
     var cellTitleTextColor: UIColor{
         get{
-            switch(self){
-            case .Default: return UIColor.white
-            case .Dark: return UIColor.white
-            case .White: return UIColor.black
+            if(AppPreference.sharedInstance.isDetailVC){
+                switch(self){
+                case .Dark: return UIColor.white
+                case .Default, .White: return UIColor.black
+                }
+            }else{
+                switch(self){
+                case .Default: return UIColor.white
+                case .Dark: return UIColor.white
+                case .White: return UIColor.black
+                }
             }
+            
         }
     }
     var cellContentTextColor: UIColor{
         get{
-            switch(self){
-            case .Default: return UIColor.init(rgb: 0x979695)
-            case .Dark: return UIColor.init(rgb: 0x979695)
-            case .White: return UIColor.init(rgb: 0x979695)
+            if(AppPreference.sharedInstance.isDetailVC){
+                switch(self){
+                case .Dark: return UIColor.init(rgb: 0x979695)
+                case .Default, .White: return UIColor.init(rgb: 0x979695)
+                }
+            }else{
+                switch(self){
+                case .Default: return UIColor.init(rgb: 0x979695)
+                case .Dark: return UIColor.init(rgb: 0x979695)
+                case .White: return UIColor.init(rgb: 0x979695)
+                }
             }
+            
         }
     }
     
     
     var appTitleColor: UIColor{
-        if(AppPreference.sharedInstance.settings.appBgMode == .White){
-            return UIColor.black
+        if(AppPreference.sharedInstance.isDetailVC){
+            if(AppPreference.sharedInstance.settings.appBgMode == .Default){
+                return UIColor.white
+            }else{
+                return UIColor.black
+            }
         }else{
-            return UIColor.white
+            if(AppPreference.sharedInstance.settings.appBgMode == .White){
+                return UIColor.black
+            }else{
+                return UIColor.white
+            }
         }
+        
     }
     var bgColorCell: UIColor{
         get{
-            switch(self){
-            case .Default: return UIColor.init(rgb: 0x1C1C1C)
-            case .Dark: return UIColor.init(rgb: 0x1C1C1C)
-            case .White: return UIColor.init(rgb: 0xEFEEEC)
+            if(AppPreference.sharedInstance.isDetailVC){
+                switch(self){
+                case .Dark: return UIColor.init(rgb: 0x1C1C1C)
+                case .Default, .White: return UIColor.init(rgb: 0xEFEEEC)
+                }
+            }else{
+                switch(self){
+                case .Default: return UIColor.init(rgb: 0x1C1C1C)
+                case .Dark: return UIColor.init(rgb: 0x1C1C1C)
+                case .White: return UIColor.init(rgb: 0xEFEEEC)
+                }
             }
+            
         }
     }
     
     var selectedThemeBg: UIColor{
         get{
-            switch(self){
-            case .Default: return UIColor.init(rgb: 0x0091FB)
-            case .Dark: return UIColor.init(rgb: 0x0091FB)
-            case .White: return UIColor.init(rgb: 0x0091FB)
+            if(AppPreference.sharedInstance.isDetailVC){
+                switch(self){
+                case .Dark: return UIColor.init(rgb: 0x0091FB)
+                case .Default, .White: return UIColor.init(rgb: 0x0091FB)
+                }
+            }else{
+                switch(self){
+                case .Default: return UIColor.init(rgb: 0x0091FB)
+                case .Dark: return UIColor.init(rgb: 0x0091FB)
+                case .White: return UIColor.init(rgb: 0x0091FB)
+                }
             }
+            
         }
     }
     var unSelectedThemeBg: UIColor{
         get{
-            switch(self){
-            case .Default: return UIColor.init(rgb: 0x292929)
-            case .Dark: return UIColor.init(rgb: 0x292929)
-            case .White: return UIColor.init(rgb: 0xEAEAE9)
+            if(AppPreference.sharedInstance.isDetailVC){
+                switch(self){
+                case .Dark: return UIColor.init(rgb: 0x292929)
+                case .Default, .White: return UIColor.init(rgb: 0xEAEAE9)
+                }
+            }else{
+                switch(self){
+                case .Default: return UIColor.init(rgb: 0x292929)
+                case .Dark: return UIColor.init(rgb: 0x292929)
+                case .White: return UIColor.init(rgb: 0xEAEAE9)
+                }
             }
+            
         }
     }
 }
@@ -139,6 +227,7 @@ open class AppPreference {
     }()
     
     //MARK: Local Variable
+    var isDetailVC = false
     var settings:GeneralSettingModel!
     var siriView:SearchingView!
     var contacts = [ContactModel]()
@@ -155,7 +244,7 @@ open class AppPreference {
     init( array : [String]) {
         emptyStringArray = array
     }
-    func getAppBgColor(isDetailVC: Bool = false) -> UIColor{
+    func getAppBgColor() -> UIColor{
         if(isDetailVC == false){
             return AppPreference.sharedInstance.settings.appBgMode.bgColor
         }else{
@@ -202,12 +291,21 @@ open class AppPreference {
     func getNormalCellHeight() -> CGFloat{
         return 50
     }
-    func changeNavMode(nav: UINavigationController?){
-        if(AppPreference.sharedInstance.settings.appBgMode == .White){
-            nav?.navigationBar.barStyle = UIBarStyle.default
+    func changeNavMode(nav: UINavigationController?, isDetail:Bool = false){
+        if(isDetail == true){
+            if(AppPreference.sharedInstance.settings.appBgMode == .White || AppPreference.sharedInstance.settings.appBgMode == .Default){
+                nav?.navigationBar.barStyle = UIBarStyle.default
+            }else{
+                nav?.navigationBar.barStyle = UIBarStyle.black
+            }
         }else{
-            nav?.navigationBar.barStyle = UIBarStyle.black
+            if(AppPreference.sharedInstance.settings.appBgMode == .White){
+                nav?.navigationBar.barStyle = UIBarStyle.default
+            }else{
+                nav?.navigationBar.barStyle = UIBarStyle.black
+            }
         }
+        
     }
 }
 

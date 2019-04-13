@@ -67,8 +67,8 @@ extension FavouriteVC: SwipeTableViewCellDelegate{
         let deleteAction = SwipeAction(style: .destructive, title: "Delete") { action, indexPath in
            
             SimpleFunction.deleteContactToFavourit(contact: self.favouritedContacts[indexPath.row])
-            self.favouritedContacts.remove(at: indexPath.row)
             self.reloadModels()
+            self.reloadData()
         }
         
         // customize the action appearance

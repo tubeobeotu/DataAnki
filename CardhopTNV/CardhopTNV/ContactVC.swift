@@ -107,9 +107,13 @@ extension ContactVC: SwipeTableViewCellDelegate{
         guard orientation == .right else { return nil }
         
         let deleteAction = SwipeAction(style: .destructive, title: "Delete") { action, indexPath in
-            SimpleFunction.deleteContactToContacts(contact: self.contacts[indexPath.row])
-            self.contacts.remove(at: indexPath.row)
-            self.reloadModels()
+            if let tmpContacts = self.sections[indexPath.section].values.first{
+                SimpleFunction.deleteContactToContacts(contact: tmpContacts[indexPath.row])
+                SimpleFunction.deleteContactFromSystem(contact: tmpContacts[indexPath.row])
+                self.reloadModels()
+                self.reloadData()
+            }
+            
         }
         
         // customize the action appearance

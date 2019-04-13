@@ -177,14 +177,14 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hn1-7u-mtk" customClass="ThemeView" customModule="CardhopTNV" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="205"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="210"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="205" id="V9c-yM-1ur"/>
+                                                    <constraint firstAttribute="height" constant="210" id="V9c-yM-1ur"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JCn-lC-c04" customClass="SettingGeneralView" customModule="CardhopTNV" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="213" width="375" height="170"/>
+                                                <rect key="frame" x="0.0" y="218" width="375" height="170"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="170" id="8pu-zo-Oxv"/>

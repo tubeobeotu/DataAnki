@@ -34,6 +34,9 @@ class ContactDetailVC: BaseViewController {
     
     var currentType:ActionType = .Message
     override func viewDidLoad() {
+        if(AppPreference.sharedInstance.settings.appBgMode == .Default){
+            AppPreference.sharedInstance.isDetailVC = true
+        }
         super.viewDidLoad()
         self.photoManager.delegate = self
         
@@ -78,8 +81,12 @@ class ContactDetailVC: BaseViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        if(AppPreference.sharedInstance.settings.appBgMode == .Default){
+            AppPreference.sharedInstance.isDetailVC = true
+        }
         self.setupBirthdayView()
     }
+
     func setupDropDowns(){
         self.dropDownPhone.dataSource = self.contact.phoneNumbers.map({ (label) -> String in
             return label.value
@@ -229,11 +236,11 @@ extension ContactDetailVC : PhotoManagerDelegate
         self.contact.thumbnailImageData = UIImagePNGRepresentation(image)
         SimpleFunction.saveContact(contact: self.contact)
     }
-
+    
     func didSelectImages(images: [Image]) {
         
     }
-
+    
     func presentVC() -> UIViewController {
         return self
     }
@@ -253,16 +260,16 @@ extension ContactDetailVC: ContactActionDetailViewDelegate{
         switch type {
         case .Call:
             self.showDropDown(dropDown: dropDownPhone, anchor: v_Call)
-        break
+            break
         case .Email:
             self.showDropDown(dropDown: dropDownEmail, anchor: v_Email)
-        break
+            break
         case .Message:
             self.showDropDown(dropDown: dropDownPhone, anchor: v_Message)
-        break
+            break
         case .Video:
             self.showDropDown(dropDown: dropDownPhone, anchor: v_Video)
-        break
+            break
         }
     }
     

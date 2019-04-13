@@ -41,6 +41,9 @@ class EditContactVC: BaseViewController {
     
     var currentSelectedIndexCell:IndexPath?
     override func viewDidLoad() {
+        if(AppPreference.sharedInstance.settings.appBgMode == .Default){
+            AppPreference.sharedInstance.isDetailVC = true
+        }
         super.viewDidLoad()
         self.v_DatePicker.isHidden = true
         self.photoManager.delegate = self
@@ -87,7 +90,12 @@ class EditContactVC: BaseViewController {
         self.getListPhoneLabels()
         self.setupDropDowns()
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if(AppPreference.sharedInstance.settings.appBgMode == .Default){
+            AppPreference.sharedInstance.isDetailVC = true
+        }
+    }
     func getListEmailLabels(){
         self.listEmailLabel.removeAll()
         for label in SimpleFunction.getListEmailLabels(){
@@ -130,6 +138,7 @@ class EditContactVC: BaseViewController {
     @objc func cancelAction(){
         self.dismiss(animated: true, completion: nil)
     }
+    
     @objc func saveAction(){
         self.contact.firstName = tf_FirstName.text ?? ""
         self.contact.lastName = tf_LastName.text ?? ""
@@ -270,7 +279,7 @@ extension EditContactVC : PhotoManagerDelegate
     func didSelectImage(image: UIImage) {
         self.v_Avatar.setImage(image: image)
         self.contact.thumbnailImageData = UIImagePNGRepresentation(image)
-
+        
     }
     
     func didSelectImages(images: [Image]) {

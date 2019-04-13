@@ -289,6 +289,18 @@ class SimpleFunction{
         }
     }
     
+    class func deleteContactFromSystem(contact: ContactModel){
+        let model = contact.getModelToRawContact()
+        let store = AppPreference.sharedInstance.contactStore
+        let saveRequest = CNSaveRequest()
+        saveRequest.delete(model)
+        do {
+            try store.execute(saveRequest)
+        } catch {
+            print("unable to update contacts")
+        }
+    }
+    
     
     //Call
     class func callNumber(phoneNumber:String, vc: UIViewController) {

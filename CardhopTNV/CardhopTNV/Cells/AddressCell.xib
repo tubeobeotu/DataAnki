@@ -44,9 +44,18 @@
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3fF-y6-vzL">
                         <rect key="frame" x="39" y="83" width="301" height="80"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_map" translatesAutoresizingMaskIntoConstraints="NO" id="MdY-Gx-3fu">
+                                <rect key="frame" x="0.0" y="0.0" width="301" height="80"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="MdY-Gx-3fu" firstAttribute="top" secondItem="3fF-y6-vzL" secondAttribute="top" id="3t4-Yb-Gr4"/>
+                            <constraint firstAttribute="trailing" secondItem="MdY-Gx-3fu" secondAttribute="trailing" id="GBM-Qg-q6L"/>
+                            <constraint firstItem="MdY-Gx-3fu" firstAttribute="leading" secondItem="3fF-y6-vzL" secondAttribute="leading" id="Tlh-9S-bCN"/>
                             <constraint firstAttribute="height" constant="80" id="UIY-Do-Ahp"/>
+                            <constraint firstAttribute="bottom" secondItem="MdY-Gx-3fu" secondAttribute="bottom" id="a7r-8L-a4v"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -77,4 +86,7 @@
             <point key="canvasLocation" x="148.80000000000001" y="180.80959520239881"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="ic_map" width="385" height="399"/>
+    </resources>
 </document>

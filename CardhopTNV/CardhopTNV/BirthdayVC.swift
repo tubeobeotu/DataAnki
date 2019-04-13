@@ -51,9 +51,9 @@ extension BirthdayVC: SwipeTableViewCellDelegate{
         guard orientation == .right else { return nil }
         
         let deleteAction = SwipeAction(style: .destructive, title: "Delete") { action, indexPath in
-            SimpleFunction.deleteContactToBirthDay(contact: self.recentsContacts[indexPath.row])
-            self.birthDayContacts.remove(at: indexPath.row)
+            SimpleFunction.deleteContactToBirthDay(contact: self.birthDayContacts[indexPath.row])
             self.reloadModels()
+            self.reloadData()
         }
         
         // customize the action appearance
