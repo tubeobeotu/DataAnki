@@ -133,7 +133,7 @@ class ContactDetailVC: BaseViewController {
         
     }
     @objc func cancelAction(){
-        SimpleFunction.calculateContactsFromLocal(contacts: AppPreference.sharedInstance.contacts)
+//        SimpleFunction.calculateContactsFromLocal(contacts: AppPreference.sharedInstance.contacts)
         self.btnPhoto.removeFromSuperview()
         self.dismiss(animated: true, completion: nil)
     }

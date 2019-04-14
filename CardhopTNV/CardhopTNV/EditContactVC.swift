@@ -11,6 +11,7 @@ import Contacts
 import DropDown
 class EditContactVC: BaseViewController {
     var contact:ContactModel!
+    var isNew = false
     var barButtonSave: UIBarButtonItem!
     @IBOutlet weak var v_Avatar: AvatarView!
     
@@ -52,7 +53,7 @@ class EditContactVC: BaseViewController {
         self.isShowLargeTitle = false
         self.isShowSiriView = false
         self.btn_buildingIcon.tintColor = AppPreference.sharedInstance.settings.appBgMode.cellTitleTextColor
-        barButtonSave = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(saveAction))
+        barButtonSave = UIBarButtonItem(title: isNew == false ? "Save" : "Add", style: .done, target: self, action: #selector(saveAction))
         barButtonSave.isEnabled = false
         self.navigationItem.rightBarButtonItem = barButtonSave
         self.enableCompanyModeUI(enable: contact.contactType == 1)
@@ -84,6 +85,14 @@ class EditContactVC: BaseViewController {
         self.tf_FirstName.textColor = AppPreference.sharedInstance.settings.appBgMode.cellTitleTextColor
         self.tf_LastName.textColor = AppPreference.sharedInstance.settings.appBgMode.cellTitleTextColor
         self.tf_CompanyName.textColor = AppPreference.sharedInstance.settings.appBgMode.cellTitleTextColor
+        self.lbl_Company.textColor = self.tf_FirstName.textColor
+        
+        self.tf_FirstName.attributedPlaceholder = NSAttributedString(string: self.tf_FirstName.placeholder ?? "",
+                                                               attributes: [.foregroundColor: AppPreference.sharedInstance.settings.appBgMode.sectionTextColor])
+        self.tf_LastName.attributedPlaceholder = NSAttributedString(string: self.tf_LastName.placeholder ?? "",
+                                                                     attributes: [.foregroundColor: AppPreference.sharedInstance.settings.appBgMode.sectionTextColor])
+        self.tf_CompanyName.attributedPlaceholder = NSAttributedString(string: self.tf_CompanyName.placeholder ?? "",
+                                                                     attributes: [.foregroundColor: AppPreference.sharedInstance.settings.appBgMode.sectionTextColor])
         
         contact.firstName = contact.firstName
         self.getListEmailLabels()
@@ -143,17 +152,25 @@ class EditContactVC: BaseViewController {
         self.contact.firstName = tf_FirstName.text ?? ""
         self.contact.lastName = tf_LastName.text ?? ""
         self.contact.organizationName = tf_CompanyName.text ?? ""
-        SimpleFunction.saveContact(contact: contact)
-        self.dismiss(animated: true, completion: nil)
+        if(isNew == false){
+            SimpleFunction.saveContact(contact: contact)
+        }else{
+            SimpleFunction.addContact(contact: contact)
+        }
+        self.navigationController?.popViewController(animated: true)
+//        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func changeProfileImage(_ sender: Any) {
     }
     func enableCompanyModeUI(enable: Bool){
+        self.switch_CompanyMode.isOn = enable
         if(!enable){
+            self.contact.contactType = 0
             self.v_Organization.isHidden = true
             self.cst_StackHeigh.constant = self.cst_StackHeigh.constant - self.v_Organization.frame.height
         }else{
+            self.contact.contactType = 1
             self.v_Organization.isHidden = false
             self.cst_StackHeigh.constant = enableCompanyModeHeight
         }
@@ -163,6 +180,7 @@ class EditContactVC: BaseViewController {
         self.didSelectBirthday()
     }
     @IBAction func changeCompanyMode(_ sender: UISwitch) {
+        barButtonSave.isEnabled = true
         self.enableCompanyModeUI(enable: sender.isOn)
     }
     @IBAction func editPhoto(_ sender: Any) {
@@ -292,8 +310,17 @@ extension EditContactVC : PhotoManagerDelegate
 }
 
 extension EditContactVC: UITextFieldDelegate{
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        self.barButtonSave.isEnabled = self.tf_FirstName.text?.isValidedString() ?? false
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if let text = textField.text,
+            let textRange = Range(range, in: text) {
+            let updatedText = text.replacingCharacters(in: textRange,
+                                                       with: string)
+            self.barButtonSave.isEnabled = updatedText.isValidedString()
+        }else{
+            self.barButtonSave.isEnabled = false
+        }
+        
+        return true
     }
 }
 extension EditContactVC: ContactNoteCellDelegate{

@@ -122,7 +122,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Xy7-0N-2aT"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Contacts" id="EpR-nx-VNd"/>
+                    <navigationItem key="navigationItem" title="Contacts" id="EpR-nx-VNd">
+                        <barButtonItem key="leftBarButtonItem" image="ic_add" id="Ezr-D0-XnA">
+                            <connections>
+                                <action selector="addContact:" destination="bJd-4q-k3j" id="gMa-tz-95m"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tbl_Content" destination="rp5-MC-qfb" id="FJS-GR-f0G"/>
                     </connections>

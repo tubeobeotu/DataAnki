@@ -263,6 +263,25 @@ class SimpleFunction{
         }
         return -1
     }
+    
+    class func addContact(contact: ContactModel){
+        self.insertContactToContacts(contact: contact)
+        contact.setRawModel(rawContact: CNMutableContact())
+        let model = contact.getModelToRawContact()
+        // Saving the newly created contact
+        let store = AppPreference.sharedInstance.contactStore
+        let saveRequest = CNSaveRequest()
+        saveRequest.add(model, toContainerWithIdentifier: nil)
+        do {
+            try store.execute(saveRequest)
+            if model.isKeyAvailable(CNContactIdentifierKey) {
+                contact.identifier = model.identifier
+            }
+        } catch {
+            print("unable to update contacts")
+        }
+    }
+    
     class func saveContact(contact: ContactModel){
         self.insertContactToRecent(contact: contact)
         let model = contact.getModelToRawContact()

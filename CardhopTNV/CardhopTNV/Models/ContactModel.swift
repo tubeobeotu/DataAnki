@@ -88,18 +88,23 @@ class ContactModel: BaseModel{
     }
     open var note:String = ""
     open var organizationName: String = ""
-    open var contactType: Int! //0 person 1 organizarion
+    open var contactType: Int = 0//0 person 1 organizarion
     open var thumbnailImageData: Data?
     let colors = [UIColor.green, UIColor.red, UIColor.yellow, UIColor.blue, UIColor.brown, UIColor.cyan, UIColor.orange]
     var stateColor:UIColor!
     
-    open var phoneNumbers: [ContactLabelModel]!
-    open var emailAddresses: [ContactLabelModel]!
-    open var postalAddresses: [ContactAddressModel]!
+    open var phoneNumbers = [ContactLabelModel]()
+    open var emailAddresses = [ContactLabelModel]()
+    open var postalAddresses = [ContactAddressModel]()
     /*! The Gregorian birthday. */
     open var birthday: DateComponents?
     
     private var rawContact:CNContact!
+    override init() {
+        
+        let randomInt = Int(arc4random_uniform(UInt32(colors.count)))
+        self.stateColor = colors[randomInt]
+    }
     convenience init(contact: CNContact) {
         self.init()
         let formatter = CNContactFormatter()
@@ -247,7 +252,9 @@ class ContactModel: BaseModel{
         }
         return sections
     }
-    
+    func setRawModel(rawContact: CNMutableContact){
+        self.rawContact = rawContact
+    }
     func getModelToRawContact() -> CNMutableContact{
         let contact = self.rawContact.mutableCopy() as! CNMutableContact
         contact.imageData = self.thumbnailImageData
@@ -258,6 +265,7 @@ class ContactModel: BaseModel{
         contact.postalAddresses = self.getRawAddressLabel()
         contact.birthday = self.birthday
         contact.note = self.note
+        contact.organizationName = self.organizationName
         contact.contactType = CNContactType(rawValue: self.contactType) ?? CNContactType.person
         return contact
     }

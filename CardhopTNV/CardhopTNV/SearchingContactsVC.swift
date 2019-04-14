@@ -17,6 +17,7 @@ class SearchingContactsVC: ContactVC {
     @IBOutlet weak var v_Guide: SearchingGuideView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.isShowSiriView = false
         self.sb_Contacts.textField?.textColor = AppPreference.sharedInstance.settings.appBgMode.cellTitleTextColor
         self.v_Guide.isHidden = !self.isShowGuide
         self.sb_Contacts.delegate = self
@@ -64,10 +65,22 @@ class SearchingContactsVC: ContactVC {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if(!(SimpleFunction.checkContactInList(contact: self.filteredContacts[indexPath.row], contacts: AppPreference.sharedInstance.favouritContacts))){
-            self.delegate?.didSelectContact(contact: self.filteredContacts[indexPath.row])
-            self.closeVC()
+        if(self.isShowGuide){
+            self.showContactDetailVC(contact: self.filteredContacts[indexPath.row])
+        }else{
+            if let tmpContacts = self.sections[indexPath.section].values.first
+            {
+                if(!(SimpleFunction.checkContactInList(contact: tmpContacts[indexPath.row], contacts: AppPreference.sharedInstance.favouritContacts))){
+                    self.delegate?.didSelectContact(contact: tmpContacts[indexPath.row])
+                    self.closeVC()
+                }
+                
+            }
+            
+            
+            
         }
+        
     }
     
 }

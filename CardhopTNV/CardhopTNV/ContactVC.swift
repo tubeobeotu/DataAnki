@@ -54,6 +54,15 @@ class ContactVC: BaseViewController {
         
     }
     
+    @IBAction func addContact(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let vc = storyboard.instantiateViewController(withIdentifier: "EditContactVC") as? EditContactVC{
+            vc.contact = ContactModel()
+            vc.isNew = true
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
 }
 extension ContactVC: UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

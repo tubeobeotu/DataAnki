@@ -20,7 +20,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZnF-ck-3Qr">
-                        <rect key="frame" x="8" y="0.0" width="324" height="57.5"/>
+                        <rect key="frame" x="8" y="4" width="324" height="57.5"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9tc-Ub-YZr" customClass="AvatarView" customModule="CardhopTNV" customModuleProvider="target">
                                 <rect key="frame" x="8" y="14" width="30" height="30"/>
@@ -81,10 +81,10 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="ZnF-ck-3Qr" secondAttribute="bottom" constant="8" id="Jo9-nf-WFd"/>
+                    <constraint firstAttribute="bottom" secondItem="ZnF-ck-3Qr" secondAttribute="bottom" constant="4" id="Jo9-nf-WFd"/>
                     <constraint firstItem="ZnF-ck-3Qr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="cY5-yx-lPa"/>
                     <constraint firstAttribute="trailing" secondItem="ZnF-ck-3Qr" secondAttribute="trailing" constant="8" id="xqL-1v-mmk"/>
-                    <constraint firstItem="ZnF-ck-3Qr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="yMZ-jd-maB"/>
+                    <constraint firstItem="ZnF-ck-3Qr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="yMZ-jd-maB"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
