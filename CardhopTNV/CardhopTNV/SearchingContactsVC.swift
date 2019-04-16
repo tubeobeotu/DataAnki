@@ -34,10 +34,11 @@ class SearchingContactsVC: ContactVC {
 
     override func reloadModels() {
         contacts = AppPreference.sharedInstance.contacts
-        if(self.isShowGuide){
-            self.filteredContacts = [ContactModel]()
+        if((self.sb_Contacts.text ?? "").isValidedString()){
+            self.filteredContacts = SimpleFunction.filterContacts(input: NSMutableArray.init(array: self.contacts) as? Array<ContactModel> ?? [ContactModel](), keyword: self.sb_Contacts.text ?? "") ?? [ContactModel]()
+            self.reloadData()
         }else{
-            self.filteredContacts = NSMutableArray.init(array: contacts) as? [ContactModel] ?? [ContactModel]()
+            self.showAllContacts()
         }
     }
     
@@ -65,22 +66,17 @@ class SearchingContactsVC: ContactVC {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if(self.isShowGuide){
-            self.showContactDetailVC(contact: self.filteredContacts[indexPath.row])
-        }else{
-            if let tmpContacts = self.sections[indexPath.section].values.first
-            {
+        if let tmpContacts = self.sections[indexPath.section].values.first
+        {
+            if(self.isShowGuide){
+                self.showContactDetailVC(contact: tmpContacts[indexPath.row])
+            }else{
                 if(!(SimpleFunction.checkContactInList(contact: tmpContacts[indexPath.row], contacts: AppPreference.sharedInstance.favouritContacts))){
                     self.delegate?.didSelectContact(contact: tmpContacts[indexPath.row])
                     self.closeVC()
                 }
-                
             }
-            
-            
-            
         }
-        
     }
     
 }

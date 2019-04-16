@@ -8,6 +8,7 @@
 
 import UIKit
 import DropDown
+import IQKeyboardManagerSwift
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -15,16 +16,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        IQKeyboardManager.shared.enable = true
         DropDown.startListeningToKeyboard()
         SimpleFunction.getContacts()
         SimpleFunction.getSettingsFromLocal()
         AppPreference.sharedInstance.siriView = SearchingView.init()
         AppPreference.sharedInstance.siriView.viewType = .UnAction
-        AppPreference.sharedInstance.siriView.frame = CGRect(x: 8, y: UIScreen.main.bounds.height - AppPreference.sharedInstance.searchViewHeight-AppPreference.sharedInstance.tabbarHeight - AppPreference.sharedInstance.marginSearchView, width: UIScreen.main.bounds.width - 8*2, height: AppPreference.sharedInstance.searchViewHeight)
+//        AppPreference.sharedInstance.siriView.frame = CGRect(x: 8, y: UIScreen.main.bounds.height - AppPreference.sharedInstance.searchViewHeight-AppPreference.sharedInstance.tabbarHeight - AppPreference.sharedInstance.marginSearchView, width: UIScreen.main.bounds.width - 8*2, height: AppPreference.sharedInstance.searchViewHeight)
         //window?.willRemoveSubview(view)
         window?.makeKeyAndVisible()
         window?.insertSubview(AppPreference.sharedInstance.siriView, at: 0)
         window?.bringSubview(toFront: AppPreference.sharedInstance.siriView)
+        var bottomPadding:CGFloat = 0
+        if #available(iOS 11.0, *) {
+            bottomPadding = window?.safeAreaInsets.bottom ?? 0
+        }
+        
+        let tmpView = AppPreference.sharedInstance.siriView!
+        tmpView.translatesAutoresizingMaskIntoConstraints = false
+        let heightTmpView = NSLayoutConstraint(item: tmpView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: AppPreference.sharedInstance.searchViewHeight)
+        let leftTmpView = NSLayoutConstraint(item: tmpView, attribute: .left, relatedBy: .equal, toItem: window, attribute: .left, multiplier: 1, constant: 8)
+        let bottomTmpView = NSLayoutConstraint(item: tmpView, attribute: .bottom, relatedBy: .equal, toItem: window, attribute: .bottom, multiplier: 1, constant: -(AppPreference.sharedInstance.tabbarHeight + AppPreference.sharedInstance.marginSearchView + bottomPadding))
+        let rightTmpView = NSLayoutConstraint(item: tmpView, attribute: .right, relatedBy: .equal, toItem: window, attribute: .right, multiplier: 1, constant: -8)
+        window?.addConstraints([heightTmpView, leftTmpView, bottomTmpView, rightTmpView])
         
         let tabBar = UITabBar.appearance()
         tabBar.barTintColor = UIColor.clear

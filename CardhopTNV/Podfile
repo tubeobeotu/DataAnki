@@ -7,6 +7,7 @@ target 'CardhopTNV' do
 	pod "QBImagePickerController"
     pod 'DropDown'
     pod 'SwipeCellKit'
+    pod 'IQKeyboardManagerSwift'
   # Pods for CardhopTNV
 
 end
