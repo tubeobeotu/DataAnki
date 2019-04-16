@@ -10,12 +10,15 @@ import UIKit
 enum ContactNewCellType:Int{
     case phone = 0
     case email = 1
+    case address = 2
     var title: String{
         switch self {
         case .email:
             return "Add Email"
-        default:
+        case .phone:
             return "Add Phone Number"
+        case .address:
+            return "Add Address"
         }
     }
 }

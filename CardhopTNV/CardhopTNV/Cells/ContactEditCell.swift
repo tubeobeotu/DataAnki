@@ -8,6 +8,7 @@
 
 import UIKit
 protocol ContactEditCellDelegate {
+    func changeValue(cell: ContactEditCell, type: ContactModelSectionsType, value: String)
     func didSelectDropDown(cell: ContactEditCell)
     func didSelectDelete(cell: ContactEditCell)
     func beginEditCell(cell: ContactEditCell, type: ContactModelSectionsType)
@@ -58,5 +59,17 @@ extension ContactEditCell: UITextFieldDelegate{
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         self.delegate?.beginEditCell(cell: self, type: self.type)
         return self.type != .birthday
+    }
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if let text = textField.text,
+            let textRange = Range(range, in: text) {
+            let updatedText = text.replacingCharacters(in: textRange,
+                                                       with: string)
+            self.delegate?.changeValue(cell: self, type:self.type, value: updatedText)
+        }else{
+            self.delegate?.changeValue(cell: self, type: self.type, value: "")
+        }
+        
+        return true
     }
 }

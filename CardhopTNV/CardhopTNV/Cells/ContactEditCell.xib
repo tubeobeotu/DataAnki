@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,7 +23,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="110" height="49.5"/>
                         <subviews>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t9L-Nn-YcH">
-                                <rect key="frame" x="8" y="10.5" width="30" height="30"/>
+                                <rect key="frame" x="8" y="10" width="30" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="9gw-cy-d9o"/>
@@ -32,7 +31,7 @@
                                 </constraints>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="imageEdgeInsets" minX="7" minY="7" maxX="7" maxY="7"/>
-                                <state key="normal" title="    " image="ic_remove"/>
+                                <state key="normal" title="   " image="ic_remove"/>
                                 <connections>
                                     <action selector="deleteAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="j6t-v5-REO"/>
                                 </connections>
@@ -48,12 +47,11 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="t9L-Nn-YcH" firstAttribute="top" secondItem="BmA-mn-8Gf" secondAttribute="top" constant="10.5" id="0DS-Uv-Y7g"/>
-                            <constraint firstAttribute="bottom" secondItem="t9L-Nn-YcH" secondAttribute="bottom" constant="9" id="5iH-Pp-NIM"/>
                             <constraint firstItem="t9L-Nn-YcH" firstAttribute="leading" secondItem="BmA-mn-8Gf" secondAttribute="leadingMargin" id="DQ3-bf-N8R"/>
                             <constraint firstAttribute="width" constant="110" id="Dub-qC-NCe"/>
                             <constraint firstItem="Thi-DF-3WY" firstAttribute="leading" secondItem="t9L-Nn-YcH" secondAttribute="trailing" id="GH6-KA-V31"/>
                             <constraint firstAttribute="trailing" secondItem="Thi-DF-3WY" secondAttribute="trailing" constant="8" id="KL4-Fp-pyX"/>
+                            <constraint firstAttribute="height" constant="49.5" id="ZKB-wU-mMG"/>
                             <constraint firstItem="Thi-DF-3WY" firstAttribute="top" secondItem="BmA-mn-8Gf" secondAttribute="top" id="fgB-8A-0WU"/>
                             <constraint firstAttribute="bottom" secondItem="Thi-DF-3WY" secondAttribute="bottom" id="hex-Kh-NkX"/>
                             <constraint firstItem="t9L-Nn-YcH" firstAttribute="centerY" secondItem="BmA-mn-8Gf" secondAttribute="centerY" id="uKq-qm-F9M"/>

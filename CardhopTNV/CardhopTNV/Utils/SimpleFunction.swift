@@ -29,10 +29,21 @@ class SimpleFunction{
                     ] as [Any]
                 let request = CNContactFetchRequest(keysToFetch: keys as! [CNKeyDescriptor])
                 do {
-                    try AppPreference.sharedInstance.contactStore.enumerateContacts(with: request){
-                        (contact, stop) in
-                        // Array containing all unified contacts from everywhere
-                        contacts.append(ContactModel.init(contact: contact))
+                    var allContainers: [CNContainer] = []
+                    do {
+                        allContainers = try AppPreference.sharedInstance.contactStore.containers(matching: nil)
+                    } catch {
+                        print("Error fetching containers")
+                    }
+                    // Iterate all containers and append their contacts to our results array
+                    for container in allContainers {
+                        let fetchPredicate = CNContact.predicateForContactsInContainer(withIdentifier: container.identifier)
+                        request.predicate = fetchPredicate
+                        try AppPreference.sharedInstance.contactStore.enumerateContacts(with: request){
+                            (contact, stop) in
+                            // Array containing all unified contacts from everywhere
+                            contacts.append(ContactModel.init(contact: contact))
+                        }
                     }
                 } catch {
                     print("unable to fetch contacts")
@@ -157,6 +168,13 @@ class SimpleFunction{
         return [CNLabelHome, CNLabelWork, CNLabelEmailiCloud, CNLabelOther]
     }
     class func getStringFromEmailLabel(label: String) -> String{
+        return CNLabeledValue<NSString>.localizedString(forLabel: label)
+    }
+    
+    class func getListAddressesLabels() -> [String]{
+        return [CNLabelHome, CNLabelWork, CNLabelOther]
+    }
+    class func getStringFromAddresseLabel(label: String) -> String{
         return CNLabeledValue<NSString>.localizedString(forLabel: label)
     }
     

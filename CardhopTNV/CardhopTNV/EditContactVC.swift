@@ -33,9 +33,11 @@ class EditContactVC: BaseViewController {
     @IBOutlet weak var btn_buildingIcon: UIButton!
     let dropDownPhone = DropDown()
     let dropDownEmail = DropDown()
+    let dropDownAddress = DropDown()
     
     var listEmailLabel = [ContactLabelModel]()
     var listPhoneLabel = [ContactLabelModel]()
+    var listAddressLabel = [ContactLabelModel]()
     
     var enableCompanyModeHeight:CGFloat = 0
     var photoManager = PhotoManager()
@@ -54,7 +56,7 @@ class EditContactVC: BaseViewController {
         self.isShowSiriView = false
         self.btn_buildingIcon.tintColor = AppPreference.sharedInstance.settings.appBgMode.cellTitleTextColor
         barButtonSave = UIBarButtonItem(title: isNew == false ? "Save" : "Add", style: .done, target: self, action: #selector(saveAction))
-        barButtonSave.isEnabled = false
+//        barButtonSave.isEnabled = false
         self.navigationItem.rightBarButtonItem = barButtonSave
         self.enableCompanyModeUI(enable: contact.contactType == 1)
         
@@ -96,6 +98,7 @@ class EditContactVC: BaseViewController {
         
         contact.firstName = contact.firstName
         self.getListEmailLabels()
+        self.getListAddresLabels()
         self.getListPhoneLabels()
         self.setupDropDowns()
     }
@@ -103,6 +106,14 @@ class EditContactVC: BaseViewController {
         super.viewWillAppear(animated)
         if(AppPreference.sharedInstance.settings.appBgMode == .Default){
             AppPreference.sharedInstance.isDetailVC = true
+        }
+    }
+    func getListAddresLabels(){
+        self.listAddressLabel.removeAll()
+        for label in SimpleFunction.getListAddressesLabels(){
+            let tmpLabel = ContactLabelModel()
+            tmpLabel.label = label
+            self.listAddressLabel.append(tmpLabel)
         }
     }
     func getListEmailLabels(){
@@ -122,6 +133,19 @@ class EditContactVC: BaseViewController {
         }
     }
     func setupDropDowns(){
+        self.dropDownAddress.dataSource = self.listAddressLabel.map({ (label) -> String in
+            return label.label
+        })
+        self.dropDownAddress.selectionAction = { [unowned self] (index: Int, item: String) in
+            if let indexPath = self.currentSelectedIndexCell{
+                self.contact.postalAddresses[indexPath.row].label = self.listAddressLabel[index].label
+                self.barButtonSave.isEnabled = true
+                self.tbl_Content.reloadRows(at: [indexPath], with: .none)
+            }
+            
+        }
+        
+        
         self.dropDownEmail.dataSource = self.listEmailLabel.map({ (label) -> String in
             return label.label
         })
@@ -228,7 +252,7 @@ extension EditContactVC: UITableViewDataSource{
         case .email:
             return self.contact.emailAddresses.count + 1
         case .address:
-            return self.contact.postalAddresses.count
+            return self.contact.postalAddresses.count + 1
         case .birthday, .note:
             return 1
         }
@@ -274,8 +298,15 @@ extension EditContactVC: UITableViewDataSource{
                 }
                 return cell
             }else{
+                if(indexPath.row == self.contact.postalAddresses.count){
+                    let newCell = tableView.dequeueReusableCell(withIdentifier: "ContactNewCell", for: indexPath) as! ContactNewCell
+                    newCell.delegate = self
+                    newCell.type = .address
+                    return newCell
+                }
                 let cell = tableView.dequeueReusableCell(withIdentifier: "AddressEditCell", for: indexPath) as! AddressEditCell
                 cell.setupModel(address: self.contact.postalAddresses[indexPath.row])
+                cell.delegate = self
                 return cell
             }
         }
@@ -337,8 +368,64 @@ extension EditContactVC: ContactNoteCellDelegate{
     func beginEditCell(cell: ContactEditCell, type: ContactModelSectionsType) {
         if(type == .birthday){
             self.v_DatePicker.isHidden = false
-            
         }
+    }
+    func changeValue(cell: ContactEditCell, type: ContactModelSectionsType, value: String) {
+        if let indexPath = self.tbl_Content.indexPath(for: cell){
+            switch(type){
+            case .email:
+                let model = self.contact.emailAddresses[indexPath.row]
+                model.value = value
+                break
+            case .mobile:
+                let model = self.contact.phoneNumbers[indexPath.row]
+                model.value = value
+                break
+            case .note:
+                self.contact.note = value
+                break
+            default:
+                break
+            }
+        }
+        
+    }
+}
+extension EditContactVC: AddressEditCellDelegate{
+    func didSelectAddressDropDown(cell: AddressEditCell) {
+        currentSelectedIndexCell = self.tbl_Content.indexPath(for: cell)
+        self.dropDownAddress.anchorView = cell.btn_DropDown
+        self.dropDownAddress.show()
+    }
+    func didSelectRemoveDropDown(cell: AddressEditCell) {
+        currentSelectedIndexCell = self.tbl_Content.indexPath(for: cell)
+        if let indexPath = self.tbl_Content.indexPath(for: cell){
+            self.contact.postalAddresses.remove(at: indexPath.row)
+        }
+        self.reloadData()
+    }
+    func changeAddressValue(cell: AddressEditCell, type: AddressType, value: String) {
+        if let indexPath = self.tbl_Content.indexPath(for: cell){
+            let model = self.contact.postalAddresses[indexPath.row]
+            switch(type){
+            case .city:
+                model.city = value
+                break
+            case .country:
+                model.country = value
+                break
+            case .postCode:
+                model.postalCode = value
+                break
+            case .province:
+                model.state = value
+                break
+            case .street:
+                model.street = value
+                break
+            }
+        }
+        
     }
 }
 
@@ -351,13 +438,18 @@ extension EditContactVC: ContactNewCellDelegate{
             email.label = firstLabel ?? "Other"
             email.isNew = true
             self.contact.emailAddresses.append(email)
-        }else{
+        }else if(type == .phone){
             let phone = ContactLabelModel()
             let firstLabel = SimpleFunction.getListNumberLabels().first
             phone.isEmail = false
             phone.isNew = true
             phone.label = firstLabel ?? "Other"
             self.contact.phoneNumbers.append(phone)
+        }else{
+            let tmpAddress = ContactAddressModel()
+            let firstLabel = SimpleFunction.getListAddressesLabels().first
+            tmpAddress.label = firstLabel ?? "Other"
+            self.contact.postalAddresses.append(tmpAddress)
         }
         self.reloadData()
     }
