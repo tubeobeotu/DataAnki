@@ -183,7 +183,7 @@ class ContactModel: BaseModel{
             let tmpPhone = ContactLabelModel()
             tmpPhone.identifier = phone.identifier
             tmpPhone.label = (phone.label ?? "") as String
-            tmpPhone.value = (phone.value.stringValue) as String
+            tmpPhone.value = (phone.value.value(forKey: "digits")) as! String
             contactPhone.append(tmpPhone)
         }
         return contactPhone
