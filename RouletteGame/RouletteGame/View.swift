@@ -43,11 +43,12 @@ extension UIView {
 
 import UIKit
 
+public enum DeviceSizeType:Int{
+    case defaultType = 0
+    case otherType = 1
+}
 public extension UIDevice {
-//    static let defaultBuffer:CGFloat = 12
-    static let defaultBuffer:CGFloat = -10
-    static let originalBuffer:CGFloat = 12
-    static let modelBufferHeight: CGFloat = {
+    static let modelType: DeviceSizeType = {
         var systemInfo = utsname()
         uname(&systemInfo)
         let machineMirror = Mirror(reflecting: systemInfo.machine)
@@ -56,66 +57,85 @@ public extension UIDevice {
             return identifier + String(UnicodeScalar(UInt8(value)))
         }
         
-        func mapToDeviceBufferNumber(identifier: String) -> CGFloat { // swiftlint:disable:this cyclomatic_complexity
+        func mapToDeviceBufferNumber(identifier: String) -> DeviceSizeType { // swiftlint:disable:this cyclomatic_complexity
             #if os(iOS)
                 switch identifier {
-                case "iPod5,1":                                 return defaultBuffer
-                case "iPod7,1":                                 return defaultBuffer
-                case "iPhone3,1", "iPhone3,2", "iPhone3,3":     return defaultBuffer
-                case "iPhone4,1":                               return defaultBuffer
-                case "iPhone5,1", "iPhone5,2":                  return defaultBuffer
-                case "iPhone5,3", "iPhone5,4":                  return defaultBuffer
-                case "iPhone6,1", "iPhone6,2":                  return defaultBuffer
-                case "iPhone7,2":                               return defaultBuffer
-                case "iPhone7,1":                               return defaultBuffer
-                case "iPhone8,1":                               return defaultBuffer
-                case "iPhone8,2":                               return defaultBuffer
-                case "iPhone9,1", "iPhone9,3":                  return defaultBuffer
-                case "iPhone9,2", "iPhone9,4":                  return defaultBuffer
-                case "iPhone8,4":                               return defaultBuffer
-                case "iPhone10,1", "iPhone10,4":                return defaultBuffer
-                case "iPhone10,2", "iPhone10,5":                return defaultBuffer
-                case "iPhone10,3", "iPhone10,6":                return originalBuffer
-                case "iPhone11,2":                              return originalBuffer
-                case "iPhone11,4", "iPhone11,6":                return originalBuffer
-                case "iPhone11,8":                              return originalBuffer
-//                case "iPad2,1", "iPad2,2", "iPad2,3", "iPad2,4":return "iPad 2"
-//                case "iPad3,1", "iPad3,2", "iPad3,3":           return "iPad 3"
-//                case "iPad3,4", "iPad3,5", "iPad3,6":           return "iPad 4"
-//                case "iPad4,1", "iPad4,2", "iPad4,3":           return "iPad Air"
-//                case "iPad5,3", "iPad5,4":                      return "iPad Air 2"
-//                case "iPad6,11", "iPad6,defaultBuffer":                    return "iPad 5"
-//                case "iPad7,5", "iPad7,6":                      return "iPad 6"
-//                case "iPad11,4", "iPad11,5":                    return "iPad Air (3rd generation)"
-//                case "iPad2,5", "iPad2,6", "iPad2,7":           return "iPad Mini"
-//                case "iPad4,4", "iPad4,5", "iPad4,6":           return "iPad Mini 2"
-//                case "iPad4,7", "iPad4,8", "iPad4,9":           return "iPad Mini 3"
-//                case "iPad5,1", "iPad5,2":                      return "iPad Mini 4"
-//                case "iPad11,1", "iPad11,2":                    return "iPad Mini 5"
-//                case "iPad6,3", "iPad6,4":                      return "iPad Pro (9.7-inch)"
-//                case "iPad6,7", "iPad6,8":                      return "iPad Pro (defaultBuffer.9-inch)"
-//                case "iPad7,1", "iPad7,2":                      return "iPad Pro (defaultBuffer.9-inch) (2nd generation)"
-//                case "iPad7,3", "iPad7,4":                      return "iPad Pro (10.5-inch)"
-//                case "iPad8,1", "iPad8,2", "iPad8,3", "iPad8,4":return "iPad Pro (11-inch)"
-//                case "iPad8,5", "iPad8,6", "iPad8,7", "iPad8,8":return "iPad Pro (defaultBuffer.9-inch) (3rd generation)"
-//                case "AppleTV5,3":                              return "Apple TV"
-//                case "AppleTV6,2":                              return "Apple TV 4K"
-//                case "AudioAccessory1,1":                       return "HomePod"
-                case "i386", "x86_64":                          return defaultBuffer
-                default:                                        return defaultBuffer
+                case "iPod5,1":                                 return .defaultType
+                case "iPod7,1":                                 return .defaultType
+                case "iPhone3,1", "iPhone3,2", "iPhone3,3":     return .defaultType
+                case "iPhone4,1":                               return .defaultType
+                case "iPhone5,1", "iPhone5,2":                  return .defaultType
+                case "iPhone5,3", "iPhone5,4":                  return .defaultType
+                case "iPhone6,1", "iPhone6,2":                  return .defaultType
+                case "iPhone7,2":                               return .defaultType
+                case "iPhone7,1":                               return .defaultType
+                case "iPhone8,1":                               return .defaultType
+                case "iPhone8,2":                               return .defaultType
+                case "iPhone9,1", "iPhone9,3":                  return .defaultType
+                case "iPhone9,2", "iPhone9,4":                  return .defaultType
+                case "iPhone8,4":                               return .defaultType
+                case "iPhone10,1", "iPhone10,4":                return .defaultType
+                case "iPhone10,2", "iPhone10,5":                return .defaultType
+                case "iPhone10,3", "iPhone10,6":                return .otherType
+                case "iPhone11,2":                              return .otherType
+                case "iPhone11,4", "iPhone11,6":                return .otherType
+                case "iPhone11,8":                              return .otherType
+                case "i386", "x86_64":                          return .otherType
+                default:                                        return .otherType
                 }
             #elseif os(tvOS)
                 switch identifier {
-//                case "AppleTV5,3": return "Apple TV 4"
-//                case "AppleTV6,2": return "Apple TV 4K"
-                case "i386", "x86_64": return defaultBuffer
-                default: return defaultBuffer
+                case "i386", "x86_64": return .defaultType
+                default: return .defaultType
                 }
             #endif
         }
         
         return mapToDeviceBufferNumber(identifier: identifier)
-//        return defaultBuffer
+    }()
+    
+    static let modelBufferDuration: CGFloat = {
+        let defaultHeightBuffer:CGFloat = 1.19
+//        if(UIDevice.modelType == .defaultType){
+//            return defaultHeightBuffer
+//        }
+        return defaultHeightBuffer
+    }()
+    
+    
+    
+    static let modelBufferHeight: CGFloat = {
+        //default 18
+        //other 18
+        let defaultHeightBuffer:CGFloat = 18
+        let otherHeightBuffer:CGFloat = 18
+        if(UIDevice.modelType == .defaultType){
+            return defaultHeightBuffer
+        }
+        return otherHeightBuffer
+    }()
+    
+    
+    static let modelBufferWidth: CGFloat = {
+        let defaultWidthBuffer:CGFloat = 42
+        let otherWidthBuffer:CGFloat = 42
+        if(UIDevice.modelType == .defaultType){
+            return defaultWidthBuffer
+        }
+        return otherWidthBuffer
+    }()
+    
+    
+    
+    static let modelBufferY: CGFloat = {
+        //default 12
+        //other 16
+        let defaultBuffer:CGFloat = 12
+        let otherBuffer:CGFloat = 16
+        if(UIDevice.modelType == .defaultType){
+            return defaultBuffer
+        }
+        return otherBuffer
     }()
     
 }

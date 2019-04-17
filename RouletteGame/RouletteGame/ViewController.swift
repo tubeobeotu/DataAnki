@@ -37,7 +37,7 @@ class ViewController: UIViewController {
     let timeToShowResult:Double = 3
     var isZoomIn = false
     var randomInt = Int(arc4random_uniform(2))
-    let ratio:CGFloat = 0.185
+    let ratio:CGFloat = 0.2008
     
     var isShowDefault = true {
         didSet{
@@ -63,9 +63,9 @@ class ViewController: UIViewController {
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.cst_tmpDickHeight.constant = (self.view.frame.height*self.ratio - CGFloat(UIDevice.modelBufferHeight))
+        self.cst_tmpDickHeight.constant = (self.view.frame.height*self.ratio )
         print(self.cst_DickResultY.constant)
-        self.cst_DickResultY.constant = -(self.cst_tmpDickHeight.constant * scale) - CGFloat(UIDevice.modelBufferHeight)
+        self.cst_DickResultY.constant = -(self.cst_tmpDickHeight.constant * scale) - CGFloat(UIDevice.modelBufferY)
         
         
     }
@@ -75,13 +75,14 @@ class ViewController: UIViewController {
         print(self.view.frame)
         self.imageView.image = UIImage(gifName: rotationAnimation)
         self.img_Result.isHidden = true
-        let width:CGFloat = 50 * scale
-        let height:CGFloat = 10 * scale
+        //iphone 6s 50
+        let width:CGFloat = CGFloat(UIDevice.modelBufferWidth) * scale
+        let height:CGFloat = UIDevice.modelBufferHeight * scale
         let marginX:CGFloat = 0 * scale
         let marginY:CGFloat = 0 * scale
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            self.imageView.zoomView(scale: self.scale, with: CGPoint.init(x: self.v_TmpDick.center.x, y: self.v_TmpDick.frame.origin.y))
-            self.img_Result.zoomView(scale: self.scale, with: CGPoint.init(x: self.v_TmpDick.center.x, y: self.v_TmpDick.frame.origin.y))
+            self.imageView.zoomView(scale: self.scale, with: CGPoint.init(x: self.v_TmpDick.center.x, y: self.view.frame.height))
+            self.img_Result.zoomView(scale: self.scale, with: CGPoint.init(x: self.v_TmpDick.center.x, y: self.view.frame.height))
             
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
@@ -100,7 +101,7 @@ class ViewController: UIViewController {
         
         view.layer.addSublayer(shapeLayer)
         let animation = CAKeyframeAnimation(keyPath: #keyPath(CALayer.position))
-        animation.duration = 1.045
+        animation.duration = CFTimeInterval(CGFloat(UIDevice.modelBufferDuration)) 
         animation.timeOffset = -0.27
         animation.calculationMode = kCAAnimationPaced
         animation.repeatCount = MAXFLOAT
@@ -113,6 +114,7 @@ class ViewController: UIViewController {
         self.rotateView(targetView: self.v_Dick, duration: duration)
     }
     func rotateView(targetView: UIView, duration: Double = 1.0) {
+//        targetView.isHidden = true
         UIView.animate(withDuration: duration, delay: 0.0, options: .curveLinear, animations: {
             targetView.transform = targetView.transform.rotated(by: CGFloat(Double.pi/(Double(arc4random_uniform(1) + 10))) + CGFloat(Double.pi))
         }) { finished in
@@ -142,7 +144,7 @@ class ViewController: UIViewController {
     }
     func zoomOutResult(){
 //        self.img_DumpResult.image = self.imageView.screenshot()
-        self.img_Result.zoomView(scale: 1, with: CGPoint.init(x: self.v_TmpDick.center.x, y: self.v_TmpDick.frame.origin.y))
+        self.img_Result.zoomView(scale: 1, with: CGPoint.init(x: self.v_TmpDick.center.x, y: self.view.frame.height))
     }
     
     func showDickResult(isShow: Bool){
