@@ -7,14 +7,19 @@
 //
 
 import UIKit
-
+import Contacts
 class ContactLabelModel: BaseModel {
     open var isNew = false
     open var isEmail = false
     private var _label: String = ""
     open var label: String {
         set {
-            _label = newValue //Error
+            if(newValue == ""){
+                _label = CNLabelHome
+            }else{
+                _label = newValue //Error
+            }
+            
         }
         get {
             if(self.isEmail == false){
