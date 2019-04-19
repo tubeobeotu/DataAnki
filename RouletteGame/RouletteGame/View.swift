@@ -95,11 +95,21 @@ public extension UIDevice {
     }()
     
     static let modelBufferDuration: CGFloat = {
-        let defaultHeightBuffer:CGFloat = 1.19
-//        if(UIDevice.modelType == .defaultType){
-//            return defaultHeightBuffer
-//        }
-        return defaultHeightBuffer
+        let defaultSpeed:CGFloat = 1.235
+        let otherSpeed:CGFloat = 1.235
+        if(UIDevice.modelType == .defaultType){
+            return defaultSpeed
+        }
+        return otherSpeed
+    }()
+    
+    static let modelBufferOffset: CGFloat = {
+        let defaultOffset:CGFloat = -0.36
+        let otherOffset:CGFloat = -0.36
+        if(UIDevice.modelType == .defaultType){
+            return defaultOffset
+        }
+        return otherOffset
     }()
     
     

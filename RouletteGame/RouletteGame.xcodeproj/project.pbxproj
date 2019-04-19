@@ -16,7 +16,6 @@
 		91C262A42243B3750054DCEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91C262A22243B3750054DCEA /* Main.storyboard */; };
 		91C262A62243B3750054DCEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91C262A52243B3750054DCEA /* Assets.xcassets */; };
 		91C262A92243B3750054DCEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91C262A72243B3750054DCEA /* LaunchScreen.storyboard */; };
-		91C262B62243B3820054DCEA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 91C262B12243B3820054DCEA /* Info.plist */; };
 		91C262B72243B3820054DCEA /* SwiftyGifManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C262B32243B3820054DCEA /* SwiftyGifManager.swift */; };
 		91C262B82243B3820054DCEA /* UIImage+SwiftyGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C262B42243B3820054DCEA /* UIImage+SwiftyGif.swift */; };
 		91C262B92243B3820054DCEA /* UIImageView+SwiftyGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C262B52243B3820054DCEA /* UIImageView+SwiftyGif.swift */; };
@@ -35,7 +34,6 @@
 		91C262A52243B3750054DCEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91C262A82243B3750054DCEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91C262AA2243B3750054DCEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		91C262B12243B3820054DCEA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91C262B22243B3820054DCEA /* SwiftyGif.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftyGif.h; sourceTree = "<group>"; };
 		91C262B32243B3820054DCEA /* SwiftyGifManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyGifManager.swift; sourceTree = "<group>"; };
 		91C262B42243B3820054DCEA /* UIImage+SwiftyGif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+SwiftyGif.swift"; sourceTree = "<group>"; };
@@ -93,7 +91,6 @@
 		91C262B02243B3820054DCEA /* SwiftyGif */ = {
 			isa = PBXGroup;
 			children = (
-				91C262B12243B3820054DCEA /* Info.plist */,
 				91C262B22243B3820054DCEA /* SwiftyGif.h */,
 				91C262B32243B3820054DCEA /* SwiftyGifManager.swift */,
 				91C262B42243B3820054DCEA /* UIImage+SwiftyGif.swift */,
@@ -170,7 +167,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91C262B62243B3820054DCEA /* Info.plist in Resources */,
 				911BCC712265FDF700CF4BA0 /* animation.gif in Resources */,
 				91C262A92243B3750054DCEA /* LaunchScreen.storyboard in Resources */,
 				91C262A62243B3750054DCEA /* Assets.xcassets in Resources */,
