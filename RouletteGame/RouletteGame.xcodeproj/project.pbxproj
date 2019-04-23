@@ -18,8 +18,8 @@
 		91C262B82243B3820054DCEA /* UIImage+SwiftyGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C262B42243B3820054DCEA /* UIImage+SwiftyGif.swift */; };
 		91C262B92243B3820054DCEA /* UIImageView+SwiftyGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C262B52243B3820054DCEA /* UIImageView+SwiftyGif.swift */; };
 		91C262BF2243B3920054DCEA /* ZoomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C262BD2243B3920054DCEA /* ZoomImageView.swift */; };
-		91D23871226F2BA1001749AF /* result.gif in Resources */ = {isa = PBXBuildFile; fileRef = 91D23870226F2BA1001749AF /* result.gif */; };
 		91D23873226F2C8A001749AF /* defaultAnimation0.gif in Resources */ = {isa = PBXBuildFile; fileRef = 91D23872226F2C8A001749AF /* defaultAnimation0.gif */; };
+		91D23875226F2EDE001749AF /* result.gif in Resources */ = {isa = PBXBuildFile; fileRef = 91D23874226F2EDE001749AF /* result.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,8 +38,8 @@
 		91C262B52243B3820054DCEA /* UIImageView+SwiftyGif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+SwiftyGif.swift"; sourceTree = "<group>"; };
 		91C262BC2243B3920054DCEA /* ZoomImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoomImageView.h; sourceTree = "<group>"; };
 		91C262BD2243B3920054DCEA /* ZoomImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomImageView.swift; sourceTree = "<group>"; };
-		91D23870226F2BA1001749AF /* result.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = result.gif; sourceTree = "<group>"; };
 		91D23872226F2C8A001749AF /* defaultAnimation0.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = defaultAnimation0.gif; sourceTree = "<group>"; };
+		91D23874226F2EDE001749AF /* result.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = result.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +80,7 @@
 				91C262A22243B3750054DCEA /* Main.storyboard */,
 				911BCC702265FDF700CF4BA0 /* animation.gif */,
 				91D23872226F2C8A001749AF /* defaultAnimation0.gif */,
-				91D23870226F2BA1001749AF /* result.gif */,
+				91D23874226F2EDE001749AF /* result.gif */,
 				91C262A52243B3750054DCEA /* Assets.xcassets */,
 				91C262A72243B3750054DCEA /* LaunchScreen.storyboard */,
 				91C262AA2243B3750054DCEA /* Info.plist */,
@@ -168,7 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				911BCC712265FDF700CF4BA0 /* animation.gif in Resources */,
-				91D23871226F2BA1001749AF /* result.gif in Resources */,
+				91D23875226F2EDE001749AF /* result.gif in Resources */,
 				91C262A92243B3750054DCEA /* LaunchScreen.storyboard in Resources */,
 				91C262A62243B3750054DCEA /* Assets.xcassets in Resources */,
 				91D23873226F2C8A001749AF /* defaultAnimation0.gif in Resources */,

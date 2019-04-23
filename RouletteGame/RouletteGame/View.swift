@@ -80,7 +80,7 @@ public extension UIDevice {
                 case "iPhone11,2":                              return .otherType
                 case "iPhone11,4", "iPhone11,6":                return .otherType
                 case "iPhone11,8":                              return .otherType
-                case "i386", "x86_64":                          return .otherType
+                case "i386", "x86_64":                          return .defaultType
                 default:                                        return .otherType
                 }
             #elseif os(tvOS)
@@ -95,7 +95,7 @@ public extension UIDevice {
     }()
     
     static let modelBufferDuration: CGFloat = {
-        let defaultSpeed:CGFloat = 1.235
+        let defaultSpeed:CGFloat = 1.18
         let otherSpeed:CGFloat = 1.235
         if(UIDevice.modelType == .defaultType){
             return defaultSpeed
@@ -140,7 +140,7 @@ public extension UIDevice {
     static let modelBufferY: CGFloat = {
         //default 12
         //other 16
-        let defaultBuffer:CGFloat = 12
+        let defaultBuffer:CGFloat = 14
         let otherBuffer:CGFloat = 16
         if(UIDevice.modelType == .defaultType){
             return defaultBuffer

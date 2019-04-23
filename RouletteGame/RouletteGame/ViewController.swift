@@ -100,7 +100,6 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.cst_tmpDickHeight.constant = (self.view.frame.height*self.ratio )
-        print(self.cst_DickResultY.constant)
         self.cst_DickResultY.constant = -(self.cst_tmpDickHeight.constant * scale) - CGFloat(UIDevice.modelBufferY)
         
         
@@ -159,6 +158,7 @@ class ViewController: UIViewController {
         v_Dick.layer.add(animation, forKey: nil)
     }
     @IBAction func action(_ sender: Any) {
+        print(self.v_Dick.frame)
         self.view.endEditing(true)
         self.v_Dick.transform = CGAffineTransform.identity
         isShowDefault = false
@@ -185,7 +185,6 @@ class ViewController: UIViewController {
         if(currentDuration == 0){
             currentDuration = Double(self.numberOfRotate/2) + 1
         }
-        print(currentDuration)
         targetView.isHidden = !showDick
         UIView.animate(withDuration: self.durationCons/currentDuration, delay: 0.0, options: .curveLinear, animations: {
                 targetView.transform = targetView.transform.rotated(by: CGFloat(Double.pi/(Double(arc4random_uniform(1) + 10))) + CGFloat(Double.pi))
@@ -199,6 +198,7 @@ class ViewController: UIViewController {
         }
     }
     func stop(){
+        print(self.v_Dick.frame)
         self.vDidZoomOut = false
         self.btn_Action.isEnabled = true
         self.v_Dick.layer.removeAllAnimations()
