@@ -22,7 +22,8 @@
 
 import UIKit
 @objc public protocol ZoomImageViewDelegate {
-    @objc optional func didZoomOut()
+    @objc optional func didZoomOut(view: ZoomImageView)
+    @objc optional func didZoomIn(view: ZoomImageView)
 }
 open class ZoomImageView : UIScrollView, UIScrollViewDelegate {
     
@@ -33,6 +34,7 @@ open class ZoomImageView : UIScrollView, UIScrollViewDelegate {
     
     // MARK: - Properties
     let gifManager = SwiftyGifManager(memoryLimit:100)
+    var maxScale:CGFloat = 2.5
     open let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.layer.allowsEdgeAntialiasing = true
@@ -198,7 +200,7 @@ open class ZoomImageView : UIScrollView, UIScrollViewDelegate {
         size.width = round(size.width)
         
         zoomScale = 1
-        maximumZoomScale = 5
+        maximumZoomScale = maxScale
         imageView.bounds.size = UIScreen.main.bounds.size
         contentSize = size
         imageView.center = ZoomImageView.contentCenter(forBoundingSize: UIScreen.main.bounds.size, contentSize: contentSize)
@@ -240,7 +242,11 @@ open class ZoomImageView : UIScrollView, UIScrollViewDelegate {
         imageView.center = ZoomImageView.contentCenter(forBoundingSize: bounds.size, contentSize: contentSize)
         if scrollView.zoomScale == scrollView.minimumZoomScale
         {
-            self.delegateZoomImageView?.didZoomOut?()
+            self.delegateZoomImageView?.didZoomOut?(view: self)
+        }
+        if scrollView.zoomScale == maxScale
+        {
+            self.delegateZoomImageView?.didZoomIn!(view: self)
         }
     }
     

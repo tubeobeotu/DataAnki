@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var img_DumpResult: UIImageView!
     @IBOutlet weak var cst_X: NSLayoutConstraint!
     
+    @IBOutlet weak var cst_tmpDickResultY: NSLayoutConstraint!
     @IBOutlet weak var cst_DickResultY: NSLayoutConstraint!
     @IBOutlet weak var v_DickResult: UIView!
     @IBOutlet weak var v_Dick: UIView!
@@ -48,10 +49,11 @@ class ViewController: UIViewController {
     var randomInt = Int(arc4random_uniform(2))
     let ratio:CGFloat = 0.2008
     let isTesing = true
+    let imageTag = 1111
     var isShowDefault = true {
         didSet{
             if(self.isShowDefault == false){
-//                self.imageView.loopCount = -1
+                //                self.imageView.loopCount = -1
             }
         }
     }
@@ -85,6 +87,7 @@ class ViewController: UIViewController {
         self.tf_Duration.text = "\(CGFloat(UIDevice.modelBufferDuration))"
         self.tf_OffsetY.text = "\((UIDevice.modelBufferOffset))"
         
+        self.imageView.tag = imageTag
         self.imageView.imageView.delegate = self
         self.hideDickResultViews()
         self.img_Result.delegateZoomImageView = self
@@ -93,17 +96,16 @@ class ViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
             self.imageView.zoomMode = .fill
             self.img_Result.zoomMode = .fill
-            
             self.showResultAnimation(isShow: false)
         }
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.cst_tmpDickHeight.constant = (self.view.frame.height*self.ratio )
+        self.cst_tmpDickHeight.constant = (self.view.frame.height*self.ratio)
         self.cst_DickResultY.constant = -(self.cst_tmpDickHeight.constant * scale) - CGFloat(UIDevice.modelBufferY)
-        
-        
+        self.cst_tmpDickResultY.constant = (self.tf_Height.text!.toCGFloat() * scale)
     }
+    
     @IBAction func showCircle(_ sender: Any) {
         showCircle = !showCircle
     }
@@ -124,11 +126,13 @@ class ViewController: UIViewController {
         }
     }
     
-    func prepareZoomIn(){
+    func prepareZoomIn(needZoomResult:Bool = true){
         self.imageView.image = UIImage(gifName: rotationAnimation)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             self.imageView.zoomView(scale: self.scale, with: CGPoint.init(x: self.v_TmpDick.center.x, y: self.view.frame.height))
-            self.img_Result.zoomView(scale: self.scale, with: CGPoint.init(x: self.v_TmpDick.center.x, y: self.view.frame.height))
+            if(needZoomResult == true){
+                self.img_Result.zoomView(scale: self.scale, with: CGPoint.init(x: self.v_TmpDick.center.x, y: self.view.frame.height))
+            }
             
         }
     }
@@ -167,17 +171,14 @@ class ViewController: UIViewController {
         self.img_Dick.image = UIImage.init(named: dickImage)
         numberOfRotate = Int(arc4random_uniform(maxRotation * 2) + maxRotation)
         currentIndex = 1
-        
         if(vDidZoomOut == false){
             self.actionDidZoomOut()
+            self.prepareZoomIn(needZoomResult: false)
         }else{
             self.prepareZoomIn()
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-            self.v_Dick.isHidden = false
-        }
-        self.addCircleAnimation()
-        self.rotateView(targetView: self.v_Dick, duration: self.durationCons)
+        
+        self.actionDick()
         
     }
     func rotateView(targetView: UIView, duration: Double = 1.0) {
@@ -187,7 +188,7 @@ class ViewController: UIViewController {
         }
         targetView.isHidden = !showDick
         UIView.animate(withDuration: self.durationCons/currentDuration, delay: 0.0, options: .curveLinear, animations: {
-                targetView.transform = targetView.transform.rotated(by: CGFloat(Double.pi/(Double(arc4random_uniform(1) + 10))) + CGFloat(Double.pi))
+            targetView.transform = targetView.transform.rotated(by: CGFloat(Double.pi/(Double(arc4random_uniform(1) + 10))) + CGFloat(Double.pi))
         }) { finished in
             if(self.numberOfRotate != self.currentIndex || self.loopForever == true){
                 self.currentIndex = self.currentIndex + 1
@@ -198,7 +199,7 @@ class ViewController: UIViewController {
         }
     }
     func stop(){
-        print(self.v_Dick.frame)
+        self.showDickResult(isShow: true)
         self.vDidZoomOut = false
         self.btn_Action.isEnabled = true
         self.v_Dick.layer.removeAllAnimations()
@@ -228,17 +229,29 @@ class ViewController: UIViewController {
         self.v_Dick.isHidden = true
         self.v_DickResult.isHidden = true
     }
+    func showDickResult(isShow: Bool){
+        self.v_Dick.isHidden = isShow
+        self.v_DickResult.isHidden = !isShow
+        if(isShow == true){
+            v_DickResult.transform = v_Dick.transform
+        }
+    }
     func showResultAnimation(isShow: Bool){
+        self.img_Result.isHidden = !isShow
         if(isShow){
-            self.img_Result.isHidden = false
             self.img_Result.imageView.startAnimatingGif()
             self.imageView.imageView.stopAnimatingGif()
         }else{
-            self.img_Result.isHidden = true
             self.img_Result.imageView.stopAnimatingGif()
             self.imageView.imageView.startAnimatingGif()
         }
         
+    }
+    
+    func actionDick(){
+        self.v_Dick.isHidden = false
+        self.addCircleAnimation()
+        self.rotateView(targetView: self.v_Dick, duration: self.durationCons)
     }
 }
 extension ViewController: SwiftyGifDelegate{
@@ -249,7 +262,10 @@ extension ViewController: SwiftyGifDelegate{
     }
 }
 extension ViewController: ZoomImageViewDelegate{
-    func didZoomOut() {
+    func didZoomIn(view: ZoomImageView) {
+        
+    }
+    func didZoomOut(view: ZoomImageView) {
         DispatchQueue.main.async {
             self.actionDidZoomOut()
             self.isShowDefault = self.vDidZoomOut
@@ -260,8 +276,8 @@ extension ViewController: ZoomImageViewDelegate{
         self.vDidZoomOut = true
         self.btn_Action.isEnabled = self.vDidZoomOut
         self.img_Result.isHidden = self.vDidZoomOut
-        self.hideDickResultViews()
         self.showResultAnimation(isShow: false)
+        self.hideDickResultViews()
     }
 }
 

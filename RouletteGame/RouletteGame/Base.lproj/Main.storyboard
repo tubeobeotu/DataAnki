@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aQz-al-O7u">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aQz-al-O7u">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -60,12 +63,16 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xsg-vf-GNP">
                                 <rect key="frame" x="161.66666666666666" y="648" width="52" height="260"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dickSmile" translatesAutoresizingMaskIntoConstraints="NO" id="whW-Rm-KaE">
-                                        <rect key="frame" x="0.0" y="130.5" width="52" height="130.5"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dickSmile" translatesAutoresizingMaskIntoConstraints="NO" id="whW-Rm-KaE">
+                                        <rect key="frame" x="0.0" y="130" width="52" height="130"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="whW-Rm-KaE" firstAttribute="top" secondItem="xsg-vf-GNP" secondAttribute="centerY" id="BdP-Kq-J4V"/>
+                                    <constraint firstAttribute="trailing" secondItem="whW-Rm-KaE" secondAttribute="trailing" id="UnA-76-jNi"/>
+                                    <constraint firstItem="whW-Rm-KaE" firstAttribute="leading" secondItem="xsg-vf-GNP" secondAttribute="leading" id="ujQ-GG-1jT"/>
+                                </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aO6-kT-obC">
                                 <rect key="frame" x="0.0" y="44" width="375" height="734"/>
@@ -145,7 +152,7 @@
                                                 </connections>
                                             </button>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TOh-ky-WXy">
-                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="30"/>
+                                                <rect key="frame" x="-8" y="0.0" width="0.0" height="30"/>
                                                 <state key="normal" title="Apply"/>
                                                 <connections>
                                                     <action selector="apply:" destination="aQz-al-O7u" eventType="touchUpInside" id="EZA-69-qoJ"/>
@@ -233,6 +240,7 @@
                             <constraint firstItem="Nds-sW-Al8" firstAttribute="top" secondItem="7jq-mP-fmM" secondAttribute="bottom" id="geo-Mm-asn"/>
                             <constraint firstItem="8nt-P5-t0s" firstAttribute="trailing" secondItem="2bp-y0-9Ce" secondAttribute="trailing" id="ir2-50-M19"/>
                             <constraint firstItem="MhF-hr-bzm" firstAttribute="trailing" secondItem="G3o-tO-vIx" secondAttribute="trailing" id="jG9-um-PPH"/>
+                            <constraint firstItem="whW-Rm-KaE" firstAttribute="height" secondItem="hpR-MI-kNt" secondAttribute="height" id="mRm-YQ-wnk"/>
                             <constraint firstItem="j1T-xX-EVf" firstAttribute="leading" secondItem="MhF-hr-bzm" secondAttribute="leading" id="nlR-jL-f9D"/>
                             <constraint firstItem="8nt-P5-t0s" firstAttribute="leading" secondItem="2bp-y0-9Ce" secondAttribute="leading" id="rHx-WD-kfp"/>
                             <constraint firstItem="MhF-hr-bzm" firstAttribute="bottom" secondItem="2bp-y0-9Ce" secondAttribute="bottom" id="uiI-DR-2vB"/>
@@ -250,6 +258,7 @@
                         <outlet property="cst_DickResultY" destination="e8C-ti-eUe" id="bg7-Yn-mwc"/>
                         <outlet property="cst_X" destination="Koa-6T-Mj6" id="y0d-7r-04i"/>
                         <outlet property="cst_tmpDickHeight" destination="FK1-pQ-Qbd" id="C3G-Zs-yte"/>
+                        <outlet property="cst_tmpDickResultY" destination="yme-mz-nVL" id="dgf-oA-eJf"/>
                         <outlet property="imageView" destination="2bp-y0-9Ce" id="3PN-Al-xvP"/>
                         <outlet property="img_Dick" destination="hpR-MI-kNt" id="ijk-93-FlN"/>
                         <outlet property="img_Result" destination="8nt-P5-t0s" id="USl-sT-gAS"/>
@@ -269,7 +278,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="defaultAnimation0.gif" width="1156" height="2067"/>
+        <image name="defaultAnimation0.gif" width="541" height="961"/>
         <image name="dick" width="458" height="1107"/>
         <image name="dickSmile" width="458" height="1107"/>
     </resources>
