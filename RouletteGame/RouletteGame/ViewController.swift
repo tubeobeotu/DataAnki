@@ -203,10 +203,12 @@ class ViewController: UIViewController {
         self.btn_Action.isEnabled = true
         self.v_Dick.layer.removeAllAnimations()
         self.showResultAnimation(isShow: true)
-        self.showDickResult(isShow: true)
         self.img_Dick.image = UIImage.init(named: self.dickSmileImage)
         DispatchQueue.main.asyncAfter(deadline: .now() + self.timeToShowResult) {
-//            self.zoomOutResult()
+            if(self.vDidZoomOut == false){
+                self.zoomOutResult()
+            }
+            
         }
     }
     
@@ -221,16 +223,6 @@ class ViewController: UIViewController {
     func zoomOutResult(){
         //        self.img_DumpResult.image = self.imageView.screenshot()
         self.img_Result.zoomView(scale: 1, with: CGPoint.init(x: self.v_TmpDick.center.x, y: self.view.frame.height))
-    }
-    
-    func showDickResult(isShow: Bool){
-//        self.v_Dick.isHidden = isShow
-//        self.v_DickResult.isHidden = !isShow
-//        if(isShow == true){
-//            v_DickResult.transform = v_Dick.transform
-//        }
-        
-        
     }
     func hideDickResultViews(){
         self.v_Dick.isHidden = true
@@ -260,16 +252,16 @@ extension ViewController: ZoomImageViewDelegate{
     func didZoomOut() {
         DispatchQueue.main.async {
             self.actionDidZoomOut()
-            self.showResultAnimation(isShow: false)
+            self.isShowDefault = self.vDidZoomOut
             self.showDefaultAnimation()
         }
     }
     func actionDidZoomOut(){
         self.vDidZoomOut = true
         self.btn_Action.isEnabled = self.vDidZoomOut
-        self.isShowDefault = self.vDidZoomOut
         self.img_Result.isHidden = self.vDidZoomOut
         self.hideDickResultViews()
+        self.showResultAnimation(isShow: false)
     }
 }
 
