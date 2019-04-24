@@ -172,8 +172,8 @@ class ViewController: UIViewController {
         numberOfRotate = Int(arc4random_uniform(maxRotation * 2) + maxRotation)
         currentIndex = 1
         if(vDidZoomOut == false){
-            self.actionDidZoomOut()
             self.prepareZoomIn(needZoomResult: false)
+            self.actionDidZoomOut()
         }else{
             self.prepareZoomIn()
         }
