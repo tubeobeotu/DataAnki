@@ -43,7 +43,7 @@ class ViewController: UIViewController {
     let rotationAnimation = "animation"
     let resultImage = "result"
     let scale:CGFloat = 2.5
-    let maxRotation:UInt32 = 10
+    let maxRotation:UInt32 = 15
     let timeToShowResult:Double = 3
     var isZoomIn = false
     var randomInt = Int(arc4random_uniform(2))
@@ -58,7 +58,7 @@ class ViewController: UIViewController {
         }
     }
     
-    let durationCons:Double = 2
+    let durationCons:Double = 0.5
     
     var showCircle = false{
         didSet{

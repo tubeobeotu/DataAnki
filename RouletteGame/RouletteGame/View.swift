@@ -95,8 +95,8 @@ public extension UIDevice {
     }()
     
     static let modelBufferDuration: CGFloat = {
-        let defaultSpeed:CGFloat = 1.235
-        let otherSpeed:CGFloat = 1.235
+        let defaultSpeed:CGFloat = 1.2352
+        let otherSpeed:CGFloat = 1.2352
         if(UIDevice.modelType == .defaultType){
             return defaultSpeed
         }
@@ -140,7 +140,7 @@ public extension UIDevice {
     static let modelBufferY: CGFloat = {
         //default 12
         //other 16
-        let defaultBuffer:CGFloat = 14
+        let defaultBuffer:CGFloat = 12
         let otherBuffer:CGFloat = 16
         if(UIDevice.modelType == .defaultType){
             return defaultBuffer
