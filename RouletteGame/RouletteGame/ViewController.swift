@@ -48,7 +48,7 @@ class ViewController: UIViewController {
     var isZoomIn = false
     var randomInt = Int(arc4random_uniform(2))
     let ratio:CGFloat = 0.2008
-    let isTesing = true
+    let isTesing = false
     let imageTag = 1111
     var isShowDefault = true {
         didSet{
@@ -167,7 +167,7 @@ class ViewController: UIViewController {
         self.v_Dick.transform = CGAffineTransform.identity
         isShowDefault = false
         btn_Action.isEnabled = false
-        self.img_Result.isHidden = true
+        self.img_Result.setHidenAnimation(isHidden: true)
         self.img_Dick.image = UIImage.init(named: dickImage)
         numberOfRotate = Int(arc4random_uniform(maxRotation * 2) + maxRotation)
         currentIndex = 1
@@ -186,7 +186,6 @@ class ViewController: UIViewController {
         if(currentDuration == 0){
             currentDuration = Double(self.numberOfRotate/2) + 1
         }
-        targetView.isHidden = !showDick
         UIView.animate(withDuration: self.durationCons/currentDuration, delay: 0.0, options: .curveLinear, animations: {
             targetView.transform = targetView.transform.rotated(by: CGFloat(Double.pi/(Double(arc4random_uniform(1) + 10))) + CGFloat(Double.pi))
         }) { finished in
@@ -226,18 +225,18 @@ class ViewController: UIViewController {
         self.img_Result.zoomView(scale: 1, with: CGPoint.init(x: self.v_TmpDick.center.x, y: self.view.frame.height))
     }
     func hideDickResultViews(){
-        self.v_Dick.isHidden = true
-        self.v_DickResult.isHidden = true
+        self.v_Dick.setHidenAnimation(isHidden: true)
+        self.v_DickResult.setHidenAnimation(isHidden: true)
     }
     func showDickResult(isShow: Bool){
-        self.v_Dick.isHidden = isShow
-        self.v_DickResult.isHidden = !isShow
+        self.v_Dick.setHidenAnimation(isHidden: isShow)
+        self.v_DickResult.setHidenAnimation(isHidden: !isShow)
         if(isShow == true){
             v_DickResult.transform = v_Dick.transform
         }
     }
     func showResultAnimation(isShow: Bool){
-        self.img_Result.isHidden = !isShow
+        self.img_Result.setHidenAnimation(isHidden: !isShow, animation: isShow, duration: 0.2)
         if(isShow){
             self.img_Result.imageView.startAnimatingGif()
             self.imageView.imageView.stopAnimatingGif()
@@ -247,9 +246,8 @@ class ViewController: UIViewController {
         }
         
     }
-    
     func actionDick(){
-        self.v_Dick.isHidden = false
+        self.v_Dick.setHidenAnimation(isHidden: !showDick, animation: true)
         self.addCircleAnimation()
         self.rotateView(targetView: self.v_Dick, duration: self.durationCons)
     }
@@ -275,13 +273,32 @@ extension ViewController: ZoomImageViewDelegate{
     func actionDidZoomOut(){
         self.vDidZoomOut = true
         self.btn_Action.isEnabled = self.vDidZoomOut
-        self.img_Result.isHidden = self.vDidZoomOut
+        self.img_Result.setHidenAnimation(isHidden: self.vDidZoomOut)
         self.showResultAnimation(isShow: false)
         self.hideDickResultViews()
     }
 }
 
-
+extension UIView{
+    func setHidenAnimation(isHidden: Bool, animation: Bool = false, duration: CGFloat = 1){
+        func setTmpHidden(){
+            if(isHidden == true){
+                self.alpha = 0
+            }else{
+                self.alpha = 1
+            }
+        }
+        if(animation){
+            UIView.animate(withDuration: TimeInterval(duration)) {
+                setTmpHidden()
+            }
+        }else{
+            setTmpHidden()
+        }
+        
+        
+    }
+}
 extension String{
     func toCGFloat() -> CGFloat{
         let str = self
