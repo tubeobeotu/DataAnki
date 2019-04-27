@@ -47,6 +47,7 @@ open class ZoomImageView : UIScrollView, UIScrollViewDelegate {
             scrollToCenter()
         }
     }
+    open var isNormalImage = false
     open var loopCount:Int = -1
     open var keepSetting = false
     open var image: UIImage? {
@@ -55,9 +56,12 @@ open class ZoomImageView : UIScrollView, UIScrollViewDelegate {
         }
         set {
             let oldImage = imageView.image
-            //            imageView.image = newValue
-            if let value = newValue{
-                imageView.setGifImage(value, manager: gifManager, loopCount: loopCount)
+            if(self.isNormalImage){
+                imageView.image = newValue
+            }else{
+                if let value = newValue{
+                    imageView.setGifImage(value, manager: gifManager, loopCount: loopCount)
+                }
             }
             
             if oldImage?.size != newValue?.size {

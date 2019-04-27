@@ -41,9 +41,9 @@ class ViewController: UIViewController {
     let dickImage = "dick"
     let dickSmileImage = "dickSmile"
     let rotationAnimation = "animation"
-    let resultImage = "result"
+    let resultImage = "idle"
     let scale:CGFloat = 2.5
-    let maxRotation:UInt32 = 15
+    let maxRotation:UInt32 = 20
     let timeToShowResult:Double = 3
     var isZoomIn = false
     var randomInt = Int(arc4random_uniform(2))
@@ -93,8 +93,9 @@ class ViewController: UIViewController {
         self.imageView.tag = imageTag
         self.imageView.imageView.delegate = self
         self.hideDickResultViews()
+        self.img_Result.isNormalImage = true
         self.img_Result.delegateZoomImageView = self
-        self.img_Result.image = UIImage(gifName: resultImage)
+        self.img_Result.image = UIImage.init(named: "sample")
         self.showDefaultAnimation()
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
             self.imageView.zoomMode = .fill
@@ -106,7 +107,7 @@ class ViewController: UIViewController {
         super.viewDidAppear(animated)
         self.cst_tmpDickHeight.constant = (self.view.frame.height*self.ratio)
         self.cst_DickResultY.constant = -(self.cst_tmpDickHeight.constant * scale) - CGFloat(UIDevice.modelBufferY)
-        self.cst_tmpDickResultY.constant = (self.tf_Height.text!.toCGFloat() * scale)
+//        self.cst_tmpDickResultY.constant = (self.tf_Height.text!.toCGFloat() * scale)
     }
     
     @IBAction func showCircle(_ sender: Any) {
@@ -195,8 +196,10 @@ class ViewController: UIViewController {
         }) { finished in
             if(self.numberOfRotate != self.currentIndex || self.loopForever == true){
                 self.currentIndex = self.currentIndex + 1
-                self.rotateView(targetView: targetView, duration: self.durationCons/currentDuration)
+            }else{
+                self.currentIndex = self.currentIndex - 1
             }
+            self.rotateView(targetView: targetView, duration: self.durationCons/currentDuration)
         }
     }
     func stop(){
@@ -241,10 +244,10 @@ class ViewController: UIViewController {
     func showResultAnimation(isShow: Bool){
         self.img_Result.setHidenAnimation(isHidden: !isShow, animation: isShow, duration: 1.0)
         if(isShow){
-            self.img_Result.imageView.startAnimatingGif()
+//            self.img_Result.imageView.startAnimatingGif()
             self.imageView.imageView.stopAnimatingGif()
         }else{
-            self.img_Result.imageView.stopAnimatingGif()
+//            self.img_Result.imageView.stopAnimatingGif()
             self.imageView.imageView.startAnimatingGif()
         }
         
