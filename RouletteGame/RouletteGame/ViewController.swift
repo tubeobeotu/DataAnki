@@ -50,10 +50,13 @@ class ViewController: UIViewController {
     let ratio:CGFloat = 0.2008
     let isTesing = false
     let imageTag = 1111
+    var isStopDacing = true
     var isShowDefault = true {
         didSet{
             if(self.isShowDefault == false){
-                //                self.imageView.loopCount = -1
+                self.imageView.loopCount = 2
+            }else{
+                self.imageView.loopCount = -1
             }
         }
     }
@@ -162,11 +165,10 @@ class ViewController: UIViewController {
         v_Dick.layer.add(animation, forKey: nil)
     }
     @IBAction func action(_ sender: Any) {
-        print(self.v_Dick.frame)
+        self.isStopDacing = false
         self.view.endEditing(true)
         self.v_Dick.transform = CGAffineTransform.identity
         isShowDefault = false
-        btn_Action.isEnabled = false
         self.img_Result.setHidenAnimation(isHidden: true)
         self.img_Dick.image = UIImage.init(named: dickImage)
         numberOfRotate = Int(arc4random_uniform(maxRotation * 2) + maxRotation)
@@ -177,11 +179,13 @@ class ViewController: UIViewController {
         }else{
             self.prepareZoomIn()
         }
-        
         self.actionDick()
-        
+        btn_Action.isEnabled = false
     }
     func rotateView(targetView: UIView, duration: Double = 1.0) {
+        if(self.isStopDacing == true){
+            return
+        }
         var currentDuration:Double = abs(Double(currentIndex - ((self.numberOfRotate + 1)*(currentIndex/((self.numberOfRotate/2) + 1)))))
         if(currentDuration == 0){
             currentDuration = Double(self.numberOfRotate/2) + 1
@@ -192,12 +196,11 @@ class ViewController: UIViewController {
             if(self.numberOfRotate != self.currentIndex || self.loopForever == true){
                 self.currentIndex = self.currentIndex + 1
                 self.rotateView(targetView: targetView, duration: self.durationCons/currentDuration)
-            }else{
-                self.stop()
             }
         }
     }
     func stop(){
+        self.isStopDacing = true
         self.showDickResult(isShow: true)
         self.vDidZoomOut = false
         self.btn_Action.isEnabled = true
@@ -236,7 +239,7 @@ class ViewController: UIViewController {
         }
     }
     func showResultAnimation(isShow: Bool){
-        self.img_Result.setHidenAnimation(isHidden: !isShow, animation: isShow, duration: 0.2)
+        self.img_Result.setHidenAnimation(isHidden: !isShow, animation: isShow, duration: 1.0)
         if(isShow){
             self.img_Result.imageView.startAnimatingGif()
             self.imageView.imageView.stopAnimatingGif()
@@ -254,9 +257,11 @@ class ViewController: UIViewController {
 }
 extension ViewController: SwiftyGifDelegate{
     public func gifDidStop(sender: UIImageView) {
-        if(self.isShowDefault == true){
-            self.showDefaultAnimation()
+        if(self.isStopDacing == false){
+            self.isStopDacing = true
+            self.stop()
         }
+        
     }
 }
 extension ViewController: ZoomImageViewDelegate{

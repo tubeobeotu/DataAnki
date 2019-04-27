@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		9105461E2259B1F400DEC5C1 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9105461D2259B1F300DEC5C1 /* View.swift */; };
-		911BCC712265FDF700CF4BA0 /* animation.gif in Resources */ = {isa = PBXBuildFile; fileRef = 911BCC702265FDF700CF4BA0 /* animation.gif */; };
 		91C2629F2243B3750054DCEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C2629E2243B3750054DCEA /* AppDelegate.swift */; };
 		91C262A12243B3750054DCEA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C262A02243B3750054DCEA /* ViewController.swift */; };
 		91C262A42243B3750054DCEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91C262A22243B3750054DCEA /* Main.storyboard */; };
@@ -18,13 +17,13 @@
 		91C262B82243B3820054DCEA /* UIImage+SwiftyGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C262B42243B3820054DCEA /* UIImage+SwiftyGif.swift */; };
 		91C262B92243B3820054DCEA /* UIImageView+SwiftyGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C262B52243B3820054DCEA /* UIImageView+SwiftyGif.swift */; };
 		91C262BF2243B3920054DCEA /* ZoomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C262BD2243B3920054DCEA /* ZoomImageView.swift */; };
+		91CBE491227462C000EC567C /* animation.gif in Resources */ = {isa = PBXBuildFile; fileRef = 91CBE490227462C000EC567C /* animation.gif */; };
 		91D23875226F2EDE001749AF /* result.gif in Resources */ = {isa = PBXBuildFile; fileRef = 91D23874226F2EDE001749AF /* result.gif */; };
 		91E4FC2E226F7D8100C23B6F /* defaultAnimation0.gif in Resources */ = {isa = PBXBuildFile; fileRef = 91E4FC2D226F7D8100C23B6F /* defaultAnimation0.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9105461D2259B1F300DEC5C1 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
-		911BCC702265FDF700CF4BA0 /* animation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = animation.gif; sourceTree = "<group>"; };
 		91C2629B2243B3750054DCEA /* RouletteGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RouletteGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91C2629E2243B3750054DCEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91C262A02243B3750054DCEA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +37,7 @@
 		91C262B52243B3820054DCEA /* UIImageView+SwiftyGif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+SwiftyGif.swift"; sourceTree = "<group>"; };
 		91C262BC2243B3920054DCEA /* ZoomImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoomImageView.h; sourceTree = "<group>"; };
 		91C262BD2243B3920054DCEA /* ZoomImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomImageView.swift; sourceTree = "<group>"; };
+		91CBE490227462C000EC567C /* animation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = animation.gif; sourceTree = "<group>"; };
 		91D23874226F2EDE001749AF /* result.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = result.gif; sourceTree = "<group>"; };
 		91E4FC2D226F7D8100C23B6F /* defaultAnimation0.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = defaultAnimation0.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,7 +78,7 @@
 				91C262A02243B3750054DCEA /* ViewController.swift */,
 				9105461D2259B1F300DEC5C1 /* View.swift */,
 				91C262A22243B3750054DCEA /* Main.storyboard */,
-				911BCC702265FDF700CF4BA0 /* animation.gif */,
+				91CBE490227462C000EC567C /* animation.gif */,
 				91E4FC2D226F7D8100C23B6F /* defaultAnimation0.gif */,
 				91D23874226F2EDE001749AF /* result.gif */,
 				91C262A52243B3750054DCEA /* Assets.xcassets */,
@@ -167,8 +167,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				911BCC712265FDF700CF4BA0 /* animation.gif in Resources */,
 				91D23875226F2EDE001749AF /* result.gif in Resources */,
+				91CBE491227462C000EC567C /* animation.gif in Resources */,
 				91C262A92243B3750054DCEA /* LaunchScreen.storyboard in Resources */,
 				91C262A62243B3750054DCEA /* Assets.xcassets in Resources */,
 				91E4FC2E226F7D8100C23B6F /* defaultAnimation0.gif in Resources */,
