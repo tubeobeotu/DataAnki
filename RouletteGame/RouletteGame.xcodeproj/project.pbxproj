@@ -332,7 +332,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = RouletteGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "6d5d48ef-f436-46db-8ead-c2225b0019df";
+				PROVISIONING_PROFILE = "12ee49c3-28b1-470e-b7de-4ee4f2fbc8b5";
 				PROVISIONING_PROFILE_SPECIFIER = RouletteGameSample;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -349,7 +349,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = RouletteGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "6d5d48ef-f436-46db-8ead-c2225b0019df";
+				PROVISIONING_PROFILE = "12ee49c3-28b1-470e-b7de-4ee4f2fbc8b5";
 				PROVISIONING_PROFILE_SPECIFIER = RouletteGameSample;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
