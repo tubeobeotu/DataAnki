@@ -9,6 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var v_mask: UIView!
     @IBOutlet weak var btn_Action: UIButton!
     @IBOutlet weak var imageView: ZoomImageView!
     @IBOutlet weak var img_Result: ZoomImageView!
@@ -101,6 +103,8 @@ class ViewController: UIViewController {
             self.imageView.zoomMode = .fill
             self.img_Result.zoomMode = .fill
             self.showResultAnimation(isShow: false)
+            
+            self.v_mask.setHidenAnimation(isHidden: true, animation: true, duration: 0.5)
         }
     }
     override func viewDidAppear(_ animated: Bool) {

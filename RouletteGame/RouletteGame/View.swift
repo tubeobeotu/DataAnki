@@ -46,6 +46,7 @@ import UIKit
 public enum DeviceSizeType:Int{
     case defaultType = 0
     case otherType = 1
+    case xType = 2
 }
 public extension UIDevice {
     static let modelType: DeviceSizeType = {
@@ -76,10 +77,10 @@ public extension UIDevice {
                 case "iPhone8,4":                               return .defaultType
                 case "iPhone10,1", "iPhone10,4":                return .defaultType
                 case "iPhone10,2", "iPhone10,5":                return .defaultType
-                case "iPhone10,3", "iPhone10,6":                return .otherType
-                case "iPhone11,2":                              return .otherType
-                case "iPhone11,4", "iPhone11,6":                return .otherType
-                case "iPhone11,8":                              return .otherType
+                case "iPhone10,3", "iPhone10,6":                return .xType
+                case "iPhone11,2":                              return .xType
+                case "iPhone11,4", "iPhone11,6":                return .xType
+                case "iPhone11,8":                              return .xType
                 case "i386", "x86_64":                          return .defaultType
                 default:                                        return .otherType
                 }
@@ -139,11 +140,14 @@ public extension UIDevice {
     
     static let modelBufferY: CGFloat = {
         //default 12
-        //other 16
+        //other new:12  16
+        //-12 iphone x
         let defaultBuffer:CGFloat = 12
-        let otherBuffer:CGFloat = 16
+        let otherBuffer:CGFloat = 12
         if(UIDevice.modelType == .defaultType){
             return defaultBuffer
+        }else if(UIDevice.modelType == .xType){
+            return -12;
         }
         return otherBuffer
     }()
