@@ -26,15 +26,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2bp-y0-9Ce" customClass="ZoomImageView" customModule="RouletteGame" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92.333333333333314" width="375" height="637.33333333333348"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <view clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8nt-P5-t0s" customClass="ZoomImageView" customModule="RouletteGame" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92.333333333333314" width="375" height="637.33333333333348"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultAnimation0.gif" translatesAutoresizingMaskIntoConstraints="NO" id="G3o-tO-vIx">
-                                <rect key="frame" x="0.0" y="92" width="375" height="637.66666666666663"/>
+                                <rect key="frame" x="0.0" y="-0.33333333333331439" width="375" height="812.33333333333326"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
                             <view hidden="YES" clipsSubviews="YES" alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j1T-xX-EVf">
@@ -111,8 +111,8 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pCI-I3-VoJ">
-                                        <rect key="frame" x="90" y="46" width="285" height="30"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pCI-I3-VoJ">
+                                        <rect key="frame" x="116" y="46" width="251" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -226,12 +226,12 @@
                             <constraint firstItem="2bp-y0-9Ce" firstAttribute="trailing" secondItem="MhF-hr-bzm" secondAttribute="trailing" id="BHV-OM-nWi"/>
                             <constraint firstAttribute="bottom" secondItem="TGL-gQ-bgF" secondAttribute="bottom" id="CWF-jb-C3O"/>
                             <constraint firstItem="eFe-tb-cfp" firstAttribute="top" secondItem="j1T-xX-EVf" secondAttribute="bottom" id="Fsh-1i-SM7"/>
-                            <constraint firstItem="2bp-y0-9Ce" firstAttribute="height" secondItem="fjC-b4-Dht" secondAttribute="width" multiplier="1.7" id="HFf-9v-L1v"/>
                             <constraint firstItem="MhF-hr-bzm" firstAttribute="trailing" secondItem="Nds-sW-Al8" secondAttribute="trailing" id="Jjq-BW-tYH"/>
                             <constraint firstItem="G3o-tO-vIx" firstAttribute="top" secondItem="2bp-y0-9Ce" secondAttribute="top" id="KIG-48-m0S"/>
                             <constraint firstItem="bva-EV-aRQ" firstAttribute="centerX" secondItem="MhF-hr-bzm" secondAttribute="centerX" id="Koa-6T-Mj6"/>
                             <constraint firstItem="aO6-kT-obC" firstAttribute="trailing" secondItem="MhF-hr-bzm" secondAttribute="trailing" id="L3w-Gf-qLs"/>
                             <constraint firstItem="aO6-kT-obC" firstAttribute="leading" secondItem="MhF-hr-bzm" secondAttribute="leading" id="Ldg-FY-3qP"/>
+                            <constraint firstAttribute="bottom" secondItem="2bp-y0-9Ce" secondAttribute="bottom" id="MB7-vp-CMd"/>
                             <constraint firstAttribute="trailing" secondItem="j1T-xX-EVf" secondAttribute="trailing" id="MTF-Zm-8Gq"/>
                             <constraint firstItem="8nt-P5-t0s" firstAttribute="trailing" secondItem="2bp-y0-9Ce" secondAttribute="trailing" id="Npf-fL-VBj"/>
                             <constraint firstItem="2bp-y0-9Ce" firstAttribute="leading" secondItem="MhF-hr-bzm" secondAttribute="leading" id="ON5-IM-Mgg"/>
@@ -252,7 +252,7 @@
                             <constraint firstItem="8nt-P5-t0s" firstAttribute="bottom" secondItem="2bp-y0-9Ce" secondAttribute="bottom" id="oLu-gh-I13"/>
                             <constraint firstItem="TGL-gQ-bgF" firstAttribute="top" secondItem="fjC-b4-Dht" secondAttribute="top" id="otY-8k-gHO"/>
                             <constraint firstItem="8nt-P5-t0s" firstAttribute="leading" secondItem="2bp-y0-9Ce" secondAttribute="leading" id="v8c-gg-p20"/>
-                            <constraint firstItem="2bp-y0-9Ce" firstAttribute="centerY" secondItem="MhF-hr-bzm" secondAttribute="centerY" id="xjU-VW-s67"/>
+                            <constraint firstItem="2bp-y0-9Ce" firstAttribute="top" secondItem="fjC-b4-Dht" secondAttribute="top" id="yed-fY-Wyo"/>
                             <constraint firstItem="xsg-vf-GNP" firstAttribute="centerY" secondItem="bva-EV-aRQ" secondAttribute="centerY" id="yme-mz-nVL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MhF-hr-bzm"/>

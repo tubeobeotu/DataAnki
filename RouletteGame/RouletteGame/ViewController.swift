@@ -39,7 +39,7 @@ class ViewController: UIViewController {
     var currentIndex:Int = 1
     var isSetup = false
     var defaultIndex = 0
-    let defaultImageGifs = ["defaultAnimation0", "defaultAnimation0"]
+    var defaultImageGifs = ["defaultAnimation0", "defaultAnimation0"]
     let dickImage = "dick"
     let dickSmileImage = "dickSmile"
     let rotationAnimation = "animation"

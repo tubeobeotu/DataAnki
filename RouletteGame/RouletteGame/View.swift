@@ -141,13 +141,13 @@ public extension UIDevice {
     static let modelBufferY: CGFloat = {
         //default 12
         //other new:12  16
-        //-12 iphone x
+        //-10 iphone x
         let defaultBuffer:CGFloat = 12
         let otherBuffer:CGFloat = 12
         if(UIDevice.modelType == .defaultType){
             return defaultBuffer
         }else if(UIDevice.modelType == .xType){
-            return -12;
+            return -10;
         }
         return otherBuffer
     }()

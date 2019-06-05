@@ -33,7 +33,7 @@ open class ZoomImageView : UIScrollView, UIScrollViewDelegate {
     }
     
     // MARK: - Properties
-    let defaultSize = CGSize.init(width: UIScreen.main.bounds.width, height: 1.77*UIScreen.main.bounds.width)
+    let defaultSize = CGSize.init(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
     let gifManager = SwiftyGifManager(memoryLimit:100)
     var maxScale:CGFloat = 2.5
     open let imageView: UIImageView = {
