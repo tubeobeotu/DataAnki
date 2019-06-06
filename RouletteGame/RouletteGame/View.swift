@@ -96,8 +96,8 @@ public extension UIDevice {
     }()
     
     static let modelBufferDuration: CGFloat = {
-        let defaultSpeed:CGFloat = 1.2352
-        let otherSpeed:CGFloat = 1.2352
+        let defaultSpeed:CGFloat = 1.35
+        let otherSpeed:CGFloat = 1.34
         if(UIDevice.modelType == .defaultType){
             return defaultSpeed
         }
@@ -118,8 +118,8 @@ public extension UIDevice {
     static let modelBufferHeight: CGFloat = {
         //default 18
         //other 18
-        let defaultHeightBuffer:CGFloat = 18
-        let otherHeightBuffer:CGFloat = 18
+        let defaultHeightBuffer:CGFloat = 10
+        let otherHeightBuffer:CGFloat = 14
         if(UIDevice.modelType == .defaultType){
             return defaultHeightBuffer
         }
@@ -128,8 +128,8 @@ public extension UIDevice {
     
     
     static let modelBufferWidth: CGFloat = {
-        let defaultWidthBuffer:CGFloat = 42
-        let otherWidthBuffer:CGFloat = 42
+        let defaultWidthBuffer:CGFloat = 38
+        let otherWidthBuffer:CGFloat = 38
         if(UIDevice.modelType == .defaultType){
             return defaultWidthBuffer
         }
@@ -142,12 +142,10 @@ public extension UIDevice {
         //default 12
         //other new:12  16
         //-10 iphone x
-        let defaultBuffer:CGFloat = 12
-        let otherBuffer:CGFloat = 12
+        let defaultBuffer:CGFloat = 24
+        let otherBuffer:CGFloat = -4
         if(UIDevice.modelType == .defaultType){
             return defaultBuffer
-        }else if(UIDevice.modelType == .xType){
-            return -10;
         }
         return otherBuffer
     }()

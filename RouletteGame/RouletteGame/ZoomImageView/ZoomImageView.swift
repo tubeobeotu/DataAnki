@@ -35,8 +35,8 @@ open class ZoomImageView : UIScrollView, UIScrollViewDelegate {
     // MARK: - Properties
     let defaultSize = CGSize.init(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
     let gifManager = SwiftyGifManager(memoryLimit:100)
-    var maxScale:CGFloat = 2.5
-    open let imageView: UIImageView = {
+    var maxScale:CGFloat = 2.0
+    public let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.layer.allowsEdgeAntialiasing = true
         return imageView
@@ -279,7 +279,7 @@ open class ZoomImageView : UIScrollView, UIScrollViewDelegate {
         let horizontalOffest = (boundingSize.width > contentSize.width) ? ((boundingSize.width - contentSize.width) * 0.5): 0.0
         let verticalOffset = (boundingSize.height > contentSize.height) ? ((boundingSize.height - contentSize.height) * 0.5): 0.0
         
-        return CGPoint(x: contentSize.width * 0.5 + horizontalOffest,  y: contentSize.height * 0.5 + verticalOffset)
+        return CGPoint(x: contentSize.width * 0.5 + horizontalOffest - 8,  y: contentSize.height * 0.5 + verticalOffset)
     }
 }
 

@@ -50,7 +50,7 @@ class ViewController: UIViewController {
     var isZoomIn = false
     var randomInt = Int(arc4random_uniform(2))
     let ratio:CGFloat = 0.2008
-    let isTesing = false
+    let isTesing = true
     let imageTag = 1111
     var isStopDacing = true
     var isShowDefault = true {
