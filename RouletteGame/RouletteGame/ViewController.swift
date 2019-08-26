@@ -7,9 +7,9 @@
 //
 
 import UIKit
-
+import AVFoundation
 class ViewController: UIViewController {
-    
+    var player: AVAudioPlayer?
     @IBOutlet weak var v_mask: UIView!
     @IBOutlet weak var btn_Action: UIButton!
     @IBOutlet weak var imageView: ZoomImageView!
@@ -39,6 +39,9 @@ class ViewController: UIViewController {
     var currentIndex:Int = 1
     var isSetup = false
     var defaultIndex = 0
+    let sandSoundName = "stand"
+    let animationSoundName = "rolling"
+    let resultSoundName = "final-result"
     var defaultImageGifs = ["defaultAnimation0", "defaultAnimation0"]
     let dickImage = "dick"
     let dickSmileImage = "dickSmile"
@@ -186,9 +189,11 @@ class ViewController: UIViewController {
         }
         self.actionDick()
         btn_Action.isEnabled = false
+        self.playSound(soundName: animationSoundName)
     }
     func rotateView(targetView: UIView, duration: Double = 1.0) {
         if(self.isStopDacing == true){
+            self.playSound(soundName: resultSoundName)
             return
         }
         var currentDuration:Double = abs(Double(currentIndex - ((self.numberOfRotate + 1)*(currentIndex/((self.numberOfRotate/2) + 1)))))
@@ -222,12 +227,39 @@ class ViewController: UIViewController {
         }
     }
     
+    func playSound(soundName: String){
+        self.pauseSound()
+        guard let url = Bundle.main.url(forResource: soundName, withExtension: "wav") else {
+            print("url not found")
+            return
+        }
+        
+        do {
+            /// this codes for making this app ready to takeover the device audio
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+            try AVAudioSession.sharedInstance().setActive(true)
+            
+            /// change fileTypeHint according to the type of your audio file (you can omit this)
+            
+            player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
+            
+            // no need for prepareToPlay because prepareToPlay is happen automatically when calling play()
+            player!.play()
+        } catch let error as NSError {
+            print("error: \(error.localizedDescription)")
+        }
+    }
+    func pauseSound(){
+        player?.stop()
+    }
+    
     func showDefaultAnimation(){
         if(randomInt == 0){
             randomInt = 1
         }else{
             randomInt = 0
         }
+        self.playSound(soundName: sandSoundName)
         self.imageView.image = UIImage(gifName: defaultImageGifs[randomInt])
     }
     func zoomOutResult(){
